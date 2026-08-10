@@ -1,0 +1,456 @@
+\chapter{Advanced ToM+ configurations}
+
+\section{The WiFi settings page}
+\label{sec:wifi_settings}
+
+Since the second firmware release, your ToM+ can now connect to the Internet by a Wi-Fi
+on board module. This will allow you to view your Twizy real time data if combined
+with MQTT protocol which will be dealt in Section~\ref{sec:MQTT}.\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/wifi_settings_3d.png}
+    \caption{The WiFi settings page.}
+\end{figure}
+
+The page will store up to four connection profiles in order to be connected to the
+Internet when you are at home or even at work or in a public place with a free Wi-Fi.
+\\In addition ToM+ has a web interface, in which you can monitor data in real time
+or customize your settings much more easily. Now let's see why you should do this…
+
+\subsection{ToM+ WiFi advantages}
+
+Since the second firmware release, your ToM+ can now connect to the Internet by a Wi-Fi
+embedded module and this will allow you to unlock many more features than before.
+Now you can have access to your Twizy data remotely on your smartphone!\\
+
+You won't need to manually check your Twizy charging state anymore, because this
+new feature will publish charging state data directly on your smartphone and they
+will be protected and private as well. It will just need some MQTT configuration.\\
+
+\begin{itemize}
+    \item No more struggling on constantly checking your Twizy charging state manually!
+    \item Plenty of possibilities to embed your Twizy in an IoT system relying on MQTT
+    \item Wi-Fi would not affect much both electric consumption and ToM performances 
+    \item Unlock a new web page with real time Twizy data and ToM user-friendly settings
+\end{itemize}
+
+\subsection{Adding a WiFi connection profile}
+
+In this new settings page you have a small table with four rows and two columns.
+The first column holds the \textbf{SSID} (i.e. the name) of the network you are trying to connect to. 
+To be clear it's the one you see on your phone or laptop. It can be alphanumeric and 
+it is case sensitive (capital letters matter, so be sure to spell it correctly!).
+While the second column under the \textbf{“KEY”} header is for the Wi-Fi password.\\
+
+When you tap on a table cell, either SSID or key, ToM+ will open a keyboard page
+where you can type in your data. Pressing OK will confirm the typed string and will
+take you back to the Wi-Fi settings page. We will discuss the keyboard page in Section~\ref{sec:keyboard_page}.\\
+
+By now you are able to set \textbf{four different connection profiles} with four pairs of SSID
+and password. If you don't set any profile but the Wi-Fi slider are enabled ToM+ will still
+perform a Wi-Fi scan every two minutes trying to find public connection without password
+protection and then it will try to connect. Press the bottom \textbf{right arrow button to save}.
+
+\subsection{Check WiFi connection}
+\label{sec:check_wifi_connection}
+
+To check if your ToM+ is connected to the Internet via Wi-Fi the process is very
+simple. In all pages there is the WiFi icon (dealt in Section~\ref{sec:status_icon_bar})
+which shows its status.
+
+\iconbox{icons/Tray_WiFiOff.png}
+{WiFi is off}
+{ToM+ is not connected and won't publish any data.}
+
+\iconbox{icons/Tray_WiFi.png}
+{WiFi is on}
+{ToM+ is connected and will publish data if MQTT is connected.}
+
+\iconbox{icons/Tray_WiFi.png}
+{WiFi scan in progress}
+{If blinking, ToM+ is currently scanning for available Wi-Fi networks.}
+
+\clearpage
+
+If you want to get more specific info about whether or not your ToM+ is connected to
+any network, you can check additional fields in the Wi-Fi settings page on the bottom right
+corner, as shown in the image below.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/wifi_bottom_line.png}
+    \caption{The WiFi bottom grid info.}
+\end{figure}
+
+As we can see when the ToM+ is connected to a network an IP address will be
+displayed (here it is \textbf{10.24.126.204}). This is the address taken by ToM+ to connect
+to the Internet. If this field contains any sequence of four numbers (from 0 to 255)
+separated by dots, then Wi-Fi is connected, otherwise it will be empty. 
+
+Tap on it to view ToM+ MAC address and tap again to see which SSID (network name) ToM+ is connected to.
+We will see more interesting features in which ToM+ IP address is involved later at Section~\ref{sec:access_webserver}.
+
+\subsection{Enable/Disable WiFi features}
+\label{sec:enable_disable_wifi}
+
+In the footer of the Wi-Fi settings page there are two sliding buttons. To change from
+ON and OFF state just tap or slide it. Let's see what the two sliders do.\\
+
+The first one of them is to disable \textbf{Wi-Fi when charging}. This will cause your ToM+ to be completely offline,
+and you won't be able to monitor your Twizy data remotely until you enable it again.
+In this state the Wi-Fi status icon will be always grayed out as shown in Section~\ref{sec:check_wifi_connection}.\\
+
+The second sliding button is to enable \textbf{Wi-Fi when driving}. This will allow
+your ToM+ to be connected to the Internet even when you are driving your Twizy.
+This is useful if you want to publish real-time data to your smartphone via MQTT.
+This also enables the web interface to be accessed while driving and your ToM+ will
+scan for available Wi-Fi networks as well.\\
+
+As already mentioned to \textit{save your changes} you need to press the bottom right arrow button.
+If you don't do this, your changes will be lost when you leave the page.
+
+\clearpage
+
+\section{The MQTT settings page}
+\label{sec:MQTT}
+
+If you have already took a look at the Wi-Fi Section~\ref{sec:wifi_settings}, you would probably now
+know that MQTT is needed to access to your data remotely and this section will show
+you how to set up it correctly and how does the ToM+ interface deal with this protocol.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/mqtt_settings_page.png}
+    \caption{The MQTT settings page.}
+\end{figure}
+
+When ToM+ is connected to the Internet via Wi-Fi, MQTT can be enabled and then
+you can view your real time Twizy data directly on your devices. The page only
+allows only one MQTT server configuration, to ensure \textbf{data safety and privacy}. You
+can configure this parameters both on ToM+ and on its Web Server page (Section~\ref{sec:web_mqtt}).
+Now let's discuss what's MQTT and some of its main advantages…
+
+\subsection{Brief MQTT explanation}
+\label{sec:brief_mqtt}
+
+MQTT is one of the easiest protocols used in IT to communicate small data payloads
+using a \textbf{client/server architecture}. This method requires one or more clients that
+usually collect data and want to store them permanently and/or perform calculations.
+
+
+So the process needs a server which processes data from all clients executing tasks.
+This server is called \textbf{MQTT broker} or commonly broker and is essential in this type
+of architecture. But how can clients and server communicate between themselves?\\
+
+
+The communication process is based on a publish/subscribe structure. Some clients
+collect and publish data and for this reason they are called \textbf{publishers} and, in the
+meanwhile some others wait for those data to be sent and they're called \textbf{subscribers}.
+The broker server lays in the middle and is the intermediary device on which all data
+from publishers are stored and sent to subscribers. Now let's introduce topics…\\
+
+
+A \textbf{topic} is a sequence of alphanumeric characters typically related to a specific
+subject and it's used to store (like a container) all data related to that specific
+subject. Topics are useful to keep and organize a lot of data collected from different
+publishers in order not to confuse those information. So, how ToM+ uses MQTT?
+
+\subsection{ToM+ and MQTT communications}
+
+Now that we know what's MQTT, let's see how MQTT and ToM+ system actually works.
+ToM+ is considered a publisher, because it collects and publishes Twizy updated data.
+The phone application instead, will be the subscriber because it is waiting to receive
+those data that the Twizy has just published. But who is in the middle? The broker server.\\
+
+Unless you have a self-hosted broker server (as I do), or you already know one to use, I
+will explain how to set up your free external broker server in Section~\ref{sec:free_broker}.
+
+
+So, combining ToM+ with MQTT protocol can be very powerful and if you like home
+automation and IoT systems can also unlock endless possibilities. For instance, you can
+create your own subscriber that will perform actions on ToM+ published data.\\
+
+\subsection{Setting up MQTT free broker}
+\label{sec:free_broker}
+
+\textit{Disclaimer}: Take your time while doing this process because for not expert users may
+take some more minutes and be sure to \textbf{note down your configuration} parameters.\\
+
+First of all choose your MQTT broker provider, I personally advice Maqiatto, since
+it's free, intuitive and easy to use. So let's visit the official website tutorial page:
+\url{https://www.maqiatto.com/examples}. Now we should see a page like the one shown here:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/mqtt_step1.png}
+    \caption{Step 1: Press “CREATE ACCOUNT” button.}
+\end{figure}
+
+As the official guide says, you need to have an account in order to create your MQTT
+broker. So let's press the top right circled \textbf{“Create Account”} button and create one.
+You will be redirected to this page (\url{https://www.maqiatto.com/signup}) where you will have to fill in your personal data.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/mqtt_step2.png}
+    \caption{Step 2: Fill in your personal data.}
+\end{figure}
+
+After filling in all the form fields press the \textbf{“Signup”} green button and wait until we
+get this page (\url{https://www.maqiatto.com/configure}) popping up a successful 
+registration message as shown in the image down here:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/mqtt_step3.png}
+    \caption{Step 3: Add IN/OUT topics.}
+\end{figure}
+
+From this page you can manage your available topics (refer to Section~\ref{sec:brief_mqtt})
+and creating new ones as well. So let's create our IN and OUT topic for sending and 
+receiving ToM data. As we can see, there's a fixed prefix (your email) since free
+users have this limitation, but it isn't a problem at all.\\
+
+In the blank text box after the “/” symbol we should put the name we want to give to our topics. Choose it carefully
+and make sure it is clear and easy for you to remember. For instance I will call the
+input topic \textbf{TOMin} and the output topic \textbf{TOMout}, but you can choose the name you
+prefer.\\
+
+For the first topic, type \textbf{TOMin} and press the \textbf{“+ Add Topic”} blue button as I did above.
+If the operation ends up correctly then a green popup message will show, saying
+\textbf{“Topic was added for this user”} and a new records will appear in the \textit{“Available
+Topics”} list that was empty before. Now repeat the process for the \textbf{TOMout} topic as
+well and check again if the topic was successfully created. Before this process the \textit{“Available
+Topics”} list was empty, but now we can see our two topics in the list and we can delete them if needed.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/mqtt_step4.png}
+    \caption{Step 4: Change your broker password.}
+\end{figure}
+
+\textit{This step is suggested but optional}. At this point the broker password is the same 
+of your Maqiatto account and it is not secure at all. But if you don't want to 
+change it or you don't care, you can skip this step and go to the next one.\\
+
+So let's take some time to make the broker secure and protected from unwanted access.
+The second part of this page (\url{https://www.maqiatto.com/configure}) allows you to change your broker password.
+Just type the new one in the \textbf{“New MQTT Password”} text field and
+then press the \textbf{“Change Password”} blue button.
+
+
+If everything goes well, a green popup message will show up saying \textbf{“Broker user password was updated”}.
+The change username button is greyed out because you can't change your username unless you are a premium user.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/mqtt_step5.png}
+    \caption{Step 5: Note down the port number.}
+\end{figure}
+
+In the last section of the configuration page (\url{https://www.maqiatto.com/configure})
+there are the \textbf{“Port Management”} parameters. Note down the MQTT TCP Port 
+which is usually set to \textbf{1883} (just to be sure) because it's the standard well-known
+port number over the Internet for MQTT protocol. Now the MQTT broker is ready to be
+used and we can move on to the next step, which is configuring ToM+ with the broker parameters.
+
+\clearpage
+
+\subsection{Connect ToM+ to MQTT broker}
+
+Now that it's clear what MQTT (Section~\ref{sec:brief_mqtt}) is and we have set up our
+personal broker (Section~\ref{sec:free_broker}) let's see where on the display we can
+connect ToM+ with our freshly created broker.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/mqtt_connect1.png}
+    \caption{MQTT broker connection parameters.}
+\end{figure}
+
+
+When you tap on the respective table field, ToM+ will open a keyboard page where you can type your data, as in Wi-Fi settings.
+To insert the symbols or numbers press the \textbf{“1/3”} button on the keyboard to switch charset.
+By pressing \textbf{OK}, you will confirm the typed string and will take you back to the MQTT
+settings page. To know more about the keyboard page see Section~\ref{sec:keyboard_page}.
+If the value is too long for the field, the text would automatically scroll.\\
+
+The first thing to specify is your \textbf{broker address}. In the example shown,
+it's set to \textit{“maqiatto.com”}. This is the address of the broker server that we have just created in Section~\ref{sec:free_broker}.
+
+Then it's time to specify the \textbf{port number} where the MQTT service is running. Unless
+you have set it to a different number manually the MQTT port will always be \textit{1883}.
+
+Next we have the \textbf{user} field, which is the username that ToM+ will use to authenticate
+when connecting to the broker. Since the pair of username and password is unique to
+you, this will prevent unwanted user to have access to your private broker. In your case,
+the user is your Maqiatto account e-mail, written like \textit{youremail@example.com}.
+
+Afterwards we need to specify the \textbf{password of the broker} which can be different from
+the one of your Maqiatto account if you chose to change it when suggested in Section~\ref{sec:free_broker}. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/mqtt_connect2.png}
+    \caption{MQTT ToM+ publishing parameters.}
+\end{figure}
+
+
+Now let's configure our \textbf{OUT topic}, where ToM+ will publish Twizy data. In Section~\ref{sec:free_broker}
+we created an out topic called TOMout but the full name of the topic must include 
+also \textbf{your e-mail as a prefix} followed by a “/” symbol and the topic
+name “TOMout”. In the example it is set to \textit{“youremail@gmail.com/TOMout”}.
+
+Now it's time for the \textbf{IN topic}, where ToM+ will receive MQTT commands.
+As for the OUT topic, we created an in topic called TOMin but the full name
+of the topic must include also \textbf{your e-mail as a prefix} followed by a “/”
+symbol and the topic name “TOMin”. In the example it is set to \textit{“youremail@gmail.com/TOMin”}.
+
+When an MQTT publisher sends a message to the broker its
+connection is authenticated by username and password but it publishes using an alias
+which \textit{you can arbitrarily choose}. It's important not to include spaces in the \textbf{Client ID},
+only alphanumeric characters and symbols are allowed. Remember that it's
+advisable to make it simple and clear as it is in the example: \textit{“TwizOMeter”}. 
+
+The last parameter is the \textbf{publish frequency}, which represents the time
+between each ToM+ publish. It's expressed in milliseconds \textit{(ms)} and can be
+set to an arbitrarily value greater than 1000ms (one second). The default is \textit{5000 ms}
+(five seconds) and it is a good compromise between data freshness and network usage.\\
+
+To \textbf{save your changes} you need to press the bottom right arrow button. If you don't
+do this, your changes will be lost when you leave the page. Now ToM+ is ready to 
+publish and receive data via MQTT protocol.\\
+
+\subsection{Enable/Disable MQTT features}
+
+If you want to temporarily or permanently disable the publishing of data with MQTT
+protocol press or slide on the left slider called \textbf{“PUBLISH”} in the image down
+here. From then on ToM+ won't publish Twizy data via MQTT until you enable it again.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/mqtt_connect3.png}
+    \caption{MQTT bottom sliders.}
+\end{figure}
+
+The right slider button under \textbf{“SUBSCRIBE”} allows ToM+ to receive commands
+from external devices published on the specified IN topic. This is useful if you
+want to control via MQTT a device connected to ToM+ expansion port
+(e.g. a smart plug to turn on/off charging remotely). You can choose to enable or disable this feature at any time by pressing or sliding the button.\\
+
+\subsection{Check ToM+ MQTTconnection}
+
+Near the two sliding buttons, there's a small \textbf{“STATUS”} label which holds
+wheter the MQTT connection is working or not. When ToM+ is connected to the MQTT
+specified broker, you will see a \textit{“CONNECTED”} text. When there's a problem with
+the broker connection or Wi-Fi is disabled, as we saw in Section~\ref{sec:enable_disable_wifi}, MQTT won't work
+properly and a \textit{“DISCONNECTED”} message appears as in the image below.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/mqtt_status.png}
+    \caption{MQTT status field.}
+\end{figure}
+
+By the way you can check the MQTT connection status also by looking at the status icon bar (Section~\ref{sec:status_icon_bar})
+where the MQTT icon will be purple if the connection is established, otherwise it will be grayed.
+
+To \textbf{save your changes} you need to press the bottom right arrow button. If you don't
+do this, your changes will be lost when you leave the page.\\
+
+
+\section{The Keyboard page}
+\label{sec:keyboard_page}
+
+When you tap on a table cell in the Wi-Fi or MQTT settings page, ToM+ will open a keyboard page
+where you can type in your data. The keyboard page is very intuitive and easy to use.
+You can switch between three different charsets by pressing the \textbf{“1/3”} button
+on the bottom left corner of the keyboard.
+
+\begin{figure}[ht]
+    \centering
+
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/keyboard_page1.jpg}
+        \caption{First charset: Letters.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/keyboard_page1_caps.jpg}
+        \caption{First charset: Uppercase letters.}
+    \end{subfigure}
+\end{figure}
+
+In the \textbf{first charset}, you can type letters in lowercase or uppercase by pressing
+the shift button circled in yellow in the first image.
+When you type something it will appear in the text field on the top of the keyboard. 
+If you want to delete a character just press the backspace button.
+
+\clearpage
+
+\begin{figure}[ht]
+    \centering
+
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/keyboard_page2.jpg}
+        \caption{Second charset: Symbols.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/keyboard_page3.jpg}
+        \caption{Third charset: Numbers and more.}
+    \end{subfigure}
+\end{figure}
+
+The \textbf{second charset} is for symbols and the \textbf{third one} is for numbers and other special characters.
+To move to the third charset just press the \textbf{“2/3”} button on the bottom left corner of the keyboard.
+When on the third charset, you can switch back to the first charset by pressing the \textbf{“3/3”} button.
+In these two pages the shift button won't do anything because it is not needed.\\
+
+When you are done typing, press the \textbf{OK} button to confirm your input and return
+to the previous MQTT or WiFi settings page, where the edited field will be updated.
+
+\subsection{The number-only keyboard}
+
+In some fields, such as the MQTT publish frequency, only numbers are allowed.
+In this case, ToM+ will open a number-only keyboard page as shown in the image below.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/keyboard_num_only.jpg}
+    \caption{Number-only keyboard.}
+\end{figure}
+
+As you can see, the layout is the same as the third charset of the full keyboard, but it is limited to numbers and a few special characters.
+You can also notice that the change charset button is unavailable, as it is not needed in this case.
+The backspace button is still available to delete characters, and the \textbf{OK button} confirms your input and returns to the previous page.
+
+
+
+\section{The web server}
+\label{sec:web_server}
+
+The new firmware update allows you to do some configurations on the Web Server
+page, that were before available only on ToM display. Here I will give a brief
+explanation of each function available on this page and then in the next paragraphs
+they will be all deepen more.
+Firstly, now you can monitor your Twizy data remotely directly on your phone or PC
+from the “Data Monitor” page, available pressing the first button of the HOME page.
+Then comes the “Trip history” page, where you can check current data stored in the
+black box for each trip. Five trips are currently available to be stored simultaneously.
+In addition, as you can see in the image, it’s possible to set up Wi-Fi profiles and
+MQTT broker more easily from the ToM web server page.
+The latest model of ToM black box has a small pluggable connector that makes ToM
+able to transmit or receive electric signals on those lines. In the “Expansion settings”
+page you can choose which signal is transmitted by each pin of the cable.
+A huge feature introduced with the latest update is the ToM capability to manage
+alarms based on what is configured on this page. An alarm is basically a condition,
+which is fully customizable and it’s based on one of the data shown on ToM display.
+When an alarm triggers, you can choose what action will be executed and the triggers
+are stored in the “Alarms log” page, which is located just below the alarm button.
+Alarms practical appliances will be discussed later in this section at 4.3.7.

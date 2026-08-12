@@ -36,6 +36,7 @@ will be protected and private as well. It will just need some MQTT configuration
 \end{itemize}
 
 \subsection{Adding a WiFi connection profile}
+\label{sec:add_wifi_profile}
 
 In this new settings page you have a small table with four rows and two columns.
 The first column holds the \textbf{SSID} (i.e. the name) of the network you are trying to connect to. 
@@ -81,6 +82,7 @@ corner, as shown in the image below.
     \centering
     \includegraphics[width=0.7\textwidth]{figures/wifi_bottom_line.png}
     \caption{The WiFi bottom grid info.}
+    \label{fig:wifi_bottom_line}
 \end{figure}
 
 As we can see when the ToM+ is connected to a network an IP address will be
@@ -128,7 +130,7 @@ you how to set up it correctly and how does the ToM+ interface deal with this pr
 When ToM+ is connected to the Internet via Wi-Fi, MQTT can be enabled and then
 you can view your real time Twizy data directly on your devices. The page only
 allows only one MQTT server configuration, to ensure \textbf{data safety and privacy}. You
-can configure this parameters both on ToM+ and on its Web Server page (Section~\ref{sec:web_mqtt}).
+can configure this parameters both on ToM+ and on its Web Server page (Section~\ref{sec:web_network_settings}).
 Now let's discuss what's MQTT and some of its main advantages…
 
 \subsection{Brief MQTT explanation}
@@ -323,6 +325,7 @@ do this, your changes will be lost when you leave the page. Now ToM+ is ready to
 publish and receive data via MQTT protocol.\\
 
 \subsection{Enable/Disable MQTT features}
+\label{sec:enable_disable_mqtt}
 
 If you want to temporarily or permanently disable the publishing of data with MQTT
 protocol press or slide on the left slider called \textbf{“PUBLISH”} in the image down
@@ -435,22 +438,287 @@ The backspace button is still available to delete characters, and the \textbf{OK
 \section{The web server}
 \label{sec:web_server}
 
-The new firmware update allows you to do some configurations on the Web Server
-page, that were before available only on ToM display. Here I will give a brief
-explanation of each function available on this page and then in the next paragraphs
-they will be all deepen more.
-Firstly, now you can monitor your Twizy data remotely directly on your phone or PC
-from the “Data Monitor” page, available pressing the first button of the HOME page.
-Then comes the “Trip history” page, where you can check current data stored in the
-black box for each trip. Five trips are currently available to be stored simultaneously.
-In addition, as you can see in the image, it’s possible to set up Wi-Fi profiles and
-MQTT broker more easily from the ToM web server page.
-The latest model of ToM black box has a small pluggable connector that makes ToM
-able to transmit or receive electric signals on those lines. In the “Expansion settings”
-page you can choose which signal is transmitted by each pin of the cable.
-A huge feature introduced with the latest update is the ToM capability to manage
-alarms based on what is configured on this page. An alarm is basically a condition,
-which is fully customizable and it’s based on one of the data shown on ToM display.
-When an alarm triggers, you can choose what action will be executed and the triggers
-are stored in the “Alarms log” page, which is located just below the alarm button.
-Alarms practical appliances will be discussed later in this section at 4.3.7.
+The web server is a new feature introduced with the second firmware release. 
+It allows you to access your ToM+ settings and data remotely from any device with a
+web browser, such as your smartphone, tablet, or PC. This is particularly useful 
+for managing standard and \textbf{advanced configurations} that aren't available on the ToM+ display.
+
+In addition, you can also use the web server to set up \textbf{WiFi and MQTT} much more easily 
+than using the ToM+ display with the keyboard page only (Section~\ref{sec:keyboard_page}).\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.46\textwidth]{figures/landing_page.png}
+    \caption{Landing page of the web server.}
+\end{figure}
+
+
+\subsection{The landing page}
+
+In the landing page shown above, you will see twelve buttons that give you access to different pages of the web server.
+Here I will give a quick overview of the functions available on each page and then in the next paragraphs
+they will be all deepen more. In these section, the icons are used as a visual aid only:\\
+
+\iconbox{icons/BatteryInfo2.png}
+{Data monitor}{Here you can monitor your Twizy data in real time, organized in tables just like on the ToM+ display pages (Section~\ref{sec:web_data_monitor}).}
+
+\iconbox{icons/Street0Ok_v2.png}
+{Trip history}{Here you can check each recorded trip data (1 to 5) and the last twenty trips, the same as on the ToM+ display (Section~\ref{sec:web_trip_history}).}
+
+\iconbox{icons/Tray_WiFiOff.png}
+{Network settings}{Here you can set up your Wi-Fi connection profiles and MQTT broker parameters, just like on the ToM+ display (Section~\ref{sec:web_network_settings}).}
+
+\iconbox{icons/Pin1.png}
+{Expansion settings}{Here you can configure the expansion connector pins and choose the behavior for the right wiper stalk button (Section~\ref{sec:web_expansion_settings}).}
+
+\iconbox{icons/Alarm.PNG}
+{Alarm Triggers}{Here you can view or set up alarms based on ToM+ data and choose the action to be executed when an alarm triggers (Section~\ref{sec:web_alarm_triggers}).}
+
+\iconbox{icons/Alarm.PNG}
+{Alarms log}{Here you can view and clear the history of the last 21 alarms trigger and their details, such as date and time (Section~\ref{sec:web_alarms_log}).}
+
+\iconbox{icons/Swap.png}
+{OTA Update \& Prefs}{Here you can update the ToM+ firmware via OTA method and backup/restore your ToM+ preferences (Section~\ref{sec:web_ota_update}).}
+
+\iconbox{icons/Swap.png}
+{Advanced Info \& Sets}{Here you can view advanced information about your Twizy battery and configure miscellaneous settings (Section~\ref{sec:web_advanced_info}).}
+
+\iconbox{icons/CEta.png}
+{Charging Prefs \& Log}{Here you can set up charging preferences, abort charge on the fly, and view or clear the last 15 charging logs (Section~\ref{sec:web_charging_prefs}).}
+
+\iconbox{icons/Timer.PNG}
+{Time \& Date}{Here you can set the time and date of your ToM+ and choose the time zone using POSIX TZ strings or synchronize with WiFi (Section~\ref{sec:web_time_date}).}
+
+\iconbox{icons/Kmh.png}
+{BigToM \textbackslash ToM+ Sets}{Here you can configure some dashboard parameters, such as the scale of the power bar or setting up a speed limit (Section~\ref{sec:web_btom_tom_sets}).}
+
+\iconbox{icons/Error.png}
+{Diagnostic}{Here you can view DTC/DF numbers and the descriptions of your Twizy errors and clear the logs if needed (Section~\ref{sec:web_diagnostic}).}
+
+
+\subsection{Access the web server}
+
+ToM+ allows you to connect to its web server page in two ways, and they are both
+useful in different situations. Before we start, bear in mind that an \textbf{IP address}
+it's basically the numeric name of your device on a network (e.g. \textit{192.168.1.100}).
+
+\textbf{\textit{For both methods, you need ToM+ to be connected to a network.}}
+So, be sure to check if your ToM+ has either a Wi-Fi profile configured as
+explained in Section~\ref{sec:add_wifi_profile} or is connected to a no-password WiFi network.
+To check if your ToM+ is connected please refer to Section~\ref{sec:check_wifi_connection}.\\
+
+\textbf{The first and easier setup} is using your phone hotspot without any password, so that ToM+ connects
+without having to configure any WiFi profile. Then, still using your phone, go on Chrome or
+Safari (or any web browser) and type in ToM+ IP address (shown as Figure~\ref{fig:wifi_bottom_line}).\\
+
+\textbf{The second method} works only when you are quite near to the Twizy within WiFi range.
+You can use your phone or laptop to perform a WiFi scan and then search for either
+\textit{“ToM+ AP”} or \textit{“Twiz o'Meter AP”} or \textit{“BigToM AP”} network, depending on your model. 
+Next, you should connect to that network with the \textbf{correct password}. It is initially 
+set to the word “pass” followed by your device serial number (e.g. \textit{pass129777}).
+Serial number can be found in the settings page as explained in Figure~\ref{fig:settings_page}. 
+Then you can change it if you want, but there's no password recovery system (see Section~\ref{sec:web_change_password}).
+Once you are connected to ToM+ Access Point, type on any browser his static IP address, which is \textbf{192.188.1.188}.
+
+
+\subsection{Change web server password}
+\label{sec:web_change_password}
+
+To change the password for the web server, go on the display WiFi settings page (Section~\ref{sec:wifi_settings})
+and tap on the \textbf{“KEY 4”} field. This will open the keyboard page (Section~\ref{sec:keyboard_page}) where you can type in your new password.
+So, this password will be used for both the Access point password as well as the fourth WiFi connection profile.
+
+
+\subsection{Data monitor page}
+\label{sec:web_data_monitor}
+
+As said in the introduction, this page lists all available ToM+ data, organized into seven
+different tables, each of which contains only the data specified in its header. The data
+distribution is the same used in Section~\ref{sec:icon_list} and can't be modified.
+
+These values are \textbf{updated every 10 seconds} and are coupled with their measure unit. Don't worry
+for your privacy because your data travels packed in a particular packet structure that
+is difficult to sniff or crack. In addition, the web server does not use any external
+services or MQTT for the monitoring so that your data remains private and safe. The page is fully
+generated directly by the black box and doesn't undergo any further processing.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/monitor_page1.png}
+    \caption{Data monitor page (top tables).}
+\end{figure}
+
+In the second part of the page, there are the last three tables which contain dashboard data,
+expansion port data and the last one holds all the battery info voltages and temperatures.
+Press the \textbf{“HOME”} green button pointed by the red arrow to return to the landing page.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/monitor_page2.png}
+    \caption{Data monitor page (bottom tables).}
+\end{figure}
+
+\clearpage
+
+\subsection{Trip history page}
+\label{sec:web_trip_history}
+
+This holds the values of the trip page previously discussed in Section~\ref{sec:trip_page}.
+It can store up to 5 different sets of data and, even if display shown data are limited,
+the web server page will show them all. The first table shows trips, each organized into five rows and
+the headers of each record are listed in Section~\ref{sec:icon_list}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/trip_page1.png}
+    \caption{Trip history page --- Trip data.}
+\end{figure}
+
+The second table shows the last twenty trips (from the most recent), with the same headers as the first table.
+You can get back to the start page pressing the \textbf{“HOME”} green button located just below the second table.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/trip_page2.png}
+    \caption{Trip history page --- Trip history.}
+\end{figure}
+
+
+\subsection{Network settings page}
+\label{sec:web_network_settings}
+
+This page allows you to configure Wi-Fi profiles and MQTT broker without struggling with
+the ToM+ display keyboard. The page is split in two main tables, one for 
+Wi-Fi (Section~\ref{sec:wifi_settings}) and the other for MQTT settings (Section~\ref{sec:MQTT}).\\
+
+As you can see in the image the first one contains all the four profiles that were
+previously set on ToM+, or if not, their default values. The same is for passwords, 
+that are not visible until you press the “O” button next to the one you want to see. 
+Pressing it again will hide the password. 
+Here you can also change the Wi-Fi password for the Access Point (Section~\ref{sec:web_change_password}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/wifi_page1.png}
+    \caption{Network settings page --- WiFi table.}
+\end{figure}
+
+The two check boxes do the same functions as the two sliding buttons in ToM+ WiFi
+settings page. To know what they are used for, refer to Section~\ref{sec:enable_disable_wifi}.
+After any change, press the \textbf{“SAVE”} button to save your changes, otherwise they will be lost when you leave the page.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/wifi_page3.png}
+    \caption{Network settings page --- WiFi status table.}
+\end{figure}
+
+If your ToM+ is connected to a network, a small table will appear below the one just
+discussed and the rows contain three main information: the SSID, ToM+ IP address
+and the MAC address. These data can be found on the ToM+ display as well, in the
+Wi-Fi settings page as previously shown in Figure~\ref{fig:wifi_bottom_line}.\\
+
+The second main table, instead holds the MQTT broker settings, as they were
+previously configured on ToM+ display, or if not, default values (\textit{e.g. “broker.address”}).
+You can easily change them manually from this web server page, that is much
+more comfortable than using the ToM+ display keyboard. Check below in the image
+how this table may look once configured.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/wifi_page2.png}
+    \caption{Network settings page --- MQTT table.}
+\end{figure}
+
+The two check boxes do the same functions as the two sliding buttons in ToM+ MQTT
+settings page. To know what they are used for, refer to Section~\ref{sec:enable_disable_mqtt}.
+If your ToM+ is connected to the MQTT broker, the table header will have a \textbf{“(CONNECTED!)”} text.\\
+
+After any change, press the \textbf{“SAVE”} button to save your changes, otherwise they will be lost when you leave the page.
+At the end of this page, pointed by a red arrow in the image, there's the \textbf{“HOME”} green button to return to the landing page.
+
+
+\subsection{Expansion settings page}
+\label{sec:web_expansion_settings}
+
+This page holds the configuration for PIN1 and PIN2 of the expansion connector, as well as the configuration for the right wiper stalk button.
+It can be really useful if you like customizing stuff and adding your personal touch to your ToM+.
+The pin-out of the expansion connector is shown in Figure~\ref{fig:expansion_pinout}. 
+Since they are general input/output pins you can choose the mode of each one depending on your needs.\\
+
+If you choose the \textbf{“INPUT”} mode, then that line will be listening to the signal specified
+in the next field, and this can be really useful when setting a really specific alarm, but
+we will discuss this later. On the other hand, if you select the \textbf{“OUTPUT”} mode ToM+
+will transmit the signal specified in the next field, which can be HIGH (5V) or LOW
+(0V), when an alarm triggers. But as said before, it will be depth in Section~\ref{sec:web_alarm_triggers}.\\
+
+Since the most recent firmware releases, new modes other than INPUT and OUTPUT have been added to the expansion PINs. Let's dig into them:\\
+
+\begin{itemize}
+    \item \textbf{IR CONTROLLER}: This mode allows ToM+ to be controlled by an infrared remote. \todo{TODO}
+    \item \textbf{KEY+ CONTROLLER}: This mode allows you to control your ToM+ via a physical button connected to the expansion port.
+    \item \textbf{SERIAL TX}: This mode allows you to configure a serial trasmission line on this pin.
+    \item \textbf{SERIAL RX}: This mode allows you to configure a serial reception line on this pin.
+    \item \textbf{CTRL BUTTON}: This mode allows you to use the right wiper stalk button as a control button for your ToM+.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/expansion_page1.png}
+    \caption{Expansion settings page --- PIN1 table.}
+\end{figure}
+
+As you can see in the image below, when selecting the \textbf{“OUTPUT”} mode, you can choose
+the \textit{“Output Type”}. This is useful if you have a really specific output device that
+needs additional management that is not limited to the standard HIGH/LOW signal. To achieve this,
+you can choose from a list of already managed output devices, highlighted in the image above.
+If you got an idea for a new output device that can be useful for the community, feel free to contact me.\\
+
+\begin{itemize}
+    \item \textit{“Normal”}: This is the standard OUTPUT mode, limited to HIGH/LOW signals.
+    \item \textit{“Charger auxilliary fan”}: This lets you control an auxilliary fan. \todo{TODO}
+    \item \textit{“Reku break light”}: This lets you connect a relay board which controls the breaking light, in order to power it on when in regeneration mode. This is particularly useful if you tuned your Twizy to increase the regeneration power.
+    \item \textit{“Auxilliary charger”}: This lets you control an auxilliary charger.
+    \item \textit{“Motor fan”}: This lets you control a motor fan.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/expansion_page3.png}
+    \caption{Expansion settings page --- PIN2 table.}
+\end{figure}
+
+The second table works the same but it's intended for PIN2 of the expansion connector.
+After any change, press the \textbf{“SAVE”} button to save your changes, otherwise they will be lost when you leave the page.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/expansion_page2.png}
+    \caption{Expansion settings page --- Wiper stalk button table.}
+\end{figure}
+
+This last table holds the configuration needed to make the provided right \textbf{wiper stalk button} (Figure~\ref{fig:wiper_stalk_button}) work.
+You can use this button to navigate through all ToM+ UI without using the touch-screen, with
+these three main \textbf{actions}: \textit{“Browse items”}, \textit{“Change page”}, \textit{“Select-deselect”}.
+To achieve this, there are three type of \textbf{button presses}: \textit{“Short”}, \textit{“Medium”}, \textit{“Long”}.
+So, in the first part of this table you can rearrange this actions with the gestures you prefer.\\
+
+\begin{itemize}
+    \item \textit{“Browse items”}: This moves a small white marker next to the current selected data.
+    \item \textit{“Change page”}: This lets you cycle through the pages present in the rotation.
+    \item \textit{“Select-deselect”}: This simulates tapping on the selected data (e.g. switches from background to foreground).\\
+\end{itemize}
+
+In the second part of the table you can select the \textbf{pages you would like to skip} when
+cycling through the available pages repeating the \textit{“Change page”} gesture. For instance,
+if I don't want to monitor the Info battery page when cycling with the button, I just check
+it out and it will be removed from the rotation.\\
+
+After any change, press the \textbf{“SAVE”} button to save your changes, otherwise they will be lost when you leave the page.
+At the end of this page, pointed by a red arrow in the image, there's the \textbf{“HOME”} green button to return to the landing page.
+
+\clearpage
+
+\subsection{Alarm triggers page}
+\label{sec:web_alarm_triggers}
+

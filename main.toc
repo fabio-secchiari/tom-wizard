@@ -80,3 +80,11 @@
 \contentsline {section}{\numberline {4.3}The Keyboard page}{50}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}The number-only keyboard}{51}{subsection.4.3.1}%
 \contentsline {section}{\numberline {4.4}The web server}{52}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}The landing page}{53}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Access the web server}{54}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Change web server password}{54}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Data monitor page}{54}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}Trip history page}{56}{subsection.4.4.5}%
+\contentsline {subsection}{\numberline {4.4.6}Network settings page}{57}{subsection.4.4.6}%
+\contentsline {subsection}{\numberline {4.4.7}Expansion settings page}{58}{subsection.4.4.7}%
+\contentsline {subsection}{\numberline {4.4.8}Alarm triggers page}{61}{subsection.4.4.8}%

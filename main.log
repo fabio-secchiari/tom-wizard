@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.4)  12 AUG 2026 18:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.4)  12 AUG 2026 19:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2268,29 +2268,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 671--676
 <figures/expansion_page3.png, id=997, 254.8722pt x 74.9199pt>
 File: figures/expansion_page3.png Graphic file (type png)
 <use figures/expansion_page3.png>
-Package pdftex.def Info: figures/expansion_page3.png  used on input line 687.
+Package pdftex.def Info: figures/expansion_page3.png  used on input line 695.
 (pdftex.def)             Requested size: 455.24411pt x 133.8337pt.
-<figures/expansion_page2.png, id=998, 613.54219pt x 402.75468pt>
+[59 <./figures/expansion_page1.png>]
+<figures/expansion_page2.png, id=1004, 613.54219pt x 402.75468pt>
 File: figures/expansion_page2.png Graphic file (type png)
 <use figures/expansion_page2.png>
-Package pdftex.def Info: figures/expansion_page2.png  used on input line 696.
+Package pdftex.def Info: figures/expansion_page2.png  used on input line 704.
 (pdftex.def)             Requested size: 455.24411pt x 298.845pt.
-[59 <./figures/expansion_page1.png> <./figures/expansion_page3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 700--705
+
+Underfull \hbox (badness 10000) in paragraph at lines 708--713
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 709--710
+Underfull \hbox (badness 10000) in paragraph at lines 717--718
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 712--716
+[60 <./figures/expansion_page3.png> <./figures/expansion_page2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 720--724
 
  []
 
-[60 <./figures/expansion_page2.png>]) [61
+[61]) [62
 
 ] (./main.aux (./chapters/01_description.aux) (./chapters/02_installation.aux) (./chapters/03_basic_UI.aux) (./chapters/04_advanced_UI.aux))
  ***********
@@ -2305,18 +2306,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: C9D6B6349671307C5DF83775C6A7A734;13399.
  ) 
 Here is how much of TeX's memory you used:
- 28792 strings out of 467168
- 586718 string characters out of 5413706
- 961848 words of memory out of 5000000
- 57385 multiletter control sequences out of 15000+600000
+ 28784 strings out of 467168
+ 586529 string characters out of 5413706
+ 961701 words of memory out of 5000000
+ 57377 multiletter control sequences out of 15000+600000
  685413 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  147i,13n,149p,490b,1071s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr10.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr17.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr8.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri10.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (62 pages, 105166207 bytes).
+Output written on main.pdf (63 pages, 105166699 bytes).
 PDF statistics:
- 1129 PDF objects out of 1200 (max. 8388607)
- 847 compressed objects within 9 object streams
+ 1132 PDF objects out of 1200 (max. 8388607)
+ 849 compressed objects within 9 object streams
  233 named destinations out of 1000 (max. 500000)
  1332 words of extra memory for PDF output out of 10000 (max. 10000000)
 

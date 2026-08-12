@@ -676,10 +676,18 @@ If you got an idea for a new output device that can be useful for the community,
 
 \begin{itemize}
     \item \textit{“Normal”}: This is the standard OUTPUT mode, limited to HIGH/LOW signals.
-    \item \textit{“Charger auxilliary fan”}: This lets you control an auxilliary fan. \todo{TODO}
-    \item \textit{“Reku break light”}: This lets you connect a relay board which controls the breaking light, in order to power it on when in regeneration mode. This is particularly useful if you tuned your Twizy to increase the regeneration power.
-    \item \textit{“Auxilliary charger”}: This lets you control an auxilliary charger.
-    \item \textit{“Motor fan”}: This lets you control a motor fan.
+    \item \textit{“Charger auxilliary fan”}: This lets you control an auxilliary fan. 
+    You will need to set an alarm on charger temperature with a threshold. Then, when charging, if 
+    it triggers the fan will start cooling the charger, stopping only after the temperature
+    drops below the selected threshold with a fixed hysteresis (even after charging is finished if needed).
+    \item \textit{“Reku break light”}: This lets you connect a relay board which controls
+    the breaking light, in order to power it on when in regeneration mode. This is particularly
+    useful if your Twizy is tuned to increase the regeneration power.
+    \item \textit{“Auxilliary charger”}: This lets you control an auxilliary charger with an
+    alarm on SOC or battery voltage. It lets you connect a relay board that enables or disables an
+    auxilliary charger when needed. It powers on only in charging mode, with a small fixed delay.
+    \item \textit{“Motor fan”}: This lets you control a motor fan with an alarm on the engine temperature.
+    It works the same as the charger fan with the difference that this works only while driving.
 \end{itemize}
 
 \begin{figure}[H]

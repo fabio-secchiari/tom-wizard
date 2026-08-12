@@ -1,13 +1,13 @@
 # Fdb version 4
-["pdflatex"] 1786553885.0888 "d:/PROJECTS/TOM/ToM_Wizard/src/main.tex" "main.pdf" "main" 1786553904.97088 0
-  "chapters/01_description.aux" 1786553895 5319 fc4b49a2a5de290e35879f6f855f0368 "pdflatex"
+["pdflatex"] 1786557055.16745 "d:/PROJECTS/TOM/ToM_Wizard/src/main.tex" "main.pdf" "main" 1786557075.41293 0
+  "chapters/01_description.aux" 1786557065 5319 fc4b49a2a5de290e35879f6f855f0368 "pdflatex"
   "chapters/01_description.tex" 1786552702 11043 0feae6939d1cd678bb9b617848baa92e ""
-  "chapters/02_installation.aux" 1786553895 2339 2f3a6d16e5653712356410f1b3c592f4 "pdflatex"
+  "chapters/02_installation.aux" 1786557065 2339 2f3a6d16e5653712356410f1b3c592f4 "pdflatex"
   "chapters/02_installation.tex" 1783267001 3684 54809667930bac77f8afe6013ec054e7 ""
-  "chapters/03_basic_UI.aux" 1786553900 12399 76e32b5aca50c09db6d1e7197834f818 "pdflatex"
+  "chapters/03_basic_UI.aux" 1786557070 12399 76e32b5aca50c09db6d1e7197834f818 "pdflatex"
   "chapters/03_basic_UI.tex" 1786545057 42231 b8e5ab2750a1d46c56df89e7cbc05f52 ""
-  "chapters/04_advanced_UI.aux" 1786553904 9574 dbe73e7727c51518ea3ca7866af9c5c1 "pdflatex"
-  "chapters/04_advanced_UI.tex" 1786553872 38535 27f9bbfb2b23462122f7b6024deb8448 ""
+  "chapters/04_advanced_UI.aux" 1786557074 9488 7223229c3145a57bf69f1e765a36bcd9 "pdflatex"
+  "chapters/04_advanced_UI.tex" 1786557047 39180 9209a35a27bbc0424e78d0573a95a001 ""
   "d:/PROJECTS/TOM/ToM_Wizard/src/main.tex" 1784476560 319 3d2b9b7a54266ba8f2d8dd0a7ed51374 ""
   "d:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1783173529 2375 baa924870cfb487815765f9094cf3728 ""
   "d:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1783173529 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -326,10 +326,10 @@
   "icons/tkWh1.png" 1783269646 2105 b8babcc97c0a1da650fe77ea051b4df3 ""
   "icons/tkWh100.png" 1783269646 2254 f81c2399474ff3c1fd59670f8af0462b ""
   "icons/tkWh1min.png" 1783269646 2133 25ae2c920a4302dedd1cfcfe3e4c97c4 ""
-  "main.aux" 1786553904 576 51f82cfdcc32fb0c3af0f41dcffe9a28 "pdflatex"
-  "main.out" 1786553904 13399 c9d6b6349671307c5df83775c6a7a734 "pdflatex"
+  "main.aux" 1786557074 441 10463d4045fbca0e7d1e87cc0ccc62f1 "pdflatex"
+  "main.out" 1786557074 13399 c9d6b6349671307c5df83775c6a7a734 "pdflatex"
   "main.tex" 1784476560 319 3d2b9b7a54266ba8f2d8dd0a7ed51374 ""
-  "main.toc" 1786553904 7875 461ccb3716435c462f576b7c91e5f11f "pdflatex"
+  "main.toc" 1786557074 7875 4601b00c5aec83c3e50ca197b3674ea3 "pdflatex"
   "preamble.tex" 1786551264 890 0baf5dd70bfba538f88f750106b27f9e ""
   (generated)
   "chapters/01_description.aux"

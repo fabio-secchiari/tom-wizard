@@ -87,4 +87,4 @@
 \contentsline {subsection}{\numberline {4.4.5}Trip history page}{56}{subsection.4.4.5}%
 \contentsline {subsection}{\numberline {4.4.6}Network settings page}{57}{subsection.4.4.6}%
 \contentsline {subsection}{\numberline {4.4.7}Expansion settings page}{58}{subsection.4.4.7}%
-\contentsline {subsection}{\numberline {4.4.8}Alarm triggers page}{61}{subsection.4.4.8}%
+\contentsline {subsection}{\numberline {4.4.8}Alarm triggers page}{62}{subsection.4.4.8}%

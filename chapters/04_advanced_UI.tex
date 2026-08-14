@@ -655,12 +655,22 @@ will transmit the signal specified in the next field, which can be HIGH (5V) or 
 Since the most recent firmware releases, new modes other than INPUT and OUTPUT have been added to the expansion PINs. Let's dig into them:\\
 
 \begin{itemize}
-    \item \textbf{IR CONTROLLER}: This mode allows ToM+ to be controlled by an infrared remote. \todo{TODO}
-    \item \textbf{KEY+ CONTROLLER}: This mode allows you to control your ToM+ via a physical button connected to the expansion port.
-    \item \textbf{SERIAL TX}: This mode allows you to configure a serial trasmission line on this pin.
-    \item \textbf{SERIAL RX}: This mode allows you to configure a serial reception line on this pin.
-    \item \textbf{CTRL BUTTON}: This mode allows you to use the right wiper stalk button as a control button for your ToM+.
+    \item \textbf{IR CONTROLLER}: This mode allows ToM+ to be controlled by an infrared remote.
+    \item \textbf{KEY+ CONTROLLER}: This mode allows you to control your ToM+ via a rotational infrared remote. For these two first modes an additional configuration table will appear.
+    \item \textbf{SERIAL TX}: Allows you to configure a serial TX line (still not implemented).
+    \item \textbf{SERIAL RX}: Allows you to configure a serial RX line (still not implemented).
+    \item \textbf{CTRL BUTTON}: This mode allows you to use the right wiper stalk button as a control button for your ToM+ gestures.
 \end{itemize}
+
+\subsubsection{Standard OUTPUT mode}
+
+Both in \textbf{“OUTPUT”} and \textbf{“INPUT”} mode, you will need first of all to choose between
+\textit{“Active High”} or \textit{“Active Low”}. When an alarm triggers a LOW/HIGH signal is sent
+to the PIN chosen as the alarm output (either PIN1 or PIN2).
+
+If you select \textit{“Active High”}, the signal sent is HIGH (5V) and normally is held to LOW (0V).
+
+If you select \textit{“Active Low”}, the signal sent is LOW (0V) and normally is held to HIGH (5V).
 
 \begin{figure}[H]
     \centering
@@ -668,10 +678,12 @@ Since the most recent firmware releases, new modes other than INPUT and OUTPUT h
     \caption{Expansion settings page --- PIN1 table.}
 \end{figure}
 
-As you can see in the image below, when selecting the \textbf{“OUTPUT”} mode, you can choose
+As you can see in the image below, when selecting the \textbf{“OUTPUT”} mode, you can also choose
 the \textit{“Output Type”}. This is useful if you have a really specific output device that
 needs additional management that is not limited to the standard HIGH/LOW signal. To achieve this,
-you can choose from a list of already managed output devices, highlighted in the image above.
+you can choose from a list of already managed output devices, highlighted in the image above.\\
+
+After any change, press the \textbf{“SAVE”} button to save your changes, otherwise they will be lost when you leave the page.
 If you got an idea for a new output device that can be useful for the community, feel free to contact me.\\
 
 \begin{itemize}
@@ -690,14 +702,95 @@ If you got an idea for a new output device that can be useful for the community,
     It works the same as the charger fan with the difference that this works only while driving.
 \end{itemize}
 
+\subsubsection{Standard INPUT mode}
+
+As you can see in the image below, when selecting the \textbf{“INPUT”} mode, no additional tables will appear.
+This mode heavily relies on alarm configuration and triggers, so plese refer to Section~\ref{sec:web_alarm_triggers}.
+We chose \textbf{“INPUT”} mode in the second table, that works the same but it's intended for PIN2 of the expansion connector.
+
+After any change, press the \textbf{“SAVE”} button to save your changes, otherwise they will be lost when you leave the page.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/expansion_page3.png}
     \caption{Expansion settings page --- PIN2 table.}
 \end{figure}
 
-The second table works the same but it's intended for PIN2 of the expansion connector.
-After any change, press the \textbf{“SAVE”} button to save your changes, otherwise they will be lost when you leave the page.
+\subsubsection{IR CONTROLLER mode}
+
+First of all you will need an IR receiver (either a sensor or a module like the one in the first image)
+to be plugged in one of the expansion board PINs.
+This mode is intended to be used with a general IR remote, but the one I personally suggest
+is the one shown in the second image below, specially designed to be put on the steering wheel.
+
+\begin{figure}[ht]
+    \centering
+
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/ir_receiver.jpg}
+        \caption{IR receiver module.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/ir_controller_photo.jpg}
+        \caption{IR controller steering wheel remote.}
+    \end{subfigure}
+\end{figure}
+
+When you select the \textbf{“IR CONTROLLER”} mode for either PIN1 or PIN2 table, remember
+to press the \textbf{“SAVE”} button to save your changes. Once you saved, the page will
+reload and an additional table will appear below, you can see it in the image below.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/ir_settings.png}
+    \caption{Expansion settings page --- IR settings table.}
+\end{figure}
+
+This table will help you to pair each button of the IR controller with the respective IR code.
+In the top part of the table there is a little text area that you can use as an \textbf{IR code
+receiver moditor} to test in real-time IR codes of your remote after plugging the IR receiver.\\
+
+Using this, you can fill the other fields accordingly. The last one is particularly important
+and it's basically the code the remote sends when you are holding down a button.
+After that, remeber to press the \textbf{“SAVE”} button to save your changes, otherwise they will be lost when you leave the page.
+Lastly, a useful \textbf{“Default”} button is located next to it, to easily revert your changes if needed.
+
+\subsubsection{KEY+ CONTROLLER mode}
+
+This mode is really similar to the one just discussed, but is intended to be used with
+another type of controller (the one in the picture below). It's a Bluetooth 
+wireless rotary controller for car audio systems, which performs different
+actions depending on how fast/slow you are rotating the external ring. And of course it
+has some more buttons as well in the internal part.\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figures/keyp_controller.jpg}
+    \caption{Bluetooth wireless rotary controller.}
+\end{figure}
+
+When you select the \textbf{“KEY+ CONTROLLER”} mode for either PIN1 or PIN2 table, remember
+to press the \textbf{“SAVE”} button to save your changes. Once you saved, the page will
+reload and an additional table will appear below, you can see it in the image below.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/keyp_settings.png}
+    \caption{Expansion settings page --- KEY+ settings table.}
+\end{figure}
+
+This works the same as the IR settings table. The main difference is about how ToM+ reads
+this values from the expansion port. \todo{TODO}
+
+\subsubsection{CTRL BUTTON mode}
+
+This last table holds the configuration needed to make the provided right \textbf{wiper stalk button} (Figure~\ref{fig:wiper_stalk_button}) work.
+You can use this button to navigate through all ToM+ UI without using the touch-screen, with
+these three main \textbf{actions}: \textit{“Browse items”}, \textit{“Change page”}, \textit{“Select-deselect”}.
+To achieve this, there are three type of \textbf{button presses}: \textit{“Short”}, \textit{“Medium”}, \textit{“Long”}.\\
 
 \begin{figure}[H]
     \centering
@@ -705,10 +798,6 @@ After any change, press the \textbf{“SAVE”} button to save your changes, oth
     \caption{Expansion settings page --- Wiper stalk button table.}
 \end{figure}
 
-This last table holds the configuration needed to make the provided right \textbf{wiper stalk button} (Figure~\ref{fig:wiper_stalk_button}) work.
-You can use this button to navigate through all ToM+ UI without using the touch-screen, with
-these three main \textbf{actions}: \textit{“Browse items”}, \textit{“Change page”}, \textit{“Select-deselect”}.
-To achieve this, there are three type of \textbf{button presses}: \textit{“Short”}, \textit{“Medium”}, \textit{“Long”}.
 So, in the first part of this table you can rearrange this actions with the gestures you prefer.\\
 
 \begin{itemize}

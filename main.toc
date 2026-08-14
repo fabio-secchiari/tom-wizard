@@ -87,4 +87,9 @@
 \contentsline {subsection}{\numberline {4.4.5}Trip history page}{56}{subsection.4.4.5}%
 \contentsline {subsection}{\numberline {4.4.6}Network settings page}{57}{subsection.4.4.6}%
 \contentsline {subsection}{\numberline {4.4.7}Expansion settings page}{58}{subsection.4.4.7}%
-\contentsline {subsection}{\numberline {4.4.8}Alarm triggers page}{62}{subsection.4.4.8}%
+\contentsline {subsubsection}{Standard OUTPUT mode}{59}{section*.89}%
+\contentsline {subsubsection}{Standard INPUT mode}{60}{section*.91}%
+\contentsline {subsubsection}{IR CONTROLLER mode}{60}{section*.93}%
+\contentsline {subsubsection}{KEY+ CONTROLLER mode}{61}{section*.96}%
+\contentsline {subsubsection}{CTRL BUTTON mode}{62}{section*.100}%
+\contentsline {subsection}{\numberline {4.4.8}Alarm triggers page}{64}{subsection.4.4.8}%

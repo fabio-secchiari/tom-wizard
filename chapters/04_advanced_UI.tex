@@ -545,7 +545,7 @@ generated directly by the black box and doesn't undergo any further processing.
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/monitor_page1.png}
-    \caption{Data monitor page (top tables).}
+    \caption{Data monitor page --- top tables.}
 \end{figure}
 
 In the second part of the page, there are the last three tables which contain dashboard data,
@@ -555,7 +555,7 @@ Press the \textbf{“HOME”} green button pointed by the red arrow to return to
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/monitor_page2.png}
-    \caption{Data monitor page (bottom tables).}
+    \caption{Data monitor page --- bottom tables.}
 \end{figure}
 
 \clearpage
@@ -819,3 +819,83 @@ At the end of this page, pointed by a red arrow in the image, there's the \textb
 \subsection{Alarm triggers page}
 \label{sec:web_alarm_triggers}
 
+When something happens on ToM+ and you want to get noticed about it, you can
+choose how to be notified and when in this page. You can have up to \textbf{ten
+alarms} running simultaneously and TOM+ constantly checks the state of each condition.
+In the image is shown the first table, where you can see currently active alarms.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/alarm_page1.png}
+    \caption{Alarm page --- Existing alarms list table.}
+\end{figure}
+
+The headers of the tables are practically the elements of the condition that ToM+ listens for.\\
+
+\begin{itemize}
+    \item \textbf{ITEM}: This is the data to be checked, chosen from the list of Section~\ref{sec:icon_list}.
+    \item \textbf{CONDITION}: This is the operator sign used when comparing the values.
+    \item \textbf{VALUE}: This is a signed integer value used as the second term of the comparison.
+    \item \textbf{ACTION}: This is the action performed when the alarm triggers. See the next table.
+    \item \textbf{SEND-MQTT}: This is a binary field and if crossed, pulish a message on MQTT topic.
+    \item \textbf{COMMAND}: This is an optional string to be sent as an additional command.
+\end{itemize}
+\  \\
+The first alarm trigger checks the battery consumption and activates the PIN2 of the 
+expansion board if it's greater than 35A. In this specific example, it is used to power
+on the rear brake light when the regeneration is enough to make the Twizy slow down.\\
+
+The second alarm trigger checks the battery SOC and shows on the display a simple pop-up
+that notify that the battery level is lower than 30\%. By checking the \textit{“Change page”} field,
+I added a further option that will tell ToM+ to send a MQTT message when this alarm triggers.\\
+
+The third alarm trigger checks the battery SOC and once charge is complete,
+e.g. equal 97\%, it does the same as before but performs an additional command. The
+command \textit{cmd/charge/Power 0} disables a Tasmota Wi-Fi switch that connects the
+Twizy plug to the wall socket.
+
+So, the function of the \textbf{“COMMAND”} column is really useful and allows you to embed 
+your ToM+ in your IoT house. See the Appendix~\ref{apx:tasmota} for detailed configurations. \todo{TODO}\\
+
+When you want to remove a specific alarm you will just need to press the \textbf{“Remove”} button in its last column.\\
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/alarm_page2.png}
+    \caption{Alarm page --- Adding new alarm table.}
+\end{figure}
+
+In the second table you can add a new alarm to the list we have just discussed.
+First of all you have to choose the \textbf{ITEM}, between all the available data listed in Section~\ref{sec:icon_list}.
+In this choice box items are organized as in the list just quoted.
+Then select the \textbf{CONDITION}, i.e. the operator of the comparison, between \textit{“lower”}, \textit{“greater”} or \textit{“equal”}.
+Next it's time for the reference \textbf{VALUE}, a signed integer number, the right term of the comparison.\\
+
+Let's take some time to explain all of the possible \textbf{ACTION}s.\\
+
+\begin{itemize}
+    \item \textit{pop-up}: a yellow pop-up notifying the item value appears in the center of the screen. To hide it just press it once. You can see a pop-up example in the first image below.
+    \item \textit{pop-up 10 sec}: a yellow pop-up notifying the item value stays on the screen for ten seconds.
+    \item \textit{silent}: no visible actions happen: it's commonly used to post MQTT messages only.
+    \item \textit{icon x fix}: icon x (\textit{where x can be 2,3,4 or 5}) lights on. See Figure~\ref{fig:alarm_icons} for alarm icons.
+    \item \textit{icon x blink}: icon x (\textit{where x can be 2,3,4 or 5}) starts blinking.
+    \item \textit{pin1 active}: PIN1 of the expansion board gets activated (LOW or HIGH depending on the level selected in the expansion settings page in Section~\ref{sec:web_alarm_triggers}).
+    \item \textit{pin2 active}: PIN2 of the expansion board gets activated. In this example PIN2 was set as INPUT mode so it's greyed out, because it can't represent an OUTPUT.
+\end{itemize}
+\  \\
+\begin{figure}[ht]
+    \centering
+
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/pop-up.PNG}
+        \caption{Pop-up: Battery temp > 89°C.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/alarm_icons.png}
+        \caption{Alarm icons (2,3,4 and 5).}
+    \end{subfigure}
+\end{figure}

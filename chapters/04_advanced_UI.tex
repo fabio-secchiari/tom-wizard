@@ -1059,7 +1059,55 @@ From now on, your ToM is finally upgraded to ToM+, enjoy!
 
 Press the \textbf{“HOME”} green button at the end of the table to return to the landing page.
 
+\clearpage
 
 \subsection{Advanced Info \& Settings page}
 \label{sec:web_advanced_info}
 
+This page is made for various advanced settings that aren't available in the ToM+ display
+settings pages discussed in Section~\ref{sec:settings_page} due to space reasons.\\
+
+The first flag, \textit{Disable Auto-dimming}, can be checked if you don't like ToM+
+LCD display to adapt the brightness when turning on the light beams.
+Otherwise, you can adjust the \textit{Dimming brightness (\%)} expressed in percentage (up to 100\%),
+and set by yourself the factor of brightness reduction when the light beams are activated.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/adv_sett_page1.png}
+    \caption{Advanced Info page --- Advanced settings page.}
+\end{figure}
+
+Next, we have the \textbf{Warning messages at power-off} subsection, where you can
+select the reminders (light beam and handbrake) and info (system errors and charge limits)
+shown on ToM+ shutdown pop-up. It looks like the one shown in the image below,
+letting you know, for instance, if you forgot to engage the handbrake.
+The last two check boxes are for future uses, not implemented yet.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figures/pop-up_finale.png}
+    \caption{Warning message at power-off.}
+\end{figure}
+
+Another available flag is \textit{Invert current value sign}. If checked, it basically shows
+a signed integer in current consumption values instead of their absolute values.
+
+The little subgroup below is dedicated to the \textbf{Cheatzy} compatibility with ToM+.
+You can set your \textit{Cheating factor} multiplied by 10: for example, 2.0 becomes 20.
+You can also select if the Cheatzy is enabled when charging or during regenerative braking
+using the \textit{Cheat also Charge/Reku} flag. These settings only make sense if the Cheatzy 
+is connected and on, otherwise they may alter your current values incorrectly.\\
+
+The next two values are additional configurations for the ToM+ calculated \textbf{Remaining KM},
+based on recent consumption sampling. Here you can adjust how often the sampling
+occurs (default: one per minute) in the \textit{Remaining KM sampling time (min)} and
+how much the last sample affects the total calculation (default: 10\%) in the
+\textit{Remaining KM sample weight (\%)}.\\
+
+Lastly we have the \textit{Miles to Kilometers} flag, that helps when your BigToM
+was made from a mile-based dashboard, but you want km/h as its measure unit. If enabled,
+ToM+ will perform this conversion for you.
+
+Please remember to \textbf{save your changes} by pressing the \textbf{“SAVE”} button
+at the end of this table. If you don't do this, your changes will be lost when you leave the page.

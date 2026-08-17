@@ -260,6 +260,7 @@ used and we can move on to the next step, which is configuring ToM+ with the bro
 \clearpage
 
 \subsection{Connect ToM+ to MQTT broker}
+\label{sec:mqtt_connection}
 
 Now that it's clear what MQTT (Section~\ref{sec:brief_mqtt}) is and we have set up our
 personal broker (Section~\ref{sec:free_broker}) let's see where on the display we can
@@ -878,10 +879,10 @@ Let's take some time to explain all of the possible \textbf{ACTION}s.\\
     \item \textit{pop-up}: a yellow pop-up notifying the item value appears in the center of the screen. To hide it just press it once. You can see a pop-up example in the first image below.
     \item \textit{pop-up 10 sec}: a yellow pop-up notifying the item value stays on the screen for ten seconds.
     \item \textit{silent}: no visible actions happen: it's commonly used to post MQTT messages only.
-    \item \textit{icon x fix}: icon x (\textit{where x can be 2,3,4 or 5}) lights on. See Figure~\ref{fig:alarm_icons} for alarm icons.
+    \item \textit{icon x fix}: icon x (\textit{where x can be 2,3,4 or 5}) lights on. See Figure~\ref{fig:alarm_icons2} for alarm icons.
     \item \textit{icon x blink}: icon x (\textit{where x can be 2,3,4 or 5}) starts blinking.
     \item \textit{pin1 active}: PIN1 of the expansion board gets activated (LOW or HIGH depending on the level selected in the expansion settings page in Section~\ref{sec:web_alarm_triggers}).
-    \item \textit{pin2 active}: PIN2 of the expansion board gets activated. In this example PIN2 was set as INPUT mode so it's greyed out, because it can't represent an OUTPUT.
+    \item \textit{pin2 active}: PIN2 of the expansion board gets activated. In this example PIN2 was set as INPUT mode so it's greyed out, because it can't represent an OUTPUT action.
 \end{itemize}
 \  \\
 \begin{figure}[ht]
@@ -896,6 +897,169 @@ Let's take some time to explain all of the possible \textbf{ACTION}s.\\
     \begin{subfigure}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/alarm_icons.png}
-        \caption{Alarm icons (2,3,4 and 5).}
+        \caption{Alarm icons (2,3,4 and 5).}\label{fig:alarm_icons2}
     \end{subfigure}
 \end{figure}
+
+The next field is the binary \textbf{SEND MQTT} flag: if enabled, ToM+ published a MQTT
+message on the configured MQTT out topic (e.g. TOMout, see Section~\ref{sec:mqtt_connection})
+when the alarm triggers as an additional notify. Last but not least is the \textbf{AUX CMD}
+text field, that holds an additional command to be sent via MQTT to other IoT devices.
+See the Appendix~\ref{apx:tasmota} for detailed configurations of a Tasmota switch as an example.\\
+
+Finally you can add your alarm by pressing the \textbf{“Add to list”} button. The page
+automatically reloads and the alarm trigger is appended to the list in the first table.
+
+Press the \textbf{“HOME”} green button at the end of the page to return to the landing page.
+
+
+\subsection{Alarms log page}
+\label{sec:web_alarms_log}
+
+This page stores the last 21 alarm triggers and does the same function as the log
+page of ToM, as shown in Section~\ref{sec:alarm_log}. You can see and remove any 
+unwanted records as well, by pressing the \textbf{“Remove”} button near the one you
+would like to permanently delete (on ToM+ display too).\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/alarm_log1.png}
+    \caption{Alarm log page table.}
+\end{figure}
+
+Obviously the table holds the \textbf{ITEM} and \textbf{VALUE} that triggered the alarm.
+But there are additional fields with the date and time when the trigger happened.
+Then, as usual, press the \textbf{“HOME”} green button at the end of the page to return to the landing page.
+
+
+\subsection{OTA Update \& Preferences page}
+\label{sec:web_ota_update}
+
+In this page you can \textbf{update the firmware} on the fly from the web interface, without having to
+struggle with the flash tool as in the older versions. This new feature is time saving
+and much more user friendly, so be sure to have always the latest version of the firmware
+installed, to have access to the newest features and improvements!
+
+\subsubsection{OTA Update}
+
+The first table gives you some information about the blackbox firmware: let's discuss
+these values. The \textbf{ESP fw} is probably the most important item in the grid because
+it tells you the version that is currently installed and loaded on the ESP motherboard.
+
+Another useful field is the \textbf{S/N} that stands for Serial Number, that you can find
+on ToM+ as well as we seen in Figure~\ref{fig:settings_page}. The next row is a little
+more technical and it is strictly related to the OTA (Over-The-Air) update mechanism.
+\textbf{Current ptn} and \textbf{Next ptn} refer to the partitions addresses where the
+firmware is currently stored and where it will be stored while the update is in progress.\\
+
+Sometimes firmware patches, like bug fixes or minor stuff, may be released without
+changing the version number (e.g. 2.4). In these cases, it can be useful knowing which
+specific binary file is installed, so the next two fields hold its complete name.
+As you can see, there are two main firmware partitions, \textbf{Ota0} and \textbf{Ota1},
+so that you can have two different versions installed and change between them if needed.
+Here, the full name is \textit{ESP32\_Fw24\_70\_4error12} for both.
+
+The last field is the complete name of the \textbf{Special partition} firmware, which
+is an additional storage used to hold third-party softwares (e.g. the Twizy-cfg tuning software).
+For more information about tuning your Twizy using Twizy-cfg on ToM+ refer to Appendix~\ref{apx:tuning}. \todo{TODO}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/ota_page3.png}
+    \caption{OTA Update page --- Update and info table.}
+\end{figure}
+
+The second part of this table allows you to update the firmware or load a third-party
+software. First of all download the binary file (with the .bin extension) you want to 
+install on ToM+. Then press the \textbf{“Browse\ldots”} button and navigate your device
+folders until you find the desired file.
+
+If it is a \textit{standard ToM+ update}, go and press the \textbf{“UPDATE”} button. To check
+the update status, an orange progress bar will appear at the bottom of the table with
+its percentage. When it reaches 100\% ToM+ will eventually reboot to apply the changes.
+
+If it is a \textit{third-party software}, be sure to check the \textit{“Update to special partition”}
+option and, only after that, press the \textbf{“UPDATE”} button. As soon as the update
+is completed ToM+ will reboot and load the special partition firmware.\\
+
+In the \textbf{“BOOT OPTIONS”} table instead, once you have loaded the desired firmwares, you can switch
+bewteen them if needed. Let's say I'm running ToM+ 2.4 firmware and I want to do some
+tuning with Twizy-cfg third-party software; I have already loaded both of them in the correct
+partitions. In order to achieve this, press the \textit{“Reboot from special partition”}
+button and wait for ToM+ to reboot, then follow the Appendix~\ref{apx:tuning} for more.\\
+
+\textit{“Reboot from Ota0 partition”} and \textit{“Reboot from Ota1 partition”} buttons
+are used to change between ToM+ firmware version. Let's say I'm running ToM+ 2.4 firmware
+but for some reason I want to get back to the 2.3 version I had before. To do so, press
+the respective button to reboot from either Ota1 and Ota0. ToM+ will instantly reboot
+and you will get disconnected to the web interface.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/ota_boot.png}
+    \caption{OTA Update page --- Boot options table.}
+\end{figure}
+
+Moving to the next one, we have the \textbf{“LCD FIRMWARE UPDATE”} table, that allows
+to perform OTA updates for the LCD display as well. This means no more struggling with
+the microSD card and the little hole on the display.\\
+
+\textbf{WARNING:} As written in the table you \textbf{MUST NOT} close this web page
+while updating: disabling your screen saver is adviceable to avoid update failure.
+The process may take some minutes, depending on the firmware version, up to 10 minutes.\\
+
+This is similar to the blackbox OTA update. So, first of all download the file (with the .tft extension) you want to 
+install on ToM+. Then press the \textbf{“Browse\ldots”} button and navigate your device
+folders until you find the desired file.
+
+If you are \textit{updating the main display}, go and press the \textbf{“UPDATE LCD”} button.
+To check the update status, the blue progress bar under the disclaimer box will show
+chunks copied to the LCD. When it finishes the display will reboot (not the blackbox).
+
+If you are \textit{updating the twin display}, be sure to check the \textit{“Update AUX LCD”}
+option and, only after that, press the \textbf{“UPDATE LCD”} button. As soon as the update
+is completed the LCD display will reboot and load the desired firmware.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/ota_lcd.png}
+    \caption{OTA Update page --- LCD firmware update table.}
+\end{figure}
+
+
+\subsubsection{Preferences and HW Upgrade}
+
+In the next web page section we can manage preferences, which includes WiFi and MQTT
+configurations, ToM+ pages icon arrangements and even more. So, it is always adviceable
+to have a \textbf{backup before updating}, to avoid entering your passwords again if an update
+goes wrong. In order to do that, press the \textbf{“BACKUP”} button and a file called
+\textit{prefs.ToM} will be downloaded on your device. Sometimes a pop-up opens to
+warn you that this file has a strange extension, hit the \textit{Keep} button and download it anyway.\\
+
+The opposite process is easy as well. Press the \textbf{“Browse\ldots”} button and navigate your device
+folders until you find the preferences file \textit{prefs.ToM}. To apply the changes
+press the \textbf{“RESTORE”} button and you will be redirected to the landing page as a confirm.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/prefs_page.png}
+    \caption{OTA Update page --- Preferences backup table.}
+\end{figure}
+
+This next table is very specific to users of older ToM versions that have now received
+the password to upgrade their device to ToM+ without changing the black box. If this
+is your case, please type the password in the text field and press the \textbf{“UPGRADE”} button.
+From now on, your ToM is finally upgraded to ToM+, enjoy!
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/hw_upgrade.png}
+    \caption{OTA Update page --- Upgrade hardware table.}
+\end{figure}
+
+Press the \textbf{“HOME”} green button at the end of the table to return to the landing page.
+
+
+\subsection{Advanced Info \& Settings page}
+\label{sec:web_advanced_info}
+

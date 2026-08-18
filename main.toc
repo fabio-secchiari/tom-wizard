@@ -98,3 +98,7 @@
 \contentsline {subsubsection}{OTA Update}{67}{section*.107}%
 \contentsline {subsubsection}{Preferences and HW Upgrade}{69}{section*.112}%
 \contentsline {subsection}{\numberline {4.4.11}Advanced Info \& Settings page}{70}{subsection.4.4.11}%
+\contentsline {subsection}{\numberline {4.4.12}Charging Preferences \& Log}{72}{subsection.4.4.12}%
+\contentsline {subsubsection}{Charging preferences}{72}{section*.119}%
+\contentsline {subsubsection}{Charging history}{74}{section*.121}%
+\contentsline {subsection}{\numberline {4.4.13}Time \& Date page}{74}{subsection.4.4.13}%

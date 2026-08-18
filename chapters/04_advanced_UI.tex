@@ -1075,7 +1075,7 @@ and set by yourself the factor of brightness reduction when the light beams are 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/adv_sett_page1.png}
-    \caption{Advanced Info page --- Advanced settings page.}
+    \caption{Advanced Info page --- Advanced settings table.}
 \end{figure}
 
 Next, we have the \textbf{Warning messages at power-off} subsection, where you can
@@ -1111,3 +1111,153 @@ ToM+ will perform this conversion for you.
 
 Please remember to \textbf{save your changes} by pressing the \textbf{“SAVE”} button
 at the end of this table. If you don't do this, your changes will be lost when you leave the page.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/adv_info.png}
+    \caption{Advanced Info page --- Advanced info table.}
+\end{figure}
+
+The table above holds data about your battery, such as stored capacity, \textbf{SOH},
+\textbf{battery mileage}, total consumed kWh and about charges, such as the number of
+\textit{total}, \textit{full} and \textit{partial} ones and the \textbf{maximum accepted charge power}.\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/item_scroll.png}
+    \caption{Advanced Info page --- Items scroll table.}
+\end{figure}
+
+This last table is a really peculiar feature introduced some updates ago that allows
+you to have dynamically changing items in pages of your choice. It can be applied to
+\textit{battery}, \textit{motor}, \textit{gyroscope}, \textit{trip} and \textit{charging}
+pages and you can choose which one using the \textbf{“Page”} field.
+
+Then, you can select which position you would like to be scrolling the data items of
+your choice. To do so, use the \textbf{“Position”} field and choose from the list the
+one you prefer, referring to Figure~\ref{fig:icon_arrangement} for the layout arrangement.\\
+
+The \textbf{“Freq”} field is the scroll frequency, basically how much time each data
+will stay in that position before ciclying to the next one. As you may notice, it is
+specified in brackets that the field will be multiplied by \textit{5 seconds}. This
+means inserting the value \textit{1} will result in a \textit{5 seconds} frequency,
+the value \textit{2} will result in a \textit{10 seconds} one and so on.
+
+The most important part is choosing the items to scroll and you can select up to
+ten data values. In the \textbf{“Scrolling items”} text areas, insert the list of
+desired item numbers (e.g. 59 or 48), one per each, referring to the list in
+Section~\ref{sec:icon_list}.\\
+
+Always remember to save your changes by pressing the \textbf{“SAVE”} button at the end of this
+table. If you don't do this, your changes will be lost when you leave the page.
+
+Press the \textbf{“HOME”} green button at the end of the table to return to the landing page.
+
+
+
+\subsection{Charging Preferences \& Log}
+\label{sec:web_charging_prefs}
+
+This page is split into two main tables: the first one is used to control the charging
+process, while the second one holds a list of the last 15 charging with some additional data.
+
+\subsubsection{Charging preferences}
+
+Starting from the most useful ones, we have a \textbf{“Charging status”} field that holds information about
+the current status of the car, including \textit{220V main} and \textit{charging process}
+with their ON and OFF flags.
+
+Just below there is the \textbf{“Charge power limit”} box, where you can choose how
+much power your Twizy can use while charging, ranging from $0.4 kW$  up to $2.3 kW$ with
+7 levels to choose from (select \textit{0 to disable the power limit}).
+
+In the top right corner there is the \textbf{“ABORT CHARGING”} button, that instantly
+stops gracefully the charging process, just like the one on ToM+ display in the settings
+page we discusses in Section~\ref{sec:settings_page}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/charging_process.png}
+    \caption{Charging Preferences page --- Charging process control table.}
+\end{figure}
+
+Right after there is the \textbf{“Stop charge at SOC \%”} field, that is the charge
+percentage at which ToM+ automatically sends the signal to abort the charging process.
+Just for you to know, limiting the maximum charge range (95\% or less) will slow down battery SOH decay.
+
+Moving on to the next field, we have the \textbf{“Full charge after”} field that is
+strictly related to the last one we discussed. Basically, this won't stop charge at
+the selected SOC once every \textit{X} charges (\textit{for instance 10} as in the image).
+Bear in mind that a 100\% charge once in a while is helpful to rebalance battery cells voltages.
+
+Another related field is the \textbf{“Max charge once (next/current)”} flag, that works
+like a button and tells ToM+ to perform a full charge, without chosen SOC stopping. This
+overrides the previous field and will be applied, \textbf{after pressing “SAVE”}, to the
+current charging process if it is already in progress or to the next one if not.\\
+
+
+Now there is a safety field, the \textbf{“Charger max temperature”}, where you can
+set a threshold (integer value expressed in °C), that if passed with an user-defined margin
+hysteresis, ToM+ slowly reduces the power limit level we saw before. It keeps reducing
+it, by two levels if needed, until the temperatures returns normal and so will do the power limit.
+
+The aforesaid margin is customizable in the appropriate \textbf{“Temp margin”} field, where
+you can input an integer value (expressed in °C), which will be added to the maximum
+charger temperature to loose the threshold before reducing charging power.
+
+Another related field is the \textbf{“Abort temperature”}, that holds the last safety threshold
+for the charger temperature, that if passed makes ToM+ abort the charge immediately.\\
+
+
+Next we have three MQTT control fields, distinguished by their progressive number.
+By checking one of this flag allows you to configure remotely the parameter on its left
+using the MQTT protocol. To achieve this, after enabling the appropriate field and
+\textbf{pressing “SAVE”}, you will just need to publish a MQTT message on the topic
+specified between the brackets (e.g. \textit{001} or \textit{002}) on your broker
+(configured in Section~\ref{sec:mqtt_connection}).
+
+If you enable the \textbf{MQTT control (001)}, you can start and stop
+the charging publishing either \textit{0} or \textit{1} on the MQTT topic \textit{001}.
+Same is for \textbf{MQTT control (002)} publishing on \textit{002} a value between
+\textit{0} and \textit{7} and \textbf{MQTT control (003)} on \textit{003} with a value
+between \textit{0} and \textit{100}.\\
+
+Last but not least, we have the \textbf{“Aux Cmd”} field, that stands for auxilliary
+command, and behaves like the one we already discussed in the alarm trigger page in
+Section~\ref{sec:web_alarm_triggers}. It is sent when the charging is complete or
+when the charge stops at the specified SOC.\\
+
+
+After any change, press the \textbf{“SAVE”} button to \textit{save your changes}, otherwise they will be lost when you leave the page.
+
+\clearpage
+
+\subsubsection{Charging history}
+
+The charging history table holds the last fifteen charging processes along with some
+useful values to enrich them. As you can see, there is the date and time, along with
+the \textbf{ODO Kilometers} value when the charging started. Next to it, we have how
+much time the charging took and the \textbf{Average Power}, along with the \textbf{charged kWh}.
+Finally we have the \textit{init SOC} and \textit{end SOC}, that are the starting and ending percentage.\\
+
+
+The last column holds some additional \textbf{Notes} about the charging process, such
+as how did it stop (either stop SOC reached or manual aborted) and more.
+
+If you want you can manually delete some records too, pressing the \textit{X} button
+at the end of the desired record. It is possible to delete all of them at once by
+pressing the \textbf{CLEAR HISTORY} button located in the bottom part of the table.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/charging_history.png}
+    \caption{Charging Preferences page --- Charging history table.}
+\end{figure} \todo{TODO}
+
+Press the \textbf{“HOME”} green button below the last table to return to the landing page.
+
+
+\subsection{Time \& Date page}
+\label{sec:web_time_date}
+

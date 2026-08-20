@@ -50,19 +50,19 @@
 \contentsline {section}{\numberline {3.9}The charging page}{34}{section.3.9}%
 \contentsline {section}{\numberline {3.10}The settings page}{35}{section.3.10}%
 \contentsline {subsection}{\numberline {3.10.1}First settings page}{35}{subsection.3.10.1}%
-\contentsline {subsubsection}{Customizing page values}{35}{section*.45}%
-\contentsline {subsubsection}{Choosing the starting page}{36}{section*.48}%
-\contentsline {subsubsection}{Adjusting display brightness}{37}{section*.50}%
-\contentsline {subsubsection}{Enable/Disable the charging page}{37}{section*.51}%
-\contentsline {subsubsection}{Setting your battery capacity}{37}{section*.53}%
-\contentsline {subsubsection}{Calibrating gyroscope module}{37}{section*.54}%
-\contentsline {subsubsection}{Changing battery page mode}{37}{section*.56}%
+\contentsline {subsubsection}{Customizing page values}{35}{section*.46}%
+\contentsline {subsubsection}{Choosing the starting page}{36}{section*.49}%
+\contentsline {subsubsection}{Adjusting display brightness}{37}{section*.51}%
+\contentsline {subsubsection}{Enable/Disable the charging page}{37}{section*.52}%
+\contentsline {subsubsection}{Setting your battery capacity}{37}{section*.54}%
+\contentsline {subsubsection}{Calibrating gyroscope module}{37}{section*.55}%
+\contentsline {subsubsection}{Changing battery page mode}{37}{section*.57}%
 \contentsline {subsection}{\numberline {3.10.2}Second settings page}{38}{subsection.3.10.2}%
-\contentsline {subsubsection}{Changing charge level}{38}{section*.58}%
-\contentsline {subsubsection}{Manual control of expansion PIN1}{39}{section*.60}%
-\contentsline {subsubsection}{Stopping the charge at a specific SOC}{39}{section*.62}%
-\contentsline {subsubsection}{Making a max parameters charge}{39}{section*.63}%
-\contentsline {subsubsection}{Abort charging process}{39}{section*.65}%
+\contentsline {subsubsection}{Changing charge level}{38}{section*.59}%
+\contentsline {subsubsection}{Manual control of expansion PIN1}{39}{section*.61}%
+\contentsline {subsubsection}{Stopping the charge at a specific SOC}{39}{section*.63}%
+\contentsline {subsubsection}{Making a max parameters charge}{39}{section*.64}%
+\contentsline {subsubsection}{Abort charging process}{39}{section*.66}%
 \contentsline {subsection}{\numberline {3.10.3}The right side menu}{40}{subsection.3.10.3}%
 \contentsline {chapter}{\numberline {4}Advanced ToM+ configurations}{41}{chapter.4}%
 \contentsline {section}{\numberline {4.1}The WiFi settings page}{41}{section.4.1}%
@@ -87,18 +87,20 @@
 \contentsline {subsection}{\numberline {4.4.5}Trip history page}{56}{subsection.4.4.5}%
 \contentsline {subsection}{\numberline {4.4.6}Network settings page}{57}{subsection.4.4.6}%
 \contentsline {subsection}{\numberline {4.4.7}Expansion settings page}{58}{subsection.4.4.7}%
-\contentsline {subsubsection}{Standard OUTPUT mode}{59}{section*.89}%
-\contentsline {subsubsection}{Standard INPUT mode}{60}{section*.91}%
-\contentsline {subsubsection}{IR CONTROLLER mode}{60}{section*.93}%
-\contentsline {subsubsection}{KEY+ CONTROLLER mode}{61}{section*.96}%
-\contentsline {subsubsection}{CTRL BUTTON mode}{62}{section*.100}%
+\contentsline {subsubsection}{Standard OUTPUT mode}{59}{section*.91}%
+\contentsline {subsubsection}{Standard INPUT mode}{60}{section*.93}%
+\contentsline {subsubsection}{IR CONTROLLER mode}{60}{section*.95}%
+\contentsline {subsubsection}{KEY+ CONTROLLER mode}{61}{section*.98}%
+\contentsline {subsubsection}{CTRL BUTTON mode}{62}{section*.102}%
 \contentsline {subsection}{\numberline {4.4.8}Alarm triggers page}{64}{subsection.4.4.8}%
 \contentsline {subsection}{\numberline {4.4.9}Alarms log page}{66}{subsection.4.4.9}%
 \contentsline {subsection}{\numberline {4.4.10}OTA Update \& Preferences page}{67}{subsection.4.4.10}%
-\contentsline {subsubsection}{OTA Update}{67}{section*.107}%
-\contentsline {subsubsection}{Preferences and HW Upgrade}{69}{section*.112}%
+\contentsline {subsubsection}{OTA Update}{67}{section*.109}%
+\contentsline {subsubsection}{Preferences and HW Upgrade}{69}{section*.114}%
 \contentsline {subsection}{\numberline {4.4.11}Advanced Info \& Settings page}{70}{subsection.4.4.11}%
 \contentsline {subsection}{\numberline {4.4.12}Charging Preferences \& Log}{72}{subsection.4.4.12}%
-\contentsline {subsubsection}{Charging preferences}{72}{section*.119}%
-\contentsline {subsubsection}{Charging history}{74}{section*.121}%
-\contentsline {subsection}{\numberline {4.4.13}Time \& Date page}{74}{subsection.4.4.13}%
+\contentsline {subsubsection}{Charging preferences}{72}{section*.121}%
+\contentsline {subsubsection}{Charging history}{74}{section*.123}%
+\contentsline {subsection}{\numberline {4.4.13}Time \& Date page}{75}{subsection.4.4.13}%
+\contentsline {subsection}{\numberline {4.4.14}BigToM \textbackslash ToM+ Settings page}{76}{subsection.4.4.14}%
+\contentsline {subsection}{\numberline {4.4.15}Diagnostic page}{77}{subsection.4.4.15}%

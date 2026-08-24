@@ -1,106 +1,122 @@
-\contentsline {chapter}{\numberline {1}Description and Features List}{3}{chapter.1}%
-\contentsline {section}{\numberline {1.1}ToM+ Feature Highlights}{3}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}A new Twizy dashboard}{3}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}WiFi connectivity}{4}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}ToM phone application}{5}{subsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.1.4}Brief consumption overview}{7}{subsection.1.1.4}%
-\contentsline {section}{\numberline {1.2}Provided ToM+ Kit}{8}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}The Black Box}{8}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}The Expansion Connector}{9}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}The LCD Display and stand}{9}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4}Additional Useful Components}{11}{subsection.1.2.4}%
-\contentsline {chapter}{\numberline {2}Installing Twiz O' Meter on Your Car}{13}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Display LCD position}{13}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Clip-on mode}{13}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}3D stand mode}{14}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Cable connection}{14}{subsection.2.1.3}%
-\contentsline {section}{\numberline {2.2}Black box position}{15}{section.2.2}%
-\contentsline {chapter}{\numberline {3}Basic user interface explanation}{16}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Icon meaning list}{16}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Page icons}{16}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Battery group}{17}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Charging group}{17}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}Motor group}{18}{subsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.1.5}Expansion port group}{18}{subsection.3.1.5}%
-\contentsline {subsection}{\numberline {3.1.6}Gyroscope group}{18}{subsection.3.1.6}%
-\contentsline {subsection}{\numberline {3.1.7}Trip group}{19}{subsection.3.1.7}%
-\contentsline {subsection}{\numberline {3.1.8}Dashboard group}{20}{subsection.3.1.8}%
-\contentsline {section}{\numberline {3.2}Dashboard page}{21}{section.3.2}%
-\contentsline {section}{\numberline {3.3}The pages layout}{22}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Changing the foreground data}{22}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Changing the active page}{23}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}The status icon bar}{23}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Pop-ups}{24}{subsection.3.3.4}%
-\contentsline {section}{\numberline {3.4}The battery info page}{25}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Checking voltage and temperature}{25}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}The condensed battery info page}{26}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}The alarm log page}{27}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Checking older alarm triggers}{28}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Deleting an alarm trigger}{28}{subsection.3.5.2}%
-\contentsline {section}{\numberline {3.6}The trip page}{29}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Changing the current trip}{30}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Disable trip recording}{30}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}Reset a trip}{30}{subsection.3.6.3}%
-\contentsline {section}{\numberline {3.7}The trip history page}{31}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}How to access the trip history page}{31}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Main trip history page controls}{32}{subsection.3.7.2}%
-\contentsline {section}{\numberline {3.8}The error page}{33}{section.3.8}%
-\contentsline {subsection}{\numberline {3.8.1}How to access the error page}{33}{subsection.3.8.1}%
-\contentsline {subsection}{\numberline {3.8.2}Main error page controls}{33}{subsection.3.8.2}%
-\contentsline {section}{\numberline {3.9}The charging page}{34}{section.3.9}%
-\contentsline {section}{\numberline {3.10}The settings page}{35}{section.3.10}%
-\contentsline {subsection}{\numberline {3.10.1}First settings page}{35}{subsection.3.10.1}%
-\contentsline {subsubsection}{Customizing page values}{35}{section*.46}%
-\contentsline {subsubsection}{Choosing the starting page}{36}{section*.49}%
-\contentsline {subsubsection}{Adjusting display brightness}{37}{section*.51}%
-\contentsline {subsubsection}{Enable/Disable the charging page}{37}{section*.52}%
-\contentsline {subsubsection}{Setting your battery capacity}{37}{section*.54}%
-\contentsline {subsubsection}{Calibrating gyroscope module}{37}{section*.55}%
-\contentsline {subsubsection}{Changing battery page mode}{37}{section*.57}%
-\contentsline {subsection}{\numberline {3.10.2}Second settings page}{38}{subsection.3.10.2}%
-\contentsline {subsubsection}{Changing charge level}{38}{section*.59}%
-\contentsline {subsubsection}{Manual control of expansion PIN1}{39}{section*.61}%
-\contentsline {subsubsection}{Stopping the charge at a specific SOC}{39}{section*.63}%
-\contentsline {subsubsection}{Making a max parameters charge}{39}{section*.64}%
-\contentsline {subsubsection}{Abort charging process}{39}{section*.66}%
-\contentsline {subsection}{\numberline {3.10.3}The right side menu}{40}{subsection.3.10.3}%
-\contentsline {chapter}{\numberline {4}Advanced ToM+ configurations}{41}{chapter.4}%
-\contentsline {section}{\numberline {4.1}The WiFi settings page}{41}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}ToM+ WiFi advantages}{41}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Adding a WiFi connection profile}{42}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Check WiFi connection}{42}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Enable/Disable WiFi features}{43}{subsection.4.1.4}%
-\contentsline {section}{\numberline {4.2}The MQTT settings page}{44}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Brief MQTT explanation}{44}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}ToM+ and MQTT communications}{45}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Setting up MQTT free broker}{45}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Connect ToM+ to MQTT broker}{48}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Enable/Disable MQTT features}{49}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}Check ToM+ MQTTconnection}{49}{subsection.4.2.6}%
-\contentsline {section}{\numberline {4.3}The Keyboard page}{50}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}The number-only keyboard}{51}{subsection.4.3.1}%
-\contentsline {section}{\numberline {4.4}The web server}{52}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}The landing page}{53}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Access the web server}{54}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Change web server password}{54}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Data monitor page}{54}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}Trip history page}{56}{subsection.4.4.5}%
-\contentsline {subsection}{\numberline {4.4.6}Network settings page}{57}{subsection.4.4.6}%
-\contentsline {subsection}{\numberline {4.4.7}Expansion settings page}{58}{subsection.4.4.7}%
-\contentsline {subsubsection}{Standard OUTPUT mode}{59}{section*.91}%
-\contentsline {subsubsection}{Standard INPUT mode}{60}{section*.93}%
-\contentsline {subsubsection}{IR CONTROLLER mode}{60}{section*.95}%
-\contentsline {subsubsection}{KEY+ CONTROLLER mode}{61}{section*.98}%
-\contentsline {subsubsection}{CTRL BUTTON mode}{62}{section*.102}%
-\contentsline {subsection}{\numberline {4.4.8}Alarm triggers page}{64}{subsection.4.4.8}%
-\contentsline {subsection}{\numberline {4.4.9}Alarms log page}{66}{subsection.4.4.9}%
-\contentsline {subsection}{\numberline {4.4.10}OTA Update \& Preferences page}{67}{subsection.4.4.10}%
-\contentsline {subsubsection}{OTA Update}{67}{section*.109}%
-\contentsline {subsubsection}{Preferences and HW Upgrade}{69}{section*.114}%
-\contentsline {subsection}{\numberline {4.4.11}Advanced Info \& Settings page}{70}{subsection.4.4.11}%
-\contentsline {subsection}{\numberline {4.4.12}Charging Preferences \& Log}{72}{subsection.4.4.12}%
-\contentsline {subsubsection}{Charging preferences}{72}{section*.121}%
-\contentsline {subsubsection}{Charging history}{74}{section*.123}%
-\contentsline {subsection}{\numberline {4.4.13}Time \& Date page}{75}{subsection.4.4.13}%
-\contentsline {subsection}{\numberline {4.4.14}BigToM \textbackslash ToM+ Settings page}{76}{subsection.4.4.14}%
-\contentsline {subsection}{\numberline {4.4.15}Diagnostic page}{77}{subsection.4.4.15}%
+\contentsline {chapter}{\numberline {1}Description and Features List}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}ToM+ Feature Highlights}{4}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}A new Twizy dashboard}{4}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}WiFi connectivity}{5}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}ToM phone application}{6}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Brief consumption overview}{8}{subsection.1.1.4}%
+\contentsline {section}{\numberline {1.2}Provided ToM+ Kit}{9}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}The Black Box}{9}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}The Expansion Connector}{10}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}The LCD Display and stand}{10}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Additional Useful Components}{12}{subsection.1.2.4}%
+\contentsline {chapter}{\numberline {2}Installing Twiz O' Meter on Your Car}{14}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Display LCD position}{14}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Clip-on mode}{14}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}3D stand mode}{15}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Cable connection}{15}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Black box position}{16}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Basic user interface explanation}{17}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Icon meaning list}{17}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Page icons}{17}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Battery group}{18}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Charging group}{18}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Motor group}{19}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Expansion port group}{19}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Gyroscope group}{19}{subsection.3.1.6}%
+\contentsline {subsection}{\numberline {3.1.7}Trip group}{20}{subsection.3.1.7}%
+\contentsline {subsection}{\numberline {3.1.8}Dashboard group}{21}{subsection.3.1.8}%
+\contentsline {section}{\numberline {3.2}Dashboard page}{22}{section.3.2}%
+\contentsline {section}{\numberline {3.3}The pages layout}{23}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Changing the foreground data}{23}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Changing the active page}{24}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}The status icon bar}{24}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Pop-ups}{25}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}The battery info page}{26}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Checking voltage and temperature}{26}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}The condensed battery info page}{27}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}The alarm log page}{28}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Checking older alarm triggers}{29}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Deleting an alarm trigger}{29}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}The trip page}{30}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Changing the current trip}{31}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Disable trip recording}{31}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Reset a trip}{31}{subsection.3.6.3}%
+\contentsline {section}{\numberline {3.7}The trip history page}{32}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}How to access the trip history page}{32}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Main trip history page controls}{33}{subsection.3.7.2}%
+\contentsline {section}{\numberline {3.8}The error page}{34}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}How to access the error page}{34}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Main error page controls}{34}{subsection.3.8.2}%
+\contentsline {section}{\numberline {3.9}The charging page}{35}{section.3.9}%
+\contentsline {section}{\numberline {3.10}The settings page}{36}{section.3.10}%
+\contentsline {subsection}{\numberline {3.10.1}First settings page}{36}{subsection.3.10.1}%
+\contentsline {subsubsection}{Customizing page values}{36}{section*.45}%
+\contentsline {subsubsection}{Choosing the starting page}{37}{section*.48}%
+\contentsline {subsubsection}{Adjusting display brightness}{38}{section*.50}%
+\contentsline {subsubsection}{Enable/Disable the charging page}{38}{section*.51}%
+\contentsline {subsubsection}{Setting your battery capacity}{38}{section*.53}%
+\contentsline {subsubsection}{Calibrating gyroscope module}{38}{section*.54}%
+\contentsline {subsubsection}{Changing battery page mode}{38}{section*.56}%
+\contentsline {subsection}{\numberline {3.10.2}Second settings page}{39}{subsection.3.10.2}%
+\contentsline {subsubsection}{Changing charge level}{39}{section*.58}%
+\contentsline {subsubsection}{Manual control of expansion PIN1}{40}{section*.60}%
+\contentsline {subsubsection}{Stopping the charge at a specific SOC}{40}{section*.62}%
+\contentsline {subsubsection}{Making a max parameters charge}{40}{section*.63}%
+\contentsline {subsubsection}{Abort charging process}{40}{section*.65}%
+\contentsline {subsection}{\numberline {3.10.3}The right side menu}{41}{subsection.3.10.3}%
+\contentsline {chapter}{\numberline {4}Advanced ToM+ configurations}{42}{chapter.4}%
+\contentsline {section}{\numberline {4.1}The WiFi settings page}{42}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}ToM+ WiFi advantages}{42}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Adding a WiFi connection profile}{43}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Check WiFi connection}{44}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Enable/Disable WiFi features}{44}{subsection.4.1.4}%
+\contentsline {section}{\numberline {4.2}The MQTT settings page}{45}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Brief MQTT explanation}{45}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}ToM+ and MQTT communications}{46}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Setting up MQTT free broker}{46}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Connect ToM+ to MQTT broker}{49}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Enable/Disable MQTT features}{50}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Check ToM+ MQTTconnection}{50}{subsection.4.2.6}%
+\contentsline {section}{\numberline {4.3}The Keyboard page}{51}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}The number-only keyboard}{52}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}The web server}{53}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}The landing page}{54}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Access the web server}{55}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Change web server password}{55}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Data monitor page}{55}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}Trip history page}{57}{subsection.4.4.5}%
+\contentsline {subsection}{\numberline {4.4.6}Network settings page}{58}{subsection.4.4.6}%
+\contentsline {subsection}{\numberline {4.4.7}Expansion settings page}{59}{subsection.4.4.7}%
+\contentsline {subsubsection}{Standard OUTPUT mode}{60}{section*.89}%
+\contentsline {subsubsection}{Standard INPUT mode}{61}{section*.91}%
+\contentsline {subsubsection}{IR CONTROLLER mode}{61}{section*.93}%
+\contentsline {subsubsection}{KEY+ CONTROLLER mode}{62}{section*.96}%
+\contentsline {subsubsection}{CTRL BUTTON mode}{63}{section*.100}%
+\contentsline {subsection}{\numberline {4.4.8}Alarm triggers page}{65}{subsection.4.4.8}%
+\contentsline {subsection}{\numberline {4.4.9}Alarms log page}{67}{subsection.4.4.9}%
+\contentsline {subsection}{\numberline {4.4.10}OTA Update \& Preferences page}{68}{subsection.4.4.10}%
+\contentsline {subsubsection}{OTA Update}{68}{section*.107}%
+\contentsline {subsubsection}{Preferences and HW Upgrade}{70}{section*.112}%
+\contentsline {subsection}{\numberline {4.4.11}Advanced Info \& Settings page}{71}{subsection.4.4.11}%
+\contentsline {subsection}{\numberline {4.4.12}Charging Preferences \& Log}{73}{subsection.4.4.12}%
+\contentsline {subsubsection}{Charging preferences}{73}{section*.119}%
+\contentsline {subsubsection}{Charging history}{75}{section*.121}%
+\contentsline {subsection}{\numberline {4.4.13}Time \& Date page}{76}{subsection.4.4.13}%
+\contentsline {subsection}{\numberline {4.4.14}BigToM \textbackslash ToM+ Settings page}{77}{subsection.4.4.14}%
+\contentsline {subsection}{\numberline {4.4.15}Diagnostic page}{79}{subsection.4.4.15}%
+\contentsline {chapter}{\numberline {5}How to update your ToM+ firmware}{80}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Requirements before updating}{80}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Why should I update?}{80}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}What do I need to update?}{80}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}How do the update files look like?}{81}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}What should I know before update?}{81}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}Updating LCD firmware}{82}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Preparing the microSD card}{82}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Inserting the microSD card}{82}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}The updating workflow}{83}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}Updating black box firmware (Windows)}{84}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Preparing the computer}{84}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}The updating workflow}{87}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}Updating the black box (Unix)}{90}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Preparing the computer}{90}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}The updating workflow}{92}{subsection.5.4.2}%

@@ -4,13 +4,26 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{booktabs}
-\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue
+]{hyperref}
 \usepackage{enumitem}
 \usepackage{geometry}
 \usepackage{tabularray}
 \usepackage{tcolorbox}
 \usepackage{subcaption}
 \usepackage{todonotes}
+\usepackage{listings}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    columns=fullflexible
+}
 
 \geometry{margin=2.5cm}
 \setlist[itemize]{nosep}

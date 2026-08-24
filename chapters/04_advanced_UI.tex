@@ -42,7 +42,7 @@ In this new settings page you have a small table with four rows and two columns.
 The first column holds the \textbf{SSID} (i.e. the name) of the network you are trying to connect to. 
 To be clear it's the one you see on your phone or laptop. It can be alphanumeric and 
 it is case sensitive (capital letters matter, so be sure to spell it correctly!).
-While the second column under the \textbf{“KEY”} header is for the Wi-Fi password.\\ \todo{TODO}
+While the second column under the \textbf{“KEY”} header is for the Wi-Fi password.\\
 
 When you tap on a table cell, either SSID or key, ToM+ will open a keyboard page
 where you can type in your data. Pressing OK will confirm the typed string and will
@@ -51,7 +51,25 @@ take you back to the Wi-Fi settings page. We will discuss the keyboard page in S
 By now you are able to set \textbf{four different connection profiles} with four pairs of SSID
 and password. If you don't set any profile but the Wi-Fi slider are enabled ToM+ will still
 perform a Wi-Fi scan every two minutes trying to find public connection without password
-protection and then it will try to connect. Press the bottom \textbf{right arrow button to save}.
+protection and then it will try to connect. Press the bottom \textbf{right arrow button to save}.\\
+
+The fourth WiFi connection profile is special, because the \textbf{“KEY 4”} field is
+used both as a standard password field for the last SSID and to change the default webserver password,
+as will be discussed in Section~\ref{sec:web_change_password}.
+
+In addition, there are some special codes you can enter in this field to perform some
+secret configuration. These codes are case sensitive and won't affect your \textbf{“KEY 4”}
+field if written correctly, since ToM+ uses them as commands only. You can type
+\textbf{GIVE\textunderscore ME\textunderscore DF!} (exactly as wrote here, with underscore
+and exclamation mark too) to \textit{show DF error numbering and error decription} both in 
+display and webUI.\\
+
+\textbf{REMEMBER!} The commands are executed by ToM+ only if they are entered from
+this WiFi settings page, not from the webUI discussed later. In addition, since the
+origin of DF number is not clear, enabling this function is up to you and under 
+your responsibility.
+
+\clearpage
 
 \subsection{Check WiFi connection}
 \label{sec:check_wifi_connection}
@@ -71,8 +89,6 @@ which shows its status.
 \iconbox{icons/Tray_WiFi.png}
 {WiFi scan in progress}
 {If blinking, ToM+ is currently scanning for available Wi-Fi networks.}
-
-\clearpage
 
 If you want to get more specific info about whether or not your ToM+ is connected to
 any network, you can check additional fields in the Wi-Fi settings page on the bottom right
@@ -498,6 +514,7 @@ they will be all deepen more. In these section, the icons are used as a visual a
 
 
 \subsection{Access the web server}
+\label{sec:web_server_access}
 
 ToM+ allows you to connect to its web server page in two ways, and they are both
 useful in different situations. Before we start, bear in mind that an \textbf{IP address}
@@ -1067,9 +1084,9 @@ Press the \textbf{“HOME”} green button at the end of the table to return to 
 This page is made for various advanced settings that aren't available in the ToM+ display
 settings pages discussed in Section~\ref{sec:settings_page} due to space reasons.\\
 
-The first flag, \textit{Disable Auto-dimming}, can be checked if you don't like ToM+
+The first flag, \textbf{“Disable Auto-dimming”}, can be checked if you don't like ToM+
 LCD display to adapt the brightness when turning on the light beams.
-Otherwise, you can adjust the \textit{Dimming brightness (\%)} expressed in percentage (up to 100\%),
+Otherwise, you can adjust the \textbf{“Dimming brightness (\%)”} expressed in percentage (up to 100\%),
 and set by yourself the factor of brightness reduction when the light beams are activated.
 
 \begin{figure}[H]
@@ -1079,33 +1096,39 @@ and set by yourself the factor of brightness reduction when the light beams are 
 \end{figure}
 
 Next, we have the \textbf{Warning messages at power-off} subsection, where you can
-select the reminders (light beam and handbrake) and info (system errors and charge limits)
+select the reminders (\textit{light beam} and \textit{handbrake}) and info (\textit{system errors} and \textit{charge limits})
 shown on ToM+ shutdown pop-up. It looks like the one shown in the image below,
 letting you know, for instance, if you forgot to engage the handbrake.
 The last two check boxes are for future uses, not implemented yet.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.4\textwidth]{figures/pop-up_finale.png}
+    \includegraphics[width=0.5\textwidth]{figures/pop-up_finale.png}
     \caption{Warning message at power-off.}
 \end{figure}
 
-Another available flag is \textit{Invert current value sign}. If checked, it basically shows
-a signed integer in current consumption values instead of their absolute values.
+Then, there is the \textbf{“Secondary font colour”} with a color picker, used to change
+the secondary font colour on ToM+ display.
+
+Another available flag is \textbf{“Invert current value sign”}. If checked, it basically shows
+a signed integer in current consumption values instead of their absolute values.\\
 
 The little subgroup below is dedicated to the \textbf{Cheatzy} compatibility with ToM+.
-You can set your \textit{Cheating factor} multiplied by 10: for example, 2.0 becomes 20.
+You can set your \textbf{“Cheating factor”} multiplied by 10: for example, 2.0 becomes 20.
 You can also select if the Cheatzy is enabled when charging or during regenerative braking
-using the \textit{Cheat also Charge/Reku} flag. These settings only make sense if the Cheatzy 
+using the \textbf{“Cheat also Charge/Reku”} flag. These settings only make sense if the Cheatzy 
 is connected and on, otherwise they may alter your current values incorrectly.\\
+
+Then, there is another flag: \textbf{“Increase thermal protection threshold”}, used to
+increase by 15°C the overheat safety threshold for ToM+ in warmer seasons.
 
 The next two values are additional configurations for the ToM+ calculated \textbf{Remaining KM},
 based on recent consumption sampling. Here you can adjust how often the sampling
-occurs (default: one per minute) in the \textit{Remaining KM sampling time (min)} and
+occurs (default: one per minute) in the \textbf{“Remaining KM sampling time (min)”} and
 how much the last sample affects the total calculation (default: 10\%) in the
-\textit{Remaining KM sample weight (\%)}.\\
+\textbf{“Remaining KM sample weight (\%)”}.\\
 
-Lastly we have the \textit{Miles to Kilometers} flag, that helps when your BigToM
+Lastly we have the \textbf{“Miles to Kilometers”} flag, that helps when your BigToM
 was made from a mile-based dashboard, but you want km/h as its measure unit. If enabled,
 ToM+ will perform this conversion for you.
 
@@ -1234,8 +1257,6 @@ when the charge stops at the specified SOC.\\
 
 After any change, press the \textbf{“SAVE”} button to \textit{save your changes}, otherwise they will be lost when you leave the page.
 
-\clearpage
-
 \subsubsection{Charging history}
 
 The charging history table holds the last fifteen charging processes along with some
@@ -1255,7 +1276,7 @@ pressing the \textbf{“CLEAR HISTORY”} button located in the bottom part of t
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figures/charging_history.png}
+    \includegraphics[width=0.95\textwidth]{figures/charging_history.png}
     \caption{Charging Preferences page --- Charging history table.}
 \end{figure}
 
@@ -1311,7 +1332,6 @@ two devices.
     \includegraphics[width=1\textwidth]{figures/btom_page.png}
     \caption{BigToM \textbackslash ToM+ Settings table.}
 \end{figure}
-\todo{LOCK}
 
 When replacing your dashboard with a BigToM one, you may have to add or substract
 some kilometers to the new dashboard ODO to have your original one. That's because
@@ -1359,7 +1379,10 @@ And finally there is the most recently added feature, called the \textbf{Twin To
 and designed for the original ToM owners, before ToM+ came out. This allows you to
 use the smaller display along with the new clip-on version, in order to monitor
 two pages simultaneously. But to make this work you need to enable the last row
-flag, the \textbf{“Enable auxillary display”} one.\\
+flag, the \textbf{“Enable auxiliary display”} one.
+
+Then you can select, with the \textbf{“Start page”} choice box, a specific page to
+show on the auxillary display at power on, or simply choose \textit{Last shown}.\\
 
 
 As always, remember to save your changes pressing the \textbf{“SAVE”} button at the
@@ -1367,7 +1390,34 @@ end of the table, otherwise they will be lost when you leave the page.
 
 Press the \textbf{“HOME”} green button below the table to return to the landing page.
 
+\clearpage
 
 \subsection{Diagnostic page}
 \label{sec:web_diagnostic}
 
+This page is composed by one table only and allows you to view more information
+about the last 10 errors that occured in your Twizy, similar to the ToM+ display
+page discussed in Section~\ref{sec:error_page}.
+
+The shown values are the \textbf{“DTC Number”} and, if available, the \textbf{“DF Number”}
+that are unique identifiers for Twizy errors, so that you can search online for it.
+Next we have the error \textbf{“Status”}, such as \textit{SAVED} if already happened
+or \textit{NOW}, if it has just occurred.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/error_page.png}
+    \caption{Diagnostic page --- Error list table.}
+\end{figure}
+
+Along with these values, the next four values are the reference \textbf{“ODO”},
+\textbf{“SOC”}, \textbf{“speed”} and \textbf{“12V Battery voltage”} when the
+corresponding error occured.
+
+For each error record, if available, there is an error \textbf{“Description”} field.\\
+
+
+If you would like to clear Twizy errors, even fatal ones, you can press the below
+\textbf{“DELETE ERRORS”} button, that will delete all of them at once.
+
+Press the \textbf{“HOME”} green button below the table to return to the landing page.

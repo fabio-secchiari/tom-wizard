@@ -1,4 +1,5 @@
 \chapter{How to update your ToM+ firmware}
+\label{sec:update_procedure}
 
 \section{Requirements before updating}
 
@@ -35,7 +36,7 @@ of all, you will need a computer and both desktops or laptops are great for this
 Later we will see how to connect ToM+ to our computer in order to transfer the new
 upgrade files on it. The second thing you must get is a micro USB cable, which is
 the same that is usually used in rechargeable device and older smartphones. You will
-also need a microSD card with a storage capacity between 8 and 32 GB. Examples
+also need a microSD card with a storage capacity between 8 and 32 GB.~Examples
 are shown in the photos down below. And of course you will need your ToM+!
 
 \begin{figure}[H]
@@ -49,8 +50,8 @@ are shown in the photos down below. And of course you will need your ToM+!
 \label{sec:update_files}
 
 Before you update the firmware, you obviously need to download from the Twizy forum
-(again \url{https://www.twizy-forum.de/twiz-o-meter}) the desired version update ZIP.
-You will probably need to register to the forum to see and download firmware files and
+(again \url{https://www.twizy-forum.de/twiz-o-meter}) the desired version update ZIP.~You
+will probably need to register to the forum to see and download firmware files and
 images. It's a really cool and active community, so I suggest to become a member anyway.
 After extracting the files in the folder, this is what you should get:
 
@@ -168,7 +169,7 @@ The microSD copying process will usually take up to a minute and a half.
     \hfill
     \begin{subfigure}[t]{0.48\textwidth}
         \centering
-        \includegraphics[width=\linewidth]{figures/copy-sd-card-nextion.png}
+        \includegraphics[width=\linewidth]{figures/copy_sd_card.png}
         \caption{ToM display update.}
     \end{subfigure}
 \end{figure}
@@ -272,7 +273,7 @@ car, you will mix power supplies (5V and 12V) and ToM+ will definitely die.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{figures/black_box.jpg}
-    \caption{The black box components.} \label{fig:black_box_labels}
+    \caption{The black box components.}\label{fig:black_box_labels}
 \end{figure}
 
 The black box has a small microUSB connector on the rear side, as
@@ -346,7 +347,7 @@ first line containing the path you've just confirmed.
 
 Proceed by \textbf{flagging the check box} next to the first line, choosing the firmware you
 want to upload. Then, type in the text box shown in the second picture this sequence
-of characters: \textbf{0x10000} (with four zeros). This represents the starting memory
+of characters: \textbf{0$\times$10000} (with four zeros). This represents the starting memory
 address where the firmware files will be stored.
 
 Now, it comes the last step of the configuration: select the COM number
@@ -408,7 +409,7 @@ damages to the device.
 Download the ToM+ firmware update folder attached to the firmware release post.
 Now, extract the binary file (\textit{.bin} extension) attached in the ToM+
 firmware release ZIP as we discussed in Section~\ref{sec:update_files}.
-The file in it is usually called \textit{“FwXX\textunderscore ESP32\textunderscore rel.bin”},
+The file in it is usually called \textit{“FwXX\textunderscore ESP32.bin”},
 where the \textit{“XX”} symbol will be replaced by the version number, for instance \textit{“23”}.\\
 
 \textbf{Disclaimer:} \textit{this black box process was tested using Ubuntu 20.04
@@ -438,8 +439,8 @@ prompted, type in the password of the sudo user, then press ENTER and wait.
 
 Once we have installed both packages type \textit{“sudo tail -f /var/log/messages”} in the
 terminal as shown in the image to monitor in real-time the log file, that will show us
-which COM the black box will be associated to by the OS. If prompted, type in the
-password of the sudo user, then press ENTER. \textbf{Now we can plug in the black box}.
+which COM the black box will be associated to by the OS.~If prompted, type in the
+password of the sudo user, then press ENTER.~\textbf{Now we can plug in the black box}.
 
 \begin{figure}[H]
     \centering

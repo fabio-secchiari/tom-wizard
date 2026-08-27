@@ -39,7 +39,7 @@ will be protected and private as well. It will just need some MQTT configuration
 \label{sec:add_wifi_profile}
 
 In this new settings page you have a small table with four rows and two columns.
-The first column holds the \textbf{SSID} (i.e. the name) of the network you are trying to connect to. 
+The first column holds the \textbf{SSID} (i.e.~the name) of the network you are trying to connect to. 
 To be clear it's the one you see on your phone or laptop. It can be alphanumeric and 
 it is case sensitive (capital letters matter, so be sure to spell it correctly!).
 While the second column under the \textbf{“KEY”} header is for the Wi-Fi password.\\
@@ -107,7 +107,7 @@ to the Internet. If this field contains any sequence of four numbers (from 0 to 
 separated by dots, then Wi-Fi is connected, otherwise it will be empty. 
 
 Tap on it to view ToM+ MAC address and tap again to see which SSID (network name) ToM+ is connected to.
-We will see more interesting features in which ToM+ IP address is involved later at Section~\ref{sec:access_webserver}.
+We will see more interesting features in which ToM+ IP address is involved later at Section~\ref{sec:web_server_access}.
 
 \subsection{Enable/Disable WiFi features}
 \label{sec:enable_disable_wifi}
@@ -121,8 +121,8 @@ In this state the Wi-Fi status icon will be always grayed out as shown in Sectio
 
 The second sliding button is to enable \textbf{Wi-Fi when driving}. This will allow
 your ToM+ to be connected to the Internet even when you are driving your Twizy.
-This is useful if you want to publish real-time data to your smartphone via MQTT.
-This also enables the web interface to be accessed while driving and your ToM+ will
+This is useful if you want to publish real-time data to your smartphone via MQTT.~This
+also enables the web interface to be accessed while driving and your ToM+ will
 scan for available Wi-Fi networks as well.\\
 
 As already mentioned to \textit{save your changes} you need to press the bottom right arrow button.
@@ -222,7 +222,7 @@ registration message as shown in the image down here:
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/mqtt_step3.png}
-    \caption{Step 3: Add IN/OUT topics.}
+    \caption{Step 3: Add IN/OUT topics.}\label{sec:free_broker_add_topics}
 \end{figure}
 
 From this page you can manage your available topics (refer to Section~\ref{sec:brief_mqtt})
@@ -357,7 +357,7 @@ here. From then on ToM+ won't publish Twizy data via MQTT until you enable it ag
 The right slider button under \textbf{“SUBSCRIBE”} allows ToM+ to receive commands
 from external devices published on the specified IN topic. This is useful if you
 want to control via MQTT a device connected to ToM+ expansion port
-(e.g. a smart plug to turn on/off charging remotely). You can choose to enable or disable this feature at any time by pressing or sliding the button.\\
+(e.g.~a smart plug to turn on/off charging remotely). You can choose to enable or disable this feature at any time by pressing or sliding the button.\\
 
 \subsection{Check ToM+ MQTTconnection}
 
@@ -457,7 +457,7 @@ The backspace button is still available to delete characters, and the \textbf{OK
 
 The web server is a new feature introduced with the second firmware release. 
 It allows you to access your ToM+ settings and data remotely from any device with a
-web browser, such as your smartphone, tablet, or PC. This is particularly useful 
+web browser, such as your smartphone, tablet, or PC.~This is particularly useful 
 for managing standard and \textbf{advanced configurations} that aren't available on the ToM+ display.
 
 In addition, you can also use the web server to set up \textbf{WiFi and MQTT} much more easily 
@@ -507,7 +507,7 @@ they will be all deepen more. In these section, the icons are used as a visual a
 {Time \& Date}{Here you can set the time and date of your ToM+ and choose the time zone using POSIX TZ strings or synchronize with WiFi (Section~\ref{sec:web_time_date}).}
 
 \iconbox{icons/Kmh.png}
-{BigToM \textbackslash ToM+ Sets}{Here you can configure some dashboard parameters, such as the scale of the power bar or setting up a speed limit (Section~\ref{sec:web_btom_tom_sets}).}
+{BigToM / ToM+ Sets}{Here you can configure some dashboard parameters, such as the scale of the power bar or setting up a speed limit (Section~\ref{sec:web_btom_tom_sets}).}
 
 \iconbox{icons/Error.png}
 {Diagnostic}{Here you can view DTC/DF numbers and the descriptions of your Twizy errors and clear the logs if needed (Section~\ref{sec:web_diagnostic}).}
@@ -800,10 +800,20 @@ reload and an additional table will appear below, you can see it in the image be
     \caption{Expansion settings page --- KEY+ settings table.}
 \end{figure}
 
-This works the same as the IR settings table. The main difference is about how ToM+ reads
-this values from the expansion port. \todo{TODO}
+This works the same as the IR settings table. The main difference is about what ToM+ reads
+from the expansion port, that is not an IR code anymore: it's a voltage instead.
+
+In the image above are shown the default values, ranging from \textit{0} to \textit{3.3V}
+written without the decimal dot symbol. For example, \textit{018} means \textit{0.18V}
+and \textit{157} is \textit{1.57V} and so on.
+ToM+ has a tolerance of \textit{0.05V} on input values to avoid voltage bouncing.\\
+
+After that, remeber to press the \textbf{“SAVE”} button to save your changes, otherwise they will be lost when
+you leave the page. Lastly, a useful \textbf{“Default”} button is located next to it, to easily revert your
+changes if needed.
 
 \subsubsection{CTRL BUTTON mode}
+\label{sec:web_wiper_stalk}
 
 This last table holds the configuration needed to make the provided right \textbf{wiper stalk button} (Figure~\ref{fig:wiper_stalk_button}) work.
 You can use this button to navigate through all ToM+ UI without using the touch-screen, with
@@ -821,7 +831,7 @@ So, in the first part of this table you can rearrange this actions with the gest
 \begin{itemize}
     \item \textit{“Browse items”}: This moves a small white marker next to the current selected data.
     \item \textit{“Change page”}: This lets you cycle through the pages present in the rotation.
-    \item \textit{“Select-deselect”}: This simulates tapping on the selected data (e.g. switches from background to foreground).\\
+    \item \textit{“Select-deselect”}: This simulates tapping on the selected data (e.g.~switches from background to foreground).\\
 \end{itemize}
 
 In the second part of the table you can select the \textbf{pages you would like to skip} when
@@ -868,12 +878,12 @@ that notify that the battery level is lower than 30\%. By checking the \textit{�
 I added a further option that will tell ToM+ to send a MQTT message when this alarm triggers.\\
 
 The third alarm trigger checks the battery SOC and once charge is complete,
-e.g. equal 97\%, it does the same as before but performs an additional command. The
+e.g.~equal 97\%, it does the same as before but performs an additional command. The
 command \textit{cmd/charge/Power 0} disables a Tasmota Wi-Fi switch that connects the
 Twizy plug to the wall socket.
 
 So, the function of the \textbf{“COMMAND”} column is really useful and allows you to embed 
-your ToM+ in your IoT house. See the Appendix~\ref{apx:tasmota} for detailed configurations. \todo{TODO}\\
+your ToM+ in your IoT house. See the Appendix~\ref{apx:tasmota} for detailed configurations.\\
 
 When you want to remove a specific alarm you will just need to press the \textbf{“Remove”} button in its last column.\\
 
@@ -887,7 +897,7 @@ When you want to remove a specific alarm you will just need to press the \textbf
 In the second table you can add a new alarm to the list we have just discussed.
 First of all you have to choose the \textbf{ITEM}, between all the available data listed in Section~\ref{sec:icon_list}.
 In this choice box items are organized as in the list just quoted.
-Then select the \textbf{CONDITION}, i.e. the operator of the comparison, between \textit{“lower”}, \textit{“greater”} or \textit{“equal”}.
+Then select the \textbf{CONDITION}, i.e.~the operator of the comparison, between \textit{“lower”}, \textit{“greater”} or \textit{“equal”}.
 Next it's time for the reference \textbf{VALUE}, a signed integer number, the right term of the comparison.\\
 
 Let's take some time to explain all of the possible \textbf{ACTION}s.\\
@@ -977,8 +987,8 @@ so that you can have two different versions installed and change between them if
 Here, the full name is \textit{ESP32\_Fw24\_70\_4error12} for both.
 
 The last field is the complete name of the \textbf{Special partition} firmware, which
-is an additional storage used to hold third-party softwares (e.g. the Twizy-cfg tuning software).
-For more information about tuning your Twizy using Twizy-cfg on ToM+ refer to Appendix~\ref{apx:tuning}. \todo{TODO}
+is an additional storage used to hold third-party softwares (e.g.~the Twizy-cfg tuning software).
+For more information about tuning your Twizy using Twizy-cfg on ToM+ refer to Appendix~\ref{apx:tuning}.
 
 \begin{figure}[H]
     \centering
@@ -1031,7 +1041,7 @@ folders until you find the desired file.
 
 If you are \textit{updating the main display}, go and press the \textbf{“UPDATE LCD”} button.
 To check the update status, the blue progress bar under the disclaimer box will show
-chunks copied to the LCD. When it finishes the display will reboot (not the blackbox).
+chunks copied to the LCD.~When it finishes the display will reboot (not the blackbox).
 
 If you are \textit{updating the twin display}, be sure to check the \textit{“Update AUX LCD”}
 option and, only after that, press the \textbf{“UPDATE LCD”} button. As soon as the update
@@ -1168,8 +1178,8 @@ the value \textit{2} will result in a \textit{10 seconds} one and so on.
 
 The most important part is choosing the items to scroll and you can select up to
 ten data values. In the \textbf{“Scrolling items”} text areas, insert the list of
-desired item numbers (e.g. 59 or 48), one per each, referring to the list in
-Section~\ref{sec:icon_list}.\\
+desired item numbers (e.g. 59 or 48), one per each, referring to the numbers in
+brackets in the list of Section~\ref{sec:item_numbers}.\\
 
 Always remember to save your changes by pressing the \textbf{“SAVE”} button at the end of this
 table. If you don't do this, your changes will be lost when you leave the page.
@@ -1320,7 +1330,7 @@ Press the \textbf{“HOME”} green button below the table to return to the land
 
 \clearpage
 
-\subsection{BigToM \textbackslash ToM+ Settings page}
+\subsection{BigToM / ToM+ Settings page}
 \label{sec:web_btom_tom_sets}
 
 In this page you can customize some parameters of you BigToM or ToM+, because this
@@ -1343,7 +1353,7 @@ safety reasons. If you want to see your real speed, just enable the \textbf{“R
 speed (not ODO)”} flag in the second row of the table.\\
 
 Now let's have a look at the \textbf{“Lock touch while driving”} flag. If active,
-the touchscreen will be disabled while driving (i.e. speed $>0$) for safety reasons.
+the touchscreen will be disabled while driving (i.e.~speed $>0$) for safety reasons.
 
 Next, we have the \textbf{Skip welcome animation} flag, that can be enabled if you
 are bored of seeing the welcome animation when changing from the dashboard to another page.\\
@@ -1402,7 +1412,9 @@ page discussed in Section~\ref{sec:error_page}.
 The shown values are the \textbf{“DTC Number”} and, if available, the \textbf{“DF Number”}
 that are unique identifiers for Twizy errors, so that you can search online for it.
 Next we have the error \textbf{“Status”}, such as \textit{SAVED} if already happened
-or \textit{NOW}, if it has just occurred.
+or \textit{PRESENT}, if it has just occurred.
+
+To \textit{enable DF Numbers}, please refer to Section~\ref{sec:add_wifi_profile}.
 
 \begin{figure}[H]
     \centering

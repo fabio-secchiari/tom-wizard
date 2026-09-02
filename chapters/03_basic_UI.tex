@@ -612,11 +612,11 @@ The values are updated and stored only when the selected trip is the \textbf{num
 \subsection{How to access the trip history page}
 
 This page is not accessible from the main page, but you can reach it by \textbf{long pressing 
-the alarm log icon} in the bottom line of the screen until it changes. This is because the trip history page
+the alarm log icon} (i.e. the fourth one) in the bottom line of the screen until it changes. This is because the trip history page
 is not a page you will use often, so it was decided to hide it from the main page
 to save space, as well as the error page. So, the sequence of pages available by \textbf{long pressing the alarm log icon} are:
 alarm log page (Section~\ref{sec:alarm_log}) $\rightarrow$ error page (Section~\ref{sec:error_page}) $\rightarrow$ trip history page $\rightarrow$ back to alarm log page,
-each one with the respective icon.\\
+each one with the respective icon. Next time ToM+ turns on, trip history page will be the default fourth icon.\\
 
 \begin{figure}[H]
     \centering
@@ -666,9 +666,12 @@ The controls to delete records or to see older ones was already discussed in Sec
 \subsection{How to access the error page}
 
 This page is not accessible from the main page, but you can reach it by \textbf{long pressing 
-the alarm log icon} in the bottom line of the screen until it changes. As we discussed before, the sequence of pages available by long pressing the alarm log icon are:
-alarm log page (Section~\ref{sec:alarm_log}) $\rightarrow$ error page $\rightarrow$ trip history page (Section~\ref{sec:trip_history}) $\rightarrow$ back to alarm log page,
-each one with the respective icon.\\
+the alarm log icon} (i.e. the fourth one) in the bottom line of the screen until
+it changes. As we discussed before, the sequence of pages available by long 
+pressing the alarm log icon are: alarm log page (Section~\ref{sec:alarm_log}) 
+$\rightarrow$ error page $\rightarrow$ trip history page (Section~\ref{sec:trip_history})
+$\rightarrow$ back to alarm log page, each one with the respective icon. 
+Next time ToM+ turns on, error page will be the default fourth icon.\\
 
 \begin{figure}[ht]
     \centering
@@ -696,6 +699,11 @@ the web server for more information such as SOC, speed and a brief description (
 By pressing on the icon of the error (circled in yellow in the image) you can cycle between the pages of stored errors,
 which are 14 in total. The first page shows the last 7 errors, while the second page shows the older ones.
 To \textbf{delete error records} both in this page and on the car, simply click on the trash can icon.\\
+
+To enable DF numbers and descriptions please refer to Section~\ref{sec:add_wifi_profile}.
+If DF numbers are shown (instead of \textit{???}) you can press that number to
+have \textbf{additional description} about the pressed error. The seventh line will be
+replaced by this additional info and you can click on it to hide again.\\
 
 As in other pages the space wasn't enough to put the buttons to change page, so you can press
 the exit button in the bottom right corner to go back to the previous page and then change the active one if you want.
@@ -803,13 +811,14 @@ listed in the left side table in the order you specified in the settings page.
 
 You can choose which page will be the first one to show when you leave the dashboard page.
 To do that press the icon to cycle through all available pages until you find the one you want.
-
+Remember that this configuration is ignored in ToM+ because the dashboard page
+will always be the displayed starting one. So, this only work for standard ToM.\\
 
 In the image below the user has selected the battery page, so when leaving the dashboard page ToM+ will show it first.\\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/settings_page1_bright.jpg}
+    \includegraphics[width=0.7\textwidth]{figures/settings_page1_bright.jpg}
     \caption{Customizing start page and brightness.}
 \end{figure}
 
@@ -831,7 +840,7 @@ your edits press the bottom right corner exit button.\\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/settings_page1_charge.jpg}
+    \includegraphics[width=0.7\textwidth]{figures/settings_page1_charge.jpg}
     \caption{Customizing charging page and battery kWh.}
 \end{figure}
 
@@ -852,7 +861,7 @@ your inclination data would be even worse. The process is shown down here:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/settings_page1_calibrate.jpg}
+    \includegraphics[width=0.7\textwidth]{figures/settings_page1_calibrate.jpg}
     \caption{Adjusting gyroscope calibration.}
 \end{figure}
 
@@ -889,7 +898,7 @@ The change will be applied to the current charge if already charging or to the n
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{figures/settings_page2_lvl.jpg}
+    \includegraphics[width=0.5\textwidth]{figures/settings_page2_lvl.jpg}
     \caption{Changing charge level.}
 \end{figure}
 
@@ -901,7 +910,7 @@ The change will be applied as soon as you press the bottom right corner exit but
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/settings_page2_stop.jpg}
+    \includegraphics[width=0.7\textwidth]{figures/settings_page2_stop.jpg}
     \caption{Manual control of expansion PIN1 and stop charge level.}
 \end{figure}
 
@@ -919,7 +928,7 @@ which will be applied to the current charge if already charging or to the next c
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/settings_page2_max.jpg}
+    \includegraphics[width=0.7\textwidth]{figures/settings_page2_max.jpg}
     \caption{Max parameters charge and abort charging process.}
 \end{figure}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.4)  1 SEP 2026 10:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.4)  2 SEP 2026 12:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -693,7 +693,7 @@ Package: array 2026/02/24 v2.7b Tabular extension package (FMi)
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 9.
  (d:/texlive/2026/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (./main.aux (./chapters_fr/01_description.aux) (./chapters_fr/02_installation.aux) (./chapters_fr/03_basic_UI.aux) (./chapters_fr/04_advanced_UI.aux) (./chapters_fr/05_update.aux) (./chapters_fr/appendix.aux))
+) (./main.aux (./chapters/01_description.aux) (./chapters/02_installation.aux) (./chapters/03_basic_UI.aux) (./chapters/04_advanced_UI.aux) (./chapters/05_update.aux) (./chapters/appendix.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
@@ -780,7 +780,7 @@ Package caption Info: End \AtBeginDocument code.
 Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 9.
 
 \c@lstlisting=\count395
-<figures/tom_plus.png, id=453, 271.2534pt x 193.9245pt>
+<figures/tom_plus.png, id=461, 271.2534pt x 193.9245pt>
 File: figures/tom_plus.png Graphic file (type png)
 <use figures/tom_plus.png>
 Package pdftex.def Info: figures/tom_plus.png  used on input line 26.
@@ -814,7 +814,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.41 ... le trajet en cours}{36}{subsection.3.6.1}
+l.41 ...ng an alarm trigger}{32}{subsection.3.5.2}
                                                   % [1
 
 ] [2])
@@ -822,30 +822,30 @@ l.41 ... le trajet en cours}{36}{subsection.3.6.1}
 \openout5 = `main.toc'.
 
  [3]
-\openout2 = `chapters_fr/01_description.aux'.
+\openout2 = `chapters/01_description.aux'.
 
- (./chapters_fr/01_description.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
-
-
+ (./chapters/01_description.tex
 Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
 
-Overfull \hbox (54.53146pt too wide) in paragraph at lines 7--8
-\T1/lmr/m/n/10.95 Twizy[][]. \T1/lmr/m/it/10.95 Si vous souhaitez obtenir une unité ToM+, envoyez-moi un e-mail à \T1/lmr/bx/n/10.95 info.twizometer@gmail.com\T1/lmr/m/n/10.95 .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
+Overfull \hbox (5.71112pt too wide) in paragraph at lines 14--18
+\T1/lmr/m/n/10.95 Twizy fo-rum[][]. \T1/lmr/m/it/10.95 If you would like to have a ToM+ unit, email me at \T1/lmr/bx/n/10.95 info.twizometer@gmail.com\T1/lmr/m/n/10.95 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--18
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
@@ -855,1829 +855,1842 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
 ]
 Chapter 1.
-<figures/dashboard.jpg, id=597, 2595.6975pt x 1741.25531pt>
+<figures/dashboard.jpg, id=607, 2595.6975pt x 1741.25531pt>
 File: figures/dashboard.jpg Graphic file (type jpg)
 <use figures/dashboard.jpg>
-Package pdftex.def Info: figures/dashboard.jpg  used on input line 26.
+Package pdftex.def Info: figures/dashboard.jpg  used on input line 47.
 (pdftex.def)             Requested size: 364.19667pt x 244.30547pt.
 [5
 
-]
-<figures/engine_page.jpg, id=602, 2340.49406pt x 1601.2322pt>
+ <./figures/dashboard.jpg>]
+<figures/engine_page.jpg, id=613, 2340.49406pt x 1601.2322pt>
 File: figures/engine_page.jpg Graphic file (type jpg)
 <use figures/engine_page.jpg>
-Package pdftex.def Info: figures/engine_page.jpg  used on input line 39.
+Package pdftex.def Info: figures/engine_page.jpg  used on input line 62.
 (pdftex.def)             Requested size: 364.19667pt x 249.1413pt.
- [6 <./figures/dashboard.jpg> <./figures/engine_page.jpg>]
-<figures/landing_page.png, id=610, 275.52937pt x 703.12688pt>
+<figures/landing_page.png, id=614, 275.52937pt x 703.12688pt>
 File: figures/landing_page.png Graphic file (type png)
 <use figures/landing_page.png>
-Package pdftex.def Info: figures/landing_page.png  used on input line 55.
+Package pdftex.def Info: figures/landing_page.png  used on input line 87.
 (pdftex.def)             Requested size: 206.54561pt x 527.08636pt.
- [7] [8 <./figures/landing_page.png>]
-<figures/tom_app_charging.png, id=624, 984.67876pt x 433.62pt>
+ [6 <./figures/engine_page.jpg>] [7 <./figures/landing_page.png>]
+<figures/tom_app_charging.png, id=630, 984.67876pt x 433.62pt>
 File: figures/tom_app_charging.png Graphic file (type png)
 <use figures/tom_app_charging.png>
-Package pdftex.def Info: figures/tom_app_charging.png  used on input line 71.
+Package pdftex.def Info: figures/tom_app_charging.png  used on input line 112.
 (pdftex.def)             Requested size: 364.19667pt x 160.37733pt.
-<figures/tom_app_settings.png, id=625, 813.0375pt x 919.18407pt>
+<figures/tom_app_settings.png, id=631, 813.0375pt x 919.18407pt>
 File: figures/tom_app_settings.png Graphic file (type png)
 <use figures/tom_app_settings.png>
-Package pdftex.def Info: figures/tom_app_settings.png  used on input line 77.
+Package pdftex.def Info: figures/tom_app_settings.png  used on input line 118.
 (pdftex.def)             Requested size: 295.90588pt x 334.53864pt.
- [9 <./figures/tom_app_charging.png>]
 <figures/consumption_off.png, id=632, 453.19313pt x 335.75438pt>
 File: figures/consumption_off.png Graphic file (type png)
 <use figures/consumption_off.png>
-Package pdftex.def Info: figures/consumption_off.png  used on input line 87.
+Package pdftex.def Info: figures/consumption_off.png  used on input line 129.
 (pdftex.def)             Requested size: 295.90588pt x 219.22653pt.
- [10 <./figures/tom_app_settings.png> <./figures/consumption_off.png (PNG copy)>]
-<figures/consumption_on_wifi.png, id=640, 441.14813pt x 335.00156pt>
+ [8 <./figures/tom_app_charging.png> <./figures/tom_app_settings.png>]
+<figures/consumption_on_wifi.png, id=641, 441.14813pt x 335.00156pt>
 File: figures/consumption_on_wifi.png Graphic file (type png)
 <use figures/consumption_on_wifi.png>
-Package pdftex.def Info: figures/consumption_on_wifi.png  used on input line 95.
+Package pdftex.def Info: figures/consumption_on_wifi.png  used on input line 137.
 (pdftex.def)             Requested size: 295.90588pt x 224.71568pt.
- [11 <./figures/consumption_on_wifi.png (PNG copy)>]
-<figures/box.png, id=646, 854.7132pt x 605.1408pt>
+ [9 <./figures/consumption_off.png (PNG copy)> <./figures/consumption_on_wifi.png (PNG copy)>]
+<figures/box.png, id=648, 854.7132pt x 605.1408pt>
 File: figures/box.png Graphic file (type png)
 <use figures/box.png>
-Package pdftex.def Info: figures/box.png  used on input line 111.
+Package pdftex.def Info: figures/box.png  used on input line 159.
 (pdftex.def)             Requested size: 364.19667pt x 257.85088pt.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 119.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 168.
  (d:/texlive/2026/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<figures/black_box.jpg, id=647, 1510.89468pt x 1007.26312pt>
+<figures/black_box.jpg, id=649, 1510.89468pt x 1007.26312pt>
 File: figures/black_box.jpg Graphic file (type jpg)
 <use figures/black_box.jpg>
-Package pdftex.def Info: figures/black_box.jpg  used on input line 129.
+Package pdftex.def Info: figures/black_box.jpg  used on input line 178.
 (pdftex.def)             Requested size: 341.43307pt x 227.62344pt.
- [12
+ [10
 
 {d:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} <./figures/box.png>]
-<figures/expansion_bb.jpg, id=656, 1568.86125pt x 906.38625pt>
+<figures/expansion_bb.jpg, id=657, 1568.86125pt x 906.38625pt>
 File: figures/expansion_bb.jpg Graphic file (type jpg)
 <use figures/expansion_bb.jpg>
-Package pdftex.def Info: figures/expansion_bb.jpg  used on input line 140.
+Package pdftex.def Info: figures/expansion_bb.jpg  used on input line 194.
 (pdftex.def)             Requested size: 318.66948pt x 184.09541pt.
- [13 <./figures/black_box.jpg> <./figures/expansion_bb.jpg>]
-<figures/display.png, id=664, 889.1619pt x 562.5015pt>
+ [11 <./figures/black_box.jpg> <./figures/expansion_bb.jpg>]
+<figures/display.png, id=665, 889.1619pt x 562.5015pt>
 File: figures/display.png Graphic file (type png)
 <use figures/display.png>
-Package pdftex.def Info: figures/display.png  used on input line 150.
+Package pdftex.def Info: figures/display.png  used on input line 204.
 (pdftex.def)             Requested size: 364.19667pt x 230.39536pt.
-<figures/3d_stand_wdisplay.png, id=665, 891.33pt x 530.9436pt>
+<figures/3d_stand_wdisplay.png, id=666, 891.33pt x 530.9436pt>
 File: figures/3d_stand_wdisplay.png Graphic file (type png)
 <use figures/3d_stand_wdisplay.png>
-Package pdftex.def Info: figures/3d_stand_wdisplay.png  used on input line 158.
+Package pdftex.def Info: figures/3d_stand_wdisplay.png  used on input line 212.
 (pdftex.def)             Requested size: 364.19667pt x 216.94293pt.
-<figures/back_cover.png, id=666, 736.4313pt x 393.1488pt>
+<figures/back_cover.png, id=667, 736.4313pt x 393.1488pt>
 File: figures/back_cover.png Graphic file (type png)
 <use figures/back_cover.png>
-Package pdftex.def Info: figures/back_cover.png  used on input line 166.
+Package pdftex.def Info: figures/back_cover.png  used on input line 220.
 (pdftex.def)             Requested size: 364.19667pt x 194.43228pt.
- [14 <./figures/display.png> <./figures/3d_stand_wdisplay.png>]
-<figures/bottom_cover_screwholes.png, id=675, 985.7628pt x 585.8688pt>
+ [12 <./figures/display.png> <./figures/3d_stand_wdisplay.png>]
+<figures/bottom_cover_screwholes.png, id=677, 985.7628pt x 585.8688pt>
 File: figures/bottom_cover_screwholes.png Graphic file (type png)
 <use figures/bottom_cover_screwholes.png>
-Package pdftex.def Info: figures/bottom_cover_screwholes.png  used on input line 174.
+Package pdftex.def Info: figures/bottom_cover_screwholes.png  used on input line 228.
 (pdftex.def)             Requested size: 364.19667pt x 216.45517pt.
-<figures/cable_tie.jpg, id=676, 912.5292pt x 266.9172pt>
+<figures/cable_tie.jpg, id=678, 912.5292pt x 266.9172pt>
 File: figures/cable_tie.jpg Graphic file (type jpg)
 <use figures/cable_tie.jpg>
-Package pdftex.def Info: figures/cable_tie.jpg  used on input line 184.
+Package pdftex.def Info: figures/cable_tie.jpg  used on input line 238.
 (pdftex.def)             Requested size: 364.19667pt x 106.52876pt.
- [15 <./figures/back_cover.png> <./figures/bottom_cover_screwholes.png>]
-<figures/wiper_stalk_button.jpg, id=685, 762.2076pt x 297.7524pt>
+ [13 <./figures/back_cover.png> <./figures/bottom_cover_screwholes.png>]
+<figures/wiper_stalk_button.jpg, id=687, 762.2076pt x 297.7524pt>
 File: figures/wiper_stalk_button.jpg Graphic file (type jpg)
 <use figures/wiper_stalk_button.jpg>
-Package pdftex.def Info: figures/wiper_stalk_button.jpg  used on input line 190.
+Package pdftex.def Info: figures/wiper_stalk_button.jpg  used on input line 244.
 (pdftex.def)             Requested size: 364.19667pt x 142.27437pt.
-<figures/sticker.png, id=686, 463.4916pt x 268.3626pt>
+<figures/sticker.png, id=688, 463.4916pt x 268.3626pt>
 File: figures/sticker.png Graphic file (type png)
 <use figures/sticker.png>
-Package pdftex.def Info: figures/sticker.png  used on input line 196.
+Package pdftex.def Info: figures/sticker.png  used on input line 250.
 (pdftex.def)             Requested size: 364.19667pt x 210.87804pt.
-) [16 <./figures/cable_tie.jpg> <./figures/wiper_stalk_button.jpg> <./figures/sticker.png>]
-\openout2 = `chapters_fr/02_installation.aux'.
+) [14 <./figures/cable_tie.jpg> <./figures/wiper_stalk_button.jpg> <./figures/sticker.png>]
+\openout2 = `chapters/02_installation.aux'.
 
- (./chapters_fr/02_installation.tex
+ (./chapters/02_installation.tex
 Chapter 2.
-<figures/clip_on.jpg, id=695, 963.6pt x 555.9972pt>
+<figures/clip_on.jpg, id=697, 963.6pt x 555.9972pt>
 File: figures/clip_on.jpg Graphic file (type jpg)
 <use figures/clip_on.jpg>
-Package pdftex.def Info: figures/clip_on.jpg  used on input line 16.
+Package pdftex.def Info: figures/clip_on.jpg  used on input line 23.
 (pdftex.def)             Requested size: 364.19667pt x 210.1358pt.
-[17
+[15
 
 
 
 
-]
-<figures/3d_stand.jpg, id=703, 754.4988pt x 515.526pt>
+ <./figures/clip_on.jpg>]
+<figures/3d_stand.jpg, id=706, 754.4988pt x 515.526pt>
 File: figures/3d_stand.jpg Graphic file (type jpg)
 <use figures/3d_stand.jpg>
-Package pdftex.def Info: figures/3d_stand.jpg  used on input line 34.
+Package pdftex.def Info: figures/3d_stand.jpg  used on input line 44.
 (pdftex.def)             Requested size: 364.19667pt x 248.84987pt.
- [18 <./figures/clip_on.jpg>]
-<figures/bb_connection.jpg, id=710, 755.4624pt x 489.5088pt>
+<figures/bb_connection.jpg, id=707, 755.4624pt x 489.5088pt>
 File: figures/bb_connection.jpg Graphic file (type jpg)
 <use figures/bb_connection.jpg>
-Package pdftex.def Info: figures/bb_connection.jpg  used on input line 46.
+Package pdftex.def Info: figures/bb_connection.jpg  used on input line 56.
 (pdftex.def)             Requested size: 364.19667pt x 235.98485pt.
- [19 <./figures/3d_stand.jpg> <./figures/bb_connection.jpg>]
-<figures/obd_connector.png, id=717, 1624.0675pt x 975.645pt>
+ [16 <./figures/3d_stand.jpg>]
+<figures/obd_connector.png, id=713, 1624.0675pt x 975.645pt>
 File: figures/obd_connector.png Graphic file (type png)
 <use figures/obd_connector.png>
-Package pdftex.def Info: figures/obd_connector.png  used on input line 58.
+Package pdftex.def Info: figures/obd_connector.png  used on input line 71.
 (pdftex.def)             Requested size: 364.19667pt x 218.78119pt.
-) [20 <./figures/obd_connector.png (PNG copy)>]
-\openout2 = `chapters_fr/03_basic_UI.aux'.
 
- (./chapters_fr/03_basic_UI.tex
+Underfull \hbox (badness 10000) in paragraph at lines 81--85
+
+ []
+
+[17 <./figures/bb_connection.jpg> <./figures/obd_connector.png (PNG copy)>]
+<figures/ButtonConnector.JPG, id=722, 249.22826pt x 175.71935pt>
+File: figures/ButtonConnector.JPG Graphic file (type jpg)
+<use figures/ButtonConnector.JPG>
+Package pdftex.def Info: figures/ButtonConnector.JPG  used on input line 88.
+(pdftex.def)             Requested size: 318.66948pt x 224.6867pt.
+<figures/button_installed.jpg, id=724, 1284.8pt x 722.7pt>
+File: figures/button_installed.jpg Graphic file (type jpg)
+<use figures/button_installed.jpg>
+Package pdftex.def Info: figures/button_installed.jpg  used on input line 98.
+(pdftex.def)             Requested size: 364.19667pt x 204.85785pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--113
+
+ []
+
+[18 <./figures/ButtonConnector.JPG> <./figures/button_installed.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 114--117
+
+ []
+
+<figures/twintom_adapter.jpg, id=734, 3185.9025pt x 1684.2925pt>
+File: figures/twintom_adapter.jpg Graphic file (type jpg)
+<use figures/twintom_adapter.jpg>
+Package pdftex.def Info: figures/twintom_adapter.jpg  used on input line 126.
+(pdftex.def)             Requested size: 318.66948pt x 168.46481pt.
+) [19 <./figures/twintom_adapter.jpg>]
+\openout2 = `chapters/03_basic_UI.aux'.
+
+ (./chapters/03_basic_UI.tex
 Chapter 3.
-<icons/BatteryV2.png, id=723, 346.896pt x 252.945pt>
+<icons/BatteryV2.png, id=740, 346.896pt x 252.945pt>
 File: icons/BatteryV2.png Graphic file (type png)
 <use icons/BatteryV2.png>
-Package pdftex.def Info: icons/BatteryV2.png  used on input line 15.
+Package pdftex.def Info: icons/BatteryV2.png  used on input line 19.
 (pdftex.def)             Requested size: 31.21399pt x 22.76219pt.
 
-Overfull \hbox (2.76125pt too wide) in paragraph at lines 15--15
+Overfull \hbox (2.76125pt too wide) in paragraph at lines 19--19
 []|[]| 
  []
 
-<icons/Motor.png, id=724, 48.18pt x 35.13126pt>
+<icons/Motor.png, id=741, 48.18pt x 35.13126pt>
 File: icons/Motor.png Graphic file (type png)
 <use icons/Motor.png>
-Package pdftex.def Info: icons/Motor.png  used on input line 19.
-(pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
-
-Overfull \hbox (2.76389pt too wide) in paragraph at lines 19--19
-[]|[]| 
- []
-
-<icons/BatteryInfo2.png, id=725, 48.18pt x 35.13126pt>
-File: icons/BatteryInfo2.png Graphic file (type png)
-<use icons/BatteryInfo2.png>
-Package pdftex.def Info: icons/BatteryInfo2.png  used on input line 23.
+Package pdftex.def Info: icons/Motor.png  used on input line 23.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 23--23
 []|[]| 
  []
 
-<icons/Alarm.PNG, id=726, 28.60687pt x 26.34843pt>
-File: icons/Alarm.PNG Graphic file (type png)
-<use icons/Alarm.PNG>
-Package pdftex.def Info: icons/Alarm.PNG  used on input line 27.
-(pdftex.def)             Requested size: 24.7136pt x 22.76219pt.
-<icons/Error.png, id=727, 25.59563pt x 26.34843pt>
-File: icons/Error.png Graphic file (type png)
-<use icons/Error.png>
-Package pdftex.def Info: icons/Error.png  used on input line 31.
-(pdftex.def)             Requested size: 22.11217pt x 22.76219pt.
-<icons/TripLog.png, id=728, 28.60687pt x 26.34843pt>
-File: icons/TripLog.png Graphic file (type png)
-<use icons/TripLog.png>
-Package pdftex.def Info: icons/TripLog.png  used on input line 35.
-(pdftex.def)             Requested size: 24.7136pt x 22.76219pt.
-<icons/Gyroscope.png, id=729, 28.60687pt x 26.34843pt>
-File: icons/Gyroscope.png Graphic file (type png)
-<use icons/Gyroscope.png>
-Package pdftex.def Info: icons/Gyroscope.png  used on input line 39.
-(pdftex.def)             Requested size: 24.7136pt x 22.76219pt.
-[21
-
-
-
-
- <./icons/BatteryV2.png (PNG copy)> <./icons/Motor.png (PNG copy)> <./icons/BatteryInfo2.png (PNG copy)> <./icons/Alarm.PNG> <./icons/Error.png> <./icons/TripLog.png>]
-<icons/Street0Ok_v2.png, id=737, 39.14626pt x 26.34843pt>
-File: icons/Street0Ok_v2.png Graphic file (type png)
-<use icons/Street0Ok_v2.png>
-Package pdftex.def Info: icons/Street0Ok_v2.png  used on input line 43.
-(pdftex.def)             Requested size: 33.81862pt x 22.76219pt.
-
-Overfull \hbox (5.36588pt too wide) in paragraph at lines 43--43
-[]|[]| 
- []
-
-<icons/3Dots.PNG, id=738, 29.35968pt x 45.16875pt>
-File: icons/3Dots.PNG Graphic file (type png)
-<use icons/3Dots.PNG>
-Package pdftex.def Info: icons/3Dots.PNG  used on input line 47.
-(pdftex.def)             Requested size: 14.79536pt x 22.76219pt.
-<icons/BatterySoc.jpg, id=739, 48.18pt x 35.13126pt>
-File: icons/BatterySoc.jpg Graphic file (type jpg)
-<use icons/BatterySoc.jpg>
-Package pdftex.def Info: icons/BatterySoc.jpg  used on input line 54.
+<icons/BatteryInfo2.png, id=742, 48.18pt x 35.13126pt>
+File: icons/BatteryInfo2.png Graphic file (type png)
+<use icons/BatteryInfo2.png>
+Package pdftex.def Info: icons/BatteryInfo2.png  used on input line 27.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
-Overfull \hbox (2.76389pt too wide) in paragraph at lines 54--54
+Overfull \hbox (2.76389pt too wide) in paragraph at lines 27--27
 []|[]| 
  []
 
-<icons/BatterySoh.jpg, id=740, 48.18pt x 35.13126pt>
-File: icons/BatterySoh.jpg Graphic file (type jpg)
-<use icons/BatterySoh.jpg>
-Package pdftex.def Info: icons/BatterySoh.jpg  used on input line 58.
+<icons/Alarm.PNG, id=743, 28.60687pt x 26.34843pt>
+File: icons/Alarm.PNG Graphic file (type png)
+<use icons/Alarm.PNG>
+Package pdftex.def Info: icons/Alarm.PNG  used on input line 31.
+(pdftex.def)             Requested size: 24.7136pt x 22.76219pt.
+<icons/Error.png, id=744, 25.59563pt x 26.34843pt>
+File: icons/Error.png Graphic file (type png)
+<use icons/Error.png>
+Package pdftex.def Info: icons/Error.png  used on input line 35.
+(pdftex.def)             Requested size: 22.11217pt x 22.76219pt.
+<icons/TripLog.png, id=745, 28.60687pt x 26.34843pt>
+File: icons/TripLog.png Graphic file (type png)
+<use icons/TripLog.png>
+Package pdftex.def Info: icons/TripLog.png  used on input line 39.
+(pdftex.def)             Requested size: 24.7136pt x 22.76219pt.
+<icons/Gyroscope.png, id=746, 28.60687pt x 26.34843pt>
+File: icons/Gyroscope.png Graphic file (type png)
+<use icons/Gyroscope.png>
+Package pdftex.def Info: icons/Gyroscope.png  used on input line 43.
+(pdftex.def)             Requested size: 24.7136pt x 22.76219pt.
+<icons/Street0Ok_v2.png, id=747, 39.14626pt x 26.34843pt>
+File: icons/Street0Ok_v2.png Graphic file (type png)
+<use icons/Street0Ok_v2.png>
+Package pdftex.def Info: icons/Street0Ok_v2.png  used on input line 47.
+(pdftex.def)             Requested size: 33.81862pt x 22.76219pt.
+
+Overfull \hbox (5.36588pt too wide) in paragraph at lines 47--47
+[]|[]| 
+ []
+
+[20
+
+
+
+
+ <./icons/BatteryV2.png (PNG copy)> <./icons/Motor.png (PNG copy)> <./icons/BatteryInfo2.png (PNG copy)> <./icons/Alarm.PNG> <./icons/Error.png> <./icons/TripLog.png> <./icons/Gyroscope.PNG>]
+<icons/3Dots.PNG, id=756, 29.35968pt x 45.16875pt>
+File: icons/3Dots.PNG Graphic file (type png)
+<use icons/3Dots.PNG>
+Package pdftex.def Info: icons/3Dots.PNG  used on input line 51.
+(pdftex.def)             Requested size: 14.79536pt x 22.76219pt.
+<icons/BatterySoc.jpg, id=757, 48.18pt x 35.13126pt>
+File: icons/BatterySoc.jpg Graphic file (type jpg)
+<use icons/BatterySoc.jpg>
+Package pdftex.def Info: icons/BatterySoc.jpg  used on input line 58.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 58--58
 []|[]| 
  []
 
-<icons/BatteryKwh.jpg, id=741, 48.18pt x 35.13126pt>
-File: icons/BatteryKwh.jpg Graphic file (type jpg)
-<use icons/BatteryKwh.jpg>
-Package pdftex.def Info: icons/BatteryKwh.jpg  used on input line 62.
+<icons/BatterySoh.jpg, id=758, 48.18pt x 35.13126pt>
+File: icons/BatterySoh.jpg Graphic file (type jpg)
+<use icons/BatterySoh.jpg>
+Package pdftex.def Info: icons/BatterySoh.jpg  used on input line 62.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 62--62
 []|[]| 
  []
 
-<icons/BatteryA.jpg, id=742, 48.18pt x 35.13126pt>
-File: icons/BatteryA.jpg Graphic file (type jpg)
-<use icons/BatteryA.jpg>
-Package pdftex.def Info: icons/BatteryA.jpg  used on input line 66.
+<icons/BatteryKwh.jpg, id=759, 48.18pt x 35.13126pt>
+File: icons/BatteryKwh.jpg Graphic file (type jpg)
+<use icons/BatteryKwh.jpg>
+Package pdftex.def Info: icons/BatteryKwh.jpg  used on input line 66.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 66--66
 []|[]| 
  []
 
-<icons/BatteryA+red.png, id=743, 48.18pt x 35.13126pt>
-File: icons/BatteryA+red.png Graphic file (type png)
-<use icons/BatteryA+red.png>
-Package pdftex.def Info: icons/BatteryA+red.png  used on input line 70.
+<icons/BatteryA.jpg, id=760, 48.18pt x 35.13126pt>
+File: icons/BatteryA.jpg Graphic file (type jpg)
+<use icons/BatteryA.jpg>
+Package pdftex.def Info: icons/BatteryA.jpg  used on input line 70.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 70--70
 []|[]| 
  []
 
-<icons/BatteryKw.png, id=744, 48.18pt x 35.13126pt>
-File: icons/BatteryKw.png Graphic file (type png)
-<use icons/BatteryKw.png>
-Package pdftex.def Info: icons/BatteryKw.png  used on input line 74.
+<icons/BatteryA+red.png, id=761, 48.18pt x 35.13126pt>
+File: icons/BatteryA+red.png Graphic file (type png)
+<use icons/BatteryA+red.png>
+Package pdftex.def Info: icons/BatteryA+red.png  used on input line 74.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 74--74
 []|[]| 
  []
 
-<icons/Battery3Â°.jpg, id=745, 48.18pt x 35.13126pt>
-File: icons/Battery3Â°.jpg Graphic file (type jpg)
-<use icons/Battery3Â°.jpg>
-Package pdftex.def Info: icons/Battery3Â°.jpg  used on input line 78.
+<icons/BatteryKw.png, id=762, 48.18pt x 35.13126pt>
+File: icons/BatteryKw.png Graphic file (type png)
+<use icons/BatteryKw.png>
+Package pdftex.def Info: icons/BatteryKw.png  used on input line 78.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 78--78
 []|[]| 
  []
 
-<icons/BatteryV2.jpg, id=746, 48.18pt x 35.13126pt>
-File: icons/BatteryV2.jpg Graphic file (type jpg)
-<use icons/BatteryV2.jpg>
-Package pdftex.def Info: icons/BatteryV2.jpg  used on input line 82.
+<icons/Battery3Â°.jpg, id=763, 48.18pt x 35.13126pt>
+File: icons/Battery3Â°.jpg Graphic file (type jpg)
+<use icons/Battery3Â°.jpg>
+Package pdftex.def Info: icons/Battery3Â°.jpg  used on input line 82.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 82--82
 []|[]| 
  []
 
-<icons/BatteryV.jpg, id=747, 48.18pt x 35.13126pt>
-File: icons/BatteryV.jpg Graphic file (type jpg)
-<use icons/BatteryV.jpg>
-Package pdftex.def Info: icons/BatteryV.jpg  used on input line 86.
+<icons/BatteryV2.jpg, id=764, 48.18pt x 35.13126pt>
+File: icons/BatteryV2.jpg Graphic file (type jpg)
+<use icons/BatteryV2.jpg>
+Package pdftex.def Info: icons/BatteryV2.jpg  used on input line 86.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 86--86
 []|[]| 
  []
 
-<icons/BatteryDiff.png, id=748, 48.18pt x 35.13126pt>
-File: icons/BatteryDiff.png Graphic file (type png)
-<use icons/BatteryDiff.png>
-Package pdftex.def Info: icons/BatteryDiff.png  used on input line 90.
+<icons/BatteryV.jpg, id=765, 48.18pt x 35.13126pt>
+File: icons/BatteryV.jpg Graphic file (type jpg)
+<use icons/BatteryV.jpg>
+Package pdftex.def Info: icons/BatteryV.jpg  used on input line 90.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 90--90
 []|[]| 
  []
 
-[22{d:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc} <./icons/Gyroscope.PNG> <./icons/Street0Ok_v2.png> <./icons/3Dots.PNG> <./icons/BatterySoc.jpg> <./icons/BatterySoh.jpg> <./icons/BatteryKwh.jpg> <./icons/BatteryA.jpg> <./icons/BatteryA+red.png (PNG copy)> <./icons/BatteryKw.png (PNG copy)> <./icons/Battery3Â°.jpg> <./icons/BatteryV2.jpg> <./icons/BatteryV.jpg>]
-<icons/CEta.png, id=758, 48.18pt x 35.13126pt>
-File: icons/CEta.png Graphic file (type png)
-<use icons/CEta.png>
-Package pdftex.def Info: icons/CEta.png  used on input line 96.
+<icons/BatteryDiff.png, id=766, 48.18pt x 35.13126pt>
+File: icons/BatteryDiff.png Graphic file (type png)
+<use icons/BatteryDiff.png>
+Package pdftex.def Info: icons/BatteryDiff.png  used on input line 94.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
-Overfull \hbox (2.76389pt too wide) in paragraph at lines 96--96
+Overfull \hbox (2.76389pt too wide) in paragraph at lines 94--94
 []|[]| 
  []
 
-<icons/ChargeÂ°.png, id=759, 48.18pt x 35.13126pt>
-File: icons/ChargeÂ°.png Graphic file (type png)
-<use icons/ChargeÂ°.png>
-Package pdftex.def Info: icons/ChargeÂ°.png  used on input line 100.
+<icons/CEta.png, id=767, 48.18pt x 35.13126pt>
+File: icons/CEta.png Graphic file (type png)
+<use icons/CEta.png>
+Package pdftex.def Info: icons/CEta.png  used on input line 100.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 100--100
 []|[]| 
  []
 
-<icons/ChargedKwh.png, id=760, 48.18pt x 35.13126pt>
-File: icons/ChargedKwh.png Graphic file (type png)
-<use icons/ChargedKwh.png>
-Package pdftex.def Info: icons/ChargedKwh.png  used on input line 104.
+[21{d:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc} <./icons/Street0Ok_v2.png> <./icons/3Dots.PNG> <./icons/BatterySoc.jpg> <./icons/BatterySoh.jpg> <./icons/BatteryKwh.jpg> <./icons/BatteryA.jpg> <./icons/BatteryA+red.png (PNG copy)> <./icons/BatteryKw.png (PNG copy)> <./icons/Battery3Â°.jpg> <./icons/BatteryV2.jpg> <./icons/BatteryV.jpg> <./icons/BatteryDiff.png (PNG copy)>]
+<icons/ChargeÂ°.png, id=776, 48.18pt x 35.13126pt>
+File: icons/ChargeÂ°.png Graphic file (type png)
+<use icons/ChargeÂ°.png>
+Package pdftex.def Info: icons/ChargeÂ°.png  used on input line 104.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 104--104
 []|[]| 
  []
 
-<icons/ChargeKwh.png, id=761, 48.18pt x 35.13126pt>
-File: icons/ChargeKwh.png Graphic file (type png)
-<use icons/ChargeKwh.png>
-Package pdftex.def Info: icons/ChargeKwh.png  used on input line 108.
+<icons/ChargedKwh.png, id=777, 48.18pt x 35.13126pt>
+File: icons/ChargedKwh.png Graphic file (type png)
+<use icons/ChargedKwh.png>
+Package pdftex.def Info: icons/ChargedKwh.png  used on input line 108.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 108--108
 []|[]| 
  []
 
-<icons/MotoRPM2.jpg, id=762, 48.18pt x 35.13126pt>
-File: icons/MotoRPM2.jpg Graphic file (type jpg)
-<use icons/MotoRPM2.jpg>
-Package pdftex.def Info: icons/MotoRPM2.jpg  used on input line 114.
+<icons/ChargeKwh.png, id=778, 48.18pt x 35.13126pt>
+File: icons/ChargeKwh.png Graphic file (type png)
+<use icons/ChargeKwh.png>
+Package pdftex.def Info: icons/ChargeKwh.png  used on input line 112.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
-Overfull \hbox (2.76389pt too wide) in paragraph at lines 114--114
+Overfull \hbox (2.76389pt too wide) in paragraph at lines 112--112
 []|[]| 
  []
 
-<icons/MotorNm.jpg, id=763, 48.18pt x 35.13126pt>
-File: icons/MotorNm.jpg Graphic file (type jpg)
-<use icons/MotorNm.jpg>
-Package pdftex.def Info: icons/MotorNm.jpg  used on input line 118.
+<icons/MotoRPM2.jpg, id=779, 48.18pt x 35.13126pt>
+File: icons/MotoRPM2.jpg Graphic file (type jpg)
+<use icons/MotoRPM2.jpg>
+Package pdftex.def Info: icons/MotoRPM2.jpg  used on input line 118.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 118--118
 []|[]| 
  []
 
-<icons/MotorÂ°2.jpg, id=764, 48.18pt x 35.13126pt>
-File: icons/MotorÂ°2.jpg Graphic file (type jpg)
-<use icons/MotorÂ°2.jpg>
-Package pdftex.def Info: icons/MotorÂ°2.jpg  used on input line 122.
+<icons/MotorNm.jpg, id=780, 48.18pt x 35.13126pt>
+File: icons/MotorNm.jpg Graphic file (type jpg)
+<use icons/MotorNm.jpg>
+Package pdftex.def Info: icons/MotorNm.jpg  used on input line 122.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 122--122
 []|[]| 
  []
 
-<icons/SevÂ°.png, id=765, 48.18pt x 35.13126pt>
-File: icons/SevÂ°.png Graphic file (type png)
-<use icons/SevÂ°.png>
-Package pdftex.def Info: icons/SevÂ°.png  used on input line 126.
+<icons/MotorÂ°2.jpg, id=781, 48.18pt x 35.13126pt>
+File: icons/MotorÂ°2.jpg Graphic file (type jpg)
+<use icons/MotorÂ°2.jpg>
+Package pdftex.def Info: icons/MotorÂ°2.jpg  used on input line 126.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 126--126
 []|[]| 
  []
 
-<icons/Pin1.png, id=766, 48.18pt x 35.13126pt>
-File: icons/Pin1.png Graphic file (type png)
-<use icons/Pin1.png>
-Package pdftex.def Info: icons/Pin1.png  used on input line 132.
+<icons/SevÂ°.png, id=782, 48.18pt x 35.13126pt>
+File: icons/SevÂ°.png Graphic file (type png)
+<use icons/SevÂ°.png>
+Package pdftex.def Info: icons/SevÂ°.png  used on input line 130.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
-Overfull \hbox (2.76389pt too wide) in paragraph at lines 132--132
+Overfull \hbox (2.76389pt too wide) in paragraph at lines 130--130
 []|[]| 
  []
 
-<icons/Pin2.png, id=767, 48.18pt x 35.13126pt>
-File: icons/Pin2.png Graphic file (type png)
-<use icons/Pin2.png>
-Package pdftex.def Info: icons/Pin2.png  used on input line 136.
+<icons/Pin1.png, id=783, 48.18pt x 35.13126pt>
+File: icons/Pin1.png Graphic file (type png)
+<use icons/Pin1.png>
+Package pdftex.def Info: icons/Pin1.png  used on input line 136.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 136--136
 []|[]| 
  []
 
-<icons/InclDX.PNG, id=768, 48.18pt x 35.13126pt>
-File: icons/InclDX.PNG Graphic file (type png)
-<use icons/InclDX.PNG>
-Package pdftex.def Info: icons/InclDX.PNG  used on input line 142.
+<icons/Pin2.png, id=784, 48.18pt x 35.13126pt>
+File: icons/Pin2.png Graphic file (type png)
+<use icons/Pin2.png>
+Package pdftex.def Info: icons/Pin2.png  used on input line 140.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
-Overfull \hbox (2.76389pt too wide) in paragraph at lines 142--142
+Overfull \hbox (2.76389pt too wide) in paragraph at lines 140--140
 []|[]| 
  []
 
-[23{d:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc} <./icons/BatteryDiff.png (PNG copy)> <./icons/CEta.png (PNG copy)> <./icons/ChargeÂ°.png (PNG copy)> <./icons/ChargedKwh.png (PNG copy)> <./icons/ChargeKwh.png (PNG copy)> <./icons/MotoRPM2.jpg> <./icons/MotorNm.jpg> <./icons/MotorÂ°2.jpg> <./icons/SevÂ°.png (PNG copy)> <./icons/Pin1.png (PNG copy)> <./icons/Pin2.png (PNG copy)>]
-<icons/InclSX.PNG, id=774, 48.18pt x 35.13126pt>
-File: icons/InclSX.PNG Graphic file (type png)
-<use icons/InclSX.PNG>
-Package pdftex.def Info: icons/InclSX.PNG  used on input line 146.
+<icons/InclDX.PNG, id=785, 48.18pt x 35.13126pt>
+File: icons/InclDX.PNG Graphic file (type png)
+<use icons/InclDX.PNG>
+Package pdftex.def Info: icons/InclDX.PNG  used on input line 146.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 146--146
 []|[]| 
  []
 
-<icons/UphillTwizy.png, id=775, 48.18pt x 35.13126pt>
-File: icons/UphillTwizy.png Graphic file (type png)
-<use icons/UphillTwizy.png>
-Package pdftex.def Info: icons/UphillTwizy.png  used on input line 150.
+<icons/InclSX.PNG, id=786, 48.18pt x 35.13126pt>
+File: icons/InclSX.PNG Graphic file (type png)
+<use icons/InclSX.PNG>
+Package pdftex.def Info: icons/InclSX.PNG  used on input line 150.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 150--150
 []|[]| 
  []
 
-<icons/DownhillTwizy.png, id=776, 48.18pt x 35.13126pt>
-File: icons/DownhillTwizy.png Graphic file (type png)
-<use icons/DownhillTwizy.png>
-Package pdftex.def Info: icons/DownhillTwizy.png  used on input line 154.
+[22{d:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc} <./icons/CEta.png (PNG copy)> <./icons/ChargeÂ°.png (PNG copy)> <./icons/ChargedKwh.png (PNG copy)> <./icons/ChargeKwh.png (PNG copy)> <./icons/MotoRPM2.jpg> <./icons/MotorNm.jpg> <./icons/MotorÂ°2.jpg> <./icons/SevÂ°.png (PNG copy)> <./icons/Pin1.png (PNG copy)> <./icons/Pin2.png (PNG copy)> <./icons/InclDx.PNG (PNG copy)>]
+<icons/UphillTwizy.png, id=792, 48.18pt x 35.13126pt>
+File: icons/UphillTwizy.png Graphic file (type png)
+<use icons/UphillTwizy.png>
+Package pdftex.def Info: icons/UphillTwizy.png  used on input line 154.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 154--154
 []|[]| 
  []
 
-<icons/GyroAcc.JPG, id=777, 48.18pt x 35.13126pt>
-File: icons/GyroAcc.JPG Graphic file (type jpg)
-<use icons/GyroAcc.JPG>
-Package pdftex.def Info: icons/GyroAcc.JPG  used on input line 158.
+<icons/DownhillTwizy.png, id=793, 48.18pt x 35.13126pt>
+File: icons/DownhillTwizy.png Graphic file (type png)
+<use icons/DownhillTwizy.png>
+Package pdftex.def Info: icons/DownhillTwizy.png  used on input line 158.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 158--158
 []|[]| 
  []
 
-<icons/Gtemp.PNG, id=778, 48.18pt x 35.13126pt>
-File: icons/Gtemp.PNG Graphic file (type png)
-<use icons/Gtemp.PNG>
-Package pdftex.def Info: icons/Gtemp.PNG  used on input line 162.
+<icons/GyroAcc.JPG, id=794, 48.18pt x 35.13126pt>
+File: icons/GyroAcc.JPG Graphic file (type jpg)
+<use icons/GyroAcc.JPG>
+Package pdftex.def Info: icons/GyroAcc.JPG  used on input line 162.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 162--162
 []|[]| 
  []
 
-<icons/Timer.PNG, id=779, 48.18pt x 35.13126pt>
-File: icons/Timer.PNG Graphic file (type png)
-<use icons/Timer.PNG>
-Package pdftex.def Info: icons/Timer.PNG  used on input line 166.
+<icons/Gtemp.PNG, id=795, 48.18pt x 35.13126pt>
+File: icons/Gtemp.PNG Graphic file (type png)
+<use icons/Gtemp.PNG>
+Package pdftex.def Info: icons/Gtemp.PNG  used on input line 166.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 166--166
 []|[]| 
  []
 
-<icons/tKm.png, id=780, 48.18pt x 35.13126pt>
-File: icons/tKm.png Graphic file (type png)
-<use icons/tKm.png>
-Package pdftex.def Info: icons/tKm.png  used on input line 172.
+<icons/Timer.PNG, id=796, 48.18pt x 35.13126pt>
+File: icons/Timer.PNG Graphic file (type png)
+<use icons/Timer.PNG>
+Package pdftex.def Info: icons/Timer.PNG  used on input line 170.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
-Overfull \hbox (2.76389pt too wide) in paragraph at lines 172--172
+Overfull \hbox (2.76389pt too wide) in paragraph at lines 170--170
 []|[]| 
  []
 
-<icons/tKmh.png, id=781, 48.18pt x 35.13126pt>
-File: icons/tKmh.png Graphic file (type png)
-<use icons/tKmh.png>
-Package pdftex.def Info: icons/tKmh.png  used on input line 176.
+<icons/tKm.png, id=797, 48.18pt x 35.13126pt>
+File: icons/tKm.png Graphic file (type png)
+<use icons/tKm.png>
+Package pdftex.def Info: icons/tKm.png  used on input line 176.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 176--176
 []|[]| 
  []
 
-<icons/tKmR.png, id=782, 48.18pt x 35.13126pt>
-File: icons/tKmR.png Graphic file (type png)
-<use icons/tKmR.png>
-Package pdftex.def Info: icons/tKmR.png  used on input line 180.
+<icons/tKmh.png, id=798, 48.18pt x 35.13126pt>
+File: icons/tKmh.png Graphic file (type png)
+<use icons/tKmh.png>
+Package pdftex.def Info: icons/tKmh.png  used on input line 180.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 180--180
 []|[]| 
  []
 
-<icons/tkWh.png, id=783, 48.18pt x 35.13126pt>
-File: icons/tkWh.png Graphic file (type png)
-<use icons/tkWh.png>
-Package pdftex.def Info: icons/tkWh.png  used on input line 184.
+<icons/tKmR.png, id=799, 48.18pt x 35.13126pt>
+File: icons/tKmR.png Graphic file (type png)
+<use icons/tKmR.png>
+Package pdftex.def Info: icons/tKmR.png  used on input line 184.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 184--184
 []|[]| 
  []
 
-<icons/tkWh100.png, id=784, 48.18pt x 35.13126pt>
-File: icons/tkWh100.png Graphic file (type png)
-<use icons/tkWh100.png>
-Package pdftex.def Info: icons/tkWh100.png  used on input line 188.
+<icons/tkWh.png, id=800, 48.18pt x 35.13126pt>
+File: icons/tkWh.png Graphic file (type png)
+<use icons/tkWh.png>
+Package pdftex.def Info: icons/tkWh.png  used on input line 188.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 188--188
 []|[]| 
  []
 
-<icons/tkWh1min.png, id=785, 48.18pt x 35.13126pt>
-File: icons/tkWh1min.png Graphic file (type png)
-<use icons/tkWh1min.png>
-Package pdftex.def Info: icons/tkWh1min.png  used on input line 192.
+<icons/tkWh100.png, id=801, 48.18pt x 35.13126pt>
+File: icons/tkWh100.png Graphic file (type png)
+<use icons/tkWh100.png>
+Package pdftex.def Info: icons/tkWh100.png  used on input line 192.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 192--192
 []|[]| 
  []
 
-[24 <./icons/InclDx.PNG (PNG copy)> <./icons/InclSx.PNG (PNG copy)> <./icons/UphillTwizy.png> <./icons/DownhillTwizy.png (PNG copy)> <./icons/GyroAcc.JPG> <./icons/Gtemp.PNG (PNG copy)> <./icons/Timer.PNG (PNG copy)> <./icons/tKm.png (PNG copy)> <./icons/tKmh.png (PNG copy)> <./icons/tKmR.png (PNG copy)> <./icons/tkWh.png (PNG copy)> <./icons/tkWh100.png (PNG copy)>]
-<icons/tTimer.png, id=793, 48.18pt x 35.13126pt>
-File: icons/tTimer.png Graphic file (type png)
-<use icons/tTimer.png>
-Package pdftex.def Info: icons/tTimer.png  used on input line 196.
+<icons/tkWh1min.png, id=802, 48.18pt x 35.13126pt>
+File: icons/tkWh1min.png Graphic file (type png)
+<use icons/tkWh1min.png>
+Package pdftex.def Info: icons/tkWh1min.png  used on input line 196.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 196--196
 []|[]| 
  []
 
-<icons/tUphill.png, id=794, 48.18pt x 35.13126pt>
-File: icons/tUphill.png Graphic file (type png)
-<use icons/tUphill.png>
-Package pdftex.def Info: icons/tUphill.png  used on input line 200.
+<icons/tTimer.png, id=803, 48.18pt x 35.13126pt>
+File: icons/tTimer.png Graphic file (type png)
+<use icons/tTimer.png>
+Package pdftex.def Info: icons/tTimer.png  used on input line 200.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 200--200
 []|[]| 
  []
 
-<icons/tDownhill.png, id=795, 48.18pt x 35.13126pt>
-File: icons/tDownhill.png Graphic file (type png)
-<use icons/tDownhill.png>
-Package pdftex.def Info: icons/tDownhill.png  used on input line 204.
+[23 <./icons/InclSx.PNG (PNG copy)> <./icons/UphillTwizy.png> <./icons/DownhillTwizy.png (PNG copy)> <./icons/GyroAcc.JPG> <./icons/Gtemp.PNG (PNG copy)> <./icons/Timer.PNG (PNG copy)> <./icons/tKm.png (PNG copy)> <./icons/tKmh.png (PNG copy)> <./icons/tKmR.png (PNG copy)> <./icons/tkWh.png (PNG copy)> <./icons/tkWh100.png (PNG copy)> <./icons/tkWh1min.png (PNG copy)>]
+<icons/tUphill.png, id=810, 48.18pt x 35.13126pt>
+File: icons/tUphill.png Graphic file (type png)
+<use icons/tUphill.png>
+Package pdftex.def Info: icons/tUphill.png  used on input line 204.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 204--204
 []|[]| 
  []
 
-<icons/ODO.png, id=796, 48.18pt x 35.13126pt>
-File: icons/ODO.png Graphic file (type png)
-<use icons/ODO.png>
-Package pdftex.def Info: icons/ODO.png  used on input line 210.
+<icons/tDownhill.png, id=811, 48.18pt x 35.13126pt>
+File: icons/tDownhill.png Graphic file (type png)
+<use icons/tDownhill.png>
+Package pdftex.def Info: icons/tDownhill.png  used on input line 208.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
-Overfull \hbox (2.76389pt too wide) in paragraph at lines 210--210
+Overfull \hbox (2.76389pt too wide) in paragraph at lines 208--208
 []|[]| 
  []
 
-<icons/Kmh.png, id=797, 48.18pt x 35.13126pt>
-File: icons/Kmh.png Graphic file (type png)
-<use icons/Kmh.png>
-Package pdftex.def Info: icons/Kmh.png  used on input line 214.
+<icons/ODO.png, id=812, 48.18pt x 35.13126pt>
+File: icons/ODO.png Graphic file (type png)
+<use icons/ODO.png>
+Package pdftex.def Info: icons/ODO.png  used on input line 214.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 214--214
 []|[]| 
  []
 
-<icons/KmhR.png, id=798, 48.18pt x 35.13126pt>
-File: icons/KmhR.png Graphic file (type png)
-<use icons/KmhR.png>
-Package pdftex.def Info: icons/KmhR.png  used on input line 218.
+<icons/Kmh.png, id=813, 48.18pt x 35.13126pt>
+File: icons/Kmh.png Graphic file (type png)
+<use icons/Kmh.png>
+Package pdftex.def Info: icons/Kmh.png  used on input line 218.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
 Overfull \hbox (2.76389pt too wide) in paragraph at lines 218--218
 []|[]| 
  []
 
-<icons/KmRCalc.png, id=799, 42.1575pt x 31.61812pt>
-File: icons/KmRCalc.png Graphic file (type png)
-<use icons/KmRCalc.png>
-Package pdftex.def Info: icons/KmRCalc.png  used on input line 222.
-(pdftex.def)             Requested size: 30.35014pt x 22.76219pt.
+<icons/KmhR.png, id=814, 48.18pt x 35.13126pt>
+File: icons/KmhR.png Graphic file (type png)
+<use icons/KmhR.png>
+Package pdftex.def Info: icons/KmhR.png  used on input line 222.
+(pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
-Overfull \hbox (1.8974pt too wide) in paragraph at lines 222--222
+Overfull \hbox (2.76389pt too wide) in paragraph at lines 222--222
 []|[]| 
  []
 
-[25 <./icons/tkWh1min.png (PNG copy)> <./icons/tTimer.png (PNG copy)> <./icons/tUphill.png> <./icons/tDownhill.png (PNG copy)> <./icons/ODO.png (PNG copy)> <./icons/Kmh.png (PNG copy)> <./icons/KmhR.png> <./icons/KmRCalc.PNG>]
-<figures/dashboard_numbers.PNG, id=807, 696.6828pt x 470.7186pt>
+<icons/KmRCalc.png, id=815, 42.1575pt x 31.61812pt>
+File: icons/KmRCalc.png Graphic file (type png)
+<use icons/KmRCalc.png>
+Package pdftex.def Info: icons/KmRCalc.png  used on input line 226.
+(pdftex.def)             Requested size: 30.35014pt x 22.76219pt.
+
+Overfull \hbox (1.8974pt too wide) in paragraph at lines 226--226
+[]|[]| 
+ []
+
+[24 <./icons/tTimer.png (PNG copy)> <./icons/tUphill.png> <./icons/tDownhill.png (PNG copy)> <./icons/ODO.png (PNG copy)> <./icons/Kmh.png (PNG copy)> <./icons/KmhR.png> <./icons/KmRCalc.PNG>]
+<figures/dashboard_numbers.PNG, id=824, 696.6828pt x 470.7186pt>
 File: figures/dashboard_numbers.PNG Graphic file (type png)
 <use figures/dashboard_numbers.PNG>
-Package pdftex.def Info: figures/dashboard_numbers.PNG  used on input line 233.
+Package pdftex.def Info: figures/dashboard_numbers.PNG  used on input line 240.
 (pdftex.def)             Requested size: 364.19667pt x 246.07512pt.
- [26
+ [25
 
  <./figures/dashboard_numbers.PNG>]
 File: figures/engine_page.jpg Graphic file (type jpg)
 <use figures/engine_page.jpg>
-Package pdftex.def Info: figures/engine_page.jpg  used on input line 259.
+Package pdftex.def Info: figures/engine_page.jpg  used on input line 273.
 (pdftex.def)             Requested size: 364.19667pt x 249.1413pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--264
+Underfull \hbox (badness 10000) in paragraph at lines 277--282
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--266
+Underfull \hbox (badness 10000) in paragraph at lines 283--289
 
  []
 
-[27]
-<figures/change_foreground.jpg, id=822, 2340.49406pt x 1601.2322pt>
+[26]
+<figures/change_foreground.jpg, id=839, 2340.49406pt x 1601.2322pt>
 File: figures/change_foreground.jpg Graphic file (type jpg)
 <use figures/change_foreground.jpg>
-Package pdftex.def Info: figures/change_foreground.jpg  used on input line 275.
+Package pdftex.def Info: figures/change_foreground.jpg  used on input line 306.
 (pdftex.def)             Requested size: 318.66948pt x 218.01392pt.
-<figures/changing_page.jpg, id=823, 1120.9378pt x 218.31563pt>
+<figures/changing_page.jpg, id=840, 1120.9378pt x 218.31563pt>
 File: figures/changing_page.jpg Graphic file (type jpg)
 <use figures/changing_page.jpg>
-Package pdftex.def Info: figures/changing_page.jpg  used on input line 287.
+Package pdftex.def Info: figures/changing_page.jpg  used on input line 322.
 (pdftex.def)             Requested size: 318.66948pt x 62.06403pt.
- [28 <./figures/change_foreground.jpg> <./figures/changing_page.jpg>]
-<figures/status_icon_bar.jpg, id=832, 1088.56688pt x 197.98969pt>
+<figures/status_icon_bar.jpg, id=843, 1088.56688pt x 197.98969pt>
 File: figures/status_icon_bar.jpg Graphic file (type jpg)
 <use figures/status_icon_bar.jpg>
-Package pdftex.def Info: figures/status_icon_bar.jpg  used on input line 300.
+Package pdftex.def Info: figures/status_icon_bar.jpg  used on input line 342.
 (pdftex.def)             Requested size: 318.66948pt x 57.95932pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 304--305
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--307
+ [27 <./figures/change_foreground.jpg> <./figures/changing_page.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 346--354
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--309
+Underfull \hbox (badness 10000) in paragraph at lines 355--359
 
  []
 
-<figures/alarm_icons.png, id=833, 30.5943pt x 6.2634pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--362
+
+ []
+
+<figures/alarm_icons.png, id=851, 30.5943pt x 6.2634pt>
 File: figures/alarm_icons.png Graphic file (type png)
 <use figures/alarm_icons.png>
-Package pdftex.def Info: figures/alarm_icons.png  used on input line 314.
+Package pdftex.def Info: figures/alarm_icons.png  used on input line 369.
 (pdftex.def)             Requested size: 318.66948pt x 65.24017pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--322
+Underfull \hbox (badness 10000) in paragraph at lines 376--382
 
  []
 
-[29 <./figures/status_icon_bar.jpg> <./figures/alarm_icons.png>]
-<figures/pop-up.PNG, id=842, 54.4434pt x 26.0172pt>
+<figures/pop-up.PNG, id=852, 54.4434pt x 26.0172pt>
 File: figures/pop-up.PNG Graphic file (type png)
 <use figures/pop-up.PNG>
-Package pdftex.def Info: figures/pop-up.PNG  used on input line 327.
+Package pdftex.def Info: figures/pop-up.PNG  used on input line 390.
 (pdftex.def)             Requested size: 318.66948pt x 152.30035pt.
-<figures/binfo_page.jpg, id=843, 810.3876pt x 551.1792pt>
+[28 <./figures/status_icon_bar.jpg> <./figures/alarm_icons.png>]
+<figures/binfo_page.jpg, id=860, 810.3876pt x 551.1792pt>
 File: figures/binfo_page.jpg Graphic file (type jpg)
 <use figures/binfo_page.jpg>
-Package pdftex.def Info: figures/binfo_page.jpg  used on input line 337.
+Package pdftex.def Info: figures/binfo_page.jpg  used on input line 404.
 (pdftex.def)             Requested size: 364.19667pt x 247.70876pt.
- [30 <./figures/pop-up.PNG>]
-<figures/binfo_page2.jpg, id=852, 739.0812pt x 506.8536pt>
+ [29 <./figures/pop-up.PNG> <./figures/binfo_page.jpg>]
+<figures/binfo_page2.jpg, id=868, 739.0812pt x 506.8536pt>
 File: figures/binfo_page2.jpg Graphic file (type jpg)
 <use figures/binfo_page2.jpg>
-Package pdftex.def Info: figures/binfo_page2.jpg  used on input line 352.
+Package pdftex.def Info: figures/binfo_page2.jpg  used on input line 426.
 (pdftex.def)             Requested size: 218.51521pt x 149.85307pt.
-<figures/binfo_page3.jpg, id=853, 741.972pt x 501.072pt>
+<figures/binfo_page3.jpg, id=869, 741.972pt x 501.072pt>
 File: figures/binfo_page3.jpg Graphic file (type jpg)
 <use figures/binfo_page3.jpg>
-Package pdftex.def Info: figures/binfo_page3.jpg  used on input line 358.
+Package pdftex.def Info: figures/binfo_page3.jpg  used on input line 432.
 (pdftex.def)             Requested size: 218.51521pt x 147.56265pt.
-<figures/binfo_page_condensed.png, id=854, 724.6272pt x 490.4724pt>
+<figures/binfo_page_condensed.png, id=870, 724.6272pt x 490.4724pt>
 File: figures/binfo_page_condensed.png Graphic file (type png)
 <use figures/binfo_page_condensed.png>
-Package pdftex.def Info: figures/binfo_page_condensed.png  used on input line 370.
+Package pdftex.def Info: figures/binfo_page_condensed.png  used on input line 445.
 (pdftex.def)             Requested size: 364.19667pt x 246.50787pt.
- [31 <./figures/binfo_page.jpg> <./figures/binfo_page2.jpg> <./figures/binfo_page3.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 374--375
+
+Underfull \hbox (badness 10000) in paragraph at lines 449--456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--377
+Underfull \hbox (badness 10000) in paragraph at lines 457--460
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 378--379
+[30 <./figures/binfo_page2.jpg> <./figures/binfo_page3.jpg> <./figures/binfo_page_condensed.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 461--468
 
  []
 
-[32 <./figures/binfo_page_condensed.png>]
-<figures/alarm_page.jpg, id=868, 716.9184pt x 510.708pt>
+<figures/alarm_page.jpg, id=880, 716.9184pt x 510.708pt>
 File: figures/alarm_page.jpg Graphic file (type jpg)
 <use figures/alarm_page.jpg>
-Package pdftex.def Info: figures/alarm_page.jpg  used on input line 389.
+Package pdftex.def Info: figures/alarm_page.jpg  used on input line 483.
 (pdftex.def)             Requested size: 364.19667pt x 259.44456pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--394
+Underfull \hbox (badness 10000) in paragraph at lines 487--490
 
  []
 
-<figures/alarm_log_old1.png, id=870, 154.8987pt x 114.1866pt>
+<figures/alarm_log_old1.png, id=882, 154.8987pt x 114.1866pt>
 File: figures/alarm_log_old1.png Graphic file (type png)
 <use figures/alarm_log_old1.png>
-Package pdftex.def Info: figures/alarm_log_old1.png  used on input line 399.
+Package pdftex.def Info: figures/alarm_log_old1.png  used on input line 496.
 (pdftex.def)             Requested size: 318.66948pt x 234.94823pt.
-[33 <./figures/alarm_page.jpg>]
-<figures/alarm_log_old2.png, id=876, 155.3805pt x 55.1661pt>
+[31 <./figures/alarm_page.jpg>]
+<figures/alarm_log_old2.png, id=888, 155.3805pt x 55.1661pt>
 File: figures/alarm_log_old2.png Graphic file (type png)
 <use figures/alarm_log_old2.png>
-Package pdftex.def Info: figures/alarm_log_old2.png  used on input line 409.
+Package pdftex.def Info: figures/alarm_log_old2.png  used on input line 509.
 (pdftex.def)             Requested size: 455.24411pt x 161.63416pt.
- [34 <./figures/alarm_log_old1.png> <./figures/alarm_log_old2.png>]
-<figures/alarm_log_old3.jpg, id=885, 155.6214pt x 56.1297pt>
+<figures/alarm_log_old3.jpg, id=889, 155.6214pt x 56.1297pt>
 File: figures/alarm_log_old3.jpg Graphic file (type jpg)
 <use figures/alarm_log_old3.jpg>
-Package pdftex.def Info: figures/alarm_log_old3.jpg  used on input line 422.
+Package pdftex.def Info: figures/alarm_log_old3.jpg  used on input line 530.
 (pdftex.def)             Requested size: 455.24411pt x 164.2262pt.
-<figures/trip_page_full.jpg, id=887, 751.608pt x 502.9992pt>
+ [32 <./figures/alarm_log_old1.png> <./figures/alarm_log_old2.png>]
+<figures/trip_page_full.jpg, id=899, 751.608pt x 502.9992pt>
 File: figures/trip_page_full.jpg Graphic file (type jpg)
 <use figures/trip_page_full.jpg>
-Package pdftex.def Info: figures/trip_page_full.jpg  used on input line 435.
+Package pdftex.def Info: figures/trip_page_full.jpg  used on input line 551.
 (pdftex.def)             Requested size: 364.19667pt x 243.73174pt.
- [35 <./figures/alarm_log_old3.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 441--442
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--562
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 447--448
+[33 <./figures/alarm_log_old3.jpg> <./figures/trip_page_full.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 570--574
 
  []
 
-<figures/trip_page_on.jpg, id=893, 712.1004pt x 486.618pt>
+<figures/trip_page_on.jpg, id=906, 712.1004pt x 486.618pt>
 File: figures/trip_page_on.jpg Graphic file (type jpg)
 <use figures/trip_page_on.jpg>
-Package pdftex.def Info: figures/trip_page_on.jpg  used on input line 454.
+Package pdftex.def Info: figures/trip_page_on.jpg  used on input line 580.
 (pdftex.def)             Requested size: 218.51521pt x 149.32042pt.
-<figures/trip_page_off.jpg, id=894, 747.7536pt x 514.5624pt>
+<figures/trip_page_off.jpg, id=907, 747.7536pt x 514.5624pt>
 File: figures/trip_page_off.jpg Graphic file (type jpg)
 <use figures/trip_page_off.jpg>
-Package pdftex.def Info: figures/trip_page_off.jpg  used on input line 460.
+Package pdftex.def Info: figures/trip_page_off.jpg  used on input line 586.
 (pdftex.def)             Requested size: 218.51521pt x 150.3656pt.
-[36 <./figures/trip_page_full.jpg>] [37 <./figures/trip_page_on.jpg> <./figures/trip_page_off.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 480--481
+[34 <./figures/trip_page_on.jpg> <./figures/trip_page_off.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 614--620
 
  []
 
-<figures/enter_trip_log_page.jpg, id=908, 818.0964pt x 574.3056pt>
+<figures/enter_trip_log_page.jpg, id=915, 818.0964pt x 574.3056pt>
 File: figures/enter_trip_log_page.jpg Graphic file (type jpg)
 <use figures/enter_trip_log_page.jpg>
-Package pdftex.def Info: figures/enter_trip_log_page.jpg  used on input line 484.
+Package pdftex.def Info: figures/enter_trip_log_page.jpg  used on input line 623.
 (pdftex.def)             Requested size: 364.19667pt x 255.66597pt.
-<figures/trip_history_page.jpg, id=909, 721.7364pt x 501.072pt>
+<figures/trip_history_page.jpg, id=916, 721.7364pt x 501.072pt>
 File: figures/trip_history_page.jpg Graphic file (type jpg)
 <use figures/trip_history_page.jpg>
-Package pdftex.def Info: figures/trip_history_page.jpg  used on input line 492.
+Package pdftex.def Info: figures/trip_history_page.jpg  used on input line 631.
 (pdftex.def)             Requested size: 364.19667pt x 252.85204pt.
-[38
+[35
 
 {d:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} <./figures/enter_trip_log_page.jpg>]
-<figures/trip_log_kwh.jpg, id=916, 742.9356pt x 515.526pt>
+<figures/trip_log_kwh.jpg, id=923, 742.9356pt x 515.526pt>
 File: figures/trip_log_kwh.jpg Graphic file (type jpg)
 <use figures/trip_log_kwh.jpg>
-Package pdftex.def Info: figures/trip_log_kwh.jpg  used on input line 503.
+Package pdftex.def Info: figures/trip_log_kwh.jpg  used on input line 645.
 (pdftex.def)             Requested size: 218.51521pt x 151.63048pt.
-<figures/trip_log_kmh.jpg, id=917, 743.8992pt x 513.5988pt>
+<figures/trip_log_kmh.jpg, id=924, 743.8992pt x 513.5988pt>
 File: figures/trip_log_kmh.jpg Graphic file (type jpg)
 <use figures/trip_log_kmh.jpg>
-Package pdftex.def Info: figures/trip_log_kmh.jpg  used on input line 509.
+Package pdftex.def Info: figures/trip_log_kmh.jpg  used on input line 651.
 (pdftex.def)             Requested size: 218.51521pt x 150.85986pt.
- [39 <./figures/trip_history_page.jpg> <./figures/trip_log_kwh.jpg> <./figures/trip_log_kmh.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 525--526
+ [36 <./figures/trip_history_page.jpg> <./figures/trip_log_kwh.jpg> <./figures/trip_log_kmh.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 668--675
 
  []
 
-<figures/enter_error_page.jpg, id=928, 755.4624pt x 523.2348pt>
+<figures/enter_error_page.jpg, id=936, 755.4624pt x 523.2348pt>
 File: figures/enter_error_page.jpg Graphic file (type jpg)
 <use figures/enter_error_page.jpg>
-Package pdftex.def Info: figures/enter_error_page.jpg  used on input line 532.
+Package pdftex.def Info: figures/enter_error_page.jpg  used on input line 681.
 (pdftex.def)             Requested size: 218.51521pt x 151.34299pt.
-<figures/error_page.jpg, id=929, 772.8072pt x 511.6716pt>
+<figures/error_page.jpg, id=937, 772.8072pt x 511.6716pt>
 File: figures/error_page.jpg Graphic file (type jpg)
 <use figures/error_page.jpg>
-Package pdftex.def Info: figures/error_page.jpg  used on input line 538.
+Package pdftex.def Info: figures/error_page.jpg  used on input line 687.
 (pdftex.def)             Requested size: 218.51521pt x 144.67241pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 545--546
+Underfull \hbox (badness 10000) in paragraph at lines 694--698
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--548
+Underfull \hbox (badness 10000) in paragraph at lines 699--702
 
  []
 
-[40
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--707
+
+ []
+
+[37
 
  <./figures/enter_error_page.jpg> <./figures/error_page.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 558--559
+Underfull \hbox (badness 10000) in paragraph at lines 720--722
 
  []
 
-<figures/charging_page.jpg, id=936, 621.522pt x 436.5108pt>
+<figures/charging_page.jpg, id=945, 621.522pt x 436.5108pt>
 File: figures/charging_page.jpg Graphic file (type jpg)
 <use figures/charging_page.jpg>
-Package pdftex.def Info: figures/charging_page.jpg  used on input line 564.
+Package pdftex.def Info: figures/charging_page.jpg  used on input line 732.
 (pdftex.def)             Requested size: 364.19667pt x 255.78738pt.
-[41
+[38
 
  <./figures/charging_page.jpg>]
-<figures/settings_page1.jpg, id=942, 208.6194pt x 140.2038pt>
+<figures/settings_page1.jpg, id=951, 208.6194pt x 140.2038pt>
 File: figures/settings_page1.jpg Graphic file (type jpg)
 <use figures/settings_page1.jpg>
-Package pdftex.def Info: figures/settings_page1.jpg  used on input line 586.
+Package pdftex.def Info: figures/settings_page1.jpg  used on input line 758.
 (pdftex.def)             Requested size: 364.19667pt x 244.7891pt.
- [42 <./figures/settings_page1.jpg>]
-<figures/settings_page1_values.jpg, id=950, 148.3944pt x 31.5579pt>
+<figures/settings_page1_values.jpg, id=953, 148.3944pt x 31.5579pt>
 File: figures/settings_page1_values.jpg Graphic file (type jpg)
 <use figures/settings_page1_values.jpg>
-Package pdftex.def Info: figures/settings_page1_values.jpg  used on input line 609.
+Package pdftex.def Info: figures/settings_page1_values.jpg  used on input line 786.
 (pdftex.def)             Requested size: 364.19667pt x 77.46053pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 613--614
+Underfull \hbox (badness 10000) in paragraph at lines 790--793
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 615--616
+[39 <./figures/settings_page1.jpg> <./figures/settings_page1_values.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 794--797
 
  []
 
-<figures/settings_page1_matching.jpg, id=953, 208.6194pt x 140.2038pt>
+<figures/settings_page1_matching.jpg, id=963, 208.6194pt x 140.2038pt>
 File: figures/settings_page1_matching.jpg Graphic file (type jpg)
 <use figures/settings_page1_matching.jpg>
-Package pdftex.def Info: figures/settings_page1_matching.jpg  used on input line 619.
+Package pdftex.def Info: figures/settings_page1_matching.jpg  used on input line 800.
 (pdftex.def)             Requested size: 364.19667pt x 244.7891pt.
-[43 <./figures/settings_page1_values.jpg> <./figures/settings_page1_matching.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 630--631
+
+Underfull \hbox (badness 10000) in paragraph at lines 812--816
 
  []
 
-<figures/settings_page1_bright.jpg, id=961, 144.7809pt x 30.5943pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 817--818
+
+ []
+
+<figures/settings_page1_bright.jpg, id=964, 144.7809pt x 30.5943pt>
 File: figures/settings_page1_bright.jpg Graphic file (type jpg)
 <use figures/settings_page1_bright.jpg>
-Package pdftex.def Info: figures/settings_page1_bright.jpg  used on input line 634.
-(pdftex.def)             Requested size: 364.19667pt x 76.97615pt.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 640.
-(d:/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd
+Package pdftex.def Info: figures/settings_page1_bright.jpg  used on input line 821.
+(pdftex.def)             Requested size: 318.66948pt x 67.35338pt.
+[40 <./figures/settings_page1_matching.jpg>]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 827.
+ (d:/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 640--641
+Underfull \hbox (badness 10000) in paragraph at lines 827--829
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 646--647
+Underfull \hbox (badness 10000) in paragraph at lines 836--840
 
  []
 
-<figures/settings_page1_charge.jpg, id=963, 142.3719pt x 30.5943pt>
+<figures/settings_page1_charge.jpg, id=973, 142.3719pt x 30.5943pt>
 File: figures/settings_page1_charge.jpg Graphic file (type jpg)
 <use figures/settings_page1_charge.jpg>
-Package pdftex.def Info: figures/settings_page1_charge.jpg  used on input line 650.
-(pdftex.def)             Requested size: 364.19667pt x 78.2772pt.
-[44 <./figures/settings_page1_bright.jpg> <./figures/settings_page1_charge.jpg>]
-<figures/settings_page1_calibrate.jpg, id=976, 142.3719pt x 30.1125pt>
+Package pdftex.def Info: figures/settings_page1_charge.jpg  used on input line 843.
+(pdftex.def)             Requested size: 318.66948pt x 68.49197pt.
+<figures/settings_page1_calibrate.jpg, id=974, 142.3719pt x 30.1125pt>
 File: figures/settings_page1_calibrate.jpg Graphic file (type jpg)
 <use figures/settings_page1_calibrate.jpg>
-Package pdftex.def Info: figures/settings_page1_calibrate.jpg  used on input line 664.
-(pdftex.def)             Requested size: 364.19667pt x 77.0445pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 672--673
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 676--677
+Package pdftex.def Info: figures/settings_page1_calibrate.jpg  used on input line 864.
+(pdftex.def)             Requested size: 318.66948pt x 67.41336pt.
+[41 <./figures/settings_page1_bright.jpg> <./figures/settings_page1_charge.jpg> <./figures/settings_page1_calibrate.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 872--876
 
  []
 
-<figures/settings_page2.jpg, id=979, 1479.5275pt x 1071.00125pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 879--882
+
+ []
+
+<figures/settings_page2.jpg, id=989, 1479.5275pt x 1071.00125pt>
 File: figures/settings_page2.jpg Graphic file (type jpg)
 <use figures/settings_page2.jpg>
-Package pdftex.def Info: figures/settings_page2.jpg  used on input line 680.
+Package pdftex.def Info: figures/settings_page2.jpg  used on input line 885.
 (pdftex.def)             Requested size: 364.19667pt x 263.63144pt.
-[45 <./figures/settings_page1_calibrate.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 688--689
+
+Underfull \hbox (badness 10000) in paragraph at lines 896--898
 
  []
 
-<figures/settings_page2_lvl.jpg, id=987, 572.1375pt x 224.84pt>
+<figures/settings_page2_lvl.jpg, id=990, 572.1375pt x 224.84pt>
 File: figures/settings_page2_lvl.jpg Graphic file (type jpg)
 <use figures/settings_page2_lvl.jpg>
-Package pdftex.def Info: figures/settings_page2_lvl.jpg  used on input line 692.
-(pdftex.def)             Requested size: 273.14923pt x 107.34216pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 698--699
+Package pdftex.def Info: figures/settings_page2_lvl.jpg  used on input line 901.
+(pdftex.def)             Requested size: 227.62206pt x 89.45065pt.
+[42 <./figures/settings_page2.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 907--910
 
  []
 
-<figures/settings_page2_stop.jpg, id=988, 1044.90375pt x 218.8175pt>
+<figures/settings_page2_stop.jpg, id=999, 1044.90375pt x 218.8175pt>
 File: figures/settings_page2_stop.jpg Graphic file (type jpg)
 <use figures/settings_page2_stop.jpg>
-Package pdftex.def Info: figures/settings_page2_stop.jpg  used on input line 702.
-(pdftex.def)             Requested size: 364.19667pt x 76.26672pt.
-[46 <./figures/settings_page2.jpg> <./figures/settings_page2_lvl.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 708--709
+Package pdftex.def Info: figures/settings_page2_stop.jpg  used on input line 913.
+(pdftex.def)             Requested size: 318.66948pt x 66.73422pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 919--922
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 712--713
+Underfull \hbox (badness 10000) in paragraph at lines 925--928
 
  []
 
-<figures/settings_page2_max.jpg, id=997, 1032.85875pt x 213.79875pt>
+<figures/settings_page2_max.jpg, id=1000, 1032.85875pt x 213.79875pt>
 File: figures/settings_page2_max.jpg Graphic file (type jpg)
 <use figures/settings_page2_max.jpg>
-Package pdftex.def Info: figures/settings_page2_max.jpg  used on input line 716.
-(pdftex.def)             Requested size: 364.19667pt x 75.38853pt.
+Package pdftex.def Info: figures/settings_page2_max.jpg  used on input line 931.
+(pdftex.def)             Requested size: 318.66948pt x 65.96373pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 722--723
+Underfull \hbox (badness 10000) in paragraph at lines 937--939
 
  []
 
-[47 <./figures/settings_page2_stop.jpg> <./figures/settings_page2_max.jpg>]
-<icons/SetupRed1.png, id=1007, 44.165pt x 33.12375pt>
+[43 <./figures/settings_page2_lvl.jpg> <./figures/settings_page2_stop.jpg> <./figures/settings_page2_max.jpg>]
+<icons/SetupRed1.png, id=1012, 44.165pt x 33.12375pt>
 File: icons/SetupRed1.png Graphic file (type png)
 <use icons/SetupRed1.png>
-Package pdftex.def Info: icons/SetupRed1.png  used on input line 730.
+Package pdftex.def Info: icons/SetupRed1.png  used on input line 946.
 (pdftex.def)             Requested size: 30.34987pt x 22.76219pt.
 
-Overfull \hbox (1.89713pt too wide) in paragraph at lines 730--730
+Overfull \hbox (1.89713pt too wide) in paragraph at lines 946--946
 []|[]| 
  []
 
-<icons/WifiBianco.PNG, id=1008, 36.135pt x 37.13875pt>
+<icons/WifiBianco.PNG, id=1013, 36.135pt x 37.13875pt>
 File: icons/WifiBianco.PNG Graphic file (type png)
 <use icons/WifiBianco.PNG>
-Package pdftex.def Info: icons/WifiBianco.PNG  used on input line 734.
+Package pdftex.def Info: icons/WifiBianco.PNG  used on input line 950.
 (pdftex.def)             Requested size: 22.14761pt x 22.76219pt.
-<icons/MQTTBianco.PNG, id=1010, 36.135pt x 37.13875pt>
+<icons/MQTTBianco.PNG, id=1015, 36.135pt x 37.13875pt>
 File: icons/MQTTBianco.PNG Graphic file (type png)
 <use icons/MQTTBianco.PNG>
-Package pdftex.def Info: icons/MQTTBianco.PNG  used on input line 738.
+Package pdftex.def Info: icons/MQTTBianco.PNG  used on input line 954.
 (pdftex.def)             Requested size: 22.14761pt x 22.76219pt.
-<icons/ExitIcon2.png, id=1012, 35.13126pt x 37.13875pt>
+<icons/ExitIcon2.png, id=1017, 35.13126pt x 37.13875pt>
 File: icons/ExitIcon2.png Graphic file (type png)
 <use icons/ExitIcon2.png>
-Package pdftex.def Info: icons/ExitIcon2.png  used on input line 742.
+Package pdftex.def Info: icons/ExitIcon2.png  used on input line 958.
 (pdftex.def)             Requested size: 21.53241pt x 22.76219pt.
-) [48
+) [44
 
  <./icons/SetupRed1.png (PNG copy)> <./icons/WifiBianco.PNG (PNG copy)> <./icons/MQTTbianco.PNG (PNG copy)> <./icons/ExitIcon2.png (PNG copy)>]
-\openout2 = `chapters_fr/04_advanced_UI.aux'.
+\openout2 = `chapters/04_advanced_UI.aux'.
 
- (./chapters_fr/04_advanced_UI.tex
+ (./chapters/04_advanced_UI.tex
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 6--7
+Underfull \hbox (badness 10000) in paragraph at lines 6--9
 
  []
 
-<figures/wifi_settings_3d.png, id=1019, 201.3924pt x 140.9265pt>
+<figures/wifi_settings_3d.png, id=1023, 201.3924pt x 140.9265pt>
 File: figures/wifi_settings_3d.png Graphic file (type png)
 <use figures/wifi_settings_3d.png>
-Package pdftex.def Info: figures/wifi_settings_3d.png  used on input line 10.
+Package pdftex.def Info: figures/wifi_settings_3d.png  used on input line 12.
 (pdftex.def)             Requested size: 364.19667pt x 254.87169pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--21
+Underfull \hbox (badness 10000) in paragraph at lines 23--26
 
  []
 
-[49
+[45
 
 
 
 
  <./figures/wifi_settings_3d.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
+Underfull \hbox (badness 10000) in paragraph at lines 27--30
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--38
+Underfull \hbox (badness 10000) in paragraph at lines 41--46
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+Underfull \hbox (badness 10000) in paragraph at lines 47--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
+Underfull \hbox (badness 10000) in paragraph at lines 51--55
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
+Underfull \hbox (badness 10000) in paragraph at lines 60--66
 
  []
 
-[50]
-<icons/Tray_WiFiOff.png, id=1033, 26.0975pt x 21.07875pt>
+[46]
+<icons/Tray_WiFiOff.png, id=1037, 26.0975pt x 21.07875pt>
 File: icons/Tray_WiFiOff.png Graphic file (type png)
 <use icons/Tray_WiFiOff.png>
-Package pdftex.def Info: icons/Tray_WiFiOff.png  used on input line 58.
+Package pdftex.def Info: icons/Tray_WiFiOff.png  used on input line 83.
 (pdftex.def)             Requested size: 28.18248pt x 22.76219pt.
-<icons/Tray_WiFi.png, id=1034, 26.0975pt x 21.07875pt>
+<icons/Tray_WiFi.png, id=1038, 26.0975pt x 21.07875pt>
 File: icons/Tray_WiFi.png Graphic file (type png)
 <use icons/Tray_WiFi.png>
-Package pdftex.def Info: icons/Tray_WiFi.png  used on input line 62.
+Package pdftex.def Info: icons/Tray_WiFi.png  used on input line 87.
 (pdftex.def)             Requested size: 28.18248pt x 22.76219pt.
 File: icons/Tray_WiFi.png Graphic file (type png)
 <use icons/Tray_WiFi.png>
-Package pdftex.def Info: icons/Tray_WiFi.png  used on input line 66.
+Package pdftex.def Info: icons/Tray_WiFi.png  used on input line 91.
 (pdftex.def)             Requested size: 28.18248pt x 22.76219pt.
-
-Underfull \hbox (badness 2735) in paragraph at lines 66--66
-\T1/lmr/m/n/10.95 Si l'icône clig-note, ToM+ recherche actuelle-ment les réseaux Wi-Fi
- []
-
-<figures/wifi_bottom_line.png, id=1035, 162.6075pt x 23.8491pt>
+<figures/wifi_bottom_line.png, id=1039, 162.6075pt x 23.8491pt>
 File: figures/wifi_bottom_line.png Graphic file (type png)
 <use figures/wifi_bottom_line.png>
-Package pdftex.def Info: figures/wifi_bottom_line.png  used on input line 72.
+Package pdftex.def Info: figures/wifi_bottom_line.png  used on input line 99.
 (pdftex.def)             Requested size: 318.66948pt x 46.7417pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+Underfull \hbox (badness 10000) in paragraph at lines 115--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+Underfull \hbox (badness 10000) in paragraph at lines 118--121
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 122--127
 
  []
 
-[51
+[47
 
- <./icons/Tray_WiFiOff.png (PNG copy)> <./icons/Tray_WiFi.png (PNG copy)> <./figures/wifi_bottom_line.png>] [52]
+ <./icons/Tray_WiFiOff.png (PNG copy)> <./icons/Tray_WiFi.png (PNG copy)> <./figures/wifi_bottom_line.png>]
 <figures/mqtt_settings_page.png, id=1049, 915.42pt x 641.39626pt>
 File: figures/mqtt_settings_page.png Graphic file (type png)
 <use figures/mqtt_settings_page.png>
-Package pdftex.def Info: figures/mqtt_settings_page.png  used on input line 101.
+Package pdftex.def Info: figures/mqtt_settings_page.png  used on input line 142.
 (pdftex.def)             Requested size: 364.19667pt x 255.174pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
+Underfull \hbox (badness 10000) in paragraph at lines 160--163
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 165--170
 
  []
 
-[53
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--183
+
+ []
+
+[48
 
  <./figures/mqtt_settings_page.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 121--123
+Underfull \hbox (badness 10000) in paragraph at lines 188--191
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+Underfull \hbox (badness 10000) in paragraph at lines 195--197
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
-
- []
-
-<figures/mqtt_step1.png, id=1059, 258.9675pt x 104.0688pt>
+<figures/mqtt_step1.png, id=1060, 258.9675pt x 104.0688pt>
 File: figures/mqtt_step1.png Graphic file (type png)
 <use figures/mqtt_step1.png>
-Package pdftex.def Info: figures/mqtt_step1.png  used on input line 138.
+Package pdftex.def Info: figures/mqtt_step1.png  used on input line 204.
 (pdftex.def)             Requested size: 455.24411pt x 182.96474pt.
-[54 <./figures/mqtt_step1.png>]
-<figures/mqtt_step2.png, id=1068, 244.7544pt x 69.3792pt>
+<figures/mqtt_step2.png, id=1062, 244.7544pt x 69.3792pt>
 File: figures/mqtt_step2.png Graphic file (type png)
 <use figures/mqtt_step2.png>
-Package pdftex.def Info: figures/mqtt_step2.png  used on input line 147.
+Package pdftex.def Info: figures/mqtt_step2.png  used on input line 214.
 (pdftex.def)             Requested size: 455.24411pt x 129.04712pt.
-<figures/mqtt_step3.png, id=1070, 284.5029pt x 129.8451pt>
+[49 <./figures/mqtt_step1.png>]
+<figures/mqtt_step3.png, id=1071, 284.5029pt x 129.8451pt>
 File: figures/mqtt_step3.png Graphic file (type png)
 <use figures/mqtt_step3.png>
-Package pdftex.def Info: figures/mqtt_step3.png  used on input line 155.
+Package pdftex.def Info: figures/mqtt_step3.png  used on input line 224.
 (pdftex.def)             Requested size: 455.24411pt x 207.77023pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \hbox (badness 10000) in paragraph at lines 228--232
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
+Underfull \hbox (badness 10000) in paragraph at lines 233--237
 
  []
 
-[55 <./figures/mqtt_step2.png> <./figures/mqtt_step3.png>]
-<figures/mqtt_step4.png, id=1080, 176.3388pt x 85.7604pt>
+<figures/mqtt_step4.png, id=1073, 176.3388pt x 85.7604pt>
 File: figures/mqtt_step4.png Graphic file (type png)
 <use figures/mqtt_step4.png>
-Package pdftex.def Info: figures/mqtt_step4.png  used on input line 167.
+Package pdftex.def Info: figures/mqtt_step4.png  used on input line 247.
 (pdftex.def)             Requested size: 364.19667pt x 177.14862pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
+[50 <./figures/mqtt_step2.png> <./figures/mqtt_step3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 251--254
 
  []
 
-<figures/mqtt_step5.png, id=1082, 131.0496pt x 55.6479pt>
+<figures/mqtt_step5.png, id=1083, 131.0496pt x 55.6479pt>
 File: figures/mqtt_step5.png Graphic file (type png)
 <use figures/mqtt_step5.png>
-Package pdftex.def Info: figures/mqtt_step5.png  used on input line 180.
+Package pdftex.def Info: figures/mqtt_step5.png  used on input line 266.
 (pdftex.def)             Requested size: 318.66948pt x 135.33571pt.
-
-Overfull \hbox (9.7321pt too wide) in paragraph at lines 184--185
-[]\T1/lmr/m/n/10.95 Dans la dernière sec-tion de la page de con-fig-u-ra-tion ([][]$\T1/lmtt/m/n/10.95 https : / / www . maqiatto . com / configure$[][]\T1/lmr/m/n/10.95 ),
- []
-
-[56 <./figures/mqtt_step4.png> <./figures/mqtt_step5.png>]
-<figures/mqtt_connect1.png, id=1094, 771.88374pt x 309.155pt>
+[51 <./figures/mqtt_step4.png> <./figures/mqtt_step5.png>]
+<figures/mqtt_connect1.png, id=1095, 771.88374pt x 309.155pt>
 File: figures/mqtt_connect1.png Graphic file (type png)
 <use figures/mqtt_connect1.png>
-Package pdftex.def Info: figures/mqtt_connect1.png  used on input line 195.
+Package pdftex.def Info: figures/mqtt_connect1.png  used on input line 287.
 (pdftex.def)             Requested size: 364.19667pt x 145.86894pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--203
+Underfull \hbox (badness 10000) in paragraph at lines 292--297
 
  []
 
-<figures/mqtt_connect2.png, id=1098, 781.92125pt x 238.8925pt>
+<figures/mqtt_connect2.png, id=1099, 781.92125pt x 238.8925pt>
 File: figures/mqtt_connect2.png Graphic file (type png)
 <use figures/mqtt_connect2.png>
-Package pdftex.def Info: figures/mqtt_connect2.png  used on input line 214.
+Package pdftex.def Info: figures/mqtt_connect2.png  used on input line 314.
 (pdftex.def)             Requested size: 364.19667pt x 111.26976pt.
-
-Overfull \hbox (8.69717pt too wide) in paragraph at lines 218--219
-\T1/lmr/m/n/10.95 et du nom du topic ^^S TO-Mout ^^T. Dans l'exemple, il est défini sur \T1/lmr/m/it/10.95 ^^S votreemail@gmail.com/TOMout
- []
-
-[57
+[52
 
  <./figures/mqtt_connect1.png> <./figures/mqtt_connect2.png>]
-Overfull \hbox (2.62978pt too wide) in paragraph at lines 225--226
-[]\T1/lmr/m/n/10.95 Le dernier paramètre est la \T1/lmr/bx/n/10.95 fréquence de pub-li-ca-tion (pub-lish fre-quency)\T1/lmr/m/n/10.95 , qui représente
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
+Underfull \hbox (badness 10000) in paragraph at lines 335--339
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
+Underfull \hbox (badness 10000) in paragraph at lines 340--343
 
  []
 
-<figures/mqtt_connect3.png, id=1109, 793.96625pt x 218.8175pt>
+<figures/mqtt_connect3.png, id=1110, 793.96625pt x 218.8175pt>
 File: figures/mqtt_connect3.png Graphic file (type png)
 <use figures/mqtt_connect3.png>
-Package pdftex.def Info: figures/mqtt_connect3.png  used on input line 236.
+Package pdftex.def Info: figures/mqtt_connect3.png  used on input line 353.
 (pdftex.def)             Requested size: 364.19667pt x 100.37346pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--241
+Underfull \hbox (badness 10000) in paragraph at lines 357--361
 
  []
 
-[58 <./figures/mqtt_connect3.png>]
-<figures/mqtt_status.png, id=1117, 793.96625pt x 218.8175pt>
+<figures/mqtt_status.png, id=1112, 793.96625pt x 218.8175pt>
 File: figures/mqtt_status.png Graphic file (type png)
 <use figures/mqtt_status.png>
-Package pdftex.def Info: figures/mqtt_status.png  used on input line 248.
+Package pdftex.def Info: figures/mqtt_status.png  used on input line 372.
 (pdftex.def)             Requested size: 364.19667pt x 100.37346pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 254--255
+[53 <./figures/mqtt_connect3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 379--381
 
  []
 
-<figures/keyboard_page1.jpg, id=1119, 603.2136pt x 362.3136pt>
+<figures/keyboard_page1.jpg, id=1120, 603.2136pt x 362.3136pt>
 File: figures/keyboard_page1.jpg Graphic file (type jpg)
 <use figures/keyboard_page1.jpg>
-Package pdftex.def Info: figures/keyboard_page1.jpg  used on input line 267.
+Package pdftex.def Info: figures/keyboard_page1.jpg  used on input line 396.
 (pdftex.def)             Requested size: 218.51521pt x 131.24547pt.
-<figures/keyboard_page1_caps.jpg, id=1120, 603.4545pt x 362.0727pt>
+<figures/keyboard_page1_caps.jpg, id=1121, 603.4545pt x 362.0727pt>
 File: figures/keyboard_page1_caps.jpg Graphic file (type jpg)
 <use figures/keyboard_page1_caps.jpg>
-Package pdftex.def Info: figures/keyboard_page1_caps.jpg  used on input line 273.
+Package pdftex.def Info: figures/keyboard_page1_caps.jpg  used on input line 402.
 (pdftex.def)             Requested size: 218.51521pt x 131.10849pt.
-[59 <./figures/mqtt_status.png> <./figures/keyboard_page1.jpg> <./figures/keyboard_page1_caps.jpg>]
-<figures/keyboard_page2.jpg, id=1128, 607.5498pt x 369.5406pt>
+[54 <./figures/mqtt_status.png> <./figures/keyboard_page1.jpg> <./figures/keyboard_page1_caps.jpg>]
+<figures/keyboard_page2.jpg, id=1130, 607.5498pt x 369.5406pt>
 File: figures/keyboard_page2.jpg Graphic file (type jpg)
 <use figures/keyboard_page2.jpg>
-Package pdftex.def Info: figures/keyboard_page2.jpg  used on input line 289.
+Package pdftex.def Info: figures/keyboard_page2.jpg  used on input line 419.
 (pdftex.def)             Requested size: 218.51521pt x 132.91045pt.
-<figures/keyboard_page3.jpg, id=1129, 603.2136pt x 362.3136pt>
+<figures/keyboard_page3.jpg, id=1131, 603.2136pt x 362.3136pt>
 File: figures/keyboard_page3.jpg Graphic file (type jpg)
 <use figures/keyboard_page3.jpg>
-Package pdftex.def Info: figures/keyboard_page3.jpg  used on input line 295.
+Package pdftex.def Info: figures/keyboard_page3.jpg  used on input line 425.
 (pdftex.def)             Requested size: 218.51521pt x 131.24547pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--304
+Underfull \hbox (badness 10000) in paragraph at lines 430--434
 
  []
 
-<figures/keyboard_num_only.jpg, id=1130, 602.7318pt x 362.0727pt>
+<figures/keyboard_num_only.jpg, id=1132, 602.7318pt x 362.0727pt>
 File: figures/keyboard_num_only.jpg Graphic file (type jpg)
 <use figures/keyboard_num_only.jpg>
-Package pdftex.def Info: figures/keyboard_num_only.jpg  used on input line 314.
+Package pdftex.def Info: figures/keyboard_num_only.jpg  used on input line 445.
 (pdftex.def)             Requested size: 364.19667pt x 218.78117pt.
-[60
+[55
 
  <./figures/keyboard_page2.jpg> <./figures/keyboard_page3.jpg> <./figures/keyboard_num_only.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 330--331
+Underfull \hbox (badness 10000) in paragraph at lines 463--465
 
  []
 
 File: figures/landing_page.png Graphic file (type png)
 <use figures/landing_page.png>
-Package pdftex.def Info: figures/landing_page.png  used on input line 334.
+Package pdftex.def Info: figures/landing_page.png  used on input line 468.
 (pdftex.def)             Requested size: 209.41534pt x 534.4249pt.
-[61]
-Underfull \hbox (badness 10000) in paragraph at lines 341--343
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--478
 
  []
 
+[56]
 File: icons/BatteryInfo2.png Graphic file (type png)
 <use icons/BatteryInfo2.png>
-Package pdftex.def Info: icons/BatteryInfo2.png  used on input line 345.
+Package pdftex.def Info: icons/BatteryInfo2.png  used on input line 480.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
-Overfull \hbox (2.76389pt too wide) in paragraph at lines 345--345
+Overfull \hbox (2.76389pt too wide) in paragraph at lines 480--480
 []|[]| 
  []
 
-[62]
 File: icons/Street0Ok_v2.png Graphic file (type png)
 <use icons/Street0Ok_v2.png>
-Package pdftex.def Info: icons/Street0Ok_v2.png  used on input line 348.
+Package pdftex.def Info: icons/Street0Ok_v2.png  used on input line 483.
 (pdftex.def)             Requested size: 33.81862pt x 22.76219pt.
 
-Overfull \hbox (5.36588pt too wide) in paragraph at lines 348--348
+Overfull \hbox (5.36588pt too wide) in paragraph at lines 483--483
 []|[]| 
  []
 
 File: icons/Tray_WiFiOff.png Graphic file (type png)
 <use icons/Tray_WiFiOff.png>
-Package pdftex.def Info: icons/Tray_WiFiOff.png  used on input line 351.
+Package pdftex.def Info: icons/Tray_WiFiOff.png  used on input line 486.
 (pdftex.def)             Requested size: 28.18248pt x 22.76219pt.
 File: icons/Pin1.png Graphic file (type png)
 <use icons/Pin1.png>
-Package pdftex.def Info: icons/Pin1.png  used on input line 354.
+Package pdftex.def Info: icons/Pin1.png  used on input line 489.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
-Overfull \hbox (2.76389pt too wide) in paragraph at lines 354--354
+Overfull \hbox (2.76389pt too wide) in paragraph at lines 489--489
 []|[]| 
  []
 
 File: icons/Alarm.PNG Graphic file (type png)
 <use icons/Alarm.PNG>
-Package pdftex.def Info: icons/Alarm.PNG  used on input line 357.
+Package pdftex.def Info: icons/Alarm.PNG  used on input line 492.
 (pdftex.def)             Requested size: 24.7136pt x 22.76219pt.
 File: icons/Alarm.PNG Graphic file (type png)
 <use icons/Alarm.PNG>
-Package pdftex.def Info: icons/Alarm.PNG  used on input line 360.
+Package pdftex.def Info: icons/Alarm.PNG  used on input line 495.
 (pdftex.def)             Requested size: 24.7136pt x 22.76219pt.
-<icons/Swap.png, id=1154, 46.1725pt x 31.11626pt>
+<icons/Swap.png, id=1151, 46.1725pt x 31.11626pt>
 File: icons/Swap.png Graphic file (type png)
 <use icons/Swap.png>
-Package pdftex.def Info: icons/Swap.png  used on input line 363.
+Package pdftex.def Info: icons/Swap.png  used on input line 498.
 (pdftex.def)             Requested size: 33.77678pt x 22.76219pt.
 
-Overfull \hbox (5.32404pt too wide) in paragraph at lines 363--363
+Overfull \hbox (5.32404pt too wide) in paragraph at lines 498--498
 []|[]| 
+ []
+
+
+Underfull \hbox (badness 3815) in paragraph at lines 498--498
+\T1/lmr/m/n/10.95 Here you can up-date the ToM+ firmware via OTA method and
  []
 
 File: icons/Swap.png Graphic file (type png)
 <use icons/Swap.png>
-Package pdftex.def Info: icons/Swap.png  used on input line 366.
+Package pdftex.def Info: icons/Swap.png  used on input line 501.
 (pdftex.def)             Requested size: 33.77678pt x 22.76219pt.
 
-Overfull \hbox (5.32404pt too wide) in paragraph at lines 366--366
+Overfull \hbox (5.32404pt too wide) in paragraph at lines 501--501
 []|[]| 
  []
 
 File: icons/CEta.png Graphic file (type png)
 <use icons/CEta.png>
-Package pdftex.def Info: icons/CEta.png  used on input line 369.
+Package pdftex.def Info: icons/CEta.png  used on input line 504.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
-Overfull \hbox (2.76389pt too wide) in paragraph at lines 369--369
+Overfull \hbox (2.76389pt too wide) in paragraph at lines 504--504
 []|[]| 
  []
 
 File: icons/Timer.PNG Graphic file (type png)
 <use icons/Timer.PNG>
-Package pdftex.def Info: icons/Timer.PNG  used on input line 372.
+Package pdftex.def Info: icons/Timer.PNG  used on input line 507.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
-Overfull \hbox (2.76389pt too wide) in paragraph at lines 372--372
+Overfull \hbox (2.76389pt too wide) in paragraph at lines 507--507
 []|[]| 
  []
 
+[57 <./icons/Swap.png (PNG copy)>]
 File: icons/Kmh.png Graphic file (type png)
 <use icons/Kmh.png>
-Package pdftex.def Info: icons/Kmh.png  used on input line 375.
+Package pdftex.def Info: icons/Kmh.png  used on input line 510.
 (pdftex.def)             Requested size: 31.21663pt x 22.76219pt.
 
-Overfull \hbox (2.76389pt too wide) in paragraph at lines 375--375
+Overfull \hbox (2.76389pt too wide) in paragraph at lines 510--510
 []|[]| 
  []
 
-[63 <./icons/Swap.png (PNG copy)>]
 File: icons/Error.png Graphic file (type png)
 <use icons/Error.png>
-Package pdftex.def Info: icons/Error.png  used on input line 378.
+Package pdftex.def Info: icons/Error.png  used on input line 513.
 (pdftex.def)             Requested size: 22.11217pt x 22.76219pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--389
+Underfull \hbox (badness 10000) in paragraph at lines 523--527
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 390--391
+Underfull \hbox (badness 10000) in paragraph at lines 528--531
 
  []
 
-[64]
-<figures/monitor_page1.png, id=1177, 308.1111pt x 184.2885pt>
+[58]
+<figures/monitor_page1.png, id=1174, 308.1111pt x 184.2885pt>
 File: figures/monitor_page1.png Graphic file (type png)
 <use figures/monitor_page1.png>
-Package pdftex.def Info: figures/monitor_page1.png  used on input line 416.
+Package pdftex.def Info: figures/monitor_page1.png  used on input line 565.
 (pdftex.def)             Requested size: 455.24411pt x 272.30682pt.
-<figures/monitor_page2.png, id=1178, 308.1111pt x 152.2488pt>
+<figures/monitor_page2.png, id=1175, 308.1111pt x 152.2488pt>
 File: figures/monitor_page2.png Graphic file (type png)
 <use figures/monitor_page2.png>
-Package pdftex.def Info: figures/monitor_page2.png  used on input line 425.
+Package pdftex.def Info: figures/monitor_page2.png  used on input line 575.
 (pdftex.def)             Requested size: 455.24411pt x 224.96458pt.
- [65 <./figures/monitor_page1.png> <./figures/monitor_page2.png>]
-<figures/trip_page1.png, id=1189, 302.0886pt x 98.769pt>
+ [59 <./figures/monitor_page1.png> <./figures/monitor_page2.png>]
+<figures/trip_page1.png, id=1186, 302.0886pt x 98.769pt>
 File: figures/trip_page1.png Graphic file (type png)
 <use figures/trip_page1.png>
-Package pdftex.def Info: figures/trip_page1.png  used on input line 439.
+Package pdftex.def Info: figures/trip_page1.png  used on input line 591.
 (pdftex.def)             Requested size: 455.24411pt x 148.85541pt.
-<figures/trip_page2.png, id=1190, 290.2845pt x 217.2918pt>
+<figures/trip_page2.png, id=1187, 290.2845pt x 217.2918pt>
 File: figures/trip_page2.png Graphic file (type png)
 <use figures/trip_page2.png>
-Package pdftex.def Info: figures/trip_page2.png  used on input line 448.
+Package pdftex.def Info: figures/trip_page2.png  used on input line 600.
 (pdftex.def)             Requested size: 455.24411pt x 340.77417pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--457
+Underfull \hbox (badness 10000) in paragraph at lines 608--611
 
  []
 
-[66
+[60
 
  <./figures/trip_page1.png> <./figures/trip_page2.png>]
-<figures/wifi_page1.png, id=1203, 220.6644pt x 101.4189pt>
+<figures/wifi_page1.png, id=1200, 220.6644pt x 101.4189pt>
 File: figures/wifi_page1.png Graphic file (type png)
 <use figures/wifi_page1.png>
-Package pdftex.def Info: figures/wifi_page1.png  used on input line 463.
+Package pdftex.def Info: figures/wifi_page1.png  used on input line 620.
 (pdftex.def)             Requested size: 455.24411pt x 209.23938pt.
-<figures/wifi_page3.png, id=1205, 180.4341pt x 40.4712pt>
+<figures/wifi_page3.png, id=1202, 180.4341pt x 40.4712pt>
 File: figures/wifi_page3.png Graphic file (type png)
 <use figures/wifi_page3.png>
-Package pdftex.def Info: figures/wifi_page3.png  used on input line 472.
+Package pdftex.def Info: figures/wifi_page3.png  used on input line 630.
 (pdftex.def)             Requested size: 455.24411pt x 102.12628pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--477
+Underfull \hbox (badness 10000) in paragraph at lines 634--638
 
  []
 
-[67 <./figures/wifi_page1.png> <./figures/wifi_page3.png>]
-<figures/wifi_page2.png, id=1215, 225.2415pt x 132.495pt>
+<figures/wifi_page2.png, id=1204, 225.2415pt x 132.495pt>
 File: figures/wifi_page2.png Graphic file (type png)
 <use figures/wifi_page2.png>
-Package pdftex.def Info: figures/wifi_page2.png  used on input line 483.
+Package pdftex.def Info: figures/wifi_page2.png  used on input line 647.
 (pdftex.def)             Requested size: 455.24411pt x 267.81566pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 487--489
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 497--501
+[61 <./figures/wifi_page1.png> <./figures/wifi_page3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 651--654
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 502--503
+Underfull \hbox (badness 10000) in paragraph at lines 662--666
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 504--505
+Underfull \hbox (badness 10000) in paragraph at lines 667--672
 
  []
 
-[68 <./figures/wifi_page2.png>]
-<figures/expansion_page1.png, id=1225, 254.3904pt x 122.6181pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--674
+
+ []
+
+[62 <./figures/wifi_page2.png>]
+<figures/expansion_page1.png, id=1222, 254.3904pt x 122.6181pt>
 File: figures/expansion_page1.png Graphic file (type png)
 <use figures/expansion_page1.png>
-Package pdftex.def Info: figures/expansion_page1.png  used on input line 524.
+Package pdftex.def Info: figures/expansion_page1.png  used on input line 695.
 (pdftex.def)             Requested size: 455.24411pt x 219.44197pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 528--529
+Underfull \hbox (badness 10000) in paragraph at lines 699--703
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 530--532
+Underfull \hbox (badness 10000) in paragraph at lines 704--706
 
  []
 
-[69 <./figures/expansion_page1.png>]
-<figures/expansion_page3.png, id=1234, 254.8722pt x 74.9199pt>
+[63 <./figures/expansion_page1.png>]
+<figures/expansion_page3.png, id=1231, 254.8722pt x 74.9199pt>
 File: figures/expansion_page3.png Graphic file (type png)
 <use figures/expansion_page3.png>
-Package pdftex.def Info: figures/expansion_page3.png  used on input line 553.
+Package pdftex.def Info: figures/expansion_page3.png  used on input line 733.
 (pdftex.def)             Requested size: 455.24411pt x 133.8337pt.
-<figures/ir_receiver.jpg, id=1235, 552.0625pt x 441.65pt>
+<figures/ir_receiver.jpg, id=1232, 552.0625pt x 441.65pt>
 File: figures/ir_receiver.jpg Graphic file (type jpg)
 <use figures/ir_receiver.jpg>
-Package pdftex.def Info: figures/ir_receiver.jpg  used on input line 567.
+Package pdftex.def Info: figures/ir_receiver.jpg  used on input line 749.
 (pdftex.def)             Requested size: 218.51521pt x 174.81036pt.
-<figures/ir_controller_photo.jpg, id=1236, 230.5413pt x 179.7114pt>
+<figures/ir_controller_photo.jpg, id=1233, 230.5413pt x 179.7114pt>
 File: figures/ir_controller_photo.jpg Graphic file (type jpg)
 <use figures/ir_controller_photo.jpg>
-Package pdftex.def Info: figures/ir_controller_photo.jpg  used on input line 573.
+Package pdftex.def Info: figures/ir_controller_photo.jpg  used on input line 755.
 (pdftex.def)             Requested size: 218.51521pt x 170.34367pt.
-<figures/ir_settings.png, id=1237, 207.6558pt x 177.5433pt>
+<figures/ir_settings.png, id=1234, 207.6558pt x 177.5433pt>
 File: figures/ir_settings.png Graphic file (type png)
 <use figures/ir_settings.png>
-Package pdftex.def Info: figures/ir_settings.png  used on input line 582.
+Package pdftex.def Info: figures/ir_settings.png  used on input line 766.
 (pdftex.def)             Requested size: 364.19667pt x 311.42873pt.
- [70 <./figures/expansion_page3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 586--588
+ [64 <./figures/expansion_page3.png> <./figures/ir_receiver.jpg> <./figures/ir_controller_photo.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 770--773
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 595--596
+Underfull \hbox (badness 10000) in paragraph at lines 781--786
 
  []
 
-[71 <./figures/ir_receiver.jpg> <./figures/ir_controller_photo.jpg> <./figures/ir_settings.png>]
-<figures/keyp_controller.jpg, id=1254, 288.1164pt x 228.3732pt>
+<figures/keyp_controller.jpg, id=1245, 288.1164pt x 228.3732pt>
 File: figures/keyp_controller.jpg Graphic file (type jpg)
 <use figures/keyp_controller.jpg>
-Package pdftex.def Info: figures/keyp_controller.jpg  used on input line 599.
+Package pdftex.def Info: figures/keyp_controller.jpg  used on input line 789.
 (pdftex.def)             Requested size: 182.09486pt x 144.33585pt.
-<figures/keyp_settings.png, id=1255, 206.6922pt x 156.585pt>
+[65 <./figures/ir_settings.png>]
+<figures/keyp_settings.png, id=1253, 206.6922pt x 156.585pt>
 File: figures/keyp_settings.png Graphic file (type png)
 <use figures/keyp_settings.png>
-Package pdftex.def Info: figures/keyp_settings.png  used on input line 607.
+Package pdftex.def Info: figures/keyp_settings.png  used on input line 799.
 (pdftex.def)             Requested size: 364.19667pt x 275.9106pt.
- [72 <./figures/keyp_controller.jpg> <./figures/keyp_settings.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 613--615
+
+Underfull \hbox (badness 10000) in paragraph at lines 806--810
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 621--624
+Underfull \hbox (badness 10000) in paragraph at lines 818--822
 
  []
 
-<figures/expansion_page2.png, id=1266, 613.54219pt x 402.75468pt>
+[66 <./figures/keyp_controller.jpg> <./figures/keyp_settings.png>]
+<figures/expansion_page2.png, id=1263, 613.54219pt x 402.75468pt>
 File: figures/expansion_page2.png Graphic file (type png)
 <use figures/expansion_page2.png>
-Package pdftex.def Info: figures/expansion_page2.png  used on input line 627.
+Package pdftex.def Info: figures/expansion_page2.png  used on input line 825.
 (pdftex.def)             Requested size: 455.24411pt x 298.845pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 631--632
+Underfull \hbox (badness 10000) in paragraph at lines 829--830
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 636--637
+Underfull \hbox (badness 10000) in paragraph at lines 834--835
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 639--640
+Underfull \hbox (badness 10000) in paragraph at lines 837--841
 
  []
 
-[73 <./figures/expansion_page2.png>] [74]
-<figures/alarm_page1.png, id=1277, 1774.63pt x 892.33376pt>
+[67 <./figures/expansion_page2.png>]
+<figures/alarm_page1.png, id=1270, 1774.63pt x 892.33376pt>
 File: figures/alarm_page1.png Graphic file (type png)
 <use figures/alarm_page1.png>
-Package pdftex.def Info: figures/alarm_page1.png  used on input line 654.
+Package pdftex.def Info: figures/alarm_page1.png  used on input line 857.
 (pdftex.def)             Requested size: 455.24411pt x 228.89688pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 658--659
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 668--670
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 671--672
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 675--676
-
- []
-
-[75
-
- <./figures/alarm_page1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 677--678
-
- []
-
-<figures/alarm_page2.png, id=1286, 850.67813pt x 298.86656pt>
-File: figures/alarm_page2.png Graphic file (type png)
-<use figures/alarm_page2.png>
-Package pdftex.def Info: figures/alarm_page2.png  used on input line 682.
-(pdftex.def)             Requested size: 455.24411pt x 159.9399pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 686--691
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 692--693
-
- []
-
-File: figures/pop-up.PNG Graphic file (type png)
-<use figures/pop-up.PNG>
-Package pdftex.def Info: figures/pop-up.PNG  used on input line 709.
-(pdftex.def)             Requested size: 218.51521pt x 104.4341pt.
-File: figures/alarm_icons.png Graphic file (type png)
-<use figures/alarm_icons.png>
-Package pdftex.def Info: figures/alarm_icons.png  used on input line 715.
-(pdftex.def)             Requested size: 218.51521pt x 44.73592pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 720--722
-
- []
-
-[76 <./figures/alarm_page2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 731--732
-
- []
-
-<figures/alarm_log1.png, id=1300, 115.3911pt x 198.9834pt>
-File: figures/alarm_log1.png Graphic file (type png)
-<use figures/alarm_log1.png>
-Package pdftex.def Info: figures/alarm_log1.png  used on input line 735.
-(pdftex.def)             Requested size: 273.14923pt x 471.08754pt.
-[77] [78 <./figures/alarm_log1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 753--755
-
- []
-
-<figures/ota_page3.png, id=1314, 888.31876pt x 414.79968pt>
-File: figures/ota_page3.png Graphic file (type png)
-<use figures/ota_page3.png>
-Package pdftex.def Info: figures/ota_page3.png  used on input line 765.
-(pdftex.def)             Requested size: 455.24411pt x 212.57672pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 773--774
-
- []
-
-[79 <./figures/ota_page3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 775--776
-
- []
-
-<figures/ota_boot.png, id=1323, 893.58844pt x 134.75343pt>
-File: figures/ota_boot.png Graphic file (type png)
-<use figures/ota_boot.png>
-Package pdftex.def Info: figures/ota_boot.png  used on input line 781.
-(pdftex.def)             Requested size: 455.24411pt x 68.65137pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 785--786
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 787--788
-
- []
-
-<figures/ota_lcd.png, id=1324, 840.89156pt x 191.9672pt>
-File: figures/ota_lcd.png Graphic file (type png)
-<use figures/ota_lcd.png>
-Package pdftex.def Info: figures/ota_lcd.png  used on input line 798.
-(pdftex.def)             Requested size: 455.24411pt x 103.92729pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 805--806
-
- []
-
-[80 <./figures/ota_boot.png> <./figures/ota_lcd.png>]
-<figures/prefs_page.png, id=1333, 841.64438pt x 175.40532pt>
-File: figures/prefs_page.png Graphic file (type png)
-<use figures/prefs_page.png>
-Package pdftex.def Info: figures/prefs_page.png  used on input line 811.
-(pdftex.def)             Requested size: 455.24411pt x 94.87804pt.
-<figures/hw_upgrade.png, id=1334, 841.64438pt x 222.07968pt>
-File: figures/hw_upgrade.png Graphic file (type png)
-<use figures/hw_upgrade.png>
-Package pdftex.def Info: figures/hw_upgrade.png  used on input line 820.
-(pdftex.def)             Requested size: 455.24411pt x 120.12456pt.
- [81 <./figures/prefs_page.png> <./figures/hw_upgrade.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 831--832
-
- []
-
-<figures/adv_sett_page1.png, id=1345, 846.91406pt x 689.57625pt>
-File: figures/adv_sett_page1.png Graphic file (type png)
-<use figures/adv_sett_page1.png>
-Package pdftex.def Info: figures/adv_sett_page1.png  used on input line 838.
-(pdftex.def)             Requested size: 455.24411pt x 370.67157pt.
-
-Overfull \hbox (35.52678pt too wide) in paragraph at lines 842--844
-[]\T1/lmr/m/n/10.95 Ensuite, nous trou-vons la sous-section \T1/lmr/bx/n/10.95 Warn-ing mes-sages at power-off \T1/lmr/m/n/10.95 (mes-sages d'avertissement
- []
-
-<figures/pop-up_finale.png, id=1346, 433.62pt x 222.5916pt>
-File: figures/pop-up_finale.png Graphic file (type png)
-<use figures/pop-up_finale.png>
-Package pdftex.def Info: figures/pop-up_finale.png  used on input line 847.
-(pdftex.def)             Requested size: 227.62206pt x 116.84535pt.
-[82
-
- <./figures/adv_sett_page1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 853--854
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 855--858
-
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 861--862
 
  []
 
-<figures/adv_info.png, id=1353, 742.27313pt x 267.24844pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 871--875
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 876--879
+
+ []
+
+
+Overfull \hbox (8.38365pt too wide) in paragraph at lines 880--884
+\T1/lmr/m/n/10.95 it does the same as be-fore but per-forms an ad-di-tional com-mand. The com-mand \T1/lmr/m/it/10.95 cmd/charge/Power
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 885--887
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 888--889
+
+ []
+
+<figures/alarm_page2.png, id=1273, 850.67813pt x 298.86656pt>
+File: figures/alarm_page2.png Graphic file (type png)
+<use figures/alarm_page2.png>
+Package pdftex.def Info: figures/alarm_page2.png  used on input line 893.
+(pdftex.def)             Requested size: 455.24411pt x 159.9399pt.
+[68
+
+ <./figures/alarm_page1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 897--902
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 903--904
+
+ []
+
+File: figures/pop-up.PNG Graphic file (type png)
+<use figures/pop-up.PNG>
+Package pdftex.def Info: figures/pop-up.PNG  used on input line 920.
+(pdftex.def)             Requested size: 218.51521pt x 104.4341pt.
+File: figures/alarm_icons.png Graphic file (type png)
+<use figures/alarm_icons.png>
+Package pdftex.def Info: figures/alarm_icons.png  used on input line 926.
+(pdftex.def)             Requested size: 218.51521pt x 44.73592pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 931--936
+
+ []
+
+[69 <./figures/alarm_page2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 946--950
+
+ []
+
+<figures/alarm_log1.png, id=1293, 115.3911pt x 198.9834pt>
+File: figures/alarm_log1.png Graphic file (type png)
+<use figures/alarm_log1.png>
+Package pdftex.def Info: figures/alarm_log1.png  used on input line 953.
+(pdftex.def)             Requested size: 273.14923pt x 471.08754pt.
+[70 <./figures/alarm_log1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 976--981
+
+ []
+
+<figures/ota_page3.png, id=1302, 888.31876pt x 414.79968pt>
+File: figures/ota_page3.png Graphic file (type png)
+<use figures/ota_page3.png>
+Package pdftex.def Info: figures/ota_page3.png  used on input line 995.
+(pdftex.def)             Requested size: 455.24411pt x 212.57672pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1008--1011
+
+ []
+
+[71 <./figures/ota_page3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1012--1017
+
+ []
+
+<figures/ota_boot.png, id=1311, 893.58844pt x 134.75343pt>
+File: figures/ota_boot.png Graphic file (type png)
+<use figures/ota_boot.png>
+Package pdftex.def Info: figures/ota_boot.png  used on input line 1026.
+(pdftex.def)             Requested size: 455.24411pt x 68.65137pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1030--1033
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1034--1037
+
+ []
+
+<figures/ota_lcd.png, id=1312, 840.89156pt x 191.9672pt>
+File: figures/ota_lcd.png Graphic file (type png)
+<use figures/ota_lcd.png>
+Package pdftex.def Info: figures/ota_lcd.png  used on input line 1052.
+(pdftex.def)             Requested size: 455.24411pt x 103.92729pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1065
+
+ []
+
+[72 <./figures/ota_boot.png> <./figures/ota_lcd.png>]
+<figures/prefs_page.png, id=1322, 841.64438pt x 175.40532pt>
+File: figures/prefs_page.png Graphic file (type png)
+<use figures/prefs_page.png>
+Package pdftex.def Info: figures/prefs_page.png  used on input line 1072.
+(pdftex.def)             Requested size: 455.24411pt x 94.87804pt.
+<figures/hw_upgrade.png, id=1323, 841.64438pt x 222.07968pt>
+File: figures/hw_upgrade.png Graphic file (type png)
+<use figures/hw_upgrade.png>
+Package pdftex.def Info: figures/hw_upgrade.png  used on input line 1083.
+(pdftex.def)             Requested size: 455.24411pt x 120.12456pt.
+ [73 <./figures/prefs_page.png> <./figures/hw_upgrade.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1094--1096
+
+ []
+
+<figures/adv_sett_page1.png, id=1334, 846.91406pt x 689.57625pt>
+File: figures/adv_sett_page1.png Graphic file (type png)
+<use figures/adv_sett_page1.png>
+Package pdftex.def Info: figures/adv_sett_page1.png  used on input line 1104.
+(pdftex.def)             Requested size: 455.24411pt x 370.67157pt.
+<figures/pop-up_finale.png, id=1335, 433.62pt x 222.5916pt>
+File: figures/pop-up_finale.png Graphic file (type png)
+<use figures/pop-up_finale.png>
+Package pdftex.def Info: figures/pop-up_finale.png  used on input line 1116.
+(pdftex.def)             Requested size: 227.62206pt x 116.84535pt.
+[74
+
+ <./figures/adv_sett_page1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1123--1125
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1126--1131
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1135--1140
+
+ []
+
+<figures/adv_info.png, id=1342, 742.27313pt x 267.24844pt>
 File: figures/adv_info.png Graphic file (type png)
 <use figures/adv_info.png>
-Package pdftex.def Info: figures/adv_info.png  used on input line 869.
+Package pdftex.def Info: figures/adv_info.png  used on input line 1150.
 (pdftex.def)             Requested size: 409.71692pt x 147.51721pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 873--874
+Underfull \hbox (badness 10000) in paragraph at lines 1154--1157
 
  []
 
-[83 <./figures/pop-up_finale.png> <./figures/adv_info.png>]
-<figures/item_scroll.png, id=1362, 758.08218pt x 340.27126pt>
+[75 <./figures/pop-up_finale.png> <./figures/adv_info.png>]
+<figures/item_scroll.png, id=1351, 758.08218pt x 340.27126pt>
 File: figures/item_scroll.png Graphic file (type png)
 <use figures/item_scroll.png>
-Package pdftex.def Info: figures/item_scroll.png  used on input line 877.
+Package pdftex.def Info: figures/item_scroll.png  used on input line 1160.
 (pdftex.def)             Requested size: 455.24411pt x 204.34085pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 883--884
+Underfull \hbox (badness 10000) in paragraph at lines 1169--1172
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 887--888
+Underfull \hbox (badness 10000) in paragraph at lines 1179--1183
 
  []
 
-[84 <./figures/item_scroll.png>]
-<figures/charging_process.png, id=1373, 930.47626pt x 347.79938pt>
+[76 <./figures/item_scroll.png>]
+<figures/charging_process.png, id=1362, 930.47626pt x 347.79938pt>
 File: figures/charging_process.png Graphic file (type png)
 <use figures/charging_process.png>
-Package pdftex.def Info: figures/charging_process.png  used on input line 912.
+Package pdftex.def Info: figures/charging_process.png  used on input line 1217.
 (pdftex.def)             Requested size: 455.24411pt x 170.16313pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 922--923
-
- []
-
-[85 <./figures/charging_process.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 929--930
+Underfull \hbox (badness 10000) in paragraph at lines 1230--1234
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 935--937
+Underfull \hbox (badness 10000) in paragraph at lines 1245--1247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 938--939
+Underfull \hbox (badness 10000) in paragraph at lines 1256--1261
+
+ []
+
+[77 <./figures/charging_process.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1262--1266
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 945--947
+Underfull \hbox (badness 10000) in paragraph at lines 1272--1277
 
  []
 
-
-Overfull \hbox (0.88042pt too wide) in paragraph at lines 951--952
-[]\T1/lmr/m/n/10.95 Si vous le souhaitez, vous pou-vez égale-ment sup-primer manuelle-ment cer-tains en-reg-istrements
- []
-
-<figures/charging_history.png, id=1383, 868.74562pt x 691.08188pt>
+<figures/charging_history.png, id=1371, 868.74562pt x 691.08188pt>
 File: figures/charging_history.png Graphic file (type png)
 <use figures/charging_history.png>
-Package pdftex.def Info: figures/charging_history.png  used on input line 956.
+Package pdftex.def Info: figures/charging_history.png  used on input line 1289.
 (pdftex.def)             Requested size: 432.48051pt x 344.0427pt.
-[86] [87 <./figures/charging_history.png>]
-<figures/time_page.png, id=1396, 831.105pt x 599.23875pt>
+[78 <./figures/charging_history.png>]
+<figures/time_page.png, id=1380, 831.105pt x 599.23875pt>
 File: figures/time_page.png Graphic file (type png)
 <use figures/time_page.png>
-Package pdftex.def Info: figures/time_page.png  used on input line 972.
+Package pdftex.def Info: figures/time_page.png  used on input line 1305.
 (pdftex.def)             Requested size: 455.24411pt x 328.23822pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 978--979
+Underfull \hbox (badness 10000) in paragraph at lines 1313--1315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 982--983
+Underfull \hbox (badness 10000) in paragraph at lines 1320--1324
 
  []
 
-[88
+[79
 
  <./figures/time_page.png>]
-<figures/btom_page.png, id=1404, 813.79031pt x 703.12688pt>
+<figures/btom_page.png, id=1389, 813.79031pt x 703.12688pt>
 File: figures/btom_page.png Graphic file (type png)
 <use figures/btom_page.png>
-Package pdftex.def Info: figures/btom_page.png  used on input line 998.
+Package pdftex.def Info: figures/btom_page.png  used on input line 1342.
 (pdftex.def)             Requested size: 455.24411pt x 393.34067pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1004--1005
+Underfull \hbox (badness 10000) in paragraph at lines 1351--1354
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1008--1009
+Underfull \hbox (badness 10000) in paragraph at lines 1358--1360
 
  []
 
-[89
+[80
 
  <./figures/btom_page.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1013--1015
+Underfull \hbox (badness 10000) in paragraph at lines 1367--1370
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1019--1020
+Underfull \hbox (badness 10000) in paragraph at lines 1377--1383
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1026--1027
+Underfull \hbox (badness 10000) in paragraph at lines 1394--1396
 
  []
 
-[90]
-<figures/error_page.png, id=1420, 846.91406pt x 673.01437pt>
+[81]
+<figures/error_page.png, id=1404, 846.91406pt x 673.01437pt>
 File: figures/error_page.png Graphic file (type png)
 <use figures/error_page.png>
-Package pdftex.def Info: figures/error_page.png  used on input line 1047.
+Package pdftex.def Info: figures/error_page.png  used on input line 1421.
 (pdftex.def)             Requested size: 455.24411pt x 361.76898pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1053--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1429--1430
 
  []
 
-) [91
+) [82
 
  <./figures/error_page.png>]
-\openout2 = `chapters_fr/05_update.aux'.
+\openout2 = `chapters/05_update.aux'.
 
- (./chapters_fr/05_update.tex
+ (./chapters/05_update.tex
 Chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 15--20
@@ -2689,23 +2702,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--31
 
  []
 
-[92
+<figures/cables_sd_update.png, id=1413, 158.2713pt x 46.0119pt>
+File: figures/cables_sd_update.png Graphic file (type png)
+<use figures/cables_sd_update.png>
+Package pdftex.def Info: figures/cables_sd_update.png  used on input line 44.
+(pdftex.def)             Requested size: 364.19667pt x 105.89111pt.
+[83
 
 
 
 
 ]
-<figures/cables_sd_update.png, id=1433, 158.2713pt x 46.0119pt>
-File: figures/cables_sd_update.png Graphic file (type png)
-<use figures/cables_sd_update.png>
-Package pdftex.def Info: figures/cables_sd_update.png  used on input line 44.
-(pdftex.def)             Requested size: 364.19667pt x 105.89111pt.
-
-Overfull \hbox (14.79228pt too wide) in paragraph at lines 52--57
-\T1/lmr/m/n/10.95 nou-veau [][]$\T1/lmtt/m/n/10.95 https : / / www . twizy-[]forum . de / twiz-[]o-[]meter$[][]\T1/lmr/m/n/10.95 ) le fichier ZIP de la ver-sion souhaitée. Vous
- []
-
-<figures/firmware_release_folder.png, id=1435, 181.6386pt x 31.5579pt>
+<figures/firmware_release_folder.png, id=1419, 181.6386pt x 31.5579pt>
 File: figures/firmware_release_folder.png Graphic file (type png)
 <use figures/firmware_release_folder.png>
 Package pdftex.def Info: figures/firmware_release_folder.png  used on input line 60.
@@ -2725,64 +2733,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--87
 
  []
 
-[93 <./figures/cables_sd_update.png> <./figures/firmware_release_folder.png>]
+[84 <./figures/cables_sd_update.png> <./figures/firmware_release_folder.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 105--108
 
  []
 
-<figures/forma_sd_steps.png, id=1444, 146.2263pt x 89.8557pt>
+<figures/forma_sd_steps.png, id=1429, 146.2263pt x 89.8557pt>
 File: figures/forma_sd_steps.png Graphic file (type png)
 <use figures/forma_sd_steps.png>
 Package pdftex.def Info: figures/forma_sd_steps.png  used on input line 119.
 (pdftex.def)             Requested size: 318.66948pt x 195.83078pt.
-[94 <./figures/forma_sd_steps.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 131--134
 
  []
 
-<figures/sd_insert.jpg, id=1451, 877.1169pt x 527.0892pt>
+[85 <./figures/forma_sd_steps.png>]
+<figures/sd_insert.jpg, id=1436, 877.1169pt x 527.0892pt>
 File: figures/sd_insert.jpg Graphic file (type jpg)
 <use figures/sd_insert.jpg>
 Package pdftex.def Info: figures/sd_insert.jpg  used on input line 145.
 (pdftex.def)             Requested size: 273.14923pt x 164.14394pt.
-
-Overfull \hbox (4.70598pt too wide) in paragraph at lines 152--156
-\T1/lmr/m/n/10.95 votre Twizy et re-branchez l'écran au boîtier noir. En-suite, al-lumez l'écran à l'aide de l'interrupteur
- []
-
-<figures/update_screen_lcd.jpg, id=1452, 348.5823pt x 261.8583pt>
+<figures/update_screen_lcd.jpg, id=1437, 1573.88pt x 690.58pt>
 File: figures/update_screen_lcd.jpg Graphic file (type jpg)
 <use figures/update_screen_lcd.jpg>
 Package pdftex.def Info: figures/update_screen_lcd.jpg  used on input line 166.
-(pdftex.def)             Requested size: 218.51521pt x 164.1485pt.
-<figures/copy_sd_card.png, id=1453, 502.87875pt x 272.01625pt>
+(pdftex.def)             Requested size: 218.51521pt x 95.86916pt.
+<figures/copy_sd_card.png, id=1438, 502.87875pt x 272.01625pt>
 File: figures/copy_sd_card.png Graphic file (type png)
 <use figures/copy_sd_card.png>
 Package pdftex.def Info: figures/copy_sd_card.png  used on input line 172.
 (pdftex.def)             Requested size: 218.51521pt x 118.19743pt.
-[95 <./figures/sd_insert.jpg>]
-<figures/driver_download.png, id=1460, 302.8113pt x 192.72pt>
+ [86 <./figures/sd_insert.jpg> <./figures/update_screen_lcd.jpg> <./figures/copy_sd_card.png>]
+<figures/driver_download.png, id=1447, 302.8113pt x 192.72pt>
 File: figures/driver_download.png Graphic file (type png)
 <use figures/driver_download.png>
 Package pdftex.def Info: figures/driver_download.png  used on input line 212.
 (pdftex.def)             Requested size: 455.24411pt x 289.76149pt.
- [96 <./figures/update_screen_lcd.jpg> <./figures/copy_sd_card.png>]
-Overfull \hbox (27.38866pt too wide) in paragraph at lines 220--223
-[]\T1/lmr/m/n/10.95 Le fichier téléchargé sera une archive ZIP, générale-ment nom-mée \T1/lmr/m/it/10.95 ^^PCP210x_Windows_Drivers.zip^^Q\T1/lmr/m/n/10.95 ,
- []
-
-<figures/driver_folder.png, id=1468, 124.7862pt x 63.3567pt>
+<figures/driver_folder.png, id=1448, 124.7862pt x 63.3567pt>
 File: figures/driver_folder.png Graphic file (type png)
 <use figures/driver_folder.png>
 Package pdftex.def Info: figures/driver_folder.png  used on input line 226.
 (pdftex.def)             Requested size: 318.66948pt x 161.80104pt.
-[97 <./figures/driver_download.png> <./figures/driver_folder.png>]
-<figures/wizard_step1.png, id=1477, 119.7273pt x 92.5056pt>
+ [87 <./figures/driver_download.png>]
+<figures/wizard_step1.png, id=1455, 119.7273pt x 92.5056pt>
 File: figures/wizard_step1.png Graphic file (type png)
 <use figures/wizard_step1.png>
 Package pdftex.def Info: figures/wizard_step1.png  used on input line 244.
 (pdftex.def)             Requested size: 218.51521pt x 168.84319pt.
-<figures/wizard_step2.png, id=1478, 119.7273pt x 92.2647pt>
+<figures/wizard_step2.png, id=1456, 119.7273pt x 92.2647pt>
 File: figures/wizard_step2.png Graphic file (type png)
 <use figures/wizard_step2.png>
 Package pdftex.def Info: figures/wizard_step2.png  used on input line 250.
@@ -2801,18 +2800,18 @@ File: figures/black_box.jpg Graphic file (type jpg)
 <use figures/black_box.jpg>
 Package pdftex.def Info: figures/black_box.jpg  used on input line 275.
 (pdftex.def)             Requested size: 273.14923pt x 182.09875pt.
-[98 <./figures/wizard_step1.png> <./figures/wizard_step2.png>]
+[88 <./figures/driver_folder.png> <./figures/wizard_step1.png> <./figures/wizard_step2.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 283--286
 
  []
 
-<figures/device_manager.png, id=1486, 152.0079pt x 79.9788pt>
+<figures/device_manager.png, id=1466, 152.0079pt x 79.9788pt>
 File: figures/device_manager.png Graphic file (type png)
 <use figures/device_manager.png>
 Package pdftex.def Info: figures/device_manager.png  used on input line 300.
 (pdftex.def)             Requested size: 364.19667pt x 191.63086pt.
-[99 <./figures/device_manager.png>]
-<figures/esptool_folder.png, id=1495, 122.1363pt x 55.1661pt>
+[89 <./figures/device_manager.png>]
+<figures/esptool_folder.png, id=1475, 122.1363pt x 55.1661pt>
 File: figures/esptool_folder.png Graphic file (type png)
 <use figures/esptool_folder.png>
 Package pdftex.def Info: figures/esptool_folder.png  used on input line 317.
@@ -2822,57 +2821,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 321--325
 
  []
 
-<figures/launching_flashtool.png, id=1496, 287.1528pt x 89.133pt>
+<figures/launching_flashtool.png, id=1476, 287.1528pt x 89.133pt>
 File: figures/launching_flashtool.png Graphic file (type png)
 <use figures/launching_flashtool.png>
 Package pdftex.def Info: figures/launching_flashtool.png  used on input line 333.
 (pdftex.def)             Requested size: 386.96027pt x 120.1244pt.
-[100 <./figures/esptool_folder.png> <./figures/launching_flashtool.png>]
-<figures/flashtool_page.png, id=1506, 193.4427pt x 143.3355pt>
+[90 <./figures/esptool_folder.png> <./figures/launching_flashtool.png>]
+<figures/flashtool_page.png, id=1487, 193.4427pt x 143.3355pt>
 File: figures/flashtool_page.png Graphic file (type png)
 <use figures/flashtool_page.png>
 Package pdftex.def Info: figures/flashtool_page.png  used on input line 359.
 (pdftex.def)             Requested size: 455.24411pt x 337.33052pt.
-<figures/flashtool_page2.png, id=1507, 242.1045pt x 181.3977pt>
+<figures/flashtool_page2.png, id=1488, 242.1045pt x 181.3977pt>
 File: figures/flashtool_page2.png Graphic file (type png)
 <use figures/flashtool_page2.png>
 Package pdftex.def Info: figures/flashtool_page2.png  used on input line 373.
 (pdftex.def)             Requested size: 455.24411pt x 341.10521pt.
- [101 <./figures/flashtool_page.png>]
+ [91 <./figures/flashtool_page.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 381--385
 
  []
 
-[102 <./figures/flashtool_page2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 408--413
+[92 <./figures/flashtool_page2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 409--414
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--417
+Underfull \hbox (badness 10000) in paragraph at lines 415--418
 
  []
 
-<figures/apt_get_esptool.png, id=1522, 377.2494pt x 71.0655pt>
+<figures/apt_get_esptool.png, id=1502, 377.2494pt x 71.0655pt>
 File: figures/apt_get_esptool.png Graphic file (type png)
 <use figures/apt_get_esptool.png>
-Package pdftex.def Info: figures/apt_get_esptool.png  used on input line 425.
+Package pdftex.def Info: figures/apt_get_esptool.png  used on input line 426.
 (pdftex.def)             Requested size: 455.24411pt x 85.76395pt.
-<figures/apt_get_python.png, id=1523, 291.7299pt x 50.1072pt>
+<figures/apt_get_python.png, id=1503, 291.7299pt x 50.1072pt>
 File: figures/apt_get_python.png Graphic file (type png)
 <use figures/apt_get_python.png>
-Package pdftex.def Info: figures/apt_get_python.png  used on input line 435.
+Package pdftex.def Info: figures/apt_get_python.png  used on input line 436.
 (pdftex.def)             Requested size: 455.24411pt x 78.1944pt.
-[103
-
- <./figures/apt_get_esptool.png> <./figures/apt_get_python.png>]
-<figures/tail_com.png, id=1533, 291.2481pt x 50.1072pt>
+<figures/tail_com.png, id=1504, 291.2481pt x 50.1072pt>
 File: figures/tail_com.png Graphic file (type png)
 <use figures/tail_com.png>
-Package pdftex.def Info: figures/tail_com.png  used on input line 446.
+Package pdftex.def Info: figures/tail_com.png  used on input line 447.
 (pdftex.def)             Requested size: 455.24411pt x 78.32896pt.
+[93
 
-Underfull \hbox (badness 10000) in paragraph at lines 454--457
+ <./figures/apt_get_esptool.png> <./figures/apt_get_python.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 455--458
 
  []
 
@@ -2882,26 +2880,21 @@ File: lstlang1.sty 2025/11/14 1.11b listings language file
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 480.
- [104 <./figures/tail_com.png>]
-Overfull \hbox (35.89226pt too wide) in paragraph at lines 506--510
-\T1/lmr/m/n/10.95 plaçant \T1/lmr/m/it/10.95 ^^PttyUSBx^^Q \T1/lmr/m/n/10.95 par le nom du port série noté précédem-ment (ex. \T1/lmr/m/it/10.95 ^^PttyUSB0^^Q\T1/lmr/m/n/10.95 ) et \T1/lmr/m/it/10.95 ^^PESP32_FwXX.bin^^Q
- []
-
-
-Overfull \hbox (4.65457pt too wide) in paragraph at lines 513--513
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 481.
+ [94 <./figures/tail_com.png>]
+Overfull \hbox (4.65457pt too wide) in paragraph at lines 514--514
 []\T1/lmtt/m/n/10.95 921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 546--550
+Underfull \hbox (badness 10000) in paragraph at lines 547--551
 
  []
 
-) [105]
-\openout2 = `chapters_fr/appendix.aux'.
+) [95]
+\openout2 = `chapters/appendix.aux'.
 
- (./chapters_fr/appendix.tex
+ (./chapters/appendix.tex
 Appendix A.
 
 Underfull \hbox (badness 10000) in paragraph at lines 7--13
@@ -2923,16 +2916,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--42
 
  []
 
-[106
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--55
+
+ []
+
+[96
 
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 50--55
-
- []
-
 File: figures/ota_page3.png Graphic file (type png)
 <use figures/ota_page3.png>
 Package pdftex.def Info: figures/ota_page3.png  used on input line 58.
@@ -2947,12 +2941,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--78
 
  []
 
-<figures/TuningMonitor.PNG, id=1612, 558.58687pt x 649.67719pt>
+<figures/TuningMonitor.PNG, id=1593, 558.58687pt x 649.67719pt>
 File: figures/TuningMonitor.PNG Graphic file (type png)
 <use figures/TuningMonitor.PNG>
 Package pdftex.def Info: figures/TuningMonitor.PNG  used on input line 81.
 (pdftex.def)             Requested size: 318.66948pt x 370.64697pt.
-[107]
+[97]
 Underfull \hbox (badness 10000) in paragraph at lines 85--88
 
  []
@@ -2961,24 +2955,24 @@ File: figures/ota_boot.png Graphic file (type png)
 <use figures/ota_boot.png>
 Package pdftex.def Info: figures/ota_boot.png  used on input line 97.
 (pdftex.def)             Requested size: 455.24411pt x 68.65137pt.
-[108 <./figures/TuningMonitor.PNG>]
+[98 <./figures/TuningMonitor.PNG>]
 Appendix B.
 
 Underfull \hbox (badness 10000) in paragraph at lines 110--113
 
  []
 
-<figures/Sonoff.PNG, id=1626, 441.14813pt x 363.60844pt>
+<figures/Sonoff.PNG, id=1606, 441.14813pt x 363.60844pt>
 File: figures/Sonoff.PNG Graphic file (type png)
 <use figures/Sonoff.PNG>
 Package pdftex.def Info: figures/Sonoff.PNG  used on input line 122.
 (pdftex.def)             Requested size: 218.51521pt x 180.10602pt.
-<figures/TasmotaPlug.PNG, id=1627, 470.50781pt x 272.51813pt>
+<figures/TasmotaPlug.PNG, id=1607, 470.50781pt x 272.51813pt>
 File: figures/TasmotaPlug.PNG Graphic file (type png)
 <use figures/TasmotaPlug.PNG>
 Package pdftex.def Info: figures/TasmotaPlug.PNG  used on input line 128.
 (pdftex.def)             Requested size: 218.51521pt x 126.56575pt.
-[109
+[99
 
  <./figures/Sonoff.PNG> <./figures/TasmotaPlug.PNG>]
 Underfull \hbox (badness 10000) in paragraph at lines 152--156
@@ -2990,7 +2984,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 160--162
 
  []
 
-<figures/Mqtt1.PNG, id=1640, 383.93437pt x 453.19313pt>
+<figures/Mqtt1.PNG, id=1620, 383.93437pt x 453.19313pt>
 File: figures/Mqtt1.PNG Graphic file (type png)
 <use figures/Mqtt1.PNG>
 Package pdftex.def Info: figures/Mqtt1.PNG  used on input line 177.
@@ -3000,13 +2994,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 181--186
 
  []
 
-[110 <./figures/Mqtt1.PNG>] [111]
-<figures/Mqtt2.PNG, id=1653, 335.75438pt x 594.72188pt>
+[100 <./figures/Mqtt1.PNG>]
+<figures/Mqtt2.PNG, id=1627, 335.75438pt x 594.72188pt>
 File: figures/Mqtt2.PNG Graphic file (type png)
 <use figures/Mqtt2.PNG>
 Package pdftex.def Info: figures/Mqtt2.PNG  used on input line 193.
 (pdftex.def)             Requested size: 182.09486pt x 322.54254pt.
-<figures/Mqtt4.PNG, id=1654, 405.76593pt x 608.2725pt>
+<figures/Mqtt4.PNG, id=1628, 405.76593pt x 608.2725pt>
 File: figures/Mqtt4.PNG Graphic file (type png)
 <use figures/Mqtt4.PNG>
 Package pdftex.def Info: figures/Mqtt4.PNG  used on input line 199.
@@ -3027,13 +3021,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 217--220
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--226
-\T1/lmr/m/n/10.95 séquence.
- []
-
-
-Underfull \hbox (badness 2401) in paragraph at lines 221--226
-\T1/lmr/m/n/10.95 Les champs seront ceux présen-tés dans la deux-ième im-age ci-dessus, ce qui donne
+Underfull \hbox (badness 5667) in paragraph at lines 221--226
+\T1/lmr/m/n/10.95 The fields will be the one shown in the sec-ond im-age above, so it be-comes
  []
 
 
@@ -3041,10 +3030,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 227--228
 
  []
 
-[112
+[101
 
  <./figures/Mqtt2.PNG> <./figures/Mqtt4.PNG>]
-<figures/Tom01.PNG, id=1668, 528.47438pt x 211.54031pt>
+<figures/Tom01.PNG, id=1643, 528.47438pt x 211.54031pt>
 File: figures/Tom01.PNG Graphic file (type png)
 <use figures/Tom01.PNG>
 Package pdftex.def Info: figures/Tom01.PNG  used on input line 247.
@@ -3052,16 +3041,6 @@ Package pdftex.def Info: figures/Tom01.PNG  used on input line 247.
 
 Underfull \hbox (badness 10000) in paragraph at lines 260--261
 
- []
-
-
-Overfull \hbox (2.75995pt too wide) in paragraph at lines 265--266
-[]\T1/lmr/m/it/10.95 myemail@gmail.com/cmnd/<votre_ nom_ de_ topic_ Tas-mota>/Power 1 \T1/lmr/m/n/10.95 pour l'allumer. 
- []
-
-
-Overfull \hbox (5.19386pt too wide) in paragraph at lines 266--267
-[]\T1/lmr/m/it/10.95 myemail@gmail.com/cmnd/<votre_ nom_ de_ topic_ Tas-mota>/Power 0 \T1/lmr/m/n/10.95 pour l'éteindre. 
  []
 
 
@@ -3074,27 +3053,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 270--272
 
  []
 
-[113 <./figures/Tom01.PNG>]) [114] (./main.aux (./chapters_fr/01_description.aux) (./chapters_fr/02_installation.aux) (./chapters_fr/03_basic_UI.aux) (./chapters_fr/04_advanced_UI.aux) (./chapters_fr/05_update.aux) (./chapters_fr/appendix.aux))
+) [102 <./figures/Tom01.PNG>] (./main.aux (./chapters/01_description.aux) (./chapters/02_installation.aux) (./chapters/03_basic_UI.aux) (./chapters/04_advanced_UI.aux) (./chapters/05_update.aux) (./chapters/appendix.aux))
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 917478E26A56F5DC48A22088F4FA45DB;24880.
+(rerunfilecheck)             Checksum: A77A265CF2E29264AB7545AF185790E6;20336.
  ) 
 Here is how much of TeX's memory you used:
- 31174 strings out of 467168
- 624556 string characters out of 5413706
- 1452187 words of memory out of 5000000
- 59543 multiletter control sequences out of 15000+600000
+ 31191 strings out of 467168
+ 624866 string characters out of 5413706
+ 1451363 words of memory out of 5000000
+ 59567 multiletter control sequences out of 15000+600000
  683400 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,13n,111p,929b,1357s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 103i,13n,111p,490b,1357s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr10.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr12.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr8.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri10.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (115 pages, 112972013 bytes).
+Output written on main.pdf (103 pages, 114297768 bytes).
 PDF statistics:
- 1834 PDF objects out of 2073 (max. 8388607)
- 1402 compressed objects within 15 object streams
- 425 named destinations out of 1000 (max. 500000)
- 1831 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1802 PDF objects out of 2073 (max. 8388607)
+ 1380 compressed objects within 14 object streams
+ 418 named destinations out of 1000 (max. 500000)
+ 1862 words of extra memory for PDF output out of 10000 (max. 10000000)
 

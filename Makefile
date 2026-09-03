@@ -1,4 +1,4 @@
-# Makefile per compilare le 3 lingue facilmente
+# Makefile semplice e cross-platform
 
 LATEXMK = latexmk -pdf -interaction=nonstopmode -file-line-error
 
@@ -7,14 +7,14 @@ LATEXMK = latexmk -pdf -interaction=nonstopmode -file-line-error
 all: en de fr
 
 en:
-	$(LATEXMK) -jobname=main_en main.tex
+	$(LATEXMK) main_en.tex
 
 de:
-	$(LATEXMK) -jobname=main_de -pdflatex='pdflatex %O -jobname=main_de "\def\langdir{chapters_de}\input{main.tex}"' main.tex
+	$(LATEXMK) main_de.tex
 
 fr:
-	$(LATEXMK) -jobname=main_fr -pdflatex='pdflatex %O -jobname=main_fr "\def\langdir{chapters_fr}\input{main.tex}"' main.tex
+	$(LATEXMK) main_fr.tex
 
 clean:
-	latexmk -C
-	rm -f main_*.pdf main_*.aux main_*.log main_*.out main_*.toc main_*.fls main_*.fdb_latexmk main_*.synctex.gz
+	latexmk -C main_en.tex main_de.tex main_fr.tex
+	-del *.aux *.log *.out *.toc *.fls *.fdb_latexmk *.synctex.gz 2>nul || true

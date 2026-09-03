@@ -1,5 +1,6 @@
 \chapter*{Préface}
 
+<<<<<<< HEAD
 \textit{Il s’agit du manuel d’utilisation officiel de ToM+, rédigé à la main par moi-même (Fabio Java) en anglais, sans recourir à
 aucun outil d’IA, ni dans ce guide ni dans le code qui permet à ToM+ de fonctionner. Les autres langues
 que l’anglais ont été traduites automatiquement à l’aide de} \href{https://www.deepl.com/en/translator}
@@ -9,17 +10,34 @@ que l’anglais ont été traduites automatiquement à l’aide de} \href{https:
 être assuré que toutes les fonctionnalités et l’interface utilisateur fournies ont été rédigées par un être humain.
 C’est ce qui rend ce projet unique parmi toutes les alternatives : savoir exactement
 ce que fait le code est essentiel pour développer consciemment de nouvelles fonctionnalités, corriger les bogues et
+=======
+\textit{Voici le manuel d'utilisation officiel de ToM+, rédigé à la main par moi-même (Fabio Java) en anglais, sans recourir à
+aucun outil d'IA, ni dans ce guide ni dans le code qui permet à ToM+ de fonctionner. Les autres langues
+que l'anglais ont été traduites automatiquement à l'aide de} \href{https://www.deepl.com/en/translator}
+    {DeepL}.\\
+
+\textit{À l'ère de la génération automatisée de contenu, ce manuel se distingue et vous pouvez
+être assuré que toutes les fonctionnalités proposées ainsi que l'interface utilisateur ont été rédigées par un être humain.
+C’est ce qui rend ce projet unique parmi toutes les alternatives : savoir exactement
+ce que fait le code est essentiel pour développer consciemment de nouvelles fonctionnalités, corriger les bugs et
+>>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 garantir une assistance aux autres utilisateurs de ToM+ si nécessaire.}\\
 
 \textit{ToM+ évolue constamment grâce à sa vaste communauté issue du
 } \href{https://www.twizy-forum.de/twiz-o-meter}
     {forum allemand consacré à la Twizy}. \textit{Si vous 
+<<<<<<< HEAD
 souhaitez acquérir un appareil ToM+, envoyez-moi un e-mail à l’adresse} \textbf{info.twizometer@gmail.com}.
 \textit{Si vous souhaitez suggérer une nouvelle fonctionnalité, signaler un bug ou même une faute de frappe dans ce
+=======
+souhaitez vous procurer un exemplaire de ToM+, envoyez-moi un e-mail à l’adresse} \textbf{info.twizometer@gmail.com}.
+\textit{Si vous souhaitez proposer une nouvelle fonctionnalité, signaler un bug ou même une faute de frappe dans ce
+>>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 manuel, veuillez m’envoyer un e-mail ou ouvrir une pull request sur} \href{https://codeberg.org/fabio-java/ToM-Wizard}
     {Codeberg}.\\
 
 \textit{Si vous possédez un ToM standard ou un BigToM, vous pouvez également vous référer à ce manuel d’utilisation,
+<<<<<<< HEAD
 car les fonctionnalités sont fondamentalement les mêmes, à l’exception du ToM standard qui ne dispose pas de la
 page du tableau de bord ni des pages de recharge en 3D.}\\
 
@@ -30,11 +48,27 @@ modification au véhicule, mais je décline toute responsabilité quant à son i
 et à son utilisation.}\\
 
 \textit{Le présent manuel d’utilisation est mis à jour pour la version 2.4 du micrologiciel ESP à la date du 03/09/2026.}
+=======
+car les fonctionnalités sont fondamentalement les mêmes, à l’exception du ToM standard qui ne dispose pas
+de la page du tableau de bord ni des pages de recharge en 3D.}\\
+
+\textit{Le ToM n’est pas un produit commercial et il est fabriqué à la main par un amateur comme moi ; chaque 
+unité est unique et doit être considérée comme un prototype, sans logo CE ni aucun autre 
+test officiel. Le Twiz O'meter lit les données du bus CAN sans nécessiter aucune
+modification du véhicule, mais je décline toute responsabilité quant à son installation
+et à son utilisation.}\\
+
+\textit{Ce manuel d’utilisation est mis à jour pour la version 2.4 du micrologiciel ESP.}
+>>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 
 
 \chapter{Description et liste des fonctionnalités}
 
+<<<<<<< HEAD
 \section{Points forts du ToM+}
+=======
+\section{ToM+ : points forts}
+>>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 
 ToM+ dispose de nombreuses fonctions et peut être mis à jour en permanence au fur et à mesure du
 développement du micrologiciel. Dans les paragraphes suivants, je vais vous présenter brièvement ses
@@ -42,10 +76,17 @@ fonctionnalités, afin de vous donner une idée du type de produit que j’expli
 
 \subsection{Un nouveau tableau de bord pour la Twizy}
 
+<<<<<<< HEAD
 Comme le tableau de bord de notre Twizy n’affiche que quelques valeurs, telles que la vitesse et les
 kilomètres restants, j’ai décidé de développer cet écran très pratique, qui affichera bien
 plus de données, en les lisant directement à partir du bus CAN de la Twizy, via le connecteur OBD
 situé dans la boîte à gants gauche. ToM se contentera de « capter » les valeurs envoyées par la Twizy, puis de
+=======
+Étant donné que le tableau de bord de notre Twizy n’affiche que quelques valeurs, telles que la vitesse et les
+kilomètres restants, j’ai décidé de développer cet écran très pratique, qui affichera bien
+plus de données, en les lisant directement à partir du bus CAN de la Twizy, via le connecteur OBD
+situé dans la boîte à gants gauche. ToM se contentera de « capter » les valeurs transmises par la Twizy, puis de
+>>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 les afficher sur l’écran LCD, ce qui permettra de nombreuses autres fonctionnalités. ToM dispose d’une mémoire minuscule
 mais puissante, capable de stocker certaines de ces valeurs pendant la conduite afin de vous fournir
 un historique de vos trajets. Sa capacité à stocker certaines valeurs permet de
@@ -57,12 +98,21 @@ sauvegarder vos configurations et personnalisations sur le ToM, même après une
     \caption{Tableau de bord du ToM+}
 \end{figure}
 
+<<<<<<< HEAD
 Il s’efforce de conserver le même style que le tableau de bord d’origine de la Twizy, mais avec un aspect plus moderne et
 en 3D.
 Comme sur le tableau de bord d’origine, vous y trouverez l’état de la batterie, le rapport engagé, l’autonomie restante, la vitesse et l’heure.
 Mais j’ai ajouté le \textbf{pourcentage exact de charge de la batterie}, le couple moteur, quelques icônes d’état, des informations sur le trajet et bien d’autres éléments que vous pouvez configurer à votre guise et que nous verrons en détail plus tard.
 
 La page principale est personnalisable et vous pouvez choisir ce qui y est affiché, tout comme les autres pages que vous pouvez parcourir à l’aide du bouton que vous pouvez monter sur la manette d’essuie-glace.
+=======
+Il s'efforce de conserver le même style que le tableau de bord d'origine de la Twizy, mais avec un aspect plus moderne et
+en 3D.
+Comme sur le tableau de bord d’origine, vous disposez des informations suivantes : la batterie, le rapport engagé, l’autonomie restante en kilomètres, la vitesse et l’heure.
+Mais j’ai ajouté le \textbf{pourcentage exact de charge de la batterie}, le couple moteur, quelques icônes d’état, des informations sur le trajet et bien d’autres éléments que vous pouvez configurer à votre guise et que nous verrons en détail plus tard.
+
+La page principale est personnalisable et vous pouvez choisir ce qui y est affiché, tout comme les autres pages que vous pouvez parcourir à l’aide du bouton que vous pouvez monter sur la tige d’essuie-glace.
+>>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 L’aspect général des autres pages est illustré sur l’image, avec une valeur au premier plan et les autres sur le côté gauche. En bas
 , vous pouvez changer de page en appuyant sur son icône.
 
@@ -76,6 +126,7 @@ L’aspect général des autres pages est illustré sur l’image, avec une vale
 
 La carte ESP32 contenue dans le boîtier noir permet de se connecter à un
 point d’accès réseau Wi-Fi. Une fois le ToM+ connecté, de nombreuses possibilités s’offrent à vous. Par
+<<<<<<< HEAD
 exemple, cet appareil peut être utilisé pour transférer des données depuis votre Twizy vers votre \textbf{MQTT}
 , où vous pourrez utiliser ces données pour intégrer votre voiture à votre système domotique IoT. 
 
@@ -86,6 +137,18 @@ actif même s’il ne fournit aucune connexion à Internet (un message d’avert
 téléphones Android 10 secondes après la première connexion), puis effectuer vos
 configurations supplémentaires sur certaines pages Web hébergées par ToM+ lui-même. Il vous suffit de saisir
 dans votre navigateur préféré l’adresse IPv4 privée statique de ToM (\textbf{\textit{192.188.1.188}}) et de profiter de la navigation !
+=======
+exemple, cet appareil peut être utilisé pour transférer des données de votre Twizy vers votre \textbf{MQTT}
+, où vous pourrez utiliser ces données pour intégrer votre voiture à votre système domotique IoT. 
+
+Ce n’est pas la seule fonctionnalité liée à la connexion Wi-Fi dont dispose le ToM+. Il peut également 
+faire office de point d’accès grâce à son SSID et à son mot de passe, créant ainsi un réseau privé sans 
+connexion à Internet. De cette manière, vous pouvez vous connecter en toute sécurité, \textbf{en acceptant de maintenir le profil de connexion}
+actif même s’il ne fournit aucune connexion à Internet (un message d’avertissement s’affiche généralement sur les
+téléphones Android 10 secondes après la première connexion), puis effectuer vos
+configurations supplémentaires sur certaines pages web hébergées par ToM+ lui-même. Il vous suffit de saisir
+dans votre navigateur préféré l’adresse IPv4 privée statique de ToM (\textbf{\textit{192.188.1.188}}) et profitez-en !
+>>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 
 \begin{figure}[H]
     \centering
@@ -98,24 +161,42 @@ dans votre navigateur préféré l’adresse IPv4 privée statique de ToM (\text
     \caption{Page d’accueil du serveur web}
 \end{figure}
 
+<<<<<<< HEAD
 Comme vous pouvez le constater dans cette nouvelle version de ToM, le serveur Web est bien plus complet et convivial. Vous pouvez facilement naviguer parmi les pages et configurer votre appareil comme vous le souhaitez. Le serveur Web est également adapté aux appareils mobiles, vous pouvez donc l’utiliser sur votre smartphone ou votre tablette.
 
 \subsection{Application mobile ToM}
 
 Parallèlement aux mises à jour du firmware de l’écran LCD et de la « boîte noire », une application Android minimaliste est
 également mise à jour régulièrement et vous permettra de surveiller les données en temps réel de votre Twizy à l’aide
+=======
+Comme vous pouvez le constater dans cette nouvelle version de ToM, le serveur web est bien plus complet et convivial. Vous pouvez facilement naviguer parmi les pages et configurer votre appareil comme vous le souhaitez. Le serveur web est également adaptatif, ce qui vous permet de l’utiliser également sur votre smartphone ou votre tablette.
+
+\subsection{Application mobile ToM}
+
+Parallèlement aux mises à jour du micrologiciel de l’écran LCD et de la boîte noire, une application Android minimaliste est
+également mise à jour et vous permettra de surveiller les données en temps réel de votre Twizy à l’aide
+>>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 de votre smartphone. 
 
 La mise en page s’efforce d’imiter l’interface graphique d’origine de ToM et s’appuie sur le protocole \textbf{MQTT} pour partager
 et transférer les valeurs de ToM+ vers l’application ; vous devrez donc la configurer à la fois
+<<<<<<< HEAD
 sur l’application et sur la page MQTT de ToM+, en intervertissant les sujets IN et OUT. L’application est
+=======
+sur l’application et sur la page MQTT de ToM+, en inversant les rubriques IN et OUT. L’application est
+>>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 distribuée sous la forme d’un fichier \textbf{APK}, un programme d’installation pour applications Android qui
 vous permet d’installer cette application même sans connexion Internet. Elle est disponible \href{https://www.mediafire.com/file/du7px1bzq0zzdxu/TwizOMeter_v3.1.2.apk/file}
     {en cliquant ici}.
 
 Vous devrez peut-être activer l’option « Installer des applications provenant de sources inconnues » dans les paramètres de votre téléphone pour ouvrir un fichier
+<<<<<<< HEAD
 portant l’extension \textit{(.apk)}. Au premier démarrage, vous verrez peut-être s’afficher une fenêtre contextuelle indiquant que cette application
 a été conçue pour une version plus ancienne d’Android si vous possédez un téléphone plus récent : cliquez simplement sur OK
+=======
+portant l’extension \textit{(.apk)}. Au premier démarrage, vous verrez peut-être apparaître une fenêtre contextuelle indiquant que cette application
+a été créée pour une version plus ancienne d’Android si vous disposez d’un téléphone plus récent : cliquez simplement sur OK
+>>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 et ignorez ce message (l’application fonctionnera parfaitement). Voici un aperçu de la page de chargement et des paramètres de l’application :
 
 \begin{figure}[H]
@@ -141,12 +222,20 @@ ne consomme pas beaucoup, comme le montrent les mesures progressives ci-dessous.
     \caption{Consommation lorsque la Twizy est à l’arrêt}
 \end{figure}
 
+<<<<<<< HEAD
 Lorsque la carte mère est active et que l’écran est allumé, la consommation est d’environ 90 mA. Si le Wi-Fi est également activé, la consommation d’énergie est proche de celle indiquée ci-dessous (peut-être légèrement supérieure en raison des dernières mises à jour qui ont introduit les graphismes en 3D).
+=======
+Lorsque la carte mère est active et que l’écran est allumé, la consommation est d’environ 90 mA. Si le Wi-Fi est également activé, la consommation électrique est proche de celle indiquée ci-dessous (peut-être légèrement supérieure en raison des dernières mises à jour qui ont introduit les graphismes 3D).
+>>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.65\textwidth]{figures/consumption_on_wifi.png}
+<<<<<<< HEAD
     \caption{Consommation lorsque le ToM+ est allumé avec le Wi-Fi}
+=======
+    \caption{Consommation lorsque le ToM+ est activé avec le Wi-Fi}
+>>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 \end{figure}
 
 Lorsque le Twizy est éteint, le boîtier noir passe en mode veille et consomme 18 mA.
@@ -161,8 +250,13 @@ appareil et son écran LCD. Comme il utilise une technologie tactile résistive,
 \section{Kit ToM+ fourni}
 
 Lorsque le ToM+ est expédié, il est généralement emballé dans une boîte marron afin de protéger les cartes électroniques internes
+<<<<<<< HEAD
 et les capteurs des chocs pendant le transport. Dans cette nouvelle version, plus besoin de longs câbles : un seul câble plus court, relié à la carte mère interne du ToM+, est logé dans un petit boîtier en plastique noir
 que j’appelle généralement la « boîte noire ». Bien sûr, l’écran tactile LCD résistif est également fourni ; il vous permet de visualiser et de configurer l’ensemble du système.
+=======
+et les capteurs des chocs pendant le transport. Dans cette nouvelle version, plus besoin de longs câbles : un seul câble plus court est relié à la carte mère interne du ToM+, logée dans un petit boîtier en plastique noir
+que j’appelle généralement la « boîte noire ». Bien sûr, l’écran tactile LCD résistif est également fourni, sur lequel vous pouvez visualiser et configurer tous les paramètres.
+>>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 Plus besoin de vis ni de ruban adhésif ! Il suffit d’un simple clip permettant de fixer l’écran directement sur le tableau de bord d’origine.
 
 \begin{figure}[H]
@@ -173,7 +267,11 @@ Plus besoin de vis ni de ruban adhésif ! Il suffit d’un simple clip permettan
 
 \subsection{La « boîte noire »}
 
+<<<<<<< HEAD
 La « boîte noire » est la carte mère de ToM+ et contient la plupart des composants nécessaires
+=======
+La « boîte noire » est la carte mère du ToM+ et contient la plupart des composants nécessaires
+>>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 au fonctionnement du système. Elle offre :
 \begin{itemize}
     \item Un connecteur externe pour l’écran LCD ;
@@ -194,11 +292,19 @@ au fonctionnement du système. Elle offre :
 
 Si vous souhaitez personnaliser davantage votre ToM+, vous pouvez facilement le faire à l’aide du connecteur
 illustré sur l’image ci-contre. En effet, il fournit une alimentation supplémentaire de 5 V provenant de
+<<<<<<< HEAD
 VCC (ancien câble rouge) et de la masse (GND, ancien câble noir), ce qui vous permet d’alimenter une LED externe, un
 petit buzzer ou tout autre dispositif de votre choix. Les deux autres câbles correspondent à des broches d’entrée-sortie générales :
 la broche 1 (anciennement jaune) et la broche 2 (anciennement bleue). Elles peuvent remplir des fonctions d’entrée ou de sortie, selon votre choix sur la \textit{« page d’extension »} du serveur web ToM \textbf{.} Dans cette dernière version de l’appareil, le connecteur d’extension est intégré au boîtier noir (sans câbles colorés), mais le brochage reste identique.
 N’oubliez pas de retirer le capot de protection avant de l’utiliser et de respecter une tension d’entrée de \textbf{3,3 V maximum}. Pour des tensions plus élevées,
 prévoyez un diviseur de tension approprié.
+=======
+VCC (ancien câble rouge) et de la masse (GND) (ancien câble noir), ce qui vous permet d’alimenter une LED externe, un
+petit buzzer ou tout autre dispositif de votre choix. Les deux autres câbles sont des broches d’entrée-sortie générales,
+la broche 1 (câble jaune) et la broche 2 (câble bleu). Elles peuvent remplir des fonctions d’entrée ou de sortie, selon votre choix sur la \textit{« page d’extension »} du serveur web ToM \textbf{.} Dans cette dernière version de l’appareil, le connecteur d’extension est intégré au boîtier noir (sans câbles colorés), mais le brochage reste identique.
+N’oubliez pas de retirer le capot de protection avant de l’utiliser et de vous limiter à une tension d’entrée de \textbf{3,3 V maximum}. Pour des tensions plus élevées,
+prévoyez un diviseur de tension adapté.
+>>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 
 \begin{figure}[H]
     \centering
@@ -208,7 +314,11 @@ prévoyez un diviseur de tension approprié.
 
 \subsection{L’écran LCD et son support}
 
+<<<<<<< HEAD
 L’écran LCD tactile résistif est intégré à un support imprimé en 3D qui se fixe sur le tableau de bord d’origine. Si vous le souhaitez, vous pouvez également disposer d’un support autonome imprimé en 3D pour monter l’écran sur la boîte à gants, à l’instar du ToM standard. Vous disposez ainsi d’un appareil 2 en 1 pouvant être utilisé aussi bien en version à clipser qu’en version autonome, selon vos préférences. Un emplacement pour carte microSD est accessible pour les mises à jour du micrologiciel.
+=======
+L’écran LCD tactile résistif est intégré dans un support imprimé en 3D qui se fixe sur le tableau de bord d’origine. Si vous le souhaitez, vous pouvez également disposer d’un support autonome imprimé en 3D pour monter l’écran sur la boîte à gants, à l’instar du ToM standard. Vous disposez ainsi d’un appareil 2 en 1 pouvant être utilisé aussi bien en version à clipser qu’en version autonome, selon vos préférences. Un emplacement pour carte microSD est accessible pour les mises à jour du micrologiciel.
+>>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 
 \begin{figure}[H]
     \centering
@@ -224,7 +334,11 @@ L’écran, fourni avec un film de protection, comme le montrent les images, peu
     \caption{Écran LCD autonome}
 \end{figure}
 
+<<<<<<< HEAD
 Dans la version autonome, vous pouvez le fixer à l’aide du cache et des vis fournis dans l’emballage, ainsi que du support pliable en 3D, comme le montrent les images ci-dessous.
+=======
+Dans la version autonome, vous pouvez le fixer à l’aide du cache et des vis fournis dans le colis, ainsi que du support pliable en 3D, comme le montrent les images ci-dessous.
+>>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 
 \begin{figure}[H]
     \centering
@@ -242,7 +356,11 @@ Le support 3D comporte également des trous sur sa base si vous souhaitez le vis
 
 \subsection{Autres composants utiles}
 
+<<<<<<< HEAD
 Le kit comprend un serre-câble permettant de fixer le support imprimé en 3D pour le bouton sur la manette droite d’essuie-glace (également fournie). De plus, un autocollant vous est offert si vous souhaitez soutenir le projet en le collant quelque part sur votre Twizy.
+=======
+Le kit comprend un serre-câble permettant de fixer le support imprimé en 3D pour le bouton sur la manette droite d’essuie-glace (également fournie). De plus, un autocollant est offert en bonus si vous souhaitez soutenir le projet en l'apposant quelque part sur votre Twizy.
+>>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 
 \begin{figure}[H]
     \centering

@@ -51,7 +51,11 @@ def find_balanced_brace_content(text: str, start: int) -> int:
 def protect_latex(text: str) -> Tuple[str, List[str]]:
     """
     Protegge SOLO le parti che non devono essere tradotte.
+<<<<<<< HEAD
     Lascia passare \\textbf, \\textit, \\section, ecc. così DeepL può tradurre il contenuto.
+=======
+    Lascia passare \textbf, \textit, \section, ecc. così DeepL può tradurre il contenuto.
+>>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
     """
     placeholders: List[str] = []
     

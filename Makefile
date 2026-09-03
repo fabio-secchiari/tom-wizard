@@ -1,6 +1,6 @@
 # Makefile semplice e cross-platform
 
-LATEXMK = latexmk -pdf -interaction=nonstopmode -file-line-error
+LATEXMK = latexmk -pdf -interaction=nonstopmode -file-line-error -f
 
 .PHONY: all en de fr clean
 

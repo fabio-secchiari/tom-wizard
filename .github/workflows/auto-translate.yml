@@ -6,6 +6,8 @@ on:
     paths:
       - 'src/chapters/**.tex'
       - 'scripts/translate_chapters.py'
+      - 'Makefile'
+      - 'main_*.tex'
 
 jobs:
   translate-and-pr:
@@ -26,22 +28,32 @@ jobs:
           python-version: '3.12'
 
       - name: Install Python dependencies
-        run: |
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
-      - name: Install TeX Live + Pandoc
+      # ---------- Cache TeX Live (il pezzo che fa la differenza) ----------
+      - name: Cache TeX Live
+        uses: actions/cache@v4
+        id: texlive-cache
+        with:
+          path: ~/texlive
+          key: texlive-full-${{ runner.os }}-2026
+
+      - name: Install TeX Live (solo se non c'è in cache)
+        if: steps.texlive-cache.outputs.cache-hit != 'true'
         run: |
           sudo apt-get update
           sudo apt-get install -y texlive-full pandoc
-          # Se il documento è molto pesante puoi usare un'immagine Docker dedicata in seguito
 
+      - name: Install Pandoc (sempre, è leggero)
+        run: sudo apt-get install -y pandoc || true
+
+      # ---------- Traduzione ----------
       - name: Detect changed English chapters
         id: changed
         run: |
-          # Trova i file .tex modificati in chapters/ rispetto al commit precedente
-          CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'src/chapters/*.tex' | xargs -n1 basename | tr '\n' ' ')
+          CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'src/chapters/*.tex' | xargs -n1 basename 2>/dev/null | tr '\n' ' ' || true)
           echo "files=$CHANGED" >> $GITHUB_OUTPUT
-          echo "File cambiati: $CHANGED"
+          echo "File cambiati: '$CHANGED'"
 
       - name: Translate changed chapters
         env:
@@ -50,38 +62,28 @@ jobs:
           if [ -n "${{ steps.changed.outputs.files }}" ]; then
             python scripts/translate_chapters.py ${{ steps.changed.outputs.files }}
           else
-            echo "Nessun file capitolo modificato"
+            echo "Nessun file capitolo modificato → salto traduzione"
           fi
 
+      # ---------- Compilazione ----------
       - name: Compile all PDFs
         run: |
           make all
-          # I PDF saranno main_en.pdf, main_de.pdf, main_fr.pdf
 
-      - name: Generate Markdown with Pandoc
-        run: |
-          mkdir -p markdown/en markdown/de markdown/fr
-
-          # Esempio semplice: un file per lingua (puoi raffinarlo)
-          pandoc main_en.pdf -o markdown/en/guide.md 2>/dev/null || true
-          # Meglio partire dai .tex se preferisci:
-          # pandoc src/chapters/*.tex -o markdown/en/guide.md
-
-          # Per ora lasciamo un placeholder pulito — lo raffiniamo dopo
-
+      # ---------- Crea la Pull Request ----------
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "chore: auto-translate DE/FR + rebuild PDFs"
-          title: "Auto-translate: update DE/FR chapters + PDFs"
+          title: "Auto-translate: update DE/FR + PDFs"
           body: |
-            Traduzione automatica generata da DeepL + ricompilazione PDF.
+            Traduzione automatica + ricompilazione PDF generata da DeepL.
 
-            File inglesi modificati:
+            **File inglesi modificati:**
             `${{ steps.changed.outputs.files }}`
 
-            Controlla le traduzioni e mergia quando sei soddisfatto.
+            Controlla le traduzioni e i PDF, poi fai merge quando sei soddisfatto.
           branch: auto-translate/${{ github.run_id }}
           delete-branch: true
           labels: translation, automated

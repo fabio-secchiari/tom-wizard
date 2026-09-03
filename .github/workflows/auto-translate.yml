@@ -1,6 +1,7 @@
 name: Auto Translate + Build + PR
 
 on:
+  # Parte in automatico quando modifichi i capitoli inglesi
   push:
     branches: [main]
     paths:
@@ -8,6 +9,9 @@ on:
       - 'scripts/translate_chapters.py'
       - 'Makefile'
       - 'main_*.tex'
+
+  # Pulsante per avviarlo a mano da GitHub
+  workflow_dispatch:
 
 jobs:
   translate-and-pr:
@@ -30,28 +34,34 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
-      # ---------- Cache TeX Live (il pezzo che fa la differenza) ----------
+      # ========== CACHE TEX LIVE (secondo documentazione ufficiale) ==========
       - name: Cache TeX Live
+        id: cache-texlive
         uses: actions/cache@v4
-        id: texlive-cache
         with:
-          path: ~/texlive
-          key: texlive-full-${{ runner.os }}-2026
+          path: |
+            ~/.texlive
+            /tmp/texlive
+            /usr/local/texlive
+          key: texlive-full-${{ runner.os }}-2026-v1
+          restore-keys: |
+            texlive-full-${{ runner.os }}-2026-
+            texlive-full-${{ runner.os }}-
 
-      - name: Install TeX Live (solo se non c'è in cache)
-        if: steps.texlive-cache.outputs.cache-hit != 'true'
+      - name: Install TeX Live (solo se cache miss)
+        if: steps.cache-texlive.outputs.cache-hit != 'true'
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-full pandoc
+          sudo apt-get install -y texlive-full
 
-      - name: Install Pandoc (sempre, è leggero)
-        run: sudo apt-get install -y pandoc || true
+      - name: Install Pandoc
+        run: sudo apt-get install -y pandoc
 
-      # ---------- Traduzione ----------
+      # ========== TRADUZIONE ==========
       - name: Detect changed English chapters
         id: changed
         run: |
-          CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'src/chapters/*.tex' | xargs -n1 basename 2>/dev/null | tr '\n' ' ' || true)
+          CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'src/chapters/*.tex' 2>/dev/null | xargs -n1 basename 2>/dev/null | tr '\n' ' ' || true)
           echo "files=$CHANGED" >> $GITHUB_OUTPUT
           echo "File cambiati: '$CHANGED'"
 
@@ -65,12 +75,11 @@ jobs:
             echo "Nessun file capitolo modificato → salto traduzione"
           fi
 
-      # ---------- Compilazione ----------
+      # ========== COMPILAZIONE ==========
       - name: Compile all PDFs
-        run: |
-          make all
+        run: make all
 
-      # ---------- Crea la Pull Request ----------
+      # ========== PULL REQUEST ==========
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
@@ -83,7 +92,7 @@ jobs:
             **File inglesi modificati:**
             `${{ steps.changed.outputs.files }}`
 
-            Controlla le traduzioni e i PDF, poi fai merge quando sei soddisfatto.
+            Controlla le traduzioni e i PDF, poi fai merge.
           branch: auto-translate/${{ github.run_id }}
           delete-branch: true
           labels: translation, automated

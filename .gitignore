@@ -1,2 +1,35 @@
-chapters_*/
-markdown*
+# === Segreti ===
+.env
+.env.*
+
+# === File di build LaTeX (non versionare) ===
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.bbl
+*.blg
+*.idx
+*.ilg
+*.ind
+*.nav
+*.snm
+*.vrb
+*.bcf
+*.run.xml
+
+# PDF generati (li generiamo in CI e li alleghiamo alla PR se vuoi)
+*.pdf
+!docs/*.pdf
+
+# === Altro ===
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

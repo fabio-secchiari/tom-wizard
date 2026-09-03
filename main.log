@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.4)  2 SEP 2026 12:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.4)  3 SEP 2026 10:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -690,30 +690,30 @@ Package: array 2026/02/24 v2.7b Tabular extension package (FMi)
 \TX@cols=\count388
 \TX@ftn=\toks44
 ))
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 9.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11.
  (d:/texlive/2026/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (./main.aux (./chapters/01_description.aux) (./chapters/02_installation.aux) (./chapters/03_basic_UI.aux) (./chapters/04_advanced_UI.aux) (./chapters/05_update.aux) (./chapters/appendix.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
  (d:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count389
@@ -733,7 +733,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (d:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 9.
+Package hyperref Info: Link coloring ON on input line 11.
  (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -777,13 +777,13 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 9.
+Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 11.
 
 \c@lstlisting=\count395
 <figures/tom_plus.png, id=461, 271.2534pt x 193.9245pt>
 File: figures/tom_plus.png Graphic file (type png)
 <use figures/tom_plus.png>
-Package pdftex.def Info: figures/tom_plus.png  used on input line 26.
+Package pdftex.def Info: figures/tom_plus.png  used on input line 28.
 (pdftex.def)             Requested size: 386.96228pt x 276.64708pt.
 [1
 
@@ -849,6 +849,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
 [4
 
 
@@ -858,7 +863,7 @@ Chapter 1.
 <figures/dashboard.jpg, id=607, 2595.6975pt x 1741.25531pt>
 File: figures/dashboard.jpg Graphic file (type jpg)
 <use figures/dashboard.jpg>
-Package pdftex.def Info: figures/dashboard.jpg  used on input line 47.
+Package pdftex.def Info: figures/dashboard.jpg  used on input line 53.
 (pdftex.def)             Requested size: 364.19667pt x 244.30547pt.
 [5
 
@@ -866,49 +871,49 @@ Package pdftex.def Info: figures/dashboard.jpg  used on input line 47.
 <figures/engine_page.jpg, id=613, 2340.49406pt x 1601.2322pt>
 File: figures/engine_page.jpg Graphic file (type jpg)
 <use figures/engine_page.jpg>
-Package pdftex.def Info: figures/engine_page.jpg  used on input line 62.
+Package pdftex.def Info: figures/engine_page.jpg  used on input line 68.
 (pdftex.def)             Requested size: 364.19667pt x 249.1413pt.
 <figures/landing_page.png, id=614, 275.52937pt x 703.12688pt>
 File: figures/landing_page.png Graphic file (type png)
 <use figures/landing_page.png>
-Package pdftex.def Info: figures/landing_page.png  used on input line 87.
+Package pdftex.def Info: figures/landing_page.png  used on input line 93.
 (pdftex.def)             Requested size: 206.54561pt x 527.08636pt.
  [6 <./figures/engine_page.jpg>] [7 <./figures/landing_page.png>]
 <figures/tom_app_charging.png, id=630, 984.67876pt x 433.62pt>
 File: figures/tom_app_charging.png Graphic file (type png)
 <use figures/tom_app_charging.png>
-Package pdftex.def Info: figures/tom_app_charging.png  used on input line 112.
+Package pdftex.def Info: figures/tom_app_charging.png  used on input line 118.
 (pdftex.def)             Requested size: 364.19667pt x 160.37733pt.
 <figures/tom_app_settings.png, id=631, 813.0375pt x 919.18407pt>
 File: figures/tom_app_settings.png Graphic file (type png)
 <use figures/tom_app_settings.png>
-Package pdftex.def Info: figures/tom_app_settings.png  used on input line 118.
+Package pdftex.def Info: figures/tom_app_settings.png  used on input line 124.
 (pdftex.def)             Requested size: 295.90588pt x 334.53864pt.
 <figures/consumption_off.png, id=632, 453.19313pt x 335.75438pt>
 File: figures/consumption_off.png Graphic file (type png)
 <use figures/consumption_off.png>
-Package pdftex.def Info: figures/consumption_off.png  used on input line 129.
+Package pdftex.def Info: figures/consumption_off.png  used on input line 135.
 (pdftex.def)             Requested size: 295.90588pt x 219.22653pt.
  [8 <./figures/tom_app_charging.png> <./figures/tom_app_settings.png>]
 <figures/consumption_on_wifi.png, id=641, 441.14813pt x 335.00156pt>
 File: figures/consumption_on_wifi.png Graphic file (type png)
 <use figures/consumption_on_wifi.png>
-Package pdftex.def Info: figures/consumption_on_wifi.png  used on input line 137.
+Package pdftex.def Info: figures/consumption_on_wifi.png  used on input line 143.
 (pdftex.def)             Requested size: 295.90588pt x 224.71568pt.
  [9 <./figures/consumption_off.png (PNG copy)> <./figures/consumption_on_wifi.png (PNG copy)>]
 <figures/box.png, id=648, 854.7132pt x 605.1408pt>
 File: figures/box.png Graphic file (type png)
 <use figures/box.png>
-Package pdftex.def Info: figures/box.png  used on input line 159.
+Package pdftex.def Info: figures/box.png  used on input line 165.
 (pdftex.def)             Requested size: 364.19667pt x 257.85088pt.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 168.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 174.
  (d:/texlive/2026/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 <figures/black_box.jpg, id=649, 1510.89468pt x 1007.26312pt>
 File: figures/black_box.jpg Graphic file (type jpg)
 <use figures/black_box.jpg>
-Package pdftex.def Info: figures/black_box.jpg  used on input line 178.
+Package pdftex.def Info: figures/black_box.jpg  used on input line 184.
 (pdftex.def)             Requested size: 341.43307pt x 227.62344pt.
  [10
 
@@ -916,45 +921,45 @@ Package pdftex.def Info: figures/black_box.jpg  used on input line 178.
 <figures/expansion_bb.jpg, id=657, 1568.86125pt x 906.38625pt>
 File: figures/expansion_bb.jpg Graphic file (type jpg)
 <use figures/expansion_bb.jpg>
-Package pdftex.def Info: figures/expansion_bb.jpg  used on input line 194.
+Package pdftex.def Info: figures/expansion_bb.jpg  used on input line 200.
 (pdftex.def)             Requested size: 318.66948pt x 184.09541pt.
  [11 <./figures/black_box.jpg> <./figures/expansion_bb.jpg>]
 <figures/display.png, id=665, 889.1619pt x 562.5015pt>
 File: figures/display.png Graphic file (type png)
 <use figures/display.png>
-Package pdftex.def Info: figures/display.png  used on input line 204.
+Package pdftex.def Info: figures/display.png  used on input line 210.
 (pdftex.def)             Requested size: 364.19667pt x 230.39536pt.
 <figures/3d_stand_wdisplay.png, id=666, 891.33pt x 530.9436pt>
 File: figures/3d_stand_wdisplay.png Graphic file (type png)
 <use figures/3d_stand_wdisplay.png>
-Package pdftex.def Info: figures/3d_stand_wdisplay.png  used on input line 212.
+Package pdftex.def Info: figures/3d_stand_wdisplay.png  used on input line 218.
 (pdftex.def)             Requested size: 364.19667pt x 216.94293pt.
 <figures/back_cover.png, id=667, 736.4313pt x 393.1488pt>
 File: figures/back_cover.png Graphic file (type png)
 <use figures/back_cover.png>
-Package pdftex.def Info: figures/back_cover.png  used on input line 220.
+Package pdftex.def Info: figures/back_cover.png  used on input line 226.
 (pdftex.def)             Requested size: 364.19667pt x 194.43228pt.
  [12 <./figures/display.png> <./figures/3d_stand_wdisplay.png>]
 <figures/bottom_cover_screwholes.png, id=677, 985.7628pt x 585.8688pt>
 File: figures/bottom_cover_screwholes.png Graphic file (type png)
 <use figures/bottom_cover_screwholes.png>
-Package pdftex.def Info: figures/bottom_cover_screwholes.png  used on input line 228.
+Package pdftex.def Info: figures/bottom_cover_screwholes.png  used on input line 234.
 (pdftex.def)             Requested size: 364.19667pt x 216.45517pt.
 <figures/cable_tie.jpg, id=678, 912.5292pt x 266.9172pt>
 File: figures/cable_tie.jpg Graphic file (type jpg)
 <use figures/cable_tie.jpg>
-Package pdftex.def Info: figures/cable_tie.jpg  used on input line 238.
+Package pdftex.def Info: figures/cable_tie.jpg  used on input line 244.
 (pdftex.def)             Requested size: 364.19667pt x 106.52876pt.
  [13 <./figures/back_cover.png> <./figures/bottom_cover_screwholes.png>]
 <figures/wiper_stalk_button.jpg, id=687, 762.2076pt x 297.7524pt>
 File: figures/wiper_stalk_button.jpg Graphic file (type jpg)
 <use figures/wiper_stalk_button.jpg>
-Package pdftex.def Info: figures/wiper_stalk_button.jpg  used on input line 244.
+Package pdftex.def Info: figures/wiper_stalk_button.jpg  used on input line 250.
 (pdftex.def)             Requested size: 364.19667pt x 142.27437pt.
 <figures/sticker.png, id=688, 463.4916pt x 268.3626pt>
 File: figures/sticker.png Graphic file (type png)
 <use figures/sticker.png>
-Package pdftex.def Info: figures/sticker.png  used on input line 250.
+Package pdftex.def Info: figures/sticker.png  used on input line 256.
 (pdftex.def)             Requested size: 364.19667pt x 210.87804pt.
 ) [14 <./figures/cable_tie.jpg> <./figures/wiper_stalk_button.jpg> <./figures/sticker.png>]
 \openout2 = `chapters/02_installation.aux'.
@@ -3062,15 +3067,15 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: A77A265CF2E29264AB7545AF185790E6;20336.
  ) 
 Here is how much of TeX's memory you used:
- 31191 strings out of 467168
- 624866 string characters out of 5413706
- 1451363 words of memory out of 5000000
- 59567 multiletter control sequences out of 15000+600000
+ 31192 strings out of 467168
+ 624873 string characters out of 5413706
+ 1451366 words of memory out of 5000000
+ 59568 multiletter control sequences out of 15000+600000
  683400 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,13n,111p,490b,1357s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr10.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr12.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr8.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri10.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (103 pages, 114297768 bytes).
+Output written on main.pdf (103 pages, 114298056 bytes).
 PDF statistics:
  1802 PDF objects out of 2073 (max. 8388607)
  1380 compressed objects within 14 object streams

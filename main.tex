@@ -2,6 +2,8 @@
 
 \input{preamble}
 
+\providecommand{\langdir}{chapters}   % default = english
+
 \title{TOM+ User Manual\\Version 2.0}
 \author{Fabio Java}
 \date{}
@@ -36,11 +38,11 @@
 \tableofcontents
 \clearpage
 
-\include{chapters/01_description}
-\include{chapters/02_installation}
-\include{chapters/03_basic_UI}
-\include{chapters/04_advanced_UI}
-\include{chapters/05_update}
-\include{chapters/appendix}
+\include{\langdir/01_description}
+\include{\langdir/02_installation}
+\include{\langdir/03_basic_UI}
+\include{\langdir/04_advanced_UI}
+\include{\langdir/05_update}
+\include{\langdir/appendix}
 
 \end{document}

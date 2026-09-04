@@ -5,7 +5,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'src/chapters/**.tex'
+      - 'src/chapters/**/*.tex'
       - 'scripts/translate_chapters.py'
       - 'Makefile'
       - 'main_*.tex'
@@ -60,19 +60,61 @@ jobs:
       # ========== TRADUZIONE ==========
       - name: Detect changed English chapters
         id: changed
+        shell: bash
         run: |
-          CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'src/chapters/*.tex' 2>/dev/null | xargs -n1 basename 2>/dev/null | tr '\n' ' ' || true)
-          echo "files=$CHANGED" >> $GITHUB_OUTPUT
-          echo "File cambiati: '$CHANGED'"
+          BEFORE="${{ github.event.before }}"
+          AFTER="${{ github.sha }}"
+
+          echo "Before: $BEFORE"
+          echo "After:  $AFTER"
+
+          # Per workflow_dispatch non esiste un vero commit 'before'.
+          # In quel caso traduciamo tutti i capitoli.
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "Manual run detected → translating all chapters"
+            echo "files=ALL" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Se GitHub non fornisce un commit precedente valido,
+          # traduciamo tutto per sicurezza.
+          if [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            echo "First push detected → translating all chapters"
+            echo "files=ALL" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          CHANGED=$(
+            git diff --name-only "$BEFORE" "$AFTER" -- src/chapters \
+              | grep '\.tex$' \
+              | sed 's|^src/chapters/||' \
+              | tr '\n' ' ' \
+              | sed 's/[[:space:]]*$//'
+          )
+
+          echo "files=$CHANGED" >> "$GITHUB_OUTPUT"
+
+          echo "Changed chapters: '$CHANGED'"
 
       - name: Translate changed chapters
         env:
           DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+        shell: bash
         run: |
-          if [ -n "${{ steps.changed.outputs.files }}" ]; then
-            python scripts/translate_chapters.py ${{ steps.changed.outputs.files }}
+          FILES="${{ steps.changed.outputs.files }}"
+
+          if [ "$FILES" = "ALL" ]; then
+            echo "Translating all chapters..."
+            python scripts/translate_chapters.py
+
+          elif [ -n "$FILES" ]; then
+            echo "Translating changed chapters:"
+            echo "$FILES"
+
+            python scripts/translate_chapters.py $FILES
+
           else
-            echo "Nessun file capitolo modificato → salto traduzione"
+            echo "No English chapters changed."
           fi
 
       # ========== COMPILAZIONE ==========

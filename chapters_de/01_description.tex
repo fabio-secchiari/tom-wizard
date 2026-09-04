@@ -1,21 +1,12 @@
 \chapter*{Vorwort}
 
-<<<<<<< HEAD
 \textit{Dies ist das offizielle ToM+-Benutzerhandbuch, das von mir (Fabio Java) in englischer Sprache handschriftlich verfasst wurde, ohne Einsatz
 irgendeines KI-Tools – weder in diesem Handbuch noch im Code, auf dem ToM+ basiert. Andere Sprachen
-=======
-\textit{Dies ist das offizielle ToM+-Benutzerhandbuch, das von mir (Fabio Java) in englischer Sprache handschriftlich verfasst wurde, ohne den Einsatz
-von KI-Tools – weder in diesem Handbuch noch im Code, der ToM+ zum Laufen bringt. Andere Sprachen
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 als Englisch wurden automatisch mit} \href{https://www.deepl.com/en/translator}
     {DeepL} übersetzt.\\
 
 \textit{In einer Zeit der automatisierten Inhaltserstellung hebt sich dieses Handbuch von anderen ab, und Sie können
-<<<<<<< HEAD
 sicher sein, dass alle bereitgestellten Funktionen und die Benutzeroberfläche von Menschen verfasst wurden.
-=======
-sich darauf verlassen, dass alle bereitgestellten Funktionen und die Benutzeroberfläche von Menschen verfasst wurden.
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 Das macht dieses Projekt unter allen Alternativen einzigartig: Genau zu wissen,
 was der Code tut, ist der Schlüssel dazu, bewusst neue Funktionen zu entwickeln, Fehler zu beheben und
 bei Bedarf anderen ToM+-Besitzern Unterstützung zu garantieren.}\\
@@ -32,30 +23,18 @@ Handbuch melden möchten, senden Sie mir bitte eine E-Mail oder erstellen Sie ei
 da die Funktionen im Wesentlichen identisch sind – mit Ausnahme des Standard-ToM, bei dem die Dashboard-Seite
 und die 3D-Ladeseiten fehlen.}\\
 
-<<<<<<< HEAD
 \textit{ToM ist kein kommerzielles Produkt und wird von einem Hobbybastler wie mir in Handarbeit hergestellt; jedes 
-=======
-\textit{ToM ist kein kommerzielles Produkt und wird von einem Hobbybastler wie mir handgefertigt; jedes 
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 Exemplar ist ein Unikat und muss als Prototyp betrachtet werden, ohne CE-Zeichen oder sonstige 
 offizielle Prüfungen. Das Twiz O’meter liest Daten vom CAN-Bus aus, ohne dass
 Änderungen am Fahrzeug vorgenommen werden müssen; ich übernehme jedoch keine Haftung für dessen Einbau
 und Nutzung.}\\
 
-<<<<<<< HEAD
 \textit{Diese Bedienungsanleitung wurde am 03.09.2026 auf die ESP-Firmware-Version 2.4 aktualisiert.}
-=======
-\textit{Diese Bedienungsanleitung wurde auf die ESP-Firmware-Version 2.4 aktualisiert.}
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 
 
 \chapter{Beschreibung und Funktionsübersicht}
 
-<<<<<<< HEAD
 \section{Die wichtigsten Funktionen des ToM+}
-=======
-\section{ToM+ – Wichtigste Funktionen}
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 
 ToM+ verfügt über zahlreiche Funktionen und kann im Zuge der Firmware-Entwicklung
 laufend aktualisiert werden. In den folgenden Abschnitten werde ich Ihnen eine kurze Einführung in die
@@ -63,22 +42,13 @@ Funktionen geben, um Ihnen einen Eindruck von der Art des Produkts zu vermitteln
 
 \subsection{Ein neues Twizy-Armaturenbrett}
 
-<<<<<<< HEAD
 Da das Armaturenbrett unseres Twizy lediglich einige Werte wie die Geschwindigkeit und die
 verbleibende Reichweite in Kilometern anzeigt, habe ich mich entschlossen, dieses coole Display zu entwickeln, das weitaus
-=======
-Da das Armaturenbrett unseres Twizy nur einige Werte anzeigt, wie beispielsweise die Geschwindigkeit und die
-verbleibende Reichweite in Kilometern, habe ich mich entschlossen, dieses coole Display zu entwickeln, das weitaus
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 mehr Daten anzeigt, indem es diese direkt vom CAN-Bus des Twizy über den OBD-Anschluss
 im linken Handschuhfach ausliest. ToM „erfasst“ lediglich die vom Twizy gesendeten Werte und
 zeigt sie dann auf dem LCD-Display an, was zahlreiche weitere Funktionen ermöglicht. ToM verfügt über einen winzigen,
 aber leistungsstarken Speicher, der einige dieser Werte während der Fahrt speichern kann, um
-<<<<<<< HEAD
 Ihnen einen Fahrverlauf anzuzeigen. Dank dieser Speicherfunktion ist es möglich,
-=======
-Ihnen einen Fahrverlauf zu liefern. Dank dieser Speicherfunktion ist es möglich,
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 Ihre Konfigurationen und individuellen Einstellungen auf dem ToM zu speichern – selbst nach einem Firmware-Update.
 
 \begin{figure}[H]
@@ -88,20 +58,12 @@ Ihre Konfigurationen und individuellen Einstellungen auf dem ToM zu speichern �
 \end{figure}
 
 Es versucht, den Stil des ursprünglichen Twizy-Armaturenbretts beizubehalten, jedoch mit einem moderneren und
-<<<<<<< HEAD
 3D-ähnlichen Erscheinungsbild.
-=======
-3D-Look.
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 Wie beim Original werden die Batterie, der Gang, die verbleibende Reichweite in Kilometern, die Geschwindigkeit und die Uhrzeit angezeigt.
 Ich habe jedoch den genauen \textbf{Batterieprozentsatz}, das Motordrehmoment, einige Statussymbole, Fahrteninformationen und viele weitere Elemente hinzugefügt, die Sie nach Belieben konfigurieren können und auf die wir später noch im Detail eingehen werden.
 
 Die Hauptseite ist anpassbar, und Sie können auswählen, was darauf angezeigt werden soll – ebenso wie auf den anderen Seiten, durch die Sie mithilfe der Taste blättern können, die Sie am Scheibenwischerhebel anbringen können.
-<<<<<<< HEAD
 Das allgemeine Erscheinungsbild der anderen Seiten ist in der Abbildung dargestellt, wobei ein Wert im Vordergrund und die anderen auf der linken Seite zu sehen sind. Im unteren Bereich
-=======
-Das allgemeine Erscheinungsbild der anderen Seiten ist in der Abbildung dargestellt, wobei ein Wert im Vordergrund und die anderen auf der linken Seite angezeigt werden. Im unteren Bereich
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 können Sie die angezeigte Seite ändern, indem Sie auf das entsprechende Symbol tippen.
 
 \begin{figure}[H]
@@ -113,7 +75,6 @@ können Sie die angezeigte Seite ändern, indem Sie auf das entsprechende Symbol
 \subsection{WLAN-Verbindung}
 
 Das in der schwarzen Box enthaltene ESP32-Board verfügt über die Fähigkeit, eine Verbindung zu einem WLAN-
-<<<<<<< HEAD
 Netzwerkzugangspunkt herzustellen. Sobald ToM+ verbunden ist, stehen Ihnen zahlreiche Möglichkeiten offen. So
 kann dieses Gerät beispielsweise dazu verwendet werden, Daten von Ihrem Twizy an Ihren persönlichen \textbf{MQTT}
 Broker übertragen, wo Sie diese Werte nutzen können, um Ihr Auto in Ihr IoT-System für die Hausautomation einzubinden. 
@@ -124,18 +85,6 @@ Internetverbindung erstellen. Auf diese Weise können Sie eine sichere Verbindun
 aktiv zu halten, auch wenn keine Internetverbindung besteht (dies wird in der Regel 10 Sekunden nach der ersten Verbindung mit einer
 Benachrichtigung auf Android-Smartphones angezeigt), und anschließend Ihre
 weiteren Konfigurationen auf einigen Webseitenseiten vornehmen, die von ToM+ selbst gehostet werden. Geben Sie einfach
-=======
-Netzwerkzugangspunkt herzustellen. Sobald das ToM+ verbunden ist, stehen Ihnen zahlreiche Möglichkeiten offen. So
-kann dieses Gerät beispielsweise dazu verwendet werden, Daten von Ihrem Twizy an Ihren persönlichen \textbf{MQTT}
-Broker übertragen, wo Sie diese Werte nutzen können, um Ihr Fahrzeug in Ihr IoT-System für die Hausautomation einzubinden. 
-
-Dies ist nicht die einzige Funktion im Zusammenhang mit der WLAN-Fähigkeit, über die das ToM+ verfügt. Es kann 
-auch als Zugangspunkt mit eigener SSID und eigenem Passwort fungieren und so ein privates Netzwerk ohne 
-Internetverbindung erstellen. Auf diese Weise können Sie eine sichere Verbindung herstellen und \textbf{akzeptieren, dass das Verbindungsprofil}
-aktiv bleibt, auch wenn keine Internetverbindung besteht (dies wird bei Android-Smartphones in der Regel 10 Sekunden nach der ersten Verbindung durch eine
-Benachrichtigung angezeigt), und anschließend Ihre
-weiteren Konfigurationen auf einigen Webseiten vornehmen, die von ToM+ selbst gehostet werden. Geben Sie einfach
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 in Ihrem bevorzugten Browser die statische private IPv4-Adresse von ToM (\textbf{\textit{192.188.1.188}}) ein und genießen Sie es!
 
 \begin{figure}[H]
@@ -149,11 +98,7 @@ in Ihrem bevorzugten Browser die statische private IPv4-Adresse von ToM (\textbf
     \caption{Startseite des Webservers}
 \end{figure}
 
-<<<<<<< HEAD
 Wie Sie in dieser neuen Version von ToM sehen können, ist der Webserver wesentlich umfassender und benutzerfreundlicher geworden. Sie können problemlos durch die Seiten navigieren und Ihr Gerät nach Ihren Wünschen konfigurieren. Der Webserver ist zudem responsiv, sodass Sie ihn auch auf Ihrem Smartphone oder Tablet nutzen können.
-=======
-Wie Sie in dieser neuen Version von ToM sehen können, ist der Webserver wesentlich umfassender und benutzerfreundlicher. Sie können problemlos durch die Seiten navigieren und Ihr Gerät nach Ihren Wünschen konfigurieren. Der Webserver ist zudem responsiv, sodass Sie ihn auch auf Ihrem Smartphone oder Tablet nutzen können.
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 
 \subsection{ToM-Smartphone-App}
 
@@ -164,21 +109,12 @@ Ihr Smartphone überwachen können.
 Das Layout versucht, die ursprüngliche grafische Benutzeroberfläche von ToM nachzubilden, und nutzt das \textbf{MQTT}-Protokoll, um
 Werte von ToM+ an die App weiterzugeben und zu übertragen; daher müssen Sie die Konfiguration sowohl
 in der App als auch auf der ToM+-MQTT-Seite vornehmen und dabei die IN- und OUT-Themen vertauschen. Die App wird
-<<<<<<< HEAD
 als \textbf{APK}-Datei bereitgestellt, ein gepacktes Installationsprogramm für Android-Anwendungen, mit dem
 Sie diese App auch ohne Internetverbindung installieren können. Sie ist \href{https://www.mediafire.com/file/du7px1bzq0zzdxu/TwizOMeter_v3.1.2.apk/file}
     {hier klicken} verfügbar.
 
 Möglicherweise müssen Sie in den Einstellungen Ihres Smartphones die Option „Apps aus unbekannten Quellen installieren“ aktivieren, um eine Datei
 mit der Endung \textit{(.apk)} zu öffnen. Beim ersten Start wird möglicherweise ein Popup-Fenster angezeigt, in dem darauf hingewiesen wird, dass diese Anwendung
-=======
-als \textbf{APK}-Datei bereitgestellt, ein Installationspaket für Android-Anwendungen, das
-es Ihnen ermöglicht, diese App auch ohne Internetverbindung zu installieren. Sie ist \href{https://www.mediafire.com/file/du7px1bzq0zzdxu/TwizOMeter_v3.1.2.apk/file}
-    {hier klicken} verfügbar.
-
-Möglicherweise müssen Sie in den Einstellungen Ihres Smartphones die Option „Apps aus unbekannten Quellen installieren“ aktivieren, um eine Datei
-mit der Endung \textit{(.apk)} zu öffnen. Beim ersten Start wird möglicherweise ein Pop-up-Fenster angezeigt, das darauf hinweist, dass diese Anwendung
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 für eine ältere Android-Version entwickelt wurde, falls Sie ein neueres Smartphone besitzen: Klicken Sie einfach auf „OK“
 und ignorieren Sie die Meldung (die App funktioniert einwandfrei). Hier sehen Sie eine Vorschau auf die Lade- und Einstellungsseite der App:
 
@@ -194,15 +130,9 @@ und ignorieren Sie die Meldung (die App funktioniert einwandfrei). Hier sehen Si
     \caption{Einstellungsseite der ToM+-Android-App}
 \end{figure}
 
-<<<<<<< HEAD
 \subsection{Kurzer Überblick über den Verbrauch}
 
 ToM wird die 12-V-Batteriestromversorgung nutzen, die direkt vom OBD-Stecker bezogen wird, und
-=======
-\subsection{Kurzer Überblick über den Stromverbrauch}
-
-ToM wird die 12-V-Batteriestromversorgung nutzen, die direkt über den OBD-Stecker bezogen wird, und
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 verbraucht dabei nicht viel Strom, wie die folgenden Messwerte zeigen.
 
 \begin{figure}[H]
@@ -221,15 +151,9 @@ Wenn die Hauptplatine aktiv ist und das Display eingeschaltet ist, beträgt der 
 
 Wenn der Twizy ausgeschaltet ist, wechselt die Blackbox in den Ruhemodus und verbraucht 18 mA.
 Darüber hinaus ermöglicht Ihnen die Touch-Funktion eine wesentlich einfachere Interaktion mit dem
-<<<<<<< HEAD
 Gerät und dessen LCD-Display. Da es eine resistive Touch-Technologie verwendet, können Sie  Ihre
 Finger oder einen kleinen Stylus-Stift aus hartem Kunststoff verwenden, um die Tasten zu betätigen. Es ist zwar nicht so leistungsstark wie
   Armaturenbretter mit kapazitivem Touchscreen, aber sobald Sie es einmal ausprobiert haben, werden Sie nicht mehr darauf verzichten wollen, 
-=======
-Gerät und seinem LCD-Display. Da es eine resistive Touch-Technologie verwendet, können Sie  Ihre
-Finger oder einen kleinen, harten Kunststoff-Stift verwenden, um die Tasten zu betätigen. Es ist zwar nicht so leistungsstark wie
-  Armaturenbretter mit kapazitivem Touchscreen, aber wenn Sie es einmal ausprobiert haben, werden Sie nicht mehr darauf verzichten wollen, 
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
   glauben Sie mir!
 
 \clearpage
@@ -238,13 +162,8 @@ Finger oder einen kleinen, harten Kunststoff-Stift verwenden, um die Tasten zu b
 
 Beim Versand wird das ToM+ in der Regel in einem braunen Karton verpackt, um die internen Platinen
 und Sensoren vor Stößen während des Transports zu schützen. In dieser neueren Version sind keine langen Kabel mehr erforderlich, sondern lediglich ein kürzeres, das an die interne ToM+-Hauptplatine angeschlossen ist und in einem kleinen schwarzen Kunststoffgehäuse
-<<<<<<< HEAD
 untergebracht ist, das ich gewöhnlich als „Black Box“ bezeichne. Selbstverständlich ist auch das resistive LCD-Touchdisplay im Lieferumfang enthalten, auf dem Sie alle Funktionen anzeigen und konfigurieren können.
 Es sind keine Schrauben oder Klebeband mehr erforderlich! Nur ein einfaches Clip-Display, das direkt auf das ursprüngliche Armaturenbrett passt.
-=======
-untergebracht ist, das ich üblicherweise als „Black Box“ bezeichne. Selbstverständlich ist auch das resistive LCD-Touchdisplay im Lieferumfang enthalten, auf dem Sie alle Funktionen anzeigen und konfigurieren können.
-Es sind keine Schrauben oder Klebeband mehr erforderlich! Das Display lässt sich einfach aufstecken und passt direkt auf das ursprüngliche Armaturenbrett.
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 
 \begin{figure}[H]
     \centering
@@ -261,11 +180,7 @@ für den Betrieb des Systems erforderlich sind. Sie bietet:
     \item einen Erweiterungsanschluss mit Strom- und GPIO-Pins;
     \item eine integrierte OBD-Buchse für den Twizy-CAN-Bus;
     \item einen Micro-USB-Anschluss für Firmware-Updates;
-<<<<<<< HEAD
     \item eine Buchse für den Schalter am Scheibenwischerhebel;
-=======
-    \item eine Buchse für den Taster am Scheibenwischerhebel;
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
     \item einen ToM+-Ein-/Aus-Schalter
 \end{itemize}
 
@@ -275,7 +190,6 @@ für den Betrieb des Systems erforderlich sind. Sie bietet:
     \caption{Die Blackbox}\label{fig:blackbox_components}
     \end{figure}
 
-<<<<<<< HEAD
 \subsection{Der Erweiterungsanschluss}
 
 Wenn Sie Ihr ToM+ weiter anpassen möchten, können Sie dies ganz einfach über den
@@ -285,17 +199,6 @@ kleinen Summer oder was auch immer Sie wünschen, mit Strom versorgen können. D
 PIN1 (ehemals gelb) und PIN2 (ehemals blau). Sie können entweder als Ein- oder als Ausgang dienen, je nachdem, welche Einstellung Sie auf der \textit{„Erweiterungsseite“} des ToM-\textbf{Webservers} wählen. In dieser neuesten Version des Geräts ist der Erweiterungsstecker in die schwarze Box integriert (ohne farbige Kabel), die Pinbelegung bleibt jedoch unverändert.
 Denken Sie daran, vor der Verwendung die Schutzabdeckung zu entfernen und eine Eingangsspannung von \textbf{maximal 3,3 V} zu verwenden. Bei höheren
 Spannungen müssen Sie einen geeigneten Widerstandsteiler vorsehen.
-=======
-\subsection{Der Erweiterungsstecker}
-
-Wenn Sie Ihr ToM+ weiter anpassen möchten, können Sie dies ganz einfach über den Stecker tun,
-der hier im Bild zu sehen ist. Tatsächlich stellt er eine zusätzliche 5-V-Stromversorgung bereit, die von
-VCC (ehemals rotes Kabel) und GND (ehemals schwarzes Kabel) kommt, sodass Sie eine externe LED, einen
-kleinen Summer oder was auch immer Sie wünschen, mit Strom versorgen können. Die beiden anderen Kabel sind allgemeine Ein- und Ausgangspins:
-PIN1 (ehemals gelb) und PIN2 (ehemals blau). Sie können entweder als Ein- oder als Ausgang dienen, je nachdem, welche Einstellung Sie auf der \textit{„Erweiterungsseite“} des ToM-Webservers vornehmen. In dieser neuesten Version des Geräts ist der Erweiterungsstecker in das schwarze Gehäuse (ohne farbige Kabel) integriert, die Pinbelegung bleibt jedoch unverändert.
-Denken Sie daran, vor der Verwendung die Schutzabdeckung zu entfernen und eine Eingangsspannung von \textbf{maximal 3,3 V} zu verwenden. Bei höheren
-Spannungen sorgen Sie bitte für einen geeigneten Widerstandsteiler.
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 
 \begin{figure}[H]
     \centering
@@ -305,11 +208,7 @@ Spannungen sorgen Sie bitte für einen geeigneten Widerstandsteiler.
 
 \subsection{Das LCD-Display und der Ständer}
 
-<<<<<<< HEAD
 Das resistive Touch-LCD-Display ist in einen 3D-gedruckten Ständer eingebettet, der auf das Original-Armaturenbrett aufgesteckt wird. Auf Wunsch erhalten Sie auch eine eigenständige 3D-Halterung, mit der Sie das Display wie das Standard-ToM am Handschuhfach befestigen können. Auf diese Weise verfügen Sie über ein 2-in-1-Gerät, das je nach Wunsch sowohl aufsteckbar als auch eigenständig genutzt werden kann. Ein microSD-Steckplatz steht für Firmware-Updates zur Verfügung.
-=======
-Das resistive Touch-LCD-Display ist in einen 3D-gedruckten Ständer eingebettet, der auf das Original-Armaturenbrett aufgesteckt wird. Auf Wunsch erhalten Sie auch eine eigenständige 3D-Halterung, mit der Sie das Display wie das serienmäßige ToM am Handschuhfach befestigen können. Auf diese Weise verfügen Sie über ein 2-in-1-Gerät, das je nach Wunsch sowohl aufgesteckt als auch eigenständig verwendet werden kann. Für Firmware-Updates steht ein microSD-Steckplatz zur Verfügung.
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 
 \begin{figure}[H]
     \centering
@@ -317,11 +216,7 @@ Das resistive Touch-LCD-Display ist in einen 3D-gedruckten Ständer eingebettet,
     \caption{LCD-Display zum Aufstecken}
 \end{figure}
 
-<<<<<<< HEAD
 Das Display, das wie auf den Abbildungen zu sehen mit einer Schutzfolie versehen ist, lässt sich in die 3D-Halterung einsetzen, sodass Sie über einen verstellbaren Ständer verfügen, den Sie an einer beliebigen Stelle platzieren können.
-=======
-Das Display, das – wie auf den Abbildungen zu sehen – mit einer Schutzfolie versehen ist, kann in den 3D-Gehäusehalter eingesetzt werden, um einen verstellbaren Ständer zu erhalten, den Sie an einer beliebigen Stelle aufstellen können.
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 
 \begin{figure}[H]
     \centering
@@ -329,11 +224,7 @@ Das Display, das – wie auf den Abbildungen zu sehen – mit einer Schutzfolie 
     \caption{LCD-Display als eigenständiges Gerät}
 \end{figure}
 
-<<<<<<< HEAD
 In der eigenständigen Version können Sie es mit der Abdeckung und den Schrauben befestigen, die Sie zusammen mit dem faltbaren 3D-Ständer im Lieferumfang finden, wie auf den folgenden Abbildungen gezeigt.
-=======
-In der eigenständigen Version können Sie das Display mit der Abdeckung und den Schrauben befestigen, die Sie zusammen mit dem faltbaren 3D-Ständer im Lieferumfang vorfinden, wie in den folgenden Abbildungen dargestellt.
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 
 \begin{figure}[H]
     \centering
@@ -341,11 +232,7 @@ In der eigenständigen Version können Sie das Display mit der Abdeckung und den
     \caption{Mitgelieferte LCD-Abdeckung}\label{fig:back_cover}
     \end{figure}
 
-<<<<<<< HEAD
 Der 3D-Ständer verfügt außerdem über Löcher an der Basis, falls Sie ihn am Handschuhfach befestigen möchten. Die weiteren Löcher am Rahmen dienen zur Befestigung der hinteren Abdeckung, um das Display im Inneren an Ort und Stelle zu halten.
-=======
-Der 3D-Ständer verfügt außerdem über Löcher an der Basis, falls Sie ihn am Handschuhfach befestigen möchten. Die weiteren Löcher am Rahmen dienen zur Befestigung der Rückabdeckung, um das Display im Inneren an seinem Platz zu halten.
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 
 \begin{figure}[H]
     \centering
@@ -355,11 +242,7 @@ Der 3D-Ständer verfügt außerdem über Löcher an der Basis, falls Sie ihn am 
 
 \subsection{Weitere nützliche Komponenten}
 
-<<<<<<< HEAD
 Im Lieferumfang ist ein Kabelbinder enthalten, mit dem Sie den 3D-gedruckten Halter für den Knopf am rechten Scheibenwischerhebel (ebenfalls im Lieferumfang enthalten) befestigen können. Zudem gibt es einen Bonus-Aufkleber, falls Sie das Projekt unterstützen möchten, indem Sie ihn irgendwo an Ihrem Twizy anbringen.
-=======
-Im Lieferumfang ist ein Kabelbinder enthalten, mit dem Sie den 3D-gedruckten Ständer für den Knopf am rechten Scheibenwischerhebel (ebenfalls im Lieferumfang enthalten) befestigen können. Zudem gibt es einen Bonus-Aufkleber, falls Sie das Projekt unterstützen möchten, indem Sie ihn an einer beliebigen Stelle Ihres Twizy anbringen.
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
 
 \begin{figure}[H]
     \centering
@@ -370,11 +253,7 @@ Im Lieferumfang ist ein Kabelbinder enthalten, mit dem Sie den 3D-gedruckten St�
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/wiper_stalk_button.jpg}
-<<<<<<< HEAD
     \caption{3D-gedruckter Knopf für den Wischerhebel}\label{fig:wiper_stalk_button}
-=======
-    \caption{3D-gedruckter Knopf für den Scheibenwischerhebel}\label{fig:wiper_stalk_button}
->>>>>>> 96ae8e5999ba65b3a3cdd19cf6a5e034380f084d
     \end{figure}
 
 \begin{figure}[H]

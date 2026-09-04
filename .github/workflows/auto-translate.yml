@@ -5,7 +5,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'src/chapters/**/*.tex'
+      - 'chapters/**/*.tex'
       - 'scripts/translate_chapters.py'
       - 'Makefile'
       - 'main_*.tex'
@@ -75,7 +75,7 @@ jobs:
             exit 0
           fi
 
-          # First push / invalid previous commit → translate everything
+          # First push → translate everything
           if [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
             echo "First push detected → translating all chapters"
             echo "files=ALL" >> "$GITHUB_OUTPUT"
@@ -85,16 +85,18 @@ jobs:
           echo "Changed files:"
           git diff --name-only "$BEFORE" "$AFTER"
 
-          CHANGED=$(git diff --name-only "$BEFORE" "$AFTER" -- src/chapters/ \
-            | while IFS= read -r file; do
-                case "$file" in
-                  *.tex)
-                    echo "${file#src/chapters/}"
-                    ;;
-                esac
-              done \
-            | tr '\n' ' ' \
-            | sed 's/[[:space:]]*$//')
+          CHANGED=$(
+            git diff --name-only "$BEFORE" "$AFTER" -- chapters/ \
+              | while IFS= read -r file; do
+                  case "$file" in
+                    *.tex)
+                      echo "${file#chapters/}"
+                      ;;
+                  esac
+                done \
+              | tr '\n' ' ' \
+              | sed 's/[[:space:]]*$//'
+          )
 
           echo "files=$CHANGED" >> "$GITHUB_OUTPUT"
 

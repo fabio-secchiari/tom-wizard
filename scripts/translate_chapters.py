@@ -26,11 +26,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-SOURCE_DIR = Path("src/chapters")
+SOURCE_DIR = Path("chapters")
 
 TARGET_LANGS = {
-    "de": Path("src/chapters_de"),
-    "fr": Path("src/chapters_fr"),
+    "de": Path("chapters_de"),
+    "fr": Path("chapters_fr"),
 }
 
 

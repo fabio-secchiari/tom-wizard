@@ -68,33 +68,41 @@ jobs:
           echo "Before: $BEFORE"
           echo "After:  $AFTER"
 
-          # Per workflow_dispatch non esiste un vero commit 'before'.
-          # In quel caso traduciamo tutti i capitoli.
+          # Manual workflow → translate everything
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "Manual run detected → translating all chapters"
             echo "files=ALL" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
-          # Se GitHub non fornisce un commit precedente valido,
-          # traduciamo tutto per sicurezza.
+          # First push / invalid previous commit → translate everything
           if [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
             echo "First push detected → translating all chapters"
             echo "files=ALL" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
-          CHANGED=$(
-            git diff --name-only "$BEFORE" "$AFTER" -- src/chapters \
-              | grep '\.tex$' \
-              | sed 's|^src/chapters/||' \
-              | tr '\n' ' ' \
-              | sed 's/[[:space:]]*$//'
-          )
+          echo "Changed files:"
+          git diff --name-only "$BEFORE" "$AFTER"
+
+          CHANGED=$(git diff --name-only "$BEFORE" "$AFTER" -- src/chapters/ \
+            | while IFS= read -r file; do
+                case "$file" in
+                  *.tex)
+                    echo "${file#src/chapters/}"
+                    ;;
+                esac
+              done \
+            | tr '\n' ' ' \
+            | sed 's/[[:space:]]*$//')
 
           echo "files=$CHANGED" >> "$GITHUB_OUTPUT"
 
-          echo "Changed chapters: '$CHANGED'"
+          if [ -n "$CHANGED" ]; then
+            echo "Changed chapters: '$CHANGED'"
+          else
+            echo "No English chapters changed."
+          fi
 
       - name: Translate changed chapters
         env:

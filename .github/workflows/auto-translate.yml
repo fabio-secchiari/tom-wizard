@@ -131,6 +131,31 @@ jobs:
       - name: Compile all PDFs
         run: make all
 
+      - name: Compress PDFs with Ghostscript
+        run: |
+          # Installa Ghostscript (se non già presente)
+          sudo apt-get update
+          sudo apt-get install -y ghostscript
+
+          # Imposta una soglia (es. 10 MB) per comprimere solo i file grandi
+          MAX_SIZE=10485760
+
+          # Trova tutti i PDF generati (modifica il percorso se necessario, es. build/ o .)
+          find . -name "*.pdf" -type f | while read -r pdf; do
+            size=$(stat -c%s "$pdf")
+            if [ "$size" -gt "$MAX_SIZE" ]; then
+              echo "📦 Compressione di $pdf (dimensioni: $size byte)..."
+              # Usa il profilo /ebook (150 dpi, buon compromesso)
+              gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook \
+                -dNOPAUSE -dQUIET -dBATCH -sOutputFile="${pdf}.tmp" "$pdf" \
+                && mv "${pdf}.tmp" "$pdf"
+              # Se vuoi ancora più compressione (qualità minore) usa /screen
+              # Se vuoi qualità migliore usa /printer
+            else
+              echo "⏩ Saltato $pdf (dimensioni: $size byte, sotto soglia)"
+            fi
+          done
+
       # ========== PULL REQUEST ==========
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6

@@ -1,9 +1,11 @@
 \chapter{Erweiterte ToM+-Konfigurationen}
 
-\section{Die WLAN-Einstellungsseite}
+\section{Die Seite mit den WLAN-Einstellungen}
 \label{sec:wifi_settings}
 
-Seit dem zweiten Firmware-Release kann sich Ihr ToM+ über ein integriertes WLAN-Modul mit dem Internet verbinden. Dies ermöglicht es Ihnen, Ihre Twizy-Echtzeitdaten in Kombination mit dem MQTT-Protokoll anzuzeigen, das in Abschnitt~\ref{sec:MQTT} behandelt wird.\\
+Seit der zweiten Firmware-Version kann Ihr ToM+ nun über ein WLAN-Modul eine Verbindung zum Internet herstellen
+integrierten Modul eine Verbindung zum Internet herstellen. Dies ermöglicht es Ihnen, die Echtzeitdaten Ihres Twizy einzusehen, wenn dies
+mit dem MQTT-Protokoll kombiniert wird, auf das in Abschnitt~\ref{sec:MQTT} eingegangen wird.\\
 
 \begin{figure}[H]
     \centering
@@ -11,148 +13,234 @@ Seit dem zweiten Firmware-Release kann sich Ihr ToM+ über ein integriertes WLAN
     \caption{Die WLAN-Einstellungsseite.}
 \end{figure}
 
-Die Seite speichert bis zu vier Verbindungsprofile, um mit dem Internet verbunden zu sein, wenn Sie zu Hause, bei der Arbeit oder an einem öffentlichen Ort mit kostenlosem WLAN sind.\\
-Zusätzlich verfügt ToM+ über eine Weboberfläche, auf der Sie Daten in Echtzeit überwachen oder Ihre Einstellungen viel einfacher anpassen können. Schauen wir uns nun an, warum Sie dies tun sollten…
+Auf dieser Seite können bis zu vier Verbindungsprofile gespeichert werden, um eine Verbindung zum
+Internet herzustellen, wenn Sie zu Hause, am Arbeitsplatz oder an einem öffentlichen Ort mit kostenlosem WLAN sind.
+\\Darüber hinaus verfügt ToM+ über eine Weboberfläche, über die Sie Daten in Echtzeit überwachen
+oder Ihre Einstellungen wesentlich einfacher anpassen können. Sehen wir uns nun an, warum Sie dies tun sollten…
 
 \subsection{Vorteile von ToM+ WLAN}
 
-Seit dem zweiten Firmware-Release kann sich Ihr ToM+ über ein integriertes WLAN-Modul mit dem Internet verbinden, was Ihnen den Zugriff auf viele weitere Funktionen als zuvor ermöglicht. Jetzt können Sie aus der Ferne auf Ihrem Smartphone auf Ihre Twizy-Daten zugreifen!\\
+Seit der zweiten Firmware-Version kann sich Ihr ToM+ nun über ein integriertes WLAN-Modul
+mit dem Internet verbinden, wodurch Ihnen weitaus mehr Funktionen als bisher zur Verfügung stehen.
+Nun können Sie von Ihrem Smartphone aus aus der Ferne auf Ihre Twizy-Daten zugreifen!\\
 
-Sie müssen den Ladezustand Ihres Twizy nicht mehr manuell überprüfen, da diese neue Funktion die Daten zum Ladezustand direkt auf Ihrem Smartphone veröffentlicht, und diese sind sowohl geschützt als auch privat. Es erfordert lediglich eine kurze MQTT-Konfiguration.\\
+Sie müssen den Ladezustand Ihres Twizy nicht mehr manuell überprüfen, denn diese
+neue Funktion übermittelt die Ladezustandsdaten direkt auf Ihr Smartphone, wobei diese
+zugleich geschützt und vertraulich bleiben. Dazu ist lediglich eine MQTT-Konfiguration erforderlich.\\
 
 \begin{itemize}
-    \item Kein mühsames, manuelles Überprüfen des Twizy-Ladezustands mehr!
-    \item Zahlreiche Möglichkeiten, Ihren Twizy über MQTT in ein IoT-System einzubinden
-    \item WLAN beeinträchtigt weder den Stromverbrauch noch die ToM-Leistung merklich
-    \item Schalten Sie eine neue Webseite mit Twizy-Echtzeitdaten und benutzerfreundlichen ToM-Einstellungen frei
+    \item Kein mühsames manuelles Überprüfen des Ladezustands Ihres Twizy mehr!
+    \item Zahlreiche Möglichkeiten, Ihren Twizy mithilfe von MQTT in ein IoT-System zu integrieren
+    \item WLAN hat kaum Auswirkungen auf den Stromverbrauch und die ToM-Leistung 
+    \item Entdecken Sie eine neue Webseite mit Twizy-Echtzeitdaten und benutzerfreundlichen ToM-Einstellungen
 \end{itemize}
 
 \subsection{Hinzufügen eines WLAN-Verbindungsprofils}
 \label{sec:add_wifi_profile}
 
-Auf dieser neuen Einstellungsseite haben Sie eine kleine Tabelle mit vier Zeilen und zwei Spalten. Die erste Spalte enthält die \textbf{SSID} (d.~h. den Namen) des Netzwerks, mit dem Sie sich verbinden möchten. Um genau zu sein, ist es der Name, den Sie auf Ihrem Telefon oder Laptop sehen. Er kann alphanumerisch sein und unterscheidet zwischen Groß- und Kleinschreibung (Großbuchstaben sind wichtig, achten Sie also auf die korrekte Schreibweise!). Die zweite Spalte unter der Überschrift \textbf{„KEY“} ist für das WLAN-Passwort vorgesehen.\\
+Auf dieser neuen Einstellungsseite finden Sie eine kleine Tabelle mit vier Zeilen und zwei Spalten.
+Die erste Spalte enthält die \textbf{SSID} (d. h. den Namen) des Netzwerks, mit dem Sie eine Verbindung herstellen möchten. 
+Zur Verdeutlichung: Es handelt sich um den Namen, den Sie auf Ihrem Smartphone oder Laptop sehen. Er kann alphanumerisch sein und 
+es wird zwischen Groß- und Kleinschreibung unterschieden (Großbuchstaben spielen eine Rolle, achten Sie also auf die korrekte Schreibweise!).
+Die zweite Spalte unter der Überschrift \textbf{„KEY“} ist hingegen für das WLAN-Passwort vorgesehen.\\
 
-Wenn Sie auf eine Tabellenzelle tippen (entweder SSID oder Key), öffnet ToM+ eine Tastaturseite, auf der Sie Ihre Daten eingeben können. Das Drücken von OK bestätigt die eingegebene Zeichenfolge und führt Sie zurück zur WLAN-Einstellungsseite. Wir werden die Tastaturseite in Abschnitt~\ref{sec:keyboard_page} besprechen.\\
+Wenn Sie auf eine Tabellenzelle tippen – sei es bei der SSID oder beim Schlüssel –, öffnet ToM+ eine Tastaturseite,
+auf der Sie Ihre Daten eingeben können. Durch Drücken von „OK“ bestätigen Sie die eingegebene Zeichenfolge und
+gelangen zurück zur Seite mit den WLAN-Einstellungen. Wir werden die Tastaturseite in Abschnitt~\ref{sec:keyboard_page} näher erläutern.\\
 
-Bisher können Sie \textbf{vier verschiedene Verbindungsprofile} mit vier Paaren aus SSID und Passwort einrichten. Wenn Sie kein Profil einrichten, aber die WLAN-Schieberegler aktiviert sind, führt ToM+ dennoch alle zwei Minuten einen WLAN-Scan durch, um zu versuchen, öffentliche Verbindungen ohne Passwortschutz zu finden und sich dann zu verbinden. Drücken Sie die Taste mit dem \textbf{Pfeil unten rechts zum Speichern}.\\
+Mittlerweile können Sie \textbf{vier verschiedene Verbindungsprofile} mit jeweils vier Kombinationen aus SSID
+und Passwort einrichten. Wenn Sie kein Profil festlegen, der WLAN-Schieberegler jedoch aktiviert ist, führt ToM+ dennoch
+alle zwei Minuten einen WLAN-Scan durch, um nach öffentlichen Verbindungen ohne Passwortschutz
+zu suchen, und versucht anschließend, eine Verbindung herzustellen. Drücken Sie die untere \textbf{Pfeiltaste nach rechts, um zu speichern}.\\
 
-Das vierte WLAN-Verbindungsprofil ist besonders, da das Feld \textbf{„KEY 4“} sowohl als Standard-Passwortfeld für die letzte SSID als auch zum Ändern des Standard-Webserver-Passworts verwendet wird, wie in Abschnitt~\ref{sec:web_change_password} besprochen wird.
+Das vierte WLAN-Verbindungsprofil ist etwas Besonderes, da das Feld \textbf{„KEY 4“}
+sowohl als Standard-Passwortfeld für die letzte SSID als auch zum Ändern des Standard-Webserver-Passworts dient,
+wie in Abschnitt~\ref{sec:web_change_password} erläutert wird.
 
-Darüber hinaus gibt es einige Speziacodes, die Sie in dieses Feld eingeben können, um geheime Konfigurationen durchzuführen. Diese Codes unterscheiden zwischen Groß- und Kleinschreibung und wirken sich nicht auf Ihr Feld \textbf{„KEY 4“} aus, wenn sie korrekt geschrieben sind, da ToM+ sie nur als Befehle verwendet. Sie können \textbf{GIVE\textunderscore ME\textunderscore DF!} eingeben (exakt so wie hier geschrieben, auch mit Unterstrichen und Ausrufezeichen), um die \textit{DF-Fehlernummerierung und Fehlerbeschreibung} sowohl auf dem Display als auch in der Weboberfläche anzuzeigen.\\
+Darüber hinaus gibt es einige spezielle Codes, die Sie in dieses Feld eingeben können, um bestimmte
+geheime Konfigurationen vorzunehmen. Bei diesen Codes wird die Groß-/Kleinschreibung beachtet, und sie haben keine Auswirkungen auf Ihr Feld \textbf{„KEY 4“},
+sofern sie korrekt geschrieben sind, da ToM+ sie ausschließlich als Befehle verwendet. Sie können
+\textbf{GIVE\textunderscore ME\textunderscore DF!} (genau so, wie es hier geschrieben steht, einschließlich Unterstrich
+und Ausrufezeichen) eingeben, um \textit{die DF-Fehlernummerierung und die Fehlerbeschreibung} sowohl in der 
+Anzeige als auch in der Web-Benutzeroberfläche anzuzeigen.\\
 
-\textbf{ERINNERUNG!} Die Befehle werden von ToM+ nur ausgeführt, wenn sie über diese WLAN-Einstellungsseite eingegeben werden, nicht über die später besprochene Weboberfläche. Da die Herkunft der DF-Nummer nicht eindeutig geklärt ist, erfolgt die Aktivierung dieser Funktion auf eigene Verantwortung.
+\textbf{BITTE BEACHTEN SIE!} Die Befehle werden von ToM+ nur ausgeführt, wenn sie über
+diese WLAN-Einstellungsseite eingegeben werden, nicht über die später besprochene Web-UI. Da zudem die
+Herkunft der DF-Nummer unklar ist, liegt die Aktivierung dieser Funktion in Ihrem Ermessen und unterliegt 
+Ihrer Verantwortung.
 
 \clearpage
 
-\subsection{WLAN-Verbindung prüfen}
+\Unterabschnitt{WLAN-Verbindung prüfen}
 \label{sec:check_wifi_connection}
 
-Die Überprüfung, ob Ihr ToM+ über WLAN mit dem Internet verbunden ist, ist sehr einfach. Auf allen Seiten befindet sich das WLAN-Symbol (behandelt in Abschnitt~\ref{sec:status_icon_bar}), das seinen Status anzeigt.
+Um zu prüfen, ob Ihr ToM+ über WLAN mit dem Internet verbunden ist, ist die Vorgehensweise sehr
+einfach. Auf allen Seiten befindet sich das WLAN-Symbol (siehe Abschnitt~\ref{sec:status_icon_bar}),
+das den Status anzeigt.
 
 \iconbox{icons/Tray_WiFiOff.png}
-{WLAN ist aus}
-{ToM+ ist nicht verbunden und veröffentlicht keine Daten.}
+{WLAN ist ausgeschaltet}
+{Das ToM+ ist nicht verbunden und veröffentlicht keine Daten.}
 
 \iconbox{icons/Tray_WiFi.png}
-{WLAN ist an}
-{ToM+ ist verbunden und veröffentlicht Daten, wenn MQTT verbunden ist.}
+{WLAN ist eingeschaltet}
+{Das ToM+ ist verbunden und wird Daten veröffentlichen, sofern eine MQTT-Verbindung besteht.}
 
 \iconbox{icons/Tray_WiFi.png}
-{WLAN-Scan läuft}
-{Wenn es blinkt, sucht ToM+ derzeit nach verfügbaren WLAN-Netzwerken.}
+{WLAN-Suche läuft}
+{Wenn das Symbol blinkt, sucht ToM+ derzeit nach verfügbaren WLAN-Netzwerken.}
 
-Wenn Sie spezifischere Informationen darüber erhalten möchten, ob Ihr ToM+ mit einem Netzwerk verbunden ist, können Sie zusätzliche Felder auf der WLAN-Einstellungsseite in der unteren rechten Ecke überprüfen, wie im folgenden Bild gezeigt.
+Wenn Sie genauere Informationen darüber erhalten möchten, ob Ihr ToM+ mit
+einem Netzwerk verbunden ist, können Sie zusätzliche Felder auf der WLAN-Einstellungsseite in der unteren rechten
+Ecke überprüfen, wie in der Abbildung unten dargestellt.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{figures/wifi_bottom_line.png}
-    \caption{Die WLAN-Info im unteren Raster.}
+    \caption{Die Informationen im unteren WLAN-Raster.}
     \label{fig:wifi_bottom_line}
 \end{figure}
 
-Wie wir sehen können, wird eine IP-Adresse angezeigt, wenn ToM+ mit einem Netzwerk verbunden ist (hier ist es \textbf{10.24.126.204}). Dies ist die Adresse, die ToM+ verwendet, um sich mit dem Internet zu verbinden. Wenn dieses Feld eine Sequenz aus vier Zahlen (von 0 bis 255) enthält, die durch Punkte getrennt sind, ist WLAN verbunden; andernfalls bleibt es leer.
+Wie wir sehen können, wird eine IP-Adresse angezeigt, wenn das ToM+ mit einem Netzwerk verbunden ist
+(hier lautet sie \textbf{10.24.126.204}). Dies ist die Adresse, die das ToM+ für die Verbindung
+mit dem Internet verwendet. Enthält dieses Feld eine beliebige Folge von vier Zahlen (von 0 bis 255),
+die durch Punkte getrennt sind, besteht eine WLAN-Verbindung; andernfalls bleibt das Feld leer. 
 
-Tippen Sie darauf, um die MAC-Adresse von ToM+ anzuzeigen, und tippen Sie erneut, um zu sehen, mit welcher SSID (Netzwerkname) ToM+ verbunden ist. Weitere interessante Funktionen, bei denen die ToM+-IP-Adresse eine Rolle spielt, werden wir später in Abschnitt~\ref{sec:web_server_access} sehen.
+Tippen Sie darauf, um die MAC-Adresse des ToM+ anzuzeigen, und tippen Sie erneut, um zu sehen, mit welcher SSID (Netzwerkname) das ToM+ verbunden ist.
+Weitere interessante Funktionen, bei denen die IP-Adresse von ToM+ eine Rolle spielt, werden wir später im Abschnitt~\ref{sec:web_server_access} behandeln.
 
 \subsection{WLAN-Funktionen aktivieren/deaktivieren}
 \label{sec:enable_disable_wifi}
 
-In der Fußzeile der WLAN-Einstellungsseite befinden sich zwei Schieberegler. Um zwischen den Zuständen EIN und AUS zu wechseln, tippen oder schieben Sie sie einfach. Schauen wir uns an, was die beiden Schieberegler bewirken.\\
+Am unteren Rand der WLAN-Einstellungsseite befinden sich zwei Schieberegler. Um zwischen den
+Zuständen „EIN“ und „AUS“ zu wechseln, tippen Sie einfach darauf oder schieben Sie den Regler. Sehen wir uns an, welche Funktionen die beiden Schieberegler haben.\\
 
-Der erste dient dazu, \textbf{WLAN beim Laden} zu deaktivieren. Dies führt dazu, dass Ihr ToM+ vollständig offline ist und Sie Ihre Twizy-Daten erst wieder aus der Ferne überwachen können, wenn Sie es erneut aktivieren. In diesem Zustand ist das WLAN-Statussymbol immer ausgegraut, wie in Abschnitt~\ref{sec:check_wifi_connection} gezeigt.\\
+Der erste dient dazu, \textbf{WLAN während des Ladevorgangs} zu deaktivieren. Dadurch wird Ihr ToM+ vollständig offline geschaltet,
+und Sie können Ihre Twizy-Daten erst wieder aus der Ferne überwachen, wenn Sie diese Funktion erneut aktivieren.
+In diesem Zustand ist das WLAN-Statussymbol stets ausgegraut, wie in Abschnitt~\ref{sec:check_wifi_connection} dargestellt.\\
 
-Der zweite Schieberegler dient zum Aktivieren von \textbf{WLAN beim Fahren}. Dies ermöglicht es Ihrem ToM+, auch während der Fahrt mit Ihrem Twizy mit dem Internet verbunden zu bleiben. Dies ist nützlich, wenn Sie Echtzeitdaten über MQTT auf Ihr Smartphone übertragen möchten. Dadurch wird auch der Zugriff auf die Weboberfläche während der Fahrt ermöglicht und ToM+ sucht ebenfalls nach verfügbaren WLAN-Netzwerken.\\
+Der zweite Schieberegler dient dazu, \textbf{WLAN während der Fahrt} zu aktivieren. Dadurch kann
+Ihr ToM+ auch dann mit dem Internet verbunden bleiben, wenn Sie mit Ihrem Twizy unterwegs sind.
+Dies ist nützlich, wenn Sie Echtzeitdaten über MQTT auf Ihr Smartphone übertragen möchten.~Dadurch
+wird auch der Zugriff auf die Weboberfläche während der Fahrt ermöglicht, und Ihr ToM+ wird
+ebenfalls nach verfügbaren WLAN-Netzwerken suchen.\\
 
-Wie bereits erwähnt, müssen Sie zum \textit{Speichern Ihrer Änderungen} die Pfeiltaste unten rechts drücken. Wenn Sie dies nicht tun, gehen Ihre Änderungen beim Verlassen der Seite verloren.
+Wie bereits erwähnt, müssen Sie die Pfeiltaste unten rechts drücken, um \textit{Ihre Änderungen zu speichern}.
+Wenn Sie dies nicht tun, gehen Ihre Änderungen verloren, sobald Sie die Seite verlassen.
 
 \clearpage
 
 \section{Die MQTT-Einstellungsseite}
 \label{sec:MQTT}
 
-Wenn Sie bereits einen Blick auf den WLAN-Abschnitt~\ref{sec:wifi_settings} geworfen haben, wissen Sie wahrscheinlich bereits, dass MQTT erforderlich ist, um aus der Ferne auf Ihre Daten zuzugreifen. Dieser Abschnitt zeigt Ihnen, wie Sie es korrekt einrichten und wie die ToM+-Schnittstelle mit diesem Protokoll umgeht.
+Wenn Sie sich bereits den Abschnitt zum WLAN angesehen haben~\ref{sec:wifi_settings}, wissen Sie wahrscheinlich bereits,
+wissen, dass MQTT erforderlich ist, um aus der Ferne auf Ihre Daten zuzugreifen, und dieser Abschnitt zeigt
+Ihnen, wie Sie es korrekt einrichten und wie die ToM+-Schnittstelle mit diesem Protokoll umgeht.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/mqtt_settings_page.png}
-    \caption{Die MQTT-Einstellungsseite.}
+    \caption{Die Seite mit den MQTT-Einstellungen.}
 \end{figure}
 
-Wenn ToM+ über WLAN mit dem Internet verbunden ist, kann MQTT aktiviert werden, und Sie können Ihre Twizy-Echtzeitdaten direkt auf Ihren Geräten anzeigen. Die Seite erlaubt nur eine MQTT-Serverkonfiguration, um \textbf{Datensicherheit und Privatsphäre} zu gewährleisten. Sie können diese Parameter sowohl auf dem ToM+ als auch auf seiner Webserver-Seite (Abschnitt~\ref{sec:web_network_settings}) konfigurieren. Besprechen wir nun, was MQTT ist und einige seiner Hauptvorteile…
+Wenn ToM+ über WLAN mit dem Internet verbunden ist, kann MQTT aktiviert werden, und dann
+können Sie Ihre Twizy-Daten in Echtzeit direkt auf Ihren Geräten einsehen. Die Seite
+erlaubt nur die Konfiguration eines einzigen MQTT-Servers, um \textbf{Datensicherheit und Datenschutz} zu gewährleisten. Sie
+können diese Parameter sowohl auf dem ToM+ selbst als auch auf dessen Webserver-Seite konfigurieren (Abschnitt~\ref{sec:web_network_settings}).
+Lassen Sie uns nun erläutern, was MQTT ist und welche wesentlichen Vorteile es bietet…
 
-\subsection{Kurze MQTT-Erklärung}
+\subsection{Kurze Erläuterung zu MQTT}
 \label{sec:brief_mqtt}
 
-MQTT ist eines der einfachsten Protokolle in der IT zur Übertragung kleiner Datennutzlasten mithilfe einer \textbf{Client/Server-Architektur}. Diese Methode erfordert einen oder mehrere Clients, die normalerweise Daten sammeln und diese dauerhaft speichern und/oder Berechnungen durchführen möchten.
+MQTT ist eines der einfachsten Protokolle in der IT, das zur Übertragung kleiner Datenmengen
+unter Verwendung einer \textbf{Client-Server-Architektur} dient. Diese Methode erfordert einen oder mehrere Clients, die
+in der Regel Daten erfassen und diese dauerhaft speichern und/oder Berechnungen durchführen möchten.
 
-Der Prozess benötigt also einen Server, der Daten von allen Clients verarbeitet und Aufgaben ausführt. Dieser Server wird als \textbf{MQTT-Broker} oder einfach Broker bezeichnet und ist in dieser Art von Architektur essenziell. Aber wie können Clients und Server untereinander kommunizieren?\\
 
-Der Kommunikationsprozess basiert auf einer Publish/Subscribe-Struktur (Veröffentlichen/Abonnieren). Einige Clients sammeln und veröffentlichen Daten und werden aus diesem Grund \textbf{Publisher} genannt, während andere darauf warten, dass diese Daten gesendet werden, und als \textbf{Subscriber} bezeichnet werden. Der Broker-Server steht in der Mitte und ist das Vermittlungsgerät, auf dem alle Daten von Publishern gespeichert und an Subscriber gesendet werden. Führen wir nun Topics ein…\\
+Daher benötigt der Prozess einen Server, der die Daten aller Clients verarbeitet und Aufgaben ausführt.
+Dieser Server wird als \textbf{MQTT-Broker} oder umgangssprachlich einfach „Broker“ genannt und ist in dieser Art
+von Architektur unverzichtbar. Doch wie können Clients und Server miteinander kommunizieren?\\
 
-Ein \textbf{Topic} ist eine Abfolge von alphanumerischen Zeichen, die sich typischerweise auf ein bestimmtes Thema bezieht und dazu dient, alle Daten zu diesem spezifischen Thema zu speichern (wie ein Container). Topics sind nützlich, um eine Vielzahl von Daten zu organisieren, die von verschiedenen Publishern gesammelt wurden, um diese Informationen nicht zu verwirren. Wie nutzt ToM+ also MQTT?
+
+Der Kommunikationsprozess basiert auf einer Publish/Subscribe-Struktur. Einige Clients
+erfassen und veröffentlichen Daten und werden aus diesem Grund als \textbf{Publisher} bezeichnet, während
+andere darauf warten, dass diese Daten gesendet werden, und als \textbf{Abonnenten}.
+Der Broker-Server befindet sich in der Mitte und ist die Vermittlungsinstanz, auf der alle Daten
+der Publisher gespeichert und an die Abonnenten weitergeleitet werden. Kommen wir nun zu den Themen…\\
+
+
+Ein \textbf{Thema} ist eine Folge alphanumerischer Zeichen, die sich typischerweise auf ein bestimmtes
+Thema bezieht und dazu dient, (wie ein Container) alle Daten zu diesem bestimmten
+Thema zu speichern. Themen sind nützlich, um große Mengen an Daten, die von verschiedenen
+Publishern gesammelt wurden, zu verwalten und zu organisieren, damit diese Informationen nicht durcheinander geraten. Wie nutzt ToM+ also MQTT?
 
 \subsection{ToM+ und MQTT-Kommunikation}
 
-Nachdem wir nun wissen, was MQTT ist, wollen wir sehen, wie das MQTT- und ToM+-System tatsächlich funktioniert. ToM+ gilt als Publisher, da es aktualisierte Twizy-Daten sammelt und veröffentlicht. Die Smartphone-Anwendung hingegen ist der Subscriber, da sie darauf wartet, diese vom Twizy eben veröffentlichten Daten zu empfangen. Wer steht in der Mitte? Der Broker-Server.\\
+Da wir nun wissen, was MQTT ist, wollen wir uns ansehen, wie MQTT und das ToM+-System tatsächlich funktionieren.
+ToM+ gilt als Publisher, da es die aktualisierten Daten des Twizy sammelt und veröffentlicht.
+Die Smartphone-App fungiert hingegen als Subscriber, da sie darauf wartet,
+auf den Empfang jener Daten wartet, die der Twizy gerade veröffentlicht hat. Doch wer befindet sich dazwischen? Der Broker-Server.\\
 
-Sofern Sie keinen selbst gehosteten Broker-Server haben (wie ich) oder bereits einen kennen, den Sie nutzen können, erkläre ich in Abschnitt~\ref{sec:free_broker}, wie Sie Ihren kostenlosen externen Broker-Server einrichten.
+Sofern Sie keinen selbst gehosteten Broker-Server (wie ich), oder bereits einen kennen, den Sie nutzen können, werde ich
+Ihnen im Abschnitt~\ref{sec:free_broker} erklären, wie Sie Ihren kostenlosen externen Broker-Server einrichten.
 
-Die Kombination von ToM+ mit dem MQTT-Protokoll kann sehr leistungsfähig sein, und wenn Sie Heimautomatisierung und IoT-Systeme mögen, eröffnen sich unendliche Möglichkeiten. Sie können beispielsweise Ihren eigenen Subscriber erstellen, der Aktionen auf Basis der von ToM+ veröffentlichten Daten ausführt.\\
 
-\subsection{Einrichten eines kostenlosen MQTT-Brokers}
+Die Kombination von ToM+ mit dem MQTT-Protokoll kann also sehr leistungsstark sein und, wenn Sie sich für
+Hausautomation und IoT-Systeme interessieren, auch unendliche Möglichkeiten eröffnen. Zum Beispielkönnen Sie
+Ihren eigenen Abonnenten erstellen, der auf von ToM+ veröffentlichte Daten reagiert und entsprechende Aktionen ausführt.\\
+
+\subsection{Einrichtung eines kostenlosen MQTT-Brokers}
 \label{sec:free_broker}
 
-\textit{Haftungsausschluss}: Nehmen Sie sich Zeit für diesen Vorgang, da er für nicht erfahrene Benutzer einige Minuten länger dauern kann, und stellen Sie sicher, dass Sie sich Ihre \textbf{Konfigurationsparameter notieren}.\\
+\textit{Haftungsausschluss}: Nehmen Sie sich für diesen Vorgang ausreichend Zeit, da er für unerfahrene Nutzer
+etwas länger dauern kann, und achten Sie darauf, Ihre Konfigurationsparameter \textbf{zu notieren}.\\
 
-Wählen Sie zuallererst Ihren MQTT-Broker-Anbieter. Ich persönlich empfehle Maqiatto, da es kostenlos, intuitiv und einfach zu bedienen ist. Besuchen wir also die Tutorial-Seite der offiziellen Website: \url{https://www.maqiatto.com/examples}. Nun sollten wir eine Seite sehen, wie sie hier gezeigt wird:
+Wählen Sie zunächst Ihren MQTT-Broker-Anbieter aus; ich persönlich empfehle Maqiatto, da
+dieser kostenlos, intuitiv und benutzerfreundlich ist. Besuchen wir also die Tutorial-Seite auf der offiziellen Website:
+\url{https://www.maqiatto.com/examples}. Nun sollten Sie eine Seite sehen, die der hier gezeigten ähnelt:
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/mqtt_step1.png}
-    \caption{Schritt 1: Drücken Sie die Taste „CREATE ACCOUNT“.}
+    \caption{Schritt 1: Klicken Sie auf die Schaltfläche „CREATE ACCOUNT“.}
 \end{figure}
 
-Wie in der offiziellen Anleitung beschrieben, benötigen Sie ein Konto, um Ihren MQTT-Broker zu erstellen. Drücken Sie also die oben rechts eingekreiste Taste \textbf{„Create Account“} und erstellen Sie ein Konto. Sie werden zu dieser Seite weitergeleitet (\url{https://www.maqiatto.com/signup}), auf der Sie Ihre persönlichen Daten eingeben müssen.
+Wie in der offiziellen Anleitung beschrieben, benötigen Sie ein Konto, um Ihren MQTT-Broker
+einzurichten. Klicken Sie also auf die oben rechts eingekreiste Schaltfläche \textbf{„Create Account“} und erstellen Sie ein Konto.
+Sie werden auf diese Seite (\url{https://www.maqiatto.com/signup}) weitergeleitet, auf der Sie Ihre persönlichen Daten eingeben müssen.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/mqtt_step2.png}
-    \caption{Schritt 2: Füllen Sie Ihre persönlichen Daten aus.}
+    \caption{Schritt 2: Geben Sie Ihre persönlichen Daten ein.}
 \end{figure}
 
-Nachdem Sie alle Formularfelder ausgefüllt haben, drücken Sie die grüne Taste \textbf{„Signup“} und warten Sie, bis diese Seite (\url{https://www.maqiatto.com/configure}) mit einer Erfolgsmeldung für die Registrierung erscheint, wie im Bild unten gezeigt:
+Nachdem Sie alle Formularfelder ausgefüllt haben, klicken Sie auf die grüne Schaltfläche \textbf{„Signup“} und warten Sie, bis
+diese Seite (\url{https://www.maqiatto.com/configure}) mit einer Registrierungsbestätigung 
+Registrierungsmeldung erscheint, wie in der Abbildung unten dargestellt:
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/mqtt_step3.png}
-    \caption{Schritt 3: IN/OUT-Topics hinzufügen.}\label{sec:free_broker_add_topics}
+    \caption{Schritt 3: Fügen Sie IN/OUT-Themen hinzu.}\label{sec:free_broker_add_topics}
 \end{figure}
 
-Auf dieser Seite können Sie Ihre verfügbaren Topics verwalten (siehe Abschnitt~\ref{sec:brief_mqtt}) und neue erstellen. Erstellen wir also unser IN- und OUT-Topic zum Senden und Empfangen von ToM-Daten. Wie wir sehen können, gibt es ein festes Präfix (Ihre E-Mail-Adresse), da kostenlose Benutzer dieser Einschränkung unterliegen, aber das ist überhaupt kein Problem.\\
+Auf dieser Seite können Sie Ihre verfügbaren Themen verwalten (siehe Abschnitt~\ref{sec:brief_mqtt})
+und auch neue erstellen. Erstellen wir also unsere Themen „IN“ und „OUT“ für das Senden und 
+Empfangen von ToM-Daten. Wie wir sehen können, gibt es ein festes Präfix (Ihre E-Mail-Adresse), da für kostenlose
+Nutzer diese Einschränkung gilt, was jedoch überhaupt kein Problem darstellt.\\
 
-In das leere Textfeld nach dem „/“-Symbol sollten wir den Namen eintragen, den wir unseren Topics geben möchten. Wählen Sie ihn sorgfältig aus und stellen Sie sicher, dass er klar und leicht zu merken ist. Ich werde das Eingabe-Topic beispielsweise \textbf{TOMin} und das Ausgabe-Topic \textbf{TOMout} nennen, aber Sie können den Namen wählen, den Sie bevorzugen.\\
+In das leere Textfeld hinter dem Symbol „/“ sollten Sie den Namen eingeben, den Sie Ihren Themen geben möchten. Wählen Sie diesen sorgfältig aus
+und achten Sie darauf, dass er eindeutig und für Sie leicht zu merken ist. Ich werde beispielsweise das
+Eingabethema \textbf{TOMin} und das Ausgabethema \textbf{TOMout} nennen, aber Sie können den Namen wählen, den Sie
+bevorzugen.\\
 
-Geben Sie für das erste Topic \textbf{TOMin} ein und drücken Sie die blaue Taste \textbf{„+ Add Topic“}, wie ich es oben getan habe. Wenn der Vorgang erfolgreich abgeschlossen ist, wird eine grüne Pop-up-Meldung angezeigt mit dem Text \textbf{„Topic was added for this user“} und ein neuer Eintrag erscheint in der Liste der \textit{„Available Topics“}, die zuvor leer war. Wiederholen Sie den Vorgang nun auch für das Topic \textbf{TOMout} und überprüfen Sie erneut, ob das Topic erfolgreich erstellt wurde. Vor diesem Vorgang war die Liste der \textit{„Available Topics“} leer, aber jetzt können wir unsere beiden Topics in der Liste sehen und sie bei Bedarf löschen.
+Geben Sie für das erste Thema \textbf{TOMin} ein und klicken Sie wie oben beschrieben auf die blaue Schaltfläche \textbf{„+ Thema hinzufügen“}.
+Wenn der Vorgang erfolgreich abgeschlossen wurde, erscheint eine grüne Popup-Meldung mit dem Wortlaut
+\textbf{„Thema wurde für diesen Benutzer hinzugefügt“} und ein neuer Eintrag erscheint in der zuvor leeren Liste \textit{„Verfügbare
+Themen“}“, die zuvor leer war. Wiederholen Sie nun den Vorgang auch für das Thema \textbf{TOMout}
+und überprüfen Sie erneut, ob das Thema erfolgreich angelegt wurde. Vor diesem Vorgang war die Liste \textit{„Verfügbare
+Themen“} leer, doch nun sehen wir unsere beiden Themen in der Liste und können sie bei Bedarf löschen.
 
 \begin{figure}[H]
     \centering
@@ -160,11 +248,18 @@ Geben Sie für das erste Topic \textbf{TOMin} ein und drücken Sie die blaue Tas
     \caption{Schritt 4: Ändern Sie Ihr Broker-Passwort.}
 \end{figure}
 
-\textit{Dieser Schritt wird empfohlen, ist jedoch optional}. Zu diesem Zeitpunkt entspricht das Broker-Passwort dem Ihres Maqiatto-Kontos und ist überhaupt nicht sicher. Wenn Sie es jedoch nicht ändern möchten oder es Ihnen egal ist, können Sie diesen Schritt überspringen und zum nächsten übergehen.\\
+\textit{Dieser Schritt wird empfohlen, ist jedoch optional}. Derzeit entspricht das Broker-Passwort dem 
+Ihres Maqiatto-Kontos und ist überhaupt nicht sicher. Wenn Sie es jedoch nicht 
+ändern möchten oder es Ihnen egal ist, können Sie diesen Schritt überspringen und mit dem nächsten fortfahren.\\
 
-Nehmen wir uns also etwas Zeit, um den Broker sicher zu machen und vor unbefugtem Zugriff zu schützen. Der zweite Teil dieser Seite (\url{https://www.maqiatto.com/configure}) ermöglicht es Ihnen, Ihr Broker-Passwort zu ändern. Geben Sie einfach das neue Passwort in das Textfeld \textbf{„New MQTT Password“} ein und drücken Sie dann die blaue Taste \textbf{„Change Password“}.
+Nehmen wir uns also etwas Zeit, um den Broker sicher zu machen und vor unerwünschtem Zugriff zu schützen.
+Der zweite Teil dieser Seite (\url{https://www.maqiatto.com/configure}) ermöglicht es Ihnen, Ihr Broker-Passwort zu ändern.
+Geben Sie einfach das neue Passwort in das Textfeld \textbf{„Neues MQTT-Passwort“} ein und
+klicken Sie anschließend auf die blaue Schaltfläche \textbf{„Passwort ändern“}.
 
-Wenn alles klappt, erscheint eine grüne Pop-up-Meldung mit dem Text \textbf{„Broker user password was updated“}. Die Taste zum Ändern des Benutzernamens ist ausgegraut, da Sie Ihren Benutzernamen nur ändern können, wenn Sie Premium-Benutzer sind.
+
+Wenn alles geklappt hat, erscheint eine grüne Popup-Meldung mit dem Text \textbf{„Das Broker-Benutzerpasswort wurde aktualisiert“}.
+Die Schaltfläche zum Ändern des Benutzernamens ist ausgegraut, da Sie Ihren Benutzernamen nur ändern können, wenn Sie Premium-Nutzer sind.
 
 \begin{figure}[H]
     \centering
@@ -172,51 +267,86 @@ Wenn alles klappt, erscheint eine grüne Pop-up-Meldung mit dem Text \textbf{„
     \caption{Schritt 5: Notieren Sie sich die Portnummer.}
 \end{figure}
 
-Im letzten Abschnitt der Konfigurationsseite (\url{https://www.maqiatto.com/configure}) befinden sich die \textbf{„Port Management“}-Parameter. Notieren Sie sich den MQTT-TCP-Port, der gewöhnlich auf \textbf{1883} eingestellt ist (nur um sicherzugehen), da dies die Standard-Portnummer im Internet für das MQTT-Protokoll ist. Nun ist der MQTT-Broker bereit zur Verwendung und wir können zum nächsten Schritt übergehen: der Konfiguration von ToM+ mit den Broker-Parametern.
+Im letzten Abschnitt der Konfigurationsseite (\url{https://www.maqiatto.com/configure})
+befinden sich die Parameter unter \textbf{„Port-Verwaltung“}. Notieren Sie sich den MQTT-TCP-Port, 
+der in der Regel auf \textbf{1883} eingestellt ist (nur zur Sicherheit), da diesdie bekannte Standard-
+Portnummer für das MQTT-Protokoll im Internet ist. Nun ist der MQTT-Broker einsatzbereit
+und wir können mit dem nächsten Schritt fortfahren, nämlich der Konfiguration von ToM+ mit den Broker-Parametern.
 
 \clearpage
 
 \subsection{ToM+ mit dem MQTT-Broker verbinden}
 \label{sec:mqtt_connection}
 
-Nachdem nun klar ist, was MQTT ist (Abschnitt~\ref{sec:brief_mqtt}), und wir unseren persönlichen Broker eingerichtet haben (Abschnitt~\ref{sec:free_broker}), wollen wir sehen, wo auf dem Display wir ToM+ mit unserem frisch erstellten Broker verbinden können.
+Nachdem nun klar ist, was MQTT (Abschnitt~\ref{sec:brief_mqtt}) ist, und wir unseren
+eigenen Broker eingerichtet haben (Abschnitt~\ref{sec:free_broker}), wollen wir uns ansehen, an welcher Stelle auf dem Display wir
+ToM+ mit unserem soeben erstellten Broker verbinden können.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/mqtt_connect1.png}
-    \caption{MQTT-Broker-Verbindungsparameter.}
+    \caption{Verbindungsparameter für den MQTT-Broker.}
 \end{figure}
 
-Wenn Sie auf das entsprechende Tabellenfeld tippen, öffnet ToM+ eine Tastaturseite, auf der Sie Ihre Daten eingeben können, wie in den WLAN-Einstellungen. Um Symbole oder Zahlen einzugeben, drücken Sie die Taste \textbf{„1/3“} auf der Tastatur, um den Zeichensatz zu wechseln. Durch Drücken von \textbf{OK} bestätigen Sie die eingegebene Zeichenfolge und kehren zur MQTT-Einstellungsseite zurück. Weitere Informationen zur Tastaturseite finden Sie in Abschnitt~\ref{sec:keyboard_page}. Wenn der Wert zu lang für das Feld ist, scrollt der Text automatisch.\\
 
-Als Erstes müssen Sie Ihre \textbf{Broker-Adresse} angeben. Im gezeigten Beispiel ist sie auf \textit{„maqiatto.com“} eingestellt. Dies ist die Adresse des Broker-Servers, den wir gerade in Abschnitt~\ref{sec:free_broker} erstellt haben.
+Wenn Sie auf das entsprechende Tabellenfeld tippen, öffnet ToM+ eine Tastaturseite, auf der Sie Ihre Daten eingeben können, genau wie bei den WLAN-Einstellungen.
+Um Sonderzeichen oder Zahlen einzugeben, drücken Sie die Taste \textbf{„1/3“} auf der Tastatur, um den Zeichensatz zu wechseln.
+Durch Drücken von \textbf{OK} bestätigen Sie die eingegebene Zeichenfolge und gelangen zurück zur MQTT-
+Einstellungsseite zurück. Weitere Informationen zur Tastaturseite finden Sie im Abschnitt~\ref{sec:keyboard_page}.
+Sollte der Wert für das Feld zu lang sein, wird der Text automatisch gescrollt.\\
 
-Anschließend muss die \textbf{Portnummer} angegeben werden, auf der der MQTT-Dienst läuft. Sofern Sie sie nicht manuell auf eine andere Nummer eingestellt haben, ist der MQTT-Port immer \textit{1883}.
+Als Erstes müssen Sie Ihre \textbf{Broker-Adresse} angeben. Im gezeigten Beispiel
+ist diese auf \textit{„maqiatto.com“} eingestellt. Dies ist die Adresse des Broker-Servers, den wir soeben in Abschnitt~\ref{sec:free_broker} erstellt haben.
 
-Als Nächstes folgt das Feld \textbf{User}, das den Benutzernamen darstellt, den ToM+ zur Authentifizierung bei der Verbindung mit dem Broker verwendet. Da das Paar aus Benutzername und Passwort einzigartig für Sie ist, verhindert dies, dass unerwünschte Benutzer Zugriff auf Ihren privaten Broker erhalten. In Ihrem Fall ist der Benutzer die E-Mail-Adresse Ihres Maqiatto-Kontos, geschrieben wie \textit{youremail@example.com}.
+Anschließend müssen Sie die \textbf{Portnummer} angeben, auf der der MQTT-Dienst läuft. Sofern
+Sie diese nicht manuell auf eine andere Nummer eingestellt haben, lautet der MQTT-Port immer \textit{1883}.
 
-Danach müssen wir das \textbf{Passwort des Brokers} angeben, das sich von dem Ihres Maqiatto-Kontos unterscheiden kann, wenn Sie es wie in Abschnitt~\ref{sec:free_broker} empfohlen geändert haben.
+Als Nächstes folgt das Feld \textbf{Benutzer}, in das Sie den Benutzernamen eingeben, den ToM+ zur Authentifizierung
+bei der Verbindung zum Broker. Da die Kombination aus Benutzername und Passwort für
+Sie einzigartig ist, verhindert dies, dass unerwünschte Benutzer Zugriff auf Ihren privaten Broker erhalten. In Ihrem Fall
+ist der Benutzer die E-Mail-Adresse Ihres Maqiatto-Kontos, geschrieben als \textit{youremail@example.com}.
+
+Anschließend müssen wir das \textbf{Passwort des Brokers} angeben, das sich von
+dem Ihres Maqiatto-Kontos unterscheiden kann, falls Sie es geändert haben, wie in Abschnitt~\ref{sec:free_broker} vorgeschlagen. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/mqtt_connect2.png}
-    \caption{MQTT ToM+ Veröffentlichungsparameter.}
+    \caption{MQTT ToM+-Veröffentlichungsparameter.}
 \end{figure}
 
-Konfigurieren wir nun unser \textbf{OUT-Topic}, in dem ToM+ die Twizy-Daten veröffentlichen wird. In Abschnitt~\ref{sec:free_broker} haben wir ein Out-Topic namens TOMout erstellt, aber der vollständige Name des Topics muss auch \textbf{Ihre E-Mail-Adresse als Präfix} enthalten, gefolgt von einem „/“-Symbol und dem Topic-Namen „TOMout“. Im Beispiel ist es auf \textit{„youremail@gmail.com/TOMout“} eingestellt.
 
-Jetzt ist es Zeit für das \textbf{IN-Topic}, über das ToM+ MQTT-Befehle empfängt. Wie beim OUT-Topic haben wir ein In-Topic namens TOMin erstellt, aber der vollständige Name des Topics muss auch \textbf{Ihre E-Mail-Adresse als Präfix} enthalten, gefolgt von einem „/“-Symbol und dem Topic-Namen „TOMin“. Im Beispiel ist es auf \textit{„youremail@gmail.com/TOMin“} eingestellt.
+Nun konfigurieren wir unser \textbf{OUT-Thema}, in dem ToM+ die Twizy-Daten veröffentlichen wird. In Abschnitt~\ref{sec:free_broker}
+haben wir ein Out-Thema namens „TOMout“ erstellt, doch der vollständige Name des Themas muss 
+zusätzlich \textbf{Ihre E-Mail-Adresse als Präfix} enthalten, gefolgt von einem „/“-Symbol und dem Themennamen
+„TOMout“. Im Beispiel lautet die Einstellung \textit{„youremail@gmail.com/TOMout“}.
 
-Wenn ein MQTT-Publisher eine Nachricht an den Broker sendet, wird seine Verbindung durch Benutzername und Passwort authentifiziert, aber er veröffentlicht unter einem Alias, den Sie \textit{willkürlich wählen können}. Es ist wichtig, keine Leerzeichen in der \textbf{Client ID} zu verwenden; es sind nur alphanumerische Zeichen und Symbole erlaubt. Denken Sie daran, dass es ratsam ist, diese einfach und klar zu halten, wie im Beispiel: \textit{„TwizOMeter“}.
+Nun ist das \textbf{IN-Thema} an der Reihe, über das ToM+ MQTT-Befehle empfangen wird.
+Wie beim OUT-Thema haben wir ein IN-Thema namens „TOMin“ erstellt, doch der vollständige Name
+des Themas muss ebenfalls \textbf{Ihre E-Mail-Adresse als Präfix} , gefolgt von einem „/“-Symbol
+und dem Themennamen „TOMin“. Im Beispiel ist dies auf \textit{„youremail@gmail.com/TOMin“} festgelegt.
 
-Der letzte Parameter ist die \textbf{Veröffentlichungsfrequenz} (Publish Frequency), die die Zeit zwischen den einzelnen ToM+-Veröffentlichungen darstellt. Sie wird in Millisekunden \textit{(ms)} ausgedrückt und kann auf einen beliebigen Wert größer als 1000 ms (eine Sekunde) eingestellt werden. Der Standardwert beträgt \textit{5000 ms} (fünf Sekunden) und stellt einen guten Kompromiss zwischen Datenaktualität und Netzwerkauslastung dar.\\
+Wenn ein MQTT-Publisher eine Nachricht an den Broker sendet, wird seine
+Verbindung anhand von Benutzername und Passwort authentifiziert, doch die Veröffentlichung erfolgt unter Verwendung eines Alias,
+den \textit{Sie frei wählen können}. Es ist wichtig, keine Leerzeichen in der \textbf{Client-ID} zu verwenden;
+erlaubt sind ausschließlich alphanumerische Zeichen und Symbole. Denken Sie daran, dass es
+ratsam ist, diese einfach und eindeutig zu gestalten, wie im Beispiel: \textit{„TwizOMeter“}. 
 
-Um Ihre \textbf{Änderungen zu speichern}, müssen Sie die Pfeiltaste unten rechts drücken. Wenn Sie dies nicht tun, gehen Ihre Änderungen beim Verlassen der Seite verloren. Nun ist ToM+ bereit, Daten über das MQTT-Protokoll zu senden und zu empfangen.\\
+Der letzte Parameter ist die \textbf{Veröffentlichungsfrequenz}, die die Zeit
+zwischen den einzelnen ToM+-Veröffentlichungen angibt. Sie wird in Millisekunden \textit{(ms)} angegeben und kann
+auf einen beliebigen Wert größer als 1000 ms (eine Sekunde) eingestellt werden. Der Standardwert beträgt \textit{5000 ms}
+(fünf Sekunden) und stellt einen guten Kompromiss zwischen Datenaktualität und Netzwerkauslastung dar.\\
+
+Um \textbf{Ihre Änderungen zu speichern}, müssen Sie auf die Pfeiltaste unten rechts klicken. Wenn Sie dies nicht
+tun, gehen Ihre Änderungen verloren, sobald Sie die Seite verlassen. Nun ist ToM+ bereit, 
+Daten über das MQTT-Protokoll zu veröffentlichen und zu empfangen.\\
 
 \subsection{MQTT-Funktionen aktivieren/deaktivieren}
 \label{sec:enable_disable_mqtt}
 
-Wenn Sie das Veröffentlichen von Daten mit dem MQTT-Protokoll vorübergehend oder dauerhaft deaktivieren möchten, drücken oder schieben Sie den linken Schieberegler mit der Aufschrift \textbf{„PUBLISH“} im Bild unten. Von da an wird ToM+ keine Twizy-Daten mehr über MQTT veröffentlichen, bis Sie es wieder aktivieren.
+Wenn Sie die Veröffentlichung von Daten über das MQTT-Protokoll vorübergehend oder dauerhaft deaktivieren möchten,
+drücken oder schieben Sie den linken Schieberegler mit der Bezeichnung \textbf{„PUBLISH“} in der Abbildung unten
+hier. Von diesem Zeitpunkt an veröffentlicht ToM+ keine Twizy-Daten mehr über MQTT, bis Sie die Funktion wieder aktivieren.
 
 \begin{figure}[H]
     \centering
@@ -224,11 +354,18 @@ Wenn Sie das Veröffentlichen von Daten mit dem MQTT-Protokoll vorübergehend od
     \caption{Untere MQTT-Schieberegler.}
 \end{figure}
 
-Der rechte Schieberegler unter \textbf{„SUBSCRIBE“} ermöglicht es ToM+, Befehle von externen Geräten zu empfangen, die auf dem angegebenen IN-Topic veröffentlicht werden. Dies ist nützlich, wenn Sie ein an den ToM+-Erweiterungsanschluss angeschlossenes Gerät über MQTT steuern möchten (z.~B. eine smarte Steckdose zum Ferneinschalten des Ladevorgangs). Sie können diese Funktion jederzeit aktivieren oder deaktivieren, indem Sie die Taste drücken oder schieben.\\
+Der rechte Schieberegler unter \textbf{„SUBSCRIBE“} ermöglicht es ToM+, Befehle
+von externen Geräten zu empfangen, die unter dem angegebenen IN-Thema veröffentlicht werden. Dies ist nützlich, wenn Sie
+ein an den ToM+-Erweiterungsanschluss angeschlossenes Gerät über MQTT steuern möchten
+(z. B.~einen Smart Plug, um das Laden aus der Ferne ein- oder auszuschalten). Sie können diese Funktion jederzeit aktivieren oder deaktivieren, indem Sie die Schaltfläche drücken oder verschieben.\\
 
-\subsection{ToM+ MQTT-Verbindung prüfen}
+\subsection{Überprüfen der ToM+-MQTT-Verbindung}
 
-Neben den beiden Schiebereglern befindet sich ein kleines \textbf{„STATUS“}-Feld, das anzeigt, ob die MQTT-Verbindung funktioniert oder nicht. Wenn ToM+ mit dem angegebenen MQTT-Broker verbunden ist, sehen Sie den Text \textit{„CONNECTED“}. Wenn ein Problem mit der Broker-Verbindung vorliegt oder WLAN deaktiviert ist (wie in Abschnitt~\ref{sec:enable_disable_wifi} gesehen), funktioniert MQTT nicht ordnungsgemäß und es erscheint die Meldung \textit{„DISCONNECTED“}, wie im Bild unten gezeigt.
+Neben den beiden Schiebeschaltflächen befindet sich eine kleine Beschriftung \textbf{„STATUS“}, die anzeigt,
+ob die MQTT-Verbindung funktioniert oder nicht. Wenn ToM+ mit dem angegebenen MQTT-Broker
+angegebenen Broker verbunden ist, wird der Text \textit{„CONNECTED“} angezeigt. Wenn ein Problem mit
+der Broker-Verbindung vorliegt oder das WLAN deaktiviert ist, wie wir in Abschnitt~\ref{sec:enable_disable_wifi} gesehen haben, funktioniert MQTT nicht
+und es erscheint die Meldung \textit{„DISCONNECTED“}, wie in der Abbildung unten dargestellt.
 
 \begin{figure}[H]
     \centering
@@ -236,77 +373,95 @@ Neben den beiden Schiebereglern befindet sich ein kleines \textbf{„STATUS“}-
     \caption{MQTT-Statusfeld.}
 \end{figure}
 
-Übrigens können Sie den MQTT-Verbindungsstatus auch überprüfen, indem Sie auf die Status-Symbolleiste schauen (Abschnitt~\ref{sec:status_icon_bar}), in der das MQTT-Symbol lila ist, wenn die Verbindung hergestellt ist, andernfalls ist es ausgegraut.
+Übrigens können Sie den MQTT-Verbindungsstatus auch anhand der Status-Symbolleiste überprüfen (Abschnitt~\ref{sec:status_icon_bar}),
+wo das MQTT-Symbol violett ist, wenn die Verbindung besteht; andernfalls ist es ausgegraut.
 
-Um Ihre \textbf{Änderungen zu speichern}, müssen Sie die Pfeiltaste unten rechts drücken. Wenn Sie dies nicht tun, gehen Ihre Änderungen beim Verlassen der Seite verloren.\\
+Um \textbf{Ihre Änderungen zu speichern}, müssen Sie auf die Pfeiltaste unten rechts klicken. Wenn Sie dies nicht
+tun, gehen Ihre Änderungen verloren, sobald Sie die Seite verlassen.\\
 
 
 \section{Die Tastaturseite}
 \label{sec:keyboard_page}
 
-Wenn Sie in der WLAN- oder MQTT-Einstellungsseite auf eine Tabellenzelle tippen, öffnet ToM+ eine Tastaturseite, auf der Sie Ihre Daten eingeben können. Die Tastaturseite ist sehr intuitiv und einfach zu bedienen. Sie können zwischen drei verschiedenen Zeichensätzen wechseln, indem Sie die Taste \textbf{„1/3“} in der unteren linken Ecke der Tastatur drücken.
+Wenn Sie auf eine Tabellenzelle auf der WLAN- oder MQTT-Einstellungsseite tippen, öffnet ToM+ eine Tastaturseite
+, auf der Sie Ihre Daten eingeben können. Die Tastaturseite ist sehr intuitiv und einfach zu bedienen.
+Sie können zwischen drei verschiedenen Zeichensätzen wechseln, indem Sie die Schaltfläche \textbf{„1/3“}
+in der unteren linken Ecke der Tastatur drücken.
 
 \begin{figure}[ht]
     \centering
 
-    \begin{subfigure}[t]{0.48\textwidth}
+    \begin{subfigure}[t]{0,48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/keyboard_page1.jpg}
         \caption{Erster Zeichensatz: Buchstaben.}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.48\textwidth}
+    \begin{subfigure}[t]{0,48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/keyboard_page1_caps.jpg}
         \caption{Erster Zeichensatz: Großbuchstaben.}
     \end{subfigure}
 \end{figure}
 
-Im \textbf{ersten Zeichensatz} können Sie Buchstaben in Klein- oder Großschreibung eingeben, indem Sie die im ersten Bild gelb eingekreiste Shift-Taste drücken.
-Wenn Sie etwas eingeben, erscheint es im Textfeld oben auf der Tastatur. Wenn Sie ein Zeichen löschen möchten, drücken Sie einfach die Rücktaste (Backspace).
+Im \textbf{ersten Zeichensatz} können Sie Klein- oder Großbuchstaben eingeben, indem Sie
+die im ersten Bild gelb eingekreiste Umschalttaste drücken.
+Wenn Sie etwas eingeben, erscheint es im Textfeld oberhalb der Tastatur. 
+Wenn Sie ein Zeichen löschen möchten, drücken Sie einfach die Rücktaste.
 
 \clearpage
 
 \begin{figure}[ht]
     \centering
 
-    \begin{subfigure}[t]{0.48\textwidth}
+    \begin{subfigure}[t]{0,48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/keyboard_page2.jpg}
         \caption{Zweiter Zeichensatz: Symbole.}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.48\textwidth}
+    \begin{subfigure}[t]{0,48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/keyboard_page3.jpg}
         \caption{Dritter Zeichensatz: Zahlen und mehr.}
     \end{subfigure}
 \end{figure}
 
-Der \textbf{zweite Zeichensatz} ist für Symbole gedacht und der \textbf{dritte} für Zahlen und weitere Sonderzeichen. Um zum dritten Zeichensatz zu gelangen, drücken Sie einfach die Taste \textbf{„2/3“} in der unteren linken Ecke der Tastatur. Im dritten Zeichensatz können Sie durch Drücken der Taste \textbf{„3/3“} wieder zum ersten Zeichensatz zurückkehren. Auf diesen beiden Seiten hat die Shift-Taste keine Funktion, da sie nicht benötigt wird.\\
+Der \textbf{zweite Zeichensatz} ist für Symbole vorgesehen, der \textbf{dritte} für Zahlen und andere Sonderzeichen.
+Um zum dritten Zeichensatz zu wechseln, drücken Sie einfach die Taste \textbf{„2/3“} in der unteren linken Ecke der Tastatur.
+Befinden Sie sich im dritten Zeichensatz, können Sie durch Drücken der Taste \textbf{„3/3“} zum ersten Zeichensatz zurückkehren.
+Auf diesen beiden Seiten hat die Umschalttaste keine Funktion, da sie nicht benötigt wird.\\
 
-Wenn Sie mit der Eingabe fertig sind, drücken Sie die Taste \textbf{OK}, um Ihre Eingabe zu bestätigen und zur vorherigen MQTT- oder WLAN-Einstellungsseite zurückzukehren, wo das bearbeitete Feld aktualisiert wird.
+Wenn Sie mit der Eingabe fertig sind, drücken Sie die Schaltfläche \textbf{OK}, um Ihre Eingabe zu bestätigen und
+zur vorherigen Seite mit den MQTT- oder WLAN-Einstellungen zurückzukehren, auf der das bearbeitete Feld aktualisiert wird.
 
-\subsection{Die reine Zahlentastatur}
+\subsection{Die reine Zifferntastatur}
 
-In einigen Feldern, wie z.~B. der MQTT-Veröffentlichungsfrequenz, sind nur Zahlen erlaubt. In diesem Fall öffnet ToM+ eine reine Zahlentastaturseite, wie im Bild unten gezeigt.
+In einigen Feldern, wie beispielsweise der MQTT-Veröffentlichungsfrequenz, sind nur Zahlen zulässig.
+In diesem Fall öffnet ToM+ eine Seite mit einer reinen Zifferntastatur, wie in der Abbildung unten dargestellt.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/keyboard_num_only.jpg}
-    \caption{Reine Zahlentastatur.}
+    \caption{Reine Zifferntastatur.}
 \end{figure}
 
-Wie Sie sehen können, ist das Layout dasselbe wie beim dritten Zeichensatz der vollständigen Tastatur, jedoch auf Zahlen und einige Sonderzeichen beschränkt. Sie werden auch bemerken, dass die Taste zum Wechseln des Zeichensatzes nicht verfügbar ist, da sie in diesem Fall nicht benötigt wird. Die Rücktaste steht weiterhin zum Löschen von Zeichen zur Verfügung, und die \textbf{OK-Taste} bestätigt Ihre Eingabe und führt zurück zur vorherigen Seite.
+Wie Sie sehen können, entspricht das Layout dem dritten Zeichensatz der vollständigen Tastatur, ist jedoch auf Zahlen und einige Sonderzeichen beschränkt.
+Sie werden außerdem feststellen, dass die Schaltfläche zum Wechseln des Zeichensatzes nicht verfügbar ist, da sie in diesem Fall nicht benötigt wird.
+Die Rücktaste steht weiterhin zum Löschen von Zeichen zur Verfügung, und die \textbf{OK-Schaltfläche} bestätigt Ihre Eingabe und kehrt zur vorherigen Seite zurück.
 
 
 
 \section{Der Webserver}
 \label{sec:web_server}
 
-Der Webserver ist eine neue Funktion, die mit dem zweiten Firmware-Release eingeführt wurde. Er ermöglicht Ihnen den Fernzugriff auf Ihre ToM+-Einstellungen und -Daten von jedem Gerät mit einem Webbrowser, wie z.~B. Ihrem Smartphone, Tablet oder PC. Dies ist besonders nützlich für die Verwaltung von Standard- und \textbf{erweiterten Konfigurationen}, die auf dem ToM+-Display nicht verfügbar sind.
+Der Webserver ist eine neue Funktion, die mit der zweiten Firmware-Version eingeführt wurde. 
+Er ermöglicht Ihnen den Fernzugriff auf Ihre ToM+-Einstellungen und -Daten von jedem Gerät mit einem
+Webbrowser aus, beispielsweise von Ihrem Smartphone, Tablet oder PC.~Dies ist besonders nützlich 
+für die Verwaltung von Standard- und \textbf{erweiterten Konfigurationen}, die auf dem ToM+-Display nicht verfügbar sind.
 
-Zusätzlich können Sie den Webserver nutzen, um \textbf{WLAN und MQTT} viel einfacher einzurichten als nur über das ToM+-Display mit der Tastaturseite (Abschnitt~\ref{sec:keyboard_page}).\\
+Darüber hinaus können Sie den Webserver auch nutzen, um \textbf{WLAN und MQTT} viel einfacher einzurichten 
+als über das ToM+-Display, bei dem nur die Tastaturseite zur Verfügung steht (Abschnitt~\ref{sec:keyboard_page}).\\
 
 \begin{figure}[H]
     \centering
@@ -317,201 +472,275 @@ Zusätzlich können Sie den Webserver nutzen, um \textbf{WLAN und MQTT} viel ein
 
 \subsection{Die Startseite}
 
-Auf der oben gezeigten Startseite sehen Sie zwölf Schaltflächen, die Ihnen Zugriff auf verschiedene Seiten des Webservers geben. Hier gebe ich einen kurzen Überblick über die auf jeder Seite verfügbaren Funktionen, bevor diese in den folgenden Absätzen vertieft werden. In diesem Abschnitt dienen die Symbole nur als visuelle Hilfe:\\
+Auf der oben gezeigten Startseite sehen Sie zwölf Schaltflächen, über die Sie auf verschiedene Seiten des Webservers zugreifen können.
+Hier werde ich Ihnen einen kurzen Überblick über die auf den einzelnen Seiten verfügbaren Funktionen geben; in den folgenden Absätzen
+werden diese dann näher erläutert. In diesem Abschnitt dienen die Symbole lediglich als visuelle Hilfestellung:\\
 
 \iconbox{icons/BatteryInfo2.png}
-{Datenmonitor}{Hier können Sie Ihre Twizy-Daten in Echtzeit überwachen, organisiert in Tabellen genau wie auf den ToM+-Displayseiten (Abschnitt~\ref{sec:web_data_monitor}).}
+{Datenmonitor}{Hier können Sie Ihre Twizy-Daten in Echtzeit überwachen, übersichtlich in Tabellen dargestellt, genau wie auf den ToM+-Anzeigeseiten (Abschnitt~\ref{sec:web_data_monitor}).}
 
 \iconbox{icons/Street0Ok_v2.png}
-{Fahrtenverlauf}{Hier können Sie die Daten jeder aufgezeichneten Fahrt (1 bis 5) und der letzten zwanzig Fahrten überprüfen, genau wie auf dem ToM+-Display (Abschnitt~\ref{sec:web_trip_history}).}
+{Fahrtenverlauf}{Hier können Sie die Daten jeder aufgezeichneten Fahrt (1 bis 5) sowie die letzten zwanzig Fahrten einsehen, genau wie auf dem ToM+-Display (Abschnitt~\ref{sec:web_trip_history}).}
 
 \iconbox{icons/Tray_WiFiOff.png}
 {Netzwerkeinstellungen}{Hier können Sie Ihre WLAN-Verbindungsprofile und MQTT-Broker-Parameter einrichten, genau wie auf dem ToM+-Display (Abschnitt~\ref{sec:web_network_settings}).}
 
 \iconbox{icons/Pin1.png}
-{Erweiterungseinstellungen}{Hier können Sie die Pins des Erweiterungsanschlusses konfigurieren und das Verhalten für die rechte Scheibenwischerhebels-Taste wählen (Abschnitt~\ref{sec:web_expansion_settings}).}
+{Erweiterungseinstellungen}{Hier können Sie die Pins des Erweiterungssteckers konfigurieren und das Verhalten der rechten Scheibenwischerhebel-Taste festlegen (Abschnitt~\ref{sec:web_expansion_settings}).}
 
 \iconbox{icons/Alarm.PNG}
-{Alarmauslöser}{Hier können Sie Alarme auf Basis von ToM+-Daten anzeigen oder einrichten und die Aktion auswählen, die beim Auslösen eines Alarms ausgeführt werden soll (Abschnitt~\ref{sec:web_alarm_triggers}).}
+{Alarmauslöser}{Hier können Sie Alarme auf Basis von ToM+-Daten anzeigen oder einrichten und die Aktion auswählen, die bei Auslösung eines Alarms ausgeführt werden soll (Abschnitt~\ref{sec:web_alarm_triggers}).}
 
 \iconbox{icons/Alarm.PNG}
-{Alarmlogbuch}{Hier können Sie den Verlauf der letzten 21 Alarmauslösungen und deren Details, wie Datum und Uhrzeit, anzeigen und löschen (Abschnitt~\ref{sec:web_alarms_log}).}
+{Alarmprotokoll}{Hier können Sie den Verlauf der letzten 21 ausgelösten Alarme sowie deren Details wie Datum und Uhrzeit einsehen und löschen (Abschnitt~\ref{sec:web_alarms_log}).}
 
 \iconbox{icons/Swap.png}
-{OTA-Update \& Einstellungen}{Hier können Sie die ToM+-Firmware über die OTA-Methode aktualisieren und Ihre ToM+-Einstellungen sichern/wiederherstellen (Abschnitt~\ref{sec:web_ota_update}).}
+{OTA-Update & Einstellungen}{Hier können Sie die ToM+-Firmware per OTA-Update aktualisieren sowie Ihre ToM+-Einstellungen sichern und wiederherstellen (Abschnitt~\ref{sec:web_ota_update}).}
 
 \iconbox{icons/Swap.png}
-{Erweiterte Info \& Sets}{Hier können Sie erweiterte Informationen über Ihre Twizy-Batterie anzeigen und verschiedene Einstellungen konfigurieren (Abschnitt~\ref{sec:web_advanced_info}).}
+{Erweiterte Informationen & Einstellungen}{Hier können Sie erweiterte Informationen zu Ihrer Twizy-Batterie einsehen und verschiedene Einstellungen konfigurieren (Abschnitt~\ref{sec:web_advanced_info}).}
 
 \iconbox{icons/CEta.png}
-{Ladeeinstellungen \& Log}{Hier können Sie Ladeeinstellungen festlegen, den Ladevorgang spontan abbrechen und die letzten 15 Lade-Protokolle anzeigen oder löschen (Abschnitt~\ref{sec:web_charging_prefs}).}
+{Lade- Einstellungen & Protokoll}{Hier können Sie Ladeeinstellungen vornehmen, den Ladevorgang während des Ladens abbrechen sowie die letzten 15 Ladeprotokolle einsehen oder löschen (Abschnitt~\ref{sec:web_charging_prefs}).}
 
 \iconbox{icons/Timer.PNG}
-{Uhrzeit \& Datum}{Hier können Sie Uhrzeit und Datum Ihres ToM+ einstellen und die Zeitzone mithilfe von POSIX-TZ-Zeichenfolgen wählen oder mit WLAN synchronisieren (Abschnitt~\ref{sec:web_time_date}).}
+{Uhrzeit & Datum}{Hier können Sie Uhrzeit und Datum Ihres ToM+ einstellen und die Zeitzone mithilfe von POSIX-TZ-Zeichenfolgen auswählen oder eine Synchronisierung über WLAN vornehmen (Abschnitt~\ref{sec:web_time_date}).}
 
 \iconbox{icons/Kmh.png}
-{BigToM / ToM+ Sets}{Hier können Sie einige Dashboard-Parameter konfigurieren, wie z.~B. die Skalierung des Leistungsbalkens oder das Einrichten eines Tempolimits (Abschnitt~\ref{sec:web_btom_tom_sets}).}
+{BigToM / ToM+-Einstellungen}{Hier können Sie einige Parameter des Dashboards konfigurieren, wie beispielsweise den Maßstab des Leistungsbalkens oder die Einrichtung einer Geschwindigkeitsbegrenzung (Abschnitt~\ref{sec:web_btom_tom_sets}).}
 
 \iconbox{icons/Error.png}
-{Diagnose}{Hier können Sie DTC/DF-Nummern und Beschreibungen Ihrer Twizy-Fehler anzeigen und die Protokolle bei Bedarf löschen (Abschnitt~\ref{sec:web_diagnostic}).}
+{Diagnose}{Hier können Sie DTC-/DF-Nummern sowie die Beschreibungen Ihrer Twizy-Fehler einsehen und die Protokolle bei Bedarf löschen (Abschnitt~\ref{sec:web_diagnostic}).}
 
 
-\subsection{Auf den Webserver zugreifen}
+\subsection{Zugriff auf den Webserver}
 \label{sec:web_server_access}
 
-ToM+ ermöglicht es Ihnen, sich auf zwei Arten mit seiner Webserver-Seite zu verbinden, die beide in unterschiedlichen Situationen nützlich sind. Bevor wir beginnen, denken Sie daran, dass eine \textbf{IP-Adresse} im Grunde der numerische Name Ihres Geräts in einem Netzwerk ist (z.~B. \textit{192.168.1.100}).
+ToM+ bietet Ihnen zwei Möglichkeiten, eine Verbindung zur Webserver-Seite herzustellen, die beide
+in unterschiedlichen Situationen nützlich sind. Bevor wir beginnen, beachten Sie bitte, dass eine \textbf{IP-Adresse}
+im Grunde genommen der numerische Name Ihres Geräts in einem Netzwerk ist (z. B. \textit{192.168.1.100}).
 
-\textbf{\textit{Für beide Methoden muss ToM+ mit einem Netzwerk verbunden sein.}}
-Stellen Sie also sicher, dass Ihr ToM+ entweder ein wie in Abschnitt~\ref{sec:add_wifi_profile} erklärtes WLAN-Profil konfiguriert hat oder mit einem passwortfreien WLAN-Netzwerk verbunden ist. Um zu überprüfen, ob Ihr ToM+ verbunden ist, lesen Sie bitte Abschnitt~\ref{sec:check_wifi_connection}.\\
+\textbf{\textit{Für beide Methoden muss Ihr ToM+ mit einem Netzwerk verbunden sein.}}
+Stellen Sie daher sicher, dass Ihr ToM+ entweder über ein WLAN-Profil verfügt, das wie
+in Abschnitt~\ref{sec:add_wifi_profile} beschrieben konfiguriert ist, oder mit einem WLAN-Netzwerk ohne Passwort verbunden ist.
+Informationen dazu, wie Sie überprüfen können, ob Ihr ToM+ verbunden ist, lesen Sie bitte Abschnitt~\ref{sec:check_wifi_connection}.\\
 
-\textbf{Die erste und einfachste Einrichtung} besteht darin, den Hotspot Ihres Telefons ohne Passwort zu verwenden, sodass sich ToM+ verbindet, ohne ein WLAN-Profil konfigurieren zu müssen. Rufen Sie dann (immer noch auf Ihrem Telefon) Chrome oder Safari (oder einen beliebigen Webbrowser) auf und geben Sie die IP-Adresse von ToM+ ein (gezeigt in Abbildung~\ref{fig:wifi_bottom_line}).\\
+\textbf{Die erste und einfachere Einrichtungsmethode} besteht darin, den Hotspot Ihres Smartphones ohne Passwort zu verwenden, sodass sich das ToM+ verbindet,
+ohne dass ein WLAN-Profil konfiguriert werden muss. Rufen Sie anschließend – weiterhin über Ihr Smartphone – Chrome oder
+Safari (oder einen beliebigen Webbrowser) auf und geben Sie die IP-Adresse des ToM+ ein (siehe Abbildung~\ref{fig:wifi_bottom_line}).\\
 
-\textbf{Die zweite Methode} funktioniert nur, wenn Sie sich in unmittelbarer Nähe des Twizy innerhalb der WLAN-Reichweite befinden. Sie können Ihr Telefon oder Ihren Laptop verwenden, um einen WLAN-Scan durchzuführen, und dann je nach Modell nach dem Netzwerk \textit{„ToM+ AP“}, \textit{„Twiz o'Meter AP“} oder \textit{„BigToM AP“} suchen. Als Nächstes sollten Sie sich mit dem \textbf{korrekten Passwort} mit diesem Netzwerk verbinden. Es ist anfänglich auf das Wort „pass“, gefolgt von der Seriennummer Ihres Geräts, eingestellt (z.~B. \textit{pass129777}). Die Seriennummer finden Sie auf der Einstellungsseite, wie in Abbildung~\ref{fig:settings_page} erklärt. Sie können es dann auf Wunsch ändern, aber es gibt kein Passwort-Wiederherstellungssystem (siehe Abschnitt~\ref{sec:web_change_password}). Sobald Sie mit dem ToM+ Access Point verbunden sind, geben Sie in einem beliebigen Browser seine statische IP-Adresse ein, die \textbf{192.188.1.188} lautet.
+\textbf{Die zweite Methode} funktioniert nur, wenn Sie sich in unmittelbarer Nähe des Twizy innerhalb der WLAN-Reichweite befinden.
+Sie können mit Ihrem Smartphone oder Laptop einen WLAN-Scan durchführen und dann nach dem Netzwerk
+\textit{„ToM+ AP“} oder \textit{„Twiz o'Meter AP“} oder nach dem Netzwerk \textit{„BigToM AP“}, je nach Ihrem Modell. 
+Anschließend sollten Sie sich mit dem \textbf{richtigen Passwort} mit diesem Netzwerk verbinden. Es ist zunächst 
+auf das Wort „pass“ gefolgt von der Seriennummer Ihres Geräts eingestellt (z. B. \textit{pass129777}).
+Die Seriennummer finden Sie auf der Einstellungsseite, wie in Abbildung~\ref{fig:settings_page} erläutert. 
+Sie können es anschließend ändern, wenn Sie möchten, es gibt jedoch kein System zur Passwortwiederherstellung (siehe Abschnitt~\ref{sec:web_change_password}).
+Sobald Sie mit dem ToM+ Access Point verbunden sind, geben Sie in einem beliebigen Browser dessen statische IP-Adresse ein, die \textbf{192.188.1.188} lautet.
 
 
 \subsection{Webserver-Passwort ändern}
 \label{sec:web_change_password}
 
-Um das Passwort für den Webserver zu ändern, rufen Sie auf dem Display die WLAN-Einstellungsseite auf (Abschnitt~\ref{sec:wifi_settings}) und tippen Sie auf das Feld \textbf{„KEY 4“}. Dadurch wird die Tastaturseite geöffnet (Abschnitt~\ref{sec:keyboard_page}), auf der Sie Ihr neues Passwort eingeben können. Dieses Passwort wird dann sowohl als Access-Point-Passwort als auch für das vierte WLAN-Verbindungsprofil verwendet.
+Um das Passwort für den Webserver zu ändern, rufen Sie die Seite mit den WLAN-Einstellungen auf (Abschnitt~\ref{sec:wifi_settings})
+und tippen Sie auf das Feld \textbf{„KEY 4“} . Dadurch wird die Tastaturseite geöffnet (Abschnitt~\ref{sec:keyboard_page}), auf der Sie Ihr neues Passwort eingeben können.
+Dieses Passwort wird somit sowohl für das Passwort des Access Points als auch für das vierte WLAN-Verbindungsprofil verwendet.
 
 
-\subsection{Datenmonitor-Seite}
+\subsection{Seite „Datenmonitor“}
 \label{sec:web_data_monitor}
 
-Wie in der Einleitung erwähnt, listet diese Seite alle verfügbaren ToM+-Daten auf, geordnet in sieben verschiedenen Tabellen, von denen jede nur die in ihrer Kopfzeile angegebenen Daten enthält. Die Datenverteilung entspricht der in Abschnitt~\ref{sec:icon_list} verwendeten und kann nicht geändert werden.
+Wie in der Einleitung erwähnt, listet diese Seite alle verfügbaren ToM+-Daten auf, die in sieben
+verschiedene Tabellen gegliedert sind, von denen jede nur die in ihrer Kopfzeile angegebenen Daten enthält. Die
+Anordnung der Daten entspricht der in Abschnitt~\ref{sec:icon_list} verwendeten und kann nicht geändert werden.
 
-Diese Werte werden \textbf{alle 10 Sekunden aktualisiert} und sind mit ihrer Maßeinheit gekoppelt. Machen Sie sich keine Sorgen um Ihre Privatsphäre, da Ihre Daten verpackt in einer speziellen Paketstruktur übertragen werden, die schwer abzuhören oder zu knacken ist. Darüber hinaus nutzt der Webserver keine externen Dienste oder MQTT für die Überwachung, sodass Ihre Daten privat und sicher bleiben. Die Seite wird vollständig direkt von der Blackbox generiert und unterliegt keiner weiteren Verarbeitung.
+Diese Werte werden \textbf{alle 10 Sekunden aktualisiert} und sind mit ihrer Maßeinheit verknüpft. Machen Sie sich keine machen Sie sich
+keine Sorgen
+um den Schutz Ihrer Daten, da diese in einer speziellen Paketstruktur übertragen werden, die
+schwer abzufangen oder zu knacken ist. Zudem nutzt der Webserver keine externen
+Dienste oder MQTT für die Überwachung, sodass Ihre Daten privat und sicher bleiben. Die Seite wird vollständig
+direkt von der Blackbox generiert und durchläuft keine weitere Verarbeitung.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/monitor_page1.png}
-    \caption{Datenmonitor-Seite --- obere Tabellen.}
+    \caption{Datenüberwachungsseite – obere Tabellen.}
 \end{figure}
 
-Im zweiten Teil der Seite befinden sich die letzten drei Tabellen, die Dashboard-Daten und Daten des Erweiterungsanschlusses enthalten; die letzte enthält alle Spannungen und Temperaturen der Batterie-Infos. Drücken Sie die vom roten Pfeil angezeigte grüne Taste \textbf{„HOME“}, um zur Startseite zurückzukehren.
+Im zweiten Teil der Seite befinden sich die letzten drei Tabellen, die Dashboard-Daten,
+Daten zu den Erweiterungsanschlüssen sowie – in der letzten Tabelle – alle Informationen zu Batteriespannungen und -temperaturen enthalten.
+Klicken Sie auf die grüne Schaltfläche \textbf{„HOME“} grüne Schaltfläche, auf die der rote Pfeil zeigt, um zur Startseite zurückzukehren.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/monitor_page2.png}
-    \caption{Datenmonitor-Seite --- untere Tabellen.}
+    \caption{Seite „Datenüberwachung“ --– untere Tabellen.}
 \end{figure}
 
 \clearpage
 
-\subsection{Fahrtenverlauf-Seite}
+\subsection{Seite „Fahrtenverlauf“}
 \label{sec:web_trip_history}
 
-Diese enthält die Werte der zuvor in Abschnitt~\ref{sec:trip_page} besprochenen Fahrtenseite. Sie kann bis zu 5 verschiedene Datensätze speichern, und selbst wenn die auf dem Display angezeigten Daten begrenzt sind, werden sie auf der Webserver-Seite alle angezeigt. Die erste Tabelle zeigt Fahrten, jeweils organisiert in fünf Zeilen, und die Kopfzeilen jedes Datensatzes sind in Abschnitt~\ref{sec:icon_list} aufgeführt.
+Hier werden die Werte der zuvor in Abschnitt \ref{sec:trip_page} besprochen wurde.
+Sie kann bis zu 5 verschiedene Datensätze speichern, und auch wenn die angezeigten Daten begrenzt sind,
+zeigt die Webseite des Webservers alle an. Die erste Tabelle zeigt Fahrten, die jeweils in fünf Zeilen gegliedert sind, und
+die Überschriften der einzelnen Datensätze sind in Abschnitt~\ref{sec:icon_list} aufgeführt.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/trip_page1.png}
-    \caption{Fahrtenverlauf-Seite --- Fahrtendaten.}
+    \caption{Seite „Reiseverlauf“ --- Reisedaten.}
 \end{figure}
 
-Die zweite Tabelle zeigt die letzten zwanzig Fahrten (ab der aktuellsten) mit denselben Kopfzeilen wie die erste Tabelle. Sie können zur Startseite zurückkehren, indem Sie die grüne Taste \textbf{„HOME“} direkt unter der zweiten Tabelle drücken.
+Die zweite Tabelle zeigt die letzten zwanzig Reisen (beginnend mit der jüngsten) mit denselben Überschriften wie die erste Tabelle.
+Sie können zur Startseite zurückkehren, indem Sie auf die grüne Schaltfläche \textbf{„HOME“} direkt unterhalb der zweiten Tabelle klicken.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/trip_page2.png}
-    \caption{Fahrtenverlauf-Seite --- Fahrtenhistorie.}
+    \caption{Seite „Reiseverlauf“ --- Reiseverlauf.}
 \end{figure}
 
 
-\subsection{Netzwerkeinstellungsseite}
+\subsection{Seite „Netzwerkeinstellungen“}
 \label{sec:web_network_settings}
 
-Auf dieser Seite können Sie WLAN-Profile und den MQTT-Broker konfigurieren, ohne sich mit der Tastatur des ToM+-Displays abmühen zu müssen. Die Seite ist in zwei Haupttabellen unterteilt, eine für WLAN (Abschnitt~\ref{sec:wifi_settings}) und die andere für MQTT-Einstellungen (Abschnitt~\ref{sec:MQTT}).\\
+Auf dieser Seite können Sie WLAN-Profile und den MQTT-Broker konfigurieren, ohne sich mit
+der Bildschirmtastatur des ToM+ herumschlagen zu müssen. Die Seite ist in zwei Haupttabellen unterteilt, eine für 
+WLAN (Abschnitt~\ref{sec:wifi_settings}) und die andere für die MQTT-Einstellungen (Abschnitt~\ref{sec:MQTT}).\\
 
-Wie Sie im Bild sehen können, enthält die erste alle vier Profile, die zuvor auf dem ToM+ eingestellt wurden, oder, falls nicht, deren Standardwerte. Das Gleiche gilt für Passwörter, die erst sichtbar sind, wenn Sie die Schaltfläche „O“ neben dem Passwort drücken, das Sie sehen möchten. Erneutes Drücken blendet das Passwort wieder aus. Hier können Sie auch das WLAN-Passwort für den Access Point ändern (Abschnitt~\ref{sec:web_change_password}).
+Wie Sie auf dem Bild sehen können, enthält die erste Tabelle alle vier Profile, die
+zuvor auf dem ToM+ eingerichtet wurden, oder, falls dies nicht der Fall ist, deren Standardwerte. Gleiches gilt für Passwörter, 
+die erst sichtbar werden, wenn Sie die Taste „O“ neben dem Passwort drücken, das Sie einsehen möchten. 
+Durch erneutes Drücken wird das Passwort wieder ausgeblendet. 
+Hier können Sie auch das WLAN-Passwort für den Access Point ändern (Abschnitt~\ref{sec:web_change_password}).
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/wifi_page1.png}
-    \caption{Netzwerkeinstellungsseite --- WLAN-Tabelle.}
+    \caption{Seite „Netzwerkeinstellungen“ --- WLAN-Tabelle.}
 \end{figure}
 
-Die beiden Kontrollkästchen erfüllen dieselben Funktionen wie die beiden Schieberegler auf der WLAN-Einstellungsseite des ToM+. Wofür diese verwendet werden, erfahren Sie in Abschnitt~\ref{sec:enable_disable_wifi}. Nach jeder Änderung drücken Sie die Schaltfläche \textbf{„SAVE“}, um Ihre Änderungen zu speichern; andernfalls gehen sie beim Verlassen der Seite verloren.
+Die beiden Kontrollkästchen haben dieselbe Funktion wie die beiden Schieberegler auf der WLAN-Einstellungsseite von ToM+
+. Um zu erfahren, wozu sie dienen, lesen Sie bitte Abschnitt~\ref{sec:enable_disable_wifi}.
+Drücken Sie nach jeder Änderung die Schaltfläche \textbf{„SAVE“}, um Ihre Änderungen zu speichern; andernfalls gehen diese verloren, wenn Sie die Seite verlassen.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/wifi_page3.png}
-    \caption{Netzwerkeinstellungsseite --- WLAN-Statustabelle.}
+    \caption{Seite „Netzwerkeinstellungen“ – Tabelle zum WLAN-Status.}
 \end{figure}
 
-Wenn Ihr ToM+ mit einem Netzwerk verbunden ist, erscheint unterhalb der eben besprochenen Tabelle eine kleine Tabelle, deren Zeilen drei Hauptinformationen enthalten: die SSID, die IP-Adresse des ToM+ und die MAC-Adresse. Diese Daten finden Sie auch auf dem ToM+-Display auf der WLAN-Einstellungsseite, wie zuvor in Abbildung~\ref{fig:wifi_bottom_line} gezeigt.\\
+Wenn Ihr ToM+ mit einem Netzwerk verbunden ist, erscheint unterhalb der soeben
+besprochenen Tabelle eine kleine Tabelle, deren Zeilen drei wesentliche Informationen enthalten: die SSID, die IP-Adresse des ToM+
+und die MAC-Adresse. Diese Daten finden Sie ebenfalls auf dem ToM+-Display auf der
+Seite „WLAN-Einstellungen“, wie zuvor in Abbildung~\ref{fig:wifi_bottom_line} gezeigt.\\
 
-Die zweite Haupttabelle enthält hingegen die Einstellungen des MQTT-Brokers, wie sie zuvor auf dem ToM+-Display konfiguriert wurden, oder, falls nicht, Standardwerte (\textit{z.~B. „broker.address“}). Sie können diese bequem manuell auf dieser Webserver-Seite ändern, was viel komfortabler ist als die Verwendung der Tastatur des ToM+-Displays. Schauen Sie sich im Bild unten an, wie diese Tabelle nach der Konfiguration aussehen kann.
+Die zweite Haupttabelle enthält hingegen die MQTT-Broker-Einstellungen, so wie sie
+zuvor auf dem ToM+-Display konfiguriert wurden – oder, falls dies nicht der Fall war, die Standardwerte (\textit{z. B. „broker.address“}).
+Sie können diese Werte ganz einfach manuell über diese Webserver-Seite ändern, was wesentlich
+bequemer ist als die Verwendung der Tastatur des ToM+-Displays. Sehen Sie sich in der Abbildung unten an,
+wie diese Tabelle nach der Konfiguration aussehen könnte.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/wifi_page2.png}
-    \caption{Netzwerkeinstellungsseite --- MQTT-Tabelle.}
+    \caption{Seite „Netzwerkeinstellungen“ --- MQTT-Tabelle.}
 \end{figure}
 
-Die beiden Kontrollkästchen erfüllen dieselben Funktionen wie die beiden Schieberegler auf der MQTT-Einstellungsseite von ToM+. Wofür sie verwendet werden, erfahren Sie in Abschnitt~\ref{sec:enable_disable_mqtt}. Wenn Ihr ToM+ mit dem MQTT-Broker verbunden ist, enthält die Tabellenkopfzeile den Text \textbf{„(CONNECTED!)“}.\\
+Die beiden Kontrollkästchen haben dieselbe Funktion wie die beiden Schieberegler auf der ToM+-MQTT-
+Einstellungsseite. Um zu erfahren, wozu sie dienen, lesen Sie bitte Abschnitt~\ref{sec:enable_disable_mqtt}.
+Wenn Ihr ToM+ mit dem MQTT-Broker verbunden ist, enthält die wird in der Tabellenüberschrift der Text \textbf{„(VERBUNDEN!)“} angezeigt.\\
 
-Nach jeder Änderung drücken Sie die Schaltfläche \textbf{„SAVE“}, um Ihre Änderungen zu speichern; andernfalls gehen sie beim Verlassen der Seite verloren. Am Ende dieser Seite befindet sich, im Bild durch einen roten Pfeil gekennzeichnet, die grüne Schaltfläche \textbf{„HOME“}, um zur Startseite zurückzukehren.
+Drücken Sie nach jeder Änderung die Schaltfläche \textbf{„SPEICHERN“}, um Ihre Änderungen zu speichern; andernfalls gehen diese verloren, wenn Sie die Seite verlassen.
+Am Ende dieser Seite, im Bild durch einen roten Pfeil markiert, befindet sich die grüne Schaltfläche \textbf{„HOME“}, mit der Sie zur Startseite zurückkehren können.
 
 
-\subsection{Erweiterungseinstellungsseite}
+\subsection{Seite „Erweiterungseinstellungen“}
 \label{sec:web_expansion_settings}
 
-Diese Seite enthält die Konfiguration für PIN1 und PIN2 des Erweiterungsanschlusses sowie die Konfiguration für die rechte Scheibenwischerhebels-Taste. Sie kann sehr nützlich sein, wenn Sie Dinge anpassen und Ihrem ToM+ eine persönliche Note verleihen möchten. Die Pin-Belegung des Erweiterungsanschlusses ist in Abbildung~\ref{fig:expansion_pinout} dargestellt. Da es sich um allgemeine Ein-/Ausgabe-Pins handelt, können Sie den Modus für jeden einzelnen Pin je nach Bedarf wählen.\\
+Diese Seite enthält die Konfiguration für PIN1 und PIN2 des Erweiterungssteckers sowie die Konfiguration für die rechte Scheibenwischerhebel-Taste.
+Dies kann sehr nützlich sein, wenn Sie gerne Anpassungen vornehmen und Ihrem ToM+ eine persönliche Note verleihen möchten.
+Die Pinbelegung des Erweiterungssteckers ist in Abbildung \ref{fig:expansion_pinout} dargestellt. 
+Da es sich um allgemeine Ein-/Ausgangspins handelt, können Sie den Modus jedes einzelnen Pins je nach Ihren Anforderungen auswählen.\\
 
-Wenn Sie den Modus \textbf{„INPUT“} wählen, lauscht diese Leitung auf das im nächsten Feld angegebene Signal. Dies kann beim Einrichten eines sehr spezifischen Alarms sehr nützlich sein, aber wir werden dies später besprechen. Wenn Sie hingegen den Modus \textbf{„OUTPUT“} wählen, überträgt ToM+ das im nächsten Feld angegebene Signal, das HIGH (5V) oder LOW (0V) sein kann, wenn ein Alarm ausgelöst wird. Wie bereits erwähnt, wird dies in Abschnitt~\ref{sec:web_alarm_triggers} vertieft.\\
+Wenn Sie den \textbf{„INPUT“}-Modus wählen, dann empfängt diese Leitung das
+im nächsten Feld angegebene Signal; dies kann bei der Einrichtung eines sehr spezifischen Alarms sehr nützlich sein, aber
+darauf werden wir später noch eingehen. Wählen Sie hingegen den \textbf{„OUTPUT“}-Modus, sendet ToM+
+das im nächsten Feld angegeben ist – dies kann HIGH (5 V) oder LOW
+(0 V) sein –, wenn ein Alarm ausgelöst wird. Wie bereits erwähnt, wird dies jedoch in Abschnitt \ref{sec:web_alarm_triggers} näher erläutert.\\
 
-Seit den neuesten Firmware-Releases wurden den Erweiterungs-PINs neue Modi neben INPUT und OUTPUT hinzugefügt. Schauen wir uns diese genauer an:\\
+Seit den neuesten Firmware-Versionen wurden den Erweiterungs-PINs neben den Modi „INPUT“ und „OUTPUT“ weitere neue Modi hinzugefügt. Sehen wir uns diese genauer an:\\
 
 \begin{itemize}
-    \item \textbf{IR CONTROLLER}: Dieser Modus ermöglicht die Steuerung von ToM+ über eine Infrarot-Fernbedienung.
-    \item \textbf{KEY+ CONTROLLER}: Dieser Modus ermöglicht die Steuerung Ihres ToM+ über eine Infrarot-Drehfernbedienung. Für diese beiden ersten Modi erscheint eine zusätzliche Konfigurationstabelle.
+    \item \textbf{IR CONTROLLER}: In diesem Modus kann das ToM+ über eine Infrarot-Fernbedienung gesteuert werden.
+    \item \textbf{KEY+ CONTROLLER}: In diesem Modus können Sie Ihr ToM+ über eine drahtlose Drehfernbedienung steuern. Für diese beiden ersten Modi wird eine zusätzliche Konfigurationstabelle angezeigt.
     \item \textbf{SERIAL TX}: Ermöglicht die Konfiguration einer seriellen TX-Leitung (noch nicht implementiert).
-    \item \textbf{SERIAL RX}: Ermöglicht die Konfiguration einer seriellen RX-Leitung (noch nicht implementiert).
-    \item \textbf{CTRL BUTTON}: Dieser Modus ermöglicht es Ihnen, die rechte Scheibenwischerhebels-Taste als Steuertaste für Ihre ToM+-Gesten zu verwenden.
+    \item \textbf{SERIAL RX}: Hiermit können Sie eine serielle Empfangsleitung konfigurieren (noch nicht implementiert).
+    \item \textbf{CTRL-TASTE}: In diesem Modus können Sie die rechte Schalthebel-Taste als Steuertaste für Ihre ToM+-Gesten verwenden.
 \end{itemize}
 
 \subsubsection{Standard-OUTPUT-Modus}
 
-Sowohl im \textbf{„OUTPUT“}- als auch im \textbf{„INPUT“}-Modus müssen Sie zuerst zwischen \textit{„Active High“} und \textit{„Active Low“} wählen. Wenn ein Alarm auslöst, wird ein LOW/HIGH-Signal an den PIN gesendet, der als Alarmausgang ausgewählt wurde (entweder PIN1 oder PIN2).
+Sowohl im \textbf{„OUTPUT“}- als auch im \textbf{„INPUT“}-Modus müssen Sie zunächst zwischen
+\textit{„Active High“} und \textit{„Active Low“} wählen. Wenn ein Alarm ausgelöst wird, wird ein LOW-/HIGH-Signal
+an den als Alarmausgang ausgewählten Pin (entweder Pin 1 oder Pin 2) gesendet.
 
-Wenn Sie \textit{„Active High“} wählen, ist das gesendete Signal HIGH (5V) und wird normalerweise auf LOW (0V) gehalten.
+Wenn Sie \textit{„Active High“} auswählen, ist das gesendete Signal HIGH (5 V) und wird normalerweise auf LOW (0 V) gehalten.
 
-Wenn Sie \textit{„Active Low“} wählen, ist das gesendete Signal LOW (0V) und wird normalerweise auf HIGH (5V) gehalten.
+Wenn Sie \textit{„Active Low“} auswählen, ist das gesendete Signal LOW (0 V) und wird normalerweise auf HIGH (5 V) gehalten.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/expansion_page1.png}
-    \caption{Erweiterungseinstellungsseite --- PIN1-Tabelle.}
+    \caption{Seite „Erweiterungseinstellungen“ – Tabelle „PIN1“.}
 \end{figure}
 
-Wie Sie im Bild unten sehen können, können Sie bei Auswahl des Modus \textbf{„OUTPUT“} auch den \textit{„Output Type“} wählen. Dies ist nützlich, wenn Sie ein sehr spezifisches Ausgabegerät haben, das eine zusätzliche Verwaltung erfordert, die nicht auf das Standard-HIGH/LOW-Signal beschränkt ist. Um dies zu erreichen, können Sie aus einer Liste bereits verwalteter Ausgabegeräte wählen, die im Bild oben hervorgehoben sind.\\
+Wie Sie in der Abbildung unten sehen können, können Sie bei Auswahl des Modus \textbf{„OUTPUT“} Modus wählen, können Sie auch
+den \textit{„Ausgangstyp“} auswählen. Dies ist nützlich, wenn Sie über ein sehr spezifisches Ausgabegerät verfügen, das
+eine zusätzliche Verwaltung erfordert, die über das standardmäßige HIGH/LOW-Signal hinausgeht. Dazu
+können Sie aus einer Liste bereits verwalteter Ausgabegeräte wählen, die in der obigen Abbildung hervorgehoben sind.\\
 
-Nach jeder Änderung drücken Sie die Schaltfläche \textbf{„SAVE“}, um Ihre Änderungen zu speichern; andernfalls gehen sie beim Verlassen der Seite verloren. Wenn Sie eine Idee für ein neues Ausgabegerät haben, das für die Community nützlich sein könnte, können Sie mich gerne kontaktieren.\\
+Drücken Sie nach jeder Änderung die Schaltfläche \textbf{„SAVE“}, um Ihre Änderungen zu speichern; andernfalls gehen diese verloren, wenn Sie die Seite verlassen.
+Falls Sie eine Idee für ein neues Ausgabegerät haben, das für die Community nützlich sein könnte, können Sie sich gerne an mich wenden.\\
 
 \begin{itemize}
-    \item \textit{„Normal“}: Dies ist der Standard-OUTPUT-Modus, beschränkt auf HIGH/LOW-Signale.
-    \item \textit{„Charger auxilliary fan“}: Damit können Sie einen Zusatzlüfter steuern. Sie müssen einen Alarm für die Ladegerättemperatur mit einem Schwellenwert einrichten. Wenn dieser beim Laden ausgelöst wird, beginnt der Lüfter mit der Kühlung des Ladegeräts und stoppt erst, wenn die Temperatur unter den ausgewählten Schwellenwert mit einer festen Hysterese fällt (falls erforderlich auch nach dem Ende des Ladevorgangs).
-    \item \textit{„Reku break light“}: Damit können Sie eine Relaisplatine anschließen, die das Bremslicht steuert, um es im Rekuperationsmodus einzuschalten. Dies ist besonders nützlich, wenn Ihr Twizy getunt ist, um die Rekuperationsleistung zu erhöhen.
-    \item \textit{„Auxilliary charger“}: Damit können Sie ein Zusatzladegerät mit einem Alarm für SOC oder Batteriespannung steuern. Es ermöglicht den Anschluss einer Relaisplatine, die bei Bedarf ein Zusatzladegerät aktiviert oder deaktiviert. Es schaltet sich nur im Lademodus mit einer kleinen festen Verzögerung ein.
-    \item \textit{„Motor fan“}: Damit können Sie einen Motorlüfter mit einem Alarm für die Motortemperatur steuern. Es funktioniert genauso wie der Ladegerätlüfter mit dem Unterschied, dass dies nur während der Fahrt funktioniert.
+    \item \textit{„Normal“}: Dies ist der Standard-OUTPUT-Modus, der auf HIGH/LOW-Signale beschränkt ist.
+    \item \textit{„Ladegerät-Zusatzlüfter“}: Hiermit können Sie einen Zusatzlüfter steuern. 
+    Sie müssen einen Alarm für die Ladegerätstemperatur mit einem Schwellenwert einstellen. Wird dieser dann während des Ladevorgangs 
+    ausgelöst, beginnt der Lüfter mit der Kühlung des Ladegeräts und stoppt erst, wenn die Temperatur
+    mit einer festen Hysterese unter den gewählten Schwellenwert fällt (bei Bedarf auch nach Beendigung des Ladevorgangs).
+    \item \textit{„Reku-Bremslicht“}: Hiermit können Sie eine Relaisplatine anschließen, die
+    das Bremslicht steuert, um es im Regenerationsmodus einzuschalten. Dies ist besonders
+    nützlich, wenn Ihr Twizy so getunt ist, dass die Regenerationsleistung erhöht ist.
+    \item \textit{„Zusatzladegerät“}: Hiermit können Sie ein Zusatzladegerät mit einer
+    Alarmfunktion bei SOC oder Batteriespannung steuern. Sie können eine Relaisplatine anschließen, die ein
+    Zusatzladegerät bei Bedarf ein- oder ausschaltet. Es schaltet sich nur im Lademodus mit einer geringen festen Verzögerung ein.
+    \item \textit{„Motorlüfter“}: Hiermit können Sie einen Motorlüfter über einen Alarm bei Erreichen einer bestimmten Motortemperatur steuern.
+    Die Funktionsweise entspricht der des Ladegerät-Lüfters, mit dem Unterschied, dass dieser nur während der Fahrt in Betrieb ist.
 \end{itemize}
 
 \subsubsection{Standard-INPUT-Modus}
 
-Wie Sie im Bild unten sehen können, erscheinen bei Auswahl des Modus \textbf{„INPUT“} keine zusätzlichen Tabellen. Dieser Modus stützt sich stark auf die Alarmkonfiguration und Auslöser; lesen Sie daher bitte Abschnitt~\ref{sec:web_alarm_triggers}. Wir haben in der zweiten Tabelle den Modus \textbf{„INPUT“} gewählt, der genauso funktioniert, aber für PIN2 des Erweiterungsanschlusses vorgesehen ist.
+Wie Sie in der Abbildung unten sehen können, werden bei Auswahl des \textbf{„INPUT“}-Modus keine zusätzlichen Tabellen angezeigt.
+Dieser Modus stützt sich in hohem Maße auf die Alarmkonfiguration und Auslöser, beachten Sie daher bitte Abschnitt~\ref{sec:web_alarm_triggers}.
+In der zweiten Tabelle haben wir den Modus \textbf{„INPUT“} ausgewählt; dieser funktioniert auf dieselbe Weise, ist jedoch für PIN2 des Erweiterungssteckers vorgesehen.
 
-Nach jeder Änderung drücken Sie die Schaltfläche \textbf{„SAVE“}, um Ihre Änderungen zu speichern; andernfalls gehen sie beim Verlassen der Seite verloren.
+Drücken Sie nach jeder Änderung die Schaltfläche \textbf{„SAVE“}, um Ihre Änderungen zu speichern, da diese sonst beim Verlassen der Seite verloren gehen.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/expansion_page3.png}
-    \caption{Erweiterungseinstellungsseite --- PIN2-Tabelle.}
+    \caption{Seite „Erweiterungseinstellungen“ --- Tabelle PIN2.}
 \end{figure}
 
-\subsubsection{IR CONTROLLER-Modus}
+\subsubsection{IR-CONTROLLER-Modus}
 
-Zunächst benötigen Sie einen IR-Empfänger (entweder einen Sensor oder ein Modul wie das im ersten Bild), der an einen der PINs der Erweiterungsplatine angeschlossen wird. Dieser Modus ist für die Verwendung mit einer allgemeinen IR-Fernbedienung vorgesehen, aber ich persönlich empfehle die im zweiten Bild unten gezeigte, die speziell für die Anbringung am Lenkrad entwickelt wurde.
+Zunächst benötigen Sie einen IR-Empfänger (entweder einen Sensor oder ein Modul wie das auf dem ersten Bild),
+der an einen der Pins der Erweiterungskarte angeschlossen wird.
+Dieser Modus ist für die Verwendung mit einer gängigen IR-Fernbedienung vorgesehen, doch ich persönlich empfehle
+die auf dem zweiten Bild gezeigte Fernbedienung unten, die speziell für die Anbringung am Lenkrad konzipiert wurde.
 
 \begin{figure}[ht]
     \centering
@@ -522,256 +751,366 @@ Zunächst benötigen Sie einen IR-Empfänger (entweder einen Sensor oder ein Mod
         \caption{IR-Empfängermodul.}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.48\textwidth}
+    \begin{subfigure}[t]{0,48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/ir_controller_photo.jpg}
-        \caption{IR-Fernbedienung für das Lenkrad.}
+        \caption{IR-Steuerungsfernbedienung für das Lenkrad.}
     \end{subfigure}
 \end{figure}
 
-Wenn Sie den Modus \textbf{„IR CONTROLLER“} für die Tabelle von PIN1 oder PIN2 wählen, denken Sie daran, die Schaltfläche \textbf{„SAVE“} zu drücken, um Ihre Änderungen zu speichern. Sobald Sie gespeichert haben, wird die Seite neu geladen und unten erscheint eine zusätzliche Tabelle, die Sie im folgenden Bild sehen können.
+Wenn Sie den Modus \textbf{„IR CONTROLLER“} für die Tabelle „PIN1“ oder „PIN2“ auswählen, denken Sie bitte daran,
+die Schaltfläche \textbf{„SAVE“} zu betätigen, um Ihre Änderungen zu speichern. Sobald Sie gespeichert haben, wird die Seite
+neu geladen und eine zusätzliche Tabelle erscheint darunter; Sie können dies in der Abbildung unten sehen.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/ir_settings.png}
-    \caption{Erweiterungseinstellungsseite --- IR-Einstellungstabelle.}
+    \caption{Seite „Erweiterte Einstellungen“ --- Tabelle „IR-Einstellungen“.}
 \end{figure}
 
-Diese Tabelle hilft Ihnen, jede Taste der IR-Fernbedienung mit dem entsprechenden IR-Code zu koppeln. Im oberen Teil der Tabelle befindet sich ein kleiner Textbereich, den Sie als \textbf{IR-Code-Empfangsmonitor} verwenden können, um IR-Codes Ihrer Fernbedienung nach dem Anschließen des IR-Empfängers in Echtzeit zu testen.\\
+Diese Tabelle hilft Ihnen dabei, jede Taste der IR-Fernbedienung mit dem entsprechenden IR-Code zu koppeln.
+Im oberen Teil der Tabelle befindet sich ein kleiner Textbereich, den Sie als \textbf{IR-Code-Empfänger-Modus}
+verwenden können,“, um nach dem Anschließen des IR-Empfängers die IR-Codes Ihrer Fernbedienung in Echtzeit zu testen.\\
 
-Damit können Sie die anderen Felder entsprechend ausfüllen. Das letzte ist besonders wichtig und ist im Grunde der Code, den die Fernbedienung sendet, wenn Sie eine Taste gedrückt halten. Vergessen Sie danach nicht, die Schaltfläche \textbf{„SAVE“} zu drücken, um Ihre Änderungen zu speichern; andernfalls gehen sie beim Verlassen der Seite verloren. Schließlich befindet sich daneben eine nützliche Schaltfläche \textbf{„Default“}, um Ihre Änderungen bei Bedarf einfach zurückzusetzen.
+Auf diese Weise können Sie die anderen Felder entsprechend ausfüllen. Das letzte Feld ist besonders wichtig
+und enthält im Grunde den Code, den die Fernbedienung sendet, wenn Sie eine Taste gedrückt halten.
+Vergessen Sie anschließend nicht, auf die Schaltfläche \textbf{„SAVE“} zu drücken, um Ihre Änderungen zu speichern; andernfalls gehen diese verloren, wenn Sie die Seite verlassen.
+Zu guter Letzt befindet sich daneben eine nützliche Schaltfläche \textbf{„Default“}, mit der Sie Ihre Änderungen bei Bedarf ganz einfach rückgängig machen können.
 
 \subsubsection{KEY+ CONTROLLER-Modus}
 
-Dieser Modus ist dem eben besprochenen sehr ähnlich, ist jedoch für die Verwendung mit einem anderen Controller-Typ vorgesehen (dem im Bild unten). Es handelt sich um einen drahtlosen Bluetooth-Drehcontroller für Autoradios, der je nachdem, wie schnell/langsam Sie den äußeren Ring drehen, verschiedene Aktionen ausführt. Und natürlich hat er auch noch einige Tasten im inneren Teil.\\
+Dieser Modus ist dem soeben besprochenen sehr ähnlich, ist jedoch für die Verwendung mit
+einem anderen Controller-Typ vorgesehen (dem auf dem Bild unten gezeigten). Es handelt sich um einen kabellosen 
+Drehregler für Car-Audio-Systeme, der je nachdem,
+wie schnell oder langsam Sie den äußeren Ring drehen, unterschiedliche Aktionen ausführt. Und natürlich
+verfügt er im inneren Bereich auch über einige weitere Tasten.\\
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.4\textwidth]{figures/keyp_controller.jpg}
-    \caption{Drahtloser Bluetooth-Drehcontroller.}
+    \caption{Drahtloser Bluetooth-Drehregler.}
 \end{figure}
 
-Wenn Sie den Modus \textbf{„KEY+ CONTROLLER“} für die Tabelle von PIN1 oder PIN2 wählen, denken Sie daran, die Schaltfläche \textbf{„SAVE“} zu drücken, um Ihre Änderungen zu speichern. Sobald Sie gespeichert haben, wird die Seite neu geladen und unten erscheint eine zusätzliche Tabelle, die Sie im Bild unten sehen können.
+Wenn Sie den Modus \textbf{„KEY+ CONTROLLER“} entweder für die PIN1- oder die PIN2-Tabelle auswählen, denken Sie bitte daran,
+die die Schaltfläche \textbf{„SAVE“} zu drücken, um Ihre Änderungen zu speichern. Sobald Sie gespeichert haben, wird die Seite
+neu geladen und eine zusätzliche Tabelle erscheint darunter; Sie können dies in der Abbildung unten sehen.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/keyp_settings.png}
-    \caption{Erweiterungseinstellungsseite --- KEY+-Einstellungstabelle.}
+    \caption{Seite „Erweiterungseinstellungen“ – Tabelle mit KEY+-Einstellungen.}
 \end{figure}
 
-Dies funktioniert genauso wie die IR-Einstellungstabelle. Der Hauptunterschied besteht darin, was ToM+ vom Erweiterungsanschluss liest, was kein IR-Code mehr ist, sondern eine Spannung.
+Dies funktioniert genauso wie die IR-Einstellungstabelle. Der Hauptunterschied besteht darin, was ToM+
+vom Erweiterungsanschluss ausliest: Es handelt sich nicht mehr um einen IR-Code, sondern um eine Spannung.
 
-Im Bild oben sind die Standardwerte dargestellt, die von \textit{0} bis \textit{3,3V} reichen und ohne Dezimalpunkt geschrieben werden. Beispiel: \textit{018} bedeutet \textit{0,18V} und \textit{157} bedeutet \textit{1,57V} usw. ToM+ hat eine Toleranz von \textit{0,05V} auf die Eingabewerte, um Spannungsschwankungen zu vermeiden.\\
+In der obigen Abbildung sind die Standardwerte dargestellt, die von \textit{0} bis \textit{3,3 V}
+, die ohne Dezimalpunkt angegeben sind. Beispielsweise bedeutet \textit{018} \textit{0,18 V}
+und \textit{157} entspricht \textit{1,57 V} und so weiter.
+ToM+ weist bei den Eingabewerten eine Toleranz von \textit{0,05 V} auf, um Spannungsschwankungen zu vermeiden.\\
 
-Vergessen Sie danach nicht, die Schaltfläche \textbf{„SAVE“} zu drücken, um Ihre Änderungen zu speichern; andernfalls gehen sie beim Verlassen der Seite verloren. Schließlich befindet sich daneben eine nützliche Schaltfläche \textbf{„Default“}, um Ihre Änderungen bei Bedarf einfach zurückzusetzen.
+Denken Sie anschließend daran, auf die Schaltfläche \textbf{„SAVE“} zu klicken, um Ihre Änderungen zu speichern; andernfalls gehen diese verloren, wenn
+Sie die Seite verlassen. Schließlich befindet sich daneben eine nützliche Schaltfläche \textbf{„Standard“} befindet sich direkt daneben, mit der Sie Ihre
+Änderungen bei Bedarf ganz einfach rückgängig machen können.
 
-\subsubsection{CTRL BUTTON-Modus}
+\subsubsection{CTRL-TASTE-Modus}
 \label{sec:web_wiper_stalk}
 
-Diese letzte Tabelle enthält die Konfiguration, die erforderlich ist, damit die mitgelieferte rechte \textbf{Scheibenwischerhebels-Taste} (Abbildung~\ref{fig:wiper_stalk_button}) funktioniert. Sie können diese Taste verwenden, um durch die gesamte ToM+-Benutzeroberfläche zu navigieren, ohne den Touchscreen zu benutzen, und zwar mit diesen drei Haupt-\textbf{Aktionen}: \textit{„Browse items“}, \textit{„Change page“}, \textit{„Select-deselect“}. Um dies zu erreichen, gibt es drei Arten von \textbf{Tastendrücken}: \textit{„Short“}, \textit{„Medium“}, \textit{„Long“}.\\
+Diese letzte Tabelle enthält die Konfiguration, die erforderlich ist, damit die bereitgestellte rechte \textbf{Scheibenwischerhebel-Taste} (Abbildung~\ref{fig:wiper_stalk_button}) funktioniert.
+Mit dieser Taste können Sie durch die gesamte ToM+-Benutzeroberfläche navigieren, ohne den Touchscreen zu verwenden, und zwar mit
+diesen drei Hauptfunktionen: \textit{„Elemente durchblättern“}, \textit{„Seite wechseln“}, \textit{„Auswählen/Abwählen“}.
+Um dies zu erreichen, gibt es drei Arten von \textbf{Tastenbetätigungen}: \textit{„Kurz“}, \textit{„Mittel“}, \textit{„Lang“}.\\
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/expansion_page2.png}
-    \caption{Erweiterungseinstellungsseite --- Tabelle für Scheibenwischerhebels-Taste.}
+    \caption{Seite „Erweiterte Einstellungen“ --- Tabelle der Schalter am Scheibenwischerhebel.}
 \end{figure}
 
-Im ersten Teil dieser Tabelle können Sie diese Aktionen mit den von Ihnen bevorzugten Gesten neu anordnen.\\
+Im ersten Teil dieser Tabelle können Sie diese Aktionen also entsprechend Ihren bevorzugten Gesten neu anordnen.\\
 
 \begin{itemize}
-    \item \textit{„Browse items“}: Bewegt eine kleine weiße Markierung neben die aktuell ausgewählten Daten.
-    \item \textit{„Change page“}: Ermöglicht das Durchblättern der in der Rotation vorhandenen Seiten.
-    \item \textit{„Select-deselect“}: Simuliert das Tippen auf die ausgewählten Daten (z.~B. Wechsel von Hintergrund zu Vordergrund).\\
+    \item \textit{„Elemente durchsuchen“}: Hiermit wird ein kleiner weißer Marker neben die aktuell ausgewählten Daten verschoben.
+    \item \textit{„Seite wechseln“}: Hiermit können Sie durch die in der Rotation vorhandenen Seiten blättern.
+    \item \textit{„Auswählen/Auswahl aufheben“}: Hiermit wird das Antippen der ausgewählten Daten simuliert (z. B. wechselt es vom Hintergrund in den Vordergrund).\\
 \end{itemize}
 
-Im zweiten Teil der Tabelle können Sie die \textbf{Seiten auswählen, die Sie überspringen möchten}, wenn Sie mit der Geste \textit{„Change page“} durch die verfügbaren Seiten blättern. Wenn ich beispielsweise die Batterie-Info-Seite beim Blättern mit der Taste nicht überwachen möchte, deaktiviere ich sie einfach, und sie wird aus der Rotation entfernt.\\
+Im zweiten Teil der Tabelle können Sie die \textbf{Seiten auswählen, die Sie überspringen möchten}, wenn
+Sie durch die verfügbaren Seiten blättern und dabei die Geste \textit{„Seite wechseln“} wiederholen. Wenn ich beispielsweise
+wenn ich die Info-Batterieseite beim Durchblättern mit der Schaltfläche nicht überwachen möchte, markiere ich sie einfach
+und sie wird aus der Rotation entfernt.\\
 
-Nach jeder Änderung drücken Sie die Schaltfläche \textbf{„SAVE“}, um Ihre Änderungen zu speichern; andernfalls gehen sie beim Verlassen der Seite verloren. Am Ende dieser Seite befindet sich, im Bild durch einen roten Pfeil gekennzeichnet, die grüne Schaltfläche \textbf{„HOME“}, um zur Startseite zurückzukehren.
+Drücken Sie nach jeder Änderung die \textbf{„SPEICHERN“}-Schaltfläche, um Ihre Änderungen zu speichern; andernfalls gehen diese verloren, wenn Sie die Seite verlassen.
+Am Ende dieser Seite, im Bild durch einen roten Pfeil markiert, befindet sich die grüne \textbf{„HOME“}-Schaltfläche, mit der Sie zur Startseite zurückkehren können.
 
 \clearpage
 
-\subsection{Alarmauslöser-Seite}
+\subsection{Seite „Alarmauslöser“}
 \label{sec:web_alarm_triggers}
 
-Wenn auf ToM+ etwas passiert und Sie darüber benachrichtigt werden möchten, können Sie auf dieser Seite auswählen, wie und wann Sie benachrichtigt werden möchten. Sie können bis zu \textbf{zehn Alarme} gleichzeitig laufen lassen, und ToM+ überprüft ständig den Status jeder Bedingung. Im Bild ist die erste Tabelle dargestellt, in der Sie derzeit aktive Alarme sehen können.
+Wenn in ToM+ etwas passiert und Sie darüber benachrichtigt werden möchten, können Sie
+auf dieser Seite festlegen, wie und wann Sie benachrichtigt werden möchten. Sie können bis zu \textbf{zehn
+Alarme} gleichzeitig aktiv haben, und ToM+ überprüft ständig den Status jeder Bedingung.
+In der Abbildung ist die erste Tabelle dargestellt, in der Sie die derzeit aktiven Alarme sehen können.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/alarm_page1.png}
-    \caption{Alarmseite --- Liste bestehender Alarme.}
+    \caption{Alarmseite --- Tabelle mit der Liste der bestehenden Alarme.}
 \end{figure}
 
-Die Kopfzeilen der Tabellen sind praktisch die Elemente der Bedingung, auf die ToM+ lauscht.\\
+Die Überschriften der Tabellen entsprechen praktisch den Elementen der Bedingung, auf die ToM+ achtet.\\
 
 \begin{itemize}
-    \item \textbf{ITEM}: Dies sind die zu prüfenden Daten, ausgewählt aus der Liste in Abschnitt~\ref{sec:icon_list}.
-    \item \textbf{CONDITION}: Dies ist das Operatorzeichen, das beim Vergleichen der Werte verwendet wird.
-    \item \textbf{VALUE}: Dies ist ein vorzeichenbehafteter Ganzzahlwert, der als zweiter Begriff des Vergleichs verwendet wird.
-    \item \textbf{ACTION}: Dies ist die Aktion, die ausgeführt wird, wenn der Alarm auslöst. Siehe die nächste Tabelle.
-    \item \textbf{SEND-MQTT}: Dies ist ein binäres Feld; wenn es angekreuzt ist, wird eine Nachricht auf dem MQTT-Topic veröffentlicht.
-    \item \textbf{COMMAND}: Dies ist eine optionale Zeichenfolge, die als zusätzlicher Befehl gesendet werden kann.
+    \item \textbf{ITEM}: Hierbei handelt es sich um die zu überprüfenden Daten, die aus der Liste in Abschnitt~\ref{sec:icon_list} ausgewählt werden.
+    \item \textbf{CONDITION}: Dies ist das Vergleichszeichen, das beim Abgleich der Werte verwendet wird.
+    \item \textbf{VALUE}: Hierbei handelt es sich um einen vorzeichenbehafteten ganzzahligen Wert, der als zweiter Term des Vergleichs verwendet wird.
+    \item \textbf{ACTION}: Dies ist die Aktion, die ausgeführt wird, wenn der Alarm ausgelöst wird. Siehe die nächste Tabelle.
+    \item \textbf{SEND-MQTT}: Dies ist ein binäres Feld; wenn es angekreuzt ist, wird eine Nachricht zum MQTT-Thema veröffentlicht.
+    \item \textbf{COMMAND}: Dies ist eine optionale Zeichenkette, die als zusätzlicher Befehl gesendet werden soll.
 \end{itemize}
 \  \\
-Der erste Alarmauslöser prüft den Batterieverbrauch und aktiviert PIN2 der Erweiterungsplatine, wenn er größer als 35A ist. In diesem spezifischen Beispiel wird er verwendet, um das hintere Bremslicht einzuschalten, wenn die Rekuperation ausreicht, um den Twizy zu verlangsamen.\\
+Der erste Alarmauslöser überprüft den Batterieverbrauch und aktiviert den PIN2-Pin der 
+Erweiterungsplatine, sofern dieser größer als 35 A ist. In diesem konkreten Beispiel wird damit
+das hintere Bremslicht eingeschaltet, wenn die Regeneration ausreicht, um den Twizy abzubremsen.\\
 
-Der zweite Alarmauslöser prüft den Batterie-SOC und zeigt auf dem Display ein einfaches Pop-up an, das benachrichtigt, dass der Batteriepegel niedriger als 30\% ist. Durch Aktivieren des Feldes \textit{„Change page“} habe ich eine weitere Option hinzugefügt, die ToM+ anweist, eine MQTT-Nachricht zu senden, wenn dieser Alarm auslöst.\\
+Der zweite Alarmauslöser überprüft den Ladezustand (SOC) der Batterie und zeigt auf dem Display ein einfaches Popup-Fenster an,
+das darauf hinweist, dass der Ladezustand der Batterie unter 30\%. Durch Aktivieren des Feldes \textit{„Seite wechseln“}
+habe ich eine weitere Option hinzugefügt, die ToM+ anweist, eine MQTT-Nachricht zu senden, wenn dieser Alarm ausgelöst wird.\\
 
-Der dritte Alarmauslöser prüft den Batterie-SOC und führt nach Abschluss des Ladevorgangs (z.~B. gleich 97\%) dasselbe wie zuvor aus, führt jedoch einen zusätzlichen Befehl aus. Der Befehl \textit{cmd/charge/Power 0} deaktiviert einen Tasmota WLAN-Schalter, der den Twizy-Stecker mit der Wandsteckdose verbindet.
+Der dritte Alarmauslöser überprüft den Ladezustand (SOC) der Batterie und sobald der Ladevorgang abgeschlossen ist,
+z. B. bei 97\%, führt er dieselben Schritte wie zuvor aus, führt jedoch zusätzlich einen Befehl aus. Der
+Befehl \textit{cmd/charge/Power 0} deaktiviert einen Tasmota-WLAN-Schalter, der den
+Twizy-Stecker mit der Wandsteckdose verbindet.
 
-Die Funktion der Spalte \textbf{„COMMAND“} ist also sehr nützlich und ermöglicht es Ihnen, Ihr ToM+ in Ihr IoT-Haus einzubinden. Siehe Anhang~\ref{apx:tasmota} für detaillierte Konfigurationen.\\
+Die Funktion der Spalte \textbf{„COMMAND“} ist also sehr nützlich und ermöglicht es Ihnen, 
+Ihr ToM+ in Ihr IoT-Haus zu integrieren. Detaillierte Konfigurationen finden Sie im Anhang~\ref{apx:tasmota} für detaillierte Konfigurationen.\\
 
-Wenn Sie einen bestimmten Alarm entfernen möchten, müssen Sie nur die Schaltfläche \textbf{„Remove“} in der letzten Spalte drücken.\\
+Wenn Sie einen bestimmten Alarm entfernen möchten, müssen Sie lediglich auf die Schaltfläche \textbf{„Entfernen“} in der letzten Spalte klicken.\\
 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/alarm_page2.png}
-    \caption{Alarmseite --- Tabelle zum Hinzufügen neuer Alarme.}
+    \caption{Alarmseite --- Tabelle für neue Alarme hinzufügen.}
 \end{figure}
 
-In der zweiten Tabelle können Sie der eben besprochenen Liste einen neuen Alarm hinzufügen. Zunächst müssen Sie das \textbf{ITEM} aus allen in Abschnitt~\ref{sec:icon_list} aufgeführten verfügbaren Daten auswählen. In diesem Auswahlfeld sind die Elemente wie in der eben zitierten Liste organisiert. Wählen Sie dann die \textbf{CONDITION}, d.~h. den Operator des Vergleichs, zwischen \textit{„lower“}, \textit{„greater“} oder \textit{„equal“}. Als Nächstes ist der Referenz-\textbf{VALUE} an der Reihe, eine vorzeichenbehaftete Ganzzahl, der rechte Begriff des Vergleichs.\\
+In der zweiten Tabelle können Sie der soeben besprochenen Liste einen neuen Alarm hinzufügen.
+Zunächst müssen Sie den \textbf{PUNKT} aus allen verfügbaren Daten auswählen, die in Abschnitt \ref{sec:icon_list} aufgeführt sind.
+In diesem Auswahlfeld sind die Einträge so angeordnet wie in der soeben zitierten Liste.
+Wählen Sie anschließend die \textbf{BEDINGUNG}, d. h. den Vergleichsoperator, aus den Optionen \textit{„kleiner“}, \textit{„größer“} oder \textit{„gleich“}.
+Als Nächstes ist der Referenzwert \textbf{VALUE} an der Reihe, eine vorzeichenbehaftete Ganzzahl, die den rechten Term des Vergleichs darstellt.\\
 
-Nehmen wir uns etwas Zeit, um alle möglichen \textbf{ACTION}s zu erklären.\\
+Nehmen wir uns etwas Zeit, um alle möglichen \textbf{ACTION}s zu erläutern.\\
 
 \begin{itemize}
-    \item \textit{pop-up}: Ein gelbes Pop-up, das den Elementwert mitteilt, erscheint in der Mitte des Bildschirms. Um es auszublenden, drücken Sie es einmal. Ein Pop-up-Beispiel sehen Sie im ersten Bild unten.
-    \item \textit{pop-up 10 sec}: Ein gelbes Pop-up, das den Elementwert mitteilt, bleibt zehn Sekunden lang auf dem Bildschirm.
-    \item \textit{silent}: Es finden keine sichtbaren Aktionen statt: Wird häufig verwendet, um nur MQTT-Nachrichten zu senden.
-    \item \textit{icon x fix}: Symbol x (\textit{wobei x 2, 3, 4 oder 5 sein kann}) leuchtet auf. Siehe Abbildung~\ref{fig:alarm_icons2} für Alarmsymbole.
-    \item \textit{icon x blink}: Symbol x (\textit{wobei x 2, 3, 4 oder 5 sein kann}) beginnt zu blinken.
-    \item \textit{pin1 active}: PIN1 der Erweiterungsplatine wird aktiviert (LOW oder HIGH je nach Pegel, der in den Erweiterungseinstellungen in Abschnitt~\ref{sec:web_alarm_triggers} gewählt wurde).
-    \item \textit{pin2 active}: PIN2 der Erweiterungsplatine wird aktiviert. In diesem Beispiel wurde PIN2 als INPUT-Modus eingestellt, ist also ausgegraut, da er keine OUTPUT-Aktion darstellen kann.
+    \item \textit{Pop-up}: Ein gelbes Pop-up, das den Wert des Elements anzeigt, erscheint in der Mitte des Bildschirms. Um es auszublenden, tippen Sie einfach einmal darauf. Ein Beispiel für ein Pop-up sehen Sie im ersten Bild unten.
+    \item \textit{Pop-up 10 Sek.}: Ein gelbes Pop-up, das den Wert des Elements anzeigt, bleibt zehn Sekunden lang auf dem Bildschirm.
+    \item \textit{still}: Es finden keine sichtbaren Aktionen statt: Diese Option wird üblicherweise verwendet, um ausschließlich MQTT-Nachrichten zu versenden.
+    \item \textit{Symbol x leuchtet}: Das Symbol x (\textit{wobei x 2, 3, 4 oder 5 sein kann}) leuchtet auf. Siehe Abbildung~\ref{fig:alarm_icons2} für Alarmsymbole.
+    \item \textit{Symbol x blinkt}: Das Symbol x (\textit{wobei x 2, 3, 4 oder 5 sein kann}) beginnt zu blinken.
+    \item \textit{pin1 active}: PIN1 der Erweiterungsplatine wird aktiviert (LOW oder HIGH, je nach dem in den Erweiterungseinstellungen in Abschnitt~\ref{sec:web_alarm_triggers}).
+    \item \textit{Pin 2 aktiv}: Pin 2 der Erweiterungsplatine wird aktiviert. In diesem Beispiel wurde Pin 2 auf den INPUT-Modus eingestellt, daher ist er ausgegraut, da er keine OUTPUT-Aktion darstellen kann.
 \end{itemize}
 \  \\
 \begin{figure}[ht]
     \centering
 
-    \begin{subfigure}[t]{0.48\textwidth}
+    \begin{subfigure}[t]{0,48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/pop-up.PNG}
-        \caption{Pop-up: Batterietemp > 89°C.}
+        \caption{Popup: Batterietemperatur > 89 °C.}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.48\textwidth}
+    \begin{subfigure}[t]{0,48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/alarm_icons.png}
         \caption{Alarmsymbole (2, 3, 4 und 5).}\label{fig:alarm_icons2}
     \end{subfigure}
 \end{figure}
 
-Das nächste Feld ist das binäre \textbf{SEND MQTT}-Flag: Wenn aktiviert, veröffentlicht ToM+ eine MQTT-Nachricht auf dem konfigurierten MQTT-Out-Topic (z.~B. TOMout, siehe Abschnitt~\ref{sec:mqtt_connection}), wenn der Alarm als zusätzliche Benachrichtigung auslöst. Zu guter Letzt gibt es das Textfeld \textbf{AUX CMD}, das einen zusätzlichen Befehl enthält, der über MQTT an andere IoT-Geräte gesendet werden kann. Siehe Anhang~\ref{apx:tasmota} für detaillierte Konfigurationen eines Tasmota-Schalters als Beispiel.\\
+Das nächste Feld ist das binäre Flag \textbf{SEND MQTT}: Ist es aktiviert, veröffentlicht ToM+ eine MQTT-
+Meldung auf dem konfigurierten MQTT-Out-Thema (z. B. TOMout, siehe Abschnitt~\ref{sec:mqtt_connection})
+, wenn der Alarm ausgelöst wird, und zwar als zusätzliche Benachrichtigung. Zu guter Letzt gibt es noch das Textfeld \textbf{AUX CMD},
+das einen zusätzlichen Befehl enthält, der über MQTT an andere IoT-Geräte gesendet werden soll.
+Detaillierte Konfigurationsbeispiele für einen Tasmota-Schalter finden Sie im Anhang~\ref{apx:tasmota}.\\
 
-Schließlich können Sie Ihren Alarm hinzufügen, indem Sie die Schaltfläche \textbf{„Add to list“} drücken. Die Seite wird automatisch neu geladen und der Alarmauslöser wird an die Liste in der ersten Tabelle angehängt.
+Abschließend können Sie Ihren Alarm hinzufügen, indem Sie auf die Schaltfläche \textbf{„Zur Liste hinzufügen“} klicken. Die Seite
+wird automatisch neu geladen, und der Alarmauslöser wird der Liste in der ersten Tabelle hinzugefügt.
 
-Drücken Sie am Ende der Seite die grüne Taste \textbf{„HOME“}, um zur Startseite zurückzukehren.
+Klicken Sie auf die grüne Schaltfläche \textbf{„HOME“} am Ende der Seite, um zur Startseite zurückzukehren.
 
 
-\subsection{Alarmsystem-Protokollseite}
+\subsection{Alarmprotokollseite}
 \label{sec:web_alarms_log}
 
-Diese Seite speichert die letzten 21 Alarmauslösungen und erfüllt dieselbe Funktion wie die Protokollseite von ToM, wie in Abschnitt~\ref{sec:alarm_log} gezeigt. Sie können unerwünschte Datensätze auch anzeigen und entfernen, indem Sie die Schaltfläche \textbf{„Remove“} neben dem Datensatz drücken, den Sie dauerhaft löschen möchten (auch auf dem ToM+-Display).\\
+Diese Seite speichert die letzten 21 Alarmauslöser und erfüllt dieselbe Funktion wie die Protokollseite
+von ToM, wie in Abschnitt~\ref{sec:alarm_log} gezeigt. Sie können zudem alle 
+unerwünschten Einträge einsehen und entfernen, indem Sie die Schaltfläche \textbf{„Entfernen“} neben dem Eintrag betätigen, den Sie
+dauerhaft löschen möchten (auch auf dem ToM+-Display).\\
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{figures/alarm_log1.png}
-    \caption{Tabelle der Alarmlogbuch-Seite.}
+    \caption{Tabelle auf der Alarmprotokollseite.}
 \end{figure}
 
-Offensichtlich enthält die Tabelle das \textbf{ITEM} und den \textbf{VALUE}, die den Alarm ausgelöst haben. Es gibt jedoch zusätzliche Felder mit Datum und Uhrzeit, wann die Auslösung stattfand. Drücken Sie dann wie gewohnt am Ende der Seite die grüne Schaltfläche \textbf{„HOME“}, um zur Startseite zurückzukehren.
+Die Tabelle enthält natürlich die Felder \textbf{ITEM} und \textbf{VALUE}, die den Alarm ausgelöst haben.
+Es gibt jedoch zusätzliche Felder mit Datum und Uhrzeit des Auslösungszeitpunkts.
+Drücken Sie anschließend wie gewohnt die grüne Taste \textbf{„HOME“} am Ende der Seite, um zur Startseite zurückzukehren.
 
 
-\subsection{OTA-Update \& Einstellungsseite}
+\subsection{Seite „OTA-Update & Einstellungen“}
 \label{sec:web_ota_update}
 
-Auf dieser Seite können Sie die \textbf{Firmware spontan über die Weboberfläche aktualisieren}, ohne sich wie in älteren Versionen mit dem Flash-Tool herumschlagen zu müssen. Diese neue Funktion spart Zeit und ist viel benutzerfreundlicher. Stellen Sie daher sicher, dass Sie immer die neueste Version der Firmware installiert haben, um Zugriff auf die neuesten Funktionen und Verbesserungen zu haben!
+Auf dieser Seite können Sie \textbf{die Firmware} direkt über die Weboberfläche aktualisieren, ohne sich
+wie bei den älteren Versionen mit dem Flash-Tool herumschlagen zu müssen. Diese neue Funktion spart Zeit
+und ist wesentlich benutzerfreundlicher. Stellen Sie daher sicher, dass stets die neueste Firmware-Version
+installiert ist, um Zugriff auf die neuesten Funktionen und Verbesserungen zu haben!
 
 \subsubsection{OTA-Update}
 
-Die erste Tabelle gibt Ihnen einige Informationen über die Blackbox-Firmware: Besprechen wir diese Werte. Die \textbf{ESP fw} ist wahrscheinlich das wichtigste Element im Raster, da sie Ihnen die Version mitteilt, die derzeit auf dem ESP-Motherboard installiert und geladen ist.
+Die erste Tabelle enthält einige Informationen zur Blackbox-Firmware: Lassen Sie uns
+diese Werte näher. Der Eintrag \textbf{ESP fw} ist wahrscheinlich der wichtigste Punkt in der Tabelle, da
+er Ihnen die Version angibt, die derzeit auf der ESP-Hauptplatine installiert und geladen ist.
 
-Ein weiteres nützliches Feld ist die \textbf{S/N}, die für Seriennummer steht, die Sie auch auf dem ToM+ finden, wie in Abbildung~\ref{fig:settings_page} gesehen. Die nächste Zeile ist etwas technischer und steht in direktem Zusammenhang mit dem OTA-Update-Mechanismus (Over-The-Air). \textbf{Current ptn} und \textbf{Next ptn} beziehen sich auf die Partitionsadressen, an denen die Firmware derzeit gespeichert ist und wo sie während des laufenden Updates gespeichert wird.\\
+Ein weiteres nützliches Feld ist die \textbf{S/N}, die für „Seriennummer“ steht und die Sie
+sowie in Abbildung~\ref{fig:settings_page} zu sehen ist. Die nächste Zeile ist etwas
+technischer und steht in engem Zusammenhang mit dem OTA-Update-Mechanismus (Over-The-Air).
+\textbf{Aktuelle Partition} und \textbf{Nächste Partition} beziehen sich auf die Adressen der Partitionen, auf denen die
+Firmware derzeit gespeichert ist und auf denen sie während des Updates gespeichert wird.\\
 
-Manchmal werden Firmware-Patches, wie Fehlerbehebungen oder kleinere Dinge, veröffentlicht, ohne die Versionsnummer zu ändern (z.~B. 2.4). In diesen Fällen kann es nützlich sein zu wissen, welche spezifische Binärdatei installiert ist; daher enthalten die nächsten beiden Felder deren vollständigen Namen. Wie Sie sehen können, gibt es zwei Haupt-Firmware-Partitionen, \textbf{Ota0} und \textbf{Ota1}, sodass Sie zwei verschiedene Versionen installiert haben und bei Bedarf zwischen ihnen wechseln können. Hier lautet der vollständige Name für beide \textit{ESP32\_Fw24\_70\_4error12}.
+Manchmal werden Firmware-Patches, wie z. B. Fehlerbehebungen oder kleinere Anpassungen, veröffentlicht, ohne dass
+sich die Versionsnummer ändert (z. B. 2.4). In diesen Fällen kann es hilfreich sein zu wissen, welche
+konkrete Binärdatei installiert ist; daher enthalten die nächsten beiden Felder deren vollständigen Namen.
+Wie Sie sehen können, gibt es zwei Haupt-Firmware-Partitionen, \textbf{Ota0} und \textbf{Ota1},
+sodass Sie zwei verschiedene Versionen installiert haben und bei Bedarf zwischen ihnen wechseln können.
+Hier lautet der vollständige Name für beide \textit{ESP32\_Fw24\_70\_4error12}.
 
-Das letzte Feld ist der vollständige Name der Firmware der \textbf{Special partition}, bei der es sich um einen zusätzlichen Speicher handelt, der zum Halten von Software Dritter verwendet wird (z.~B. die Tuning-Software Twizy-cfg). Weitere Informationen zum Tuning Ihres Twizy mit Twizy-cfg auf ToM+ finden Sie in Anhang~\ref{apx:tuning}.
+Das letzte Feld enthält den vollständigen Namen der Firmware der \textbf{Special-Partition}, bei der
+es sich um einen zusätzlichen Speicherbereich handelt, der zur Aufbewahrung von Software von Drittanbietern dient (z. B.~die Twizy-cfg-Tuning-Software).
+Weitere Informationen zum Tuning Ihres Twizy mithilfe von Twizy-cfg auf ToM+ finden Sie im Anhang~\ref{apx:tuning}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/ota_page3.png}
-    \caption{OTA-Update-Seite --- Update- und Info-Tabelle.}
+    \caption{OTA-Update-Seite --- Tabelle mit Updates und Informationen.}
 \end{figure}
 
-Der zweite Teil dieser Tabelle ermöglicht es Ihnen, die Firmware zu aktualisieren oder Software von Drittanbietern zu laden. Laden Sie zunächst die Binärdatei (mit der Endung .bin) herunter, die Sie auf dem ToM+ installieren möchten. Drücken Sie dann die Schaltfläche \textbf{„Browse\ldots“} und navigieren Sie durch Ihre Geräteordner, bis Sie die gewünschte Datei finden.
+Im zweiten Teil dieser Tabelle können Sie die Firmware aktualisieren oder eine Software von Drittanbietern
+laden. Laden Sie zunächst die Binärdatei (mit der Erweiterung .bin) herunter, , die Sie 
+auf dem ToM+ installieren möchten. Klicken Sie anschließend auf die Schaltfläche \textbf{„Durchsuchen\ldots“} und navigieren Sie durch die Ordner Ihres Geräts,
+bis Sie die gewünschte Datei gefunden haben.
 
-Wenn es sich um ein \textit{Standard-ToM+-Update} handelt, drücken Sie die Schaltfläche \textbf{„UPDATE“}. Um den Update-Status zu überprüfen, erscheint am unteren Rand der Tabelle ein orangener Fortschrittsbalken mit Prozentangabe. Wenn er 100\% erreicht, startet ToM+ schließlich neu, um die Änderungen zu übernehmen.
+Handelt es sich um ein \textit{Standard-ToM+-Update}, klicken Sie auf die Schaltfläche \textbf{„UPDATE“}. Um
+den Status des Updates zu überprüfen, erscheint am unteren Rand der Tabelle ein orangefarbener Fortschrittsbalken mit
+der prozentualen Anzeige. Sobald dieser 100\% erreicht hat, wird ToM+ schließlich neu gestartet, um die Änderungen zu übernehmen.
 
-Wenn es sich um \textit{Software von Drittanbietern} handelt, stellen Sie sicher, dass Sie die Option \textit{„Update to special partition“} aktivieren und erst danach die Schaltfläche \textbf{„UPDATE“} drücken. Sobald das Update abgeschlossen ist, startet ToM+ neu und lädt die Firmware der Spezialpartition.\\
+Handelt es sich um \textit{Software von Drittanbietern}, stellen Sie bitte sicher, dass die Option \textit{„Update auf spezielle Partition“}
+und klicken Sie erst danach auf die Schaltfläche \textbf{„UPDATE“}. Sobald das Update
+abgeschlossen ist, startet ToM+ neu und lädt die Firmware der speziellen Partition.\\
 
-In der Tabelle \textbf{„BOOT OPTIONS“} können Sie hingegen, sobald Sie die gewünschten Firmwares geladen haben, bei Bedarf zwischen ihnen wechseln. Nehmen wir an, ich nutze die ToM+ 2.4 Firmware und möchte etwas Tuning mit der Drittanbieter-Software Twizy-cfg durchführen; ich habe bereits beide in die korrekten Partitionen geladen. Um dies zu erreichen, drücken Sie die Schaltfläche \textit{„Reboot from special partition“} und warten Sie, bis ToM+ neu startet; folgen Sie dann Anhang~\ref{apx:tuning} für weitere Informationen.\\
+In der Tabelle \textbf{„BOOT OPTIONS“} hingegen können Sie, sobald Sie die gewünschten Firmwares geladen haben,
+bei Bedarf zwischen diesen wechseln. Nehmen wir an, ich verwende die ToM+ 2.4-Firmware und möchte einige
+Einstellungen mit der Drittanbieter-Software Twizy-cfg vornehmen; ich habe beide bereits in die richtigen
+Partitionen geladen. Um dies zu erreichen, drücken Sie die Schaltfläche \textit{„Reboot from special partition“}
+und warten Sie, bis ToM+ neu gestartet ist; befolgen Sie anschließend die Anweisungen im Anhang~\ref{apx:tuning}.\\
 
-Die Schaltflächen \textit{„Reboot from Ota0 partition“} und \textit{„Reboot from Ota1 partition“} werden verwendet, um zwischen den ToM+-Firmware-Versionen zu wechseln. Nehmen wir an, ich nutze die ToM+ 2.4 Firmware, möchte aber aus irgendeinem Grund zur Version 2.3 zurückkehren, die ich zuvor hatte. Drücken Sie dazu die entsprechende Schaltfläche, um entweder von Ota1 oder Ota0 neu zu starten. ToM+ startet sofort neu und die Verbindung zur Weboberfläche wird getrennt.
+Die Schaltflächen \textit{„Reboot from Ota0 partition“} und \textit{„Reboot from Ota1 partition“}
+dienen zum Wechseln zwischen den ToM+-Firmware-Versionen. Nehmen wir an, ich verwende die ToM+-Firmware 2.4
+, möchte aber aus irgendeinem Grund zur vorherigen Version 2.3 zurückkehren. Drücken Sie dazu
+die entsprechende Schaltfläche, um entweder von der Ota1- oder der Ota0-Partition neu zu starten. ToM+ wird sofort neu gestartet
+und die Verbindung zur Weboberfläche wird unterbrochen.
 
 \begin{figure}[H]
-    \centering
+    \Zentrierung
     \includegraphics[width=1\textwidth]{figures/ota_boot.png}
-    \caption{OTA-Update-Seite --- Tabelle für Boot-Optionen.}
+    \caption{OTA-Update-Seite --- Tabelle mit Boot-Optionen.}
 \end{figure}
 
-In der nächsten Tabelle haben wir die Tabelle \textbf{„LCD FIRMWARE UPDATE“}, die es ermöglicht, OTA-Updates auch für das LCD-Display durchzuführen. Das bedeutet kein Hantieren mehr mit der MicroSD-Karte und dem kleinen Loch am Display.\\
+Weiter geht es mit der Tabelle \textbf{„LCD-FIRMWARE-UPDATE“}, die es ermöglicht,
+auch OTA-Updates für das LCD-Display durchzuführen. Das bedeutet, dass Sie sich nicht mehr mit
+der microSD-Karte und der kleinen Öffnung am Display herumschlagen müssen.\\
 
-\textbf{WARNUNG:} Wie in der Tabelle beschrieben, dürfen Sie diese Webseite während des Updates \textbf{NICHT} schließen: Es wird empfohlen, Ihren Bildschirmschoner zu deaktivieren, um ein Fehlschlagen des Updates zu vermeiden. Der Vorgang kann je nach Firmware-Version einige Minuten dauern, bis zu 10 Minuten.\\
+\textbf{WARNUNG:} Wie in der Tabelle angegeben, dürfen Sie diese Webseite während des Updates \textbf{NICHT} schließen:
+Es wird empfohlen, Ihren Bildschirmschoner zu deaktivieren, um einen Fehlschlag des Updates zu vermeiden.
+Der Vorgang kann je nach Firmware-Version einige Minuten dauern, bis zu 10 Minuten.\\
 
-Dies ist ähnlich wie das Blackbox-OTA-Update. Laden Sie also zuerst die Datei (mit der Endung .tft) herunter, die Sie auf dem ToM+ installieren möchten. Drücken Sie dann die Schaltfläche \textbf{„Browse\ldots“} und navigieren Sie durch Ihre Geräteordner, bis Sie die gewünschte Datei finden.
+Dies ähnelt dem Blackbox-OTA-Update. Laden Sie also zunächst die Datei (mit der Endung .tft) herunter, die Sie 
+auf dem ToM+ installieren möchten. Klicken Sie anschließend auf die Schaltfläche \textbf{„Durchsuchen\ldots“} und navigieren Sie durch die Ordner Ihres Geräts,
+bis Sie die gewünschte Datei gefunden haben.
 
-Wenn Sie das \textit{Hauptdisplay aktualisieren}, drücken Sie die Schaltfläche \textbf{„UPDATE LCD“}. Um den Update-Status zu überprüfen, zeigt der blaue Fortschrittsbalken unter dem Haftungsausschluss-Feld die auf das LCD kopierten Blöcke an. Wenn er fertig ist, startet das Display neu (nicht die Blackbox).
+Wenn Sie gerade dabei sind,{das Hauptdisplay aktualisieren}, klicken Sie auf die Schaltfläche \textbf{„UPDATE LCD“}.
+Um den Status des Updates zu überprüfen, zeigt der blaue Fortschrittsbalken unter dem Haftungsausschlussfeld an,
+welche Datenblöcke bereits auf das LCD kopiert wurden.~Nach Abschluss des Vorgangs wird das Display neu gestartet (nicht die Blackbox).
 
-Wenn Sie das \textit{Zusatzdisplay (Twin Display) aktualisieren}, stellen Sie sicher, dass Sie die Option \textit{„Update AUX LCD“} aktivieren und erst danach die Schaltfläche \textbf{„UPDATE LCD“} drücken. Sobald das Update abgeschlossen ist, startet das LCD-Display neu und lädt die gewünschte Firmware.
+Wenn Sie \textit{das Zweitdisplay aktualisieren}, stellen Sie sicher, dass die Option \textit{„Update AUX LCD“}
+aktiviert ist, und erst danach die Schaltfläche \textbf{„UPDATE LCD“} zu drücken. Sobald das Update
+abgeschlossen ist, wird das LCD-Display neu gestartet und lädt die gewünschte Firmware.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/ota_lcd.png}
-    \caption{OTA-Update-Seite --- Tabelle für LCD-Firmware-Update.}
+    \caption{OTA-Update-Seite --- Tabelle zur LCD-Firmware-Aktualisierung.}
 \end{figure}
 
 
-\subsubsection{Einstellungen und HW-Upgrade}
+\subsubsection{Einstellungen und Hardware-Upgrade}
 
-Im nächsten Abschnitt der Webseite können wir Einstellungen verwalten, was WLAN- und MQTT-Konfigurationen, Symbolanordnungen der ToM+-Seiten und mehr umfasst. Es ist daher immer ratsam, \textbf{vor dem Update ein Backup} zu erstellen, um die erneute Eingabe von Passwörtern zu vermeiden, falls ein Update fehlschlägt. Drücken Sie dazu die Schaltfläche \textbf{„BACKUP“}, und eine Datei namens \textit{prefs.ToM} wird auf Ihr Gerät heruntergeladen. Manchmal öffnet sich ein Pop-up, um Sie zu warnen, dass diese Datei eine ungewöhnliche Dateiendung hat; klicken Sie auf die Schaltfläche \textit{Behalten} und laden Sie sie trotzdem herunter.\\
+Im nächsten Abschnitt der Webseite können Sie Einstellungen verwalten, darunter WLAN- und MQTT-
+Konfigurationen, die Anordnung der Symbole auf den ToM+-Seiten und vieles mehr. Es ist daher stets ratsam
+, vor dem Update eine \textbf{Sicherung zu erstellen}, um zu vermeiden, dass Sie Ihre Passwörter erneut eingeben müssen, falls ein Update
+fehlschlägt. Klicken Sie dazu auf die Schaltfläche \textbf{„BACKUP“}, woraufhin eine Datei namens
+\textit{prefs.ToM} auf Ihr Gerät heruntergeladen. Manchmal öffnet sich ein Popup-Fenster, um
+Sie darauf hinzuweisen, dass diese Datei eine ungewöhnliche Dateiendung hat; klicken Sie in diesem Fall auf die Schaltfläche \textit{Behalten} und laden Sie sie trotzdem herunter.\\
 
-Der umgekehrte Vorgang ist ebenso einfach. Drücken Sie die Schaltfläche \textbf{„Browse\ldots“} und navigieren Sie durch Ihre Geräteordner, bis Sie die Einstellungsdatei \textit{prefs.ToM} finden. Um die Änderungen zu übernehmen, drücken Sie die Schaltfläche \textbf{„RESTORE“}; Sie werden zur Bestätigung auf die Startseite weitergeleitet.
+Der umgekehrte Vorgang ist ebenfalls einfach. Tippen Sie auf die Schaltfläche \textbf{„Durchsuchen\ldots“} und navigieren Sie durch die Ordner Ihres Geräts,
+bis Sie die Einstellungsdatei \textit{prefs.ToM} finden. Um die Änderungen zu übernehmen,
+tippen Sie auf die Schaltfläche \textbf{„WIEDERHERSTELLEN“}; Sie werden zur Bestätigung auf die Startseite weitergeleitet.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/prefs_page.png}
-    \caption{OTA-Update-Seite --- Tabelle zur Einstellungssicherung.}
+    \caption{OTA-Update-Seite – Tabelle zur Sicherung der Einstellungen.}
 \end{figure}
 
-Diese nächste Tabelle ist sehr spezifisch für Benutzer älterer ToM-Versionen, die nun das Passwort erhalten haben, um ihr Gerät auf ToM+ aufzurüsten, ohne die Blackbox auszutauschen. Wenn dies bei Ihnen der Fall ist, geben Sie bitte das Passwort in das Textfeld ein und drücken Sie die Schaltfläche \textbf{„UPGRADE“}. Von nun an ist Ihr ToM endlich auf ToM+ aufgerüstet, viel Spaß!
+Die folgende Tabelle richtet sich speziell an Nutzer älterer ToM-Versionen, die nun
+das Passwort erhalten haben, um ihr Gerät auf ToM+ zu aktualisieren, ohne die Blackbox zu wechseln. Sollte dies
+auf Sie zutreffen, geben Sie bitte das Passwort in das Textfeld ein und klicken Sie auf die Schaltfläche \textbf{„UPGRADE“}.
+Ab sofort ist Ihr ToM endlich auf ToM+ aktualisiert – viel Spaß damit!
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/hw_upgrade.png}
-    \caption{OTA-Update-Seite --- Tabelle zum Hardware-Upgrade.}
+    \caption{Seite „OTA-Update“ --- Tabelle „Hardware-Upgrade“.}
 \end{figure}
 
-Drücken Sie am Ende der Tabelle die grüne Taste \textbf{„HOME“}, um zur Startseite zurückzukehren.
+Drücken Sie die grüne Schaltfläche \textbf{„HOME“} am Ende der Tabelle, um zur Startseite zurückzukehren.
 
 \clearpage
 
-\subsection{Erweiterte Info- \& Einstellungsseite}
+\subsection{Seite „Erweiterte Informationen & Einstellungen“}
 \label{sec:web_advanced_info}
 
-Diese Seite ist für verschiedene erweiterte Einstellungen gedacht, die aus Platzgründen nicht auf den Einstellungsseiten des ToM+-Displays (besprochen in Abschnitt~\ref{sec:settings_page}) verfügbar sind.\\
+Diese Seite dient verschiedenen erweiterten Einstellungen, die aus Platzgründen nicht auf den in Abschnitt~\ref{sec:settings_page} beschriebenen Einstellungsseiten des ToM+-Displays
+verfügbar sind.\\
 
-Das erste Flag, \textbf{„Disable Auto-dimming“}, kann aktiviert werden, wenn Sie nicht möchten, dass das LCD-Display des ToM+ die Helligkeit beim Einschalten des Fernlichts/Abblendlichts anpasst. Andernfalls können Sie die \textbf{„Dimming brightness (\%)“} in Prozent (bis zu 100\%) einstellen und den Faktor der Helligkeitsreduzierung bei Aktivierung der Scheinwerfer selbst festlegen.
+Das erste Kontrollkästchen, \textbf{„Automatische Dimmung deaktivieren“}, können Sie aktivieren, wenn Sie nicht möchten, dass das ToM+
+LCD-Display die Helligkeit anpasst, wenn die Lichtstrahlen eingeschaltet werden.
+Andernfalls können Sie den in Prozent angegebenen Wert \textbf{„Helligkeitsdämpfung (\%)“} (bis zu 100\%)
+anpassen und den Faktor für die Helligkeitsreduzierung bei Aktivierung der Lichtstrahlen selbst festlegen.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/adv_sett_page1.png}
-    \caption{Erweiterte Info-Seite --- Tabelle für erweiterte Einstellungen.}
+    \caption{Seite „Erweiterte Informationen“ --- Tabelle „Erweiterte Einstellungen“.}
 \end{figure}
 
-Als Nächstes haben wir den Unterabschnitt \textbf{Warnmeldungen beim Ausschalten}, in dem Sie die Erinnerungen (\textit{Scheinwerfer} und \textit{Handbremse}) und Infos (\textit{Systemfehler} und \textit{Ladebegrenzungen}) auswählen können, die beim Ausschalt-Pop-up des ToM+ angezeigt werden. Es sieht aus wie im Bild unten gezeigt und lässt Sie beispielsweise wissen, wenn Sie vergessen haben, die Handbremse anzuziehen. Die letzten beiden Kontrollkästchen sind für zukünftige Verwendungen reserviert und noch nicht implementiert.
+Als Nächstes folgt der Unterabschnitt \textbf{Warnmeldungen beim Ausschalten}, in dem Sie
+die Hinweise (\textit{Lichtstrahl} und \textit{Handbremse}) sowie Informationen (\textit{Systemfehler} und \textit{Ladegrenzen})
+auswählen können, die im Popup-Fenster beim Herunterfahren von ToM+ angezeigt werden. Es sieht so aus wie in der Abbildung unten dargestellt
+und informiert Sie beispielsweise darüber, wenn Sie vergessen haben, die Handbremse anzuziehen.
+Die letzten beiden Kontrollkästchen sind für zukünftige Anwendungen vorgesehen und noch nicht implementiert.
 
 \begin{figure}[H]
     \centering
@@ -779,201 +1118,319 @@ Als Nächstes haben wir den Unterabschnitt \textbf{Warnmeldungen beim Ausschalte
     \caption{Warnmeldung beim Ausschalten.}
 \end{figure}
 
-Dann gibt es die \textbf{„Secondary font colour“} mit einer Farbauswahl, mit der die sekundäre Schriftfarbe auf dem ToM+-Display geändert werden kann.
+Außerdem gibt es die Option \textbf{„Sekundäre Schriftfarbe“} mit einem Farbwähler, mit dem Sie
+die sekundäre Schriftfarbe auf dem ToM+-Display ändern können.
 
-Ein weiteres verfügbares Flag ist \textbf{„Invert current value sign“}. Wenn aktiviert, zeigt es bei den Stromverbrauchswerten im Grunde eine vorzeichenbehaftete Ganzzahl anstelle von Absolutwerten an.\\
+Eine weitere verfügbare Option ist \textbf{„Vorzeichen des aktuellen Werts umkehren“}. Wenn diese Option aktiviert ist, werden
+die Stromverbrauchswerte grundsätzlich als vorzeichenbehaftete Ganzzahlen anstelle ihrer absoluten Werte angezeigt.\\
 
-Die kleine Untergruppe darunter ist der \textbf{Cheatzy}-Kompatibilität mit ToM+ gewidmet. Sie können Ihren \textbf{„Cheating factor“} multipliziert mit 10 einstellen: Beispielsweise wird 2,0 zu 20. Sie können auch auswählen, ob der Cheatzy beim Laden oder beim regenerativen Bremsen aktiviert ist, indem Sie das Flag \textbf{„Cheat also Charge/Reku“} verwenden. Diese Einstellungen machen nur Sinn, wenn der Cheatzy angeschlossen und eingeschaltet ist; andernfalls können sie Ihre Stromwerte fehlerhaft verändern.\\
+Die kleine Untergruppe unten ist der \textbf{Cheatzy}-Kompatibilität mit ToM+ gewidmet.
+Sie können Ihren \textbf{„Cheating-Faktor“} festlegen, der mit 10 multipliziert wird: Aus 2,0 werden beispielsweise 20.
+Sie können außerdem über das Kontrollkästchen \textbf{„Cheat auch beim Laden/Reku“} festlegen, ob Cheatzy beim Laden oder während des regenerativen Bremsens aktiviert sein soll.
+Diese Einstellungen sind nur sinnvoll, wenn Cheatzy 
+angeschlossen und eingeschaltet ist; andernfalls können sie Ihre Stromwerte falsch verfälschen.\\
 
-Dann gibt es ein weiteres Flag: \textbf{„Increase thermal protection threshold“}, mit dem der Überhitzungsschutz-Schwellenwert für ToM+ in wärmeren Jahreszeiten um 15°C erhöht werden kann.
+Darüber hinaus gibt es ein weiteres Flag: \textbf{„Schwelle für den Wärmeschutz erhöhen“}, mit dem
+die Überhitzungssicherheitsschwelle für ToM+ in wärmeren Jahreszeiten um 15 °C angehoben wird.
 
-Die nächsten beiden Werte sind zusätzliche Konfigurationen für die von ToM+ berechneten \textbf{Rest-KM}, basierend auf einer Abtastung des aktuellen Verbrauchs. Hier können Sie im Feld \textbf{„Remaining KM sampling time (min)“} einstellen, wie oft die Abtastung erfolgt (Standard: einmal pro Minute) und wie stark die letzte Stichprobe die Gesamtberechnung beeinflusst (Standard: 10\%) im Feld \textbf{„Remaining KM sample weight (\%)“}.\\
+Die nächsten beiden Werte sind zusätzliche Konfigurationen für die von ToM+ berechnete \textbf{Restreichweite in km},
+basierend auf aktuellen Verbrauchsmessungen. Hier können Sie einstellen, wie oft die Messung
+erfolgt (Standard: einmal pro Minute) unter \textbf{„Abtastintervall für verbleibende KM (min)“} und
+wie stark die letzte Messung die Gesamtberechnung beeinflusst (Standard: 10\%) unter
+\textbf{„Gewichtung der verbleibenden KM-Messung (\%)“}.\\
 
-Schließlich haben wir das Flag \textbf{„Miles to Kilometers“}, das hilft, wenn Ihr BigToM aus einem meilenbasierten Dashboard erstellt wurde, Sie aber km/h als Maßeinheit wünschen. Wenn aktiviert, führt ToM+ diese Konvertierung für Sie durch.
+Zuletzt gibt es noch die Option \textbf{„Meilen in Kilometer“}, die hilfreich ist, wenn Ihr BigToM
+aus einem meilenbasierten Armaturenbrett stammt, Sie jedoch km/h als Maßeinheit verwenden möchten. Wenn diese Option aktiviert ist,
+führt ToM+ diese Umrechnung für Sie durch.
 
-Bitte denken Sie daran, Ihre \textbf{Änderungen zu speichern}, indem Sie die Schaltfläche \textbf{„SAVE“} am Ende dieser Tabelle drücken. Wenn Sie dies nicht tun, gehen Ihre Änderungen beim Verlassen der Seite verloren.
+Bitte denken Sie daran, \textbf{Ihre Änderungen zu speichern}, indem Sie auf die Schaltfläche \textbf{„SPEICHERN“}
+am Ende dieser Tabelle klicken. Wenn Sie dies nicht tun, gehen Ihre Änderungen verloren, sobald Sie die Seite verlassen.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{figures/adv_info.png}
-    \caption{Erweiterte Info-Seite --- Tabelle für erweiterte Informationen.}
+    \caption{Seite „Erweiterte Informationen“ --- Tabelle „Erweiterte Informationen“.}
 \end{figure}
 
-Die Tabelle oben enthält Daten zu Ihrer Batterie, wie gespeicherte Kapazität, \textbf{SOH}, \textbf{Batterie-Kilometerstand}, insgesamt verbrauchte kWh und zu Ladevorgängen, wie die Anzahl der \textit{gesamten}, \textit{vollständigen} und \textit{teilweisen} Ladevorgänge sowie die \textbf{maximal akzeptierte Ladeleistung}.\\
+Die obige Tabelle enthält Daten zu Ihrer Batterie, wie beispielsweise die gespeicherte Kapazität, den \textbf{SOH},
+die \textbf{Batterie-Reichweite}, den Gesamtverbrauch in kWh sowie Angaben zu Ladevorgängen, wie beispielsweise die Anzahl der
+\textit{Gesamt-}, \textit{Voll-} und \textit{Teil-}Ladevorgänge und die \textbf{maximal akzeptierte Ladeleistung}.\\
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/item_scroll.png}
-    \caption{Erweiterte Info-Seite --- Element-Scroll-Tabelle.}
+    \caption{Seite „Erweiterte Informationen“ – Scroll-Tabelle mit Elementen.}
 \end{figure}
 
-Diese letzte Tabelle ist eine sehr spezielle Funktion, die vor einigen Updates eingeführt wurde und es Ihnen ermöglicht, dynamisch wechselnde Elemente auf Seiten Ihrer Wahl zu haben. Sie kann auf die Seiten \textit{Batterie}, \textit{Motor}, \textit{Gyroskop}, \textit{Fahrt} und \textit{Ladevorgang} angewendet werden, und Sie können über das Feld \textbf{„Page“} auswählen, welche davon genutzt werden soll.
+Diese letzte Tabelle ist eine wirklich besondere Funktion, die vor einigen Updates eingeführt wurde und es
+Ihnen ermöglicht, dynamisch wechselnde Elemente auf Seiten Ihrer Wahl anzuzeigen. Sie kann auf die
+die Seiten \textit{Batterie}, \textit{Motor}, \textit{Gyroskop}, \textit{Fahrt} und \textit{Ladevorgang}
+anwenden, und Sie können über das Feld \textbf{„Seite“} auswählen.
 
-Anschließend können Sie auswählen, an welcher Position die Datenelemente Ihrer Wahl gescrollt werden sollen. Verwenden Sie dazu das Feld \textbf{„Position“} und wählen Sie aus der Liste die von Ihnen bevorzugte Position unter Bezugnahme auf Abbildung~\ref{fig:icon_arrangement} für das Layout-Arrangement.\\
+Anschließend können Sie festlegen, an welcher Position die Datenelemente Ihrer
+Wahl gescrollt werden sollen. Verwenden Sie dazu das Feld \textbf{„Position“} und wählen Sie aus der Liste die
+von Ihnen bevorzugte Option aus; das Layout entnehmen Sie bitte Abbildung~\ref{fig:icon_arrangement}.\\
 
-Das Feld \textbf{„Freq“} ist die Scrollfrequenz, im Grunde wie lange jedes Datum an dieser Position bleibt, bevor es zum nächsten wechselt. Wie Sie vielleicht bemerken, ist in Klammern angegeben, dass das Feld mit \textit{5 Sekunden} multipliziert wird. Das bedeutet, dass die Eingabe des Werts \textit{1} zu einer Frequenz von \textit{5 Sekunden} führt, der Wert \textit{2} zu einer von \textit{10 Sekunden} und so weiter.
+Das Feld \textbf{„Freq“} gibt die Scrollfrequenz an, d. h. im Grunde genommen, wie lange jedes Datenelement
+an dieser Position verbleibt, bevor zum nächsten gewechselt wird. Wie Sie vielleicht bemerken, wird
+in Klammern angegeben, dass der Wert mit \textit{5 Sekunden} multipliziert wird. Dies
+bedeutet, dass die Eingabe des Werts \textit{1} zu eine Frequenz von \textit{5 Sekunden},
+der Wert \textit{2} führt zu einer Frequenz von \textit{10 Sekunden} und so weiter.
 
-Der wichtigste Teil ist die Auswahl der zu scrollenden Elemente, und Sie können bis zu zehn Datenwerte auswählen. Tragen Sie in den Textbereichen \textbf{„Scrolling items“} die Liste der gewünschten Elementnummern ein (z.~B. 59 oder 48), eine pro Zeile, bezogen auf die Nummern in Klammern in der Liste von Abschnitt~\ref{sec:item_numbers}.\\
+Der wichtigste Schritt ist die Auswahl der zu scrollenden Elemente; Sie können bis zu
+zehn Datenwerte auswählen. In den \textbf{„Scrolling items“} geben Sie die Liste der
+gewünschten Elementnummern (z. B. 59 oder 48) ein, jeweils eine pro Feld, wobei Sie sich auf die Nummern in
+Klammern in der Liste des Abschnitts~\ref{sec:item_numbers} beziehen.\\
 
-Denken Sie immer daran, Ihre Änderungen zu speichern, indem Sie die Schaltfläche \textbf{„SAVE“} am Ende dieser Tabelle drücken. Wenn Sie dies nicht tun, gehen Ihre Änderungen beim Verlassen der Seite verloren.
+Denken Sie stets daran, Ihre Änderungen durch Klicken auf die Schaltfläche \textbf{„SAVE“} am Ende dieser
+Tabelle zu speichern. Wenn Sie dies nicht tun, gehen Ihre Änderungen verloren, sobald Sie die Seite verlassen.
 
-Wenn Sie die Scroll-Funktion für eine bestimmte Seite und Position \textbf{deaktivieren} möchten, wählen Sie diese Felder aus und geben Sie dann \textit{0} in das Textfeld \textbf{„Freq“} ein. Drücken Sie direkt danach \textbf{„SAVE“}, und das Scrollen wird deaktiviert, wobei zu den Standardwerten zurückgekehrt wird.
+Wenn Sie die Bildlauffunktion für eine bestimmte Seite und Position \textbf{deaktivieren} möchten,
+wählen Sie diese Felder aus und geben Sie anschließend \textit{0} in das Textfeld \textbf{„Freq“} ein. Drücken Sie unmittelbar danach
+auf \textbf{„SAVE“} – die Bildlaufleiste wird deaktiviert und es gelten wieder die Standardwerte.
 
-Drücken Sie die grüne Taste \textbf{„HOME“} am Ende der Tabelle, um zur Startseite zurückzukehren.
+Klicken Sie auf die grüne Schaltfläche \textbf{„HOME“} am Ende der Tabelle, um zur Startseite zurückzukehren.
 
 
 
-\subsection{Ladeeinstellungen \& Log}
+\subsection{Ladeeinstellungen & Protokoll}
 \label{sec:web_charging_prefs}
 
-Diese Seite ist in zwei Haupttabellen unterteilt: Die erste dient zur Steuerung des Ladevorgangs, während die zweite eine Liste der letzten 15 Ladevorgänge mit einigen zusätzlichen Daten enthält.
+Diese Seite ist in zwei Haupttabellen unterteilt: Die erste dient zur Steuerung des Ladevorgangs,
+während die zweite eine Liste der letzten 15 Ladevorgänge mit einigen zusätzlichen Daten enthält.
 
 \subsubsection{Ladeeinstellungen}
 
-Beginnend mit den nützlichsten haben wir das Feld \textbf{„Charging status“}, das Informationen über den aktuellen Status des Fahrzeugs enthält, einschließlich \textit{220V Netz} und \textit{Ladevorgang} mit ihren EIN- und AUS-Flags.
+Beginnend mit den nützlichsten Funktionen gibt es ein Feld \textbf{„Ladestatus“}, das Informationen über
+den aktuellen Status des Fahrzeugs enthält, darunter \textit{220-V-Netzanschluss} und \textit{Ladevorgang}
+mit den entsprechenden Ein- und Aus-Markierungen.
 
-Direkt darunter befindet sich das Feld \textbf{„Charge power limit“}, in dem Sie wählen können, wie viel Leistung Ihr Twizy beim Laden nutzen kann, von $0,4 kW$ bis zu $2,3 kW$ mit 7 Stufen zur Auswahl (wählen Sie \textit{0, um das Leistungslimit zu deaktivieren}).
+Direkt darunter befindet sich das Feld \textbf{„Ladeleistungsbegrenzung“}, in dem Sie auswählen können, wie
+viel Leistung Ihr Twizy beim Laden verbrauchen darf, und zwar im Bereich von $0.4 kW$  bis $2.3 kW$ mit
+7 Stufen zur Auswahl (wählen Sie \textit{0, um die Leistungsbegrenzung zu deaktivieren}).
 
-In der oberen rechten Ecke befindet sich die Schaltfläche \textbf{„ABORT CHARGING“}, die den Ladevorgang sofort und geordnet stoppt, genau wie die auf dem ToM+-Display auf der Einstellungsseite, die wir in Abschnitt~\ref{sec:settings_page} besprochen haben.
+In der oberen rechten Ecke befindet sich die Schaltfläche \textbf{„LADEVORGANG ABBRECHEN“}-Schaltfläche, die den Ladevorgang sofort
+ordnungsgemäß beendet, genau wie die Schaltfläche auf dem ToM+-Display auf der Einstellungsseite,
+die wir in Abschnitt~\ref{sec:settings_page} besprochen haben.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/charging_process.png}
-    \caption{Ladeeinstellungs-Seite --- Tabelle zur Steuerung des Ladevorgangs.}
+    \caption{Seite „Ladeeinstellungen“ – Tabelle zur Steuerung des Ladevorgangs.}
 \end{figure}
 
-Gleich danach befindet sich das Feld \textbf{„Stop charge at SOC \%“}, das den Lade-Prozentsatz angibt, bei dem ToM+ automatisch das Signal zum Abbrechen des Ladevorgangs sendet. Nur zu Ihrer Information: Das Begrenzen der maximalen Ladereihe (95\% oder weniger) verlangsamt den Zerfall des Batterie-SOH.
+Direkt daneben befindet sich das Feld \textbf{„Ladevorgang bei SOC \% beenden“}, das den Ladezustand
+in Prozent angibt, bei dem ToM+ automatisch das Signal zum Abbruch des Ladevorgangs sendet.
+Zu Ihrer Information: Die Begrenzung der maximalen Ladereichweite (95 % oder weniger) verlangsamt den SOH-Verfall der Batterie.
 
-Weiter zum nächsten Feld haben wir das Feld \textbf{„Full charge after“}, das sich eng auf das letzte bezieht, das wir besprochen haben. Im Grunde stoppt dies den Ladevorgang bei dem ausgewählten SOC einmal alle \textit{X} Ladevorgänge nicht (\textit{zum Beispiel 10} wie im Bild). Denken Sie daran, dass eine 100\%-Ladung hin und wieder hilfreich ist, um die Spannungen der Batteriezellen neu zu balancieren.
+Weiter geht es mit dem nächsten Feld: Hier finden wir das Feld \textbf{„Vollaufladung nach“}, das
+in engem Zusammenhang mit dem zuletzt besprochenen Feld steht. Im Grunde wird der Ladevorgang bei
+dem ausgewählten SOC einmal alle \textit{X} Ladezyklen (\textit{beispielsweise 10}, wie in der Abbildung) nicht unterbrochen.
+Bitte beachten Sie, dass eine gelegentliche 100\%-Ladung hilfreich ist, um die Spannungen der Batteriezellen wieder auszugleichen.
 
-Ein weiteres verwandtes Feld ist das Flag \textbf{„Max charge once (next/current)“}, das wie eine Schaltfläche funktioniert und ToM+ anweist, eine vollständige Ladung ohne den gewählten SOC-Stopp durchzuführen. Dies überschreibt das vorherige Feld und wird \textbf{nach dem Drücken von „SAVE“} auf den aktuellen Ladevorgang angewendet, wenn dieser bereits läuft, oder auf den nächsten, falls nicht.\\
-
-
-Jetzt gibt es ein Sicherheitsfeld, die \textbf{„Charger max temperature“}, in dem Sie einen Schwellenwert (Ganzzahlwert in °C) einstellen können; wird dieser mit einer vom Benutzer definierten Marge-Hysterese überschritten, reduziert ToM+ langsam die zuvor gesehene Leistungsgrenze. Es reduziert diese weiter (bei Bedarf um zwei Stufen), bis die Temperatur wieder normal ist, woraufhin auch die Leistungsgrenze zurückgesetzt wird.
-
-Die genannte Marge ist im entsprechenden Feld \textbf{„Temp margin“} anpassbar, in das Sie einen Ganzzahlwert (in °C) eingeben können, der zur maximalen Ladegerättemperatur addiert wird, um den Schwellenwert zu lockern, bevor die Ladeleistung reduziert wird.
-
-Ein weiteres verwandtes Feld ist die \textbf{„Abort temperature“}, die den letzten Sicherheitsschwellenwert für die Ladegerättemperatur enthält; wird dieser überschritten, bricht ToM+ den Ladevorgang sofort ab.\\
-
-
-Als Nächstes haben wir drei MQTT-Steuerfelder, die durch ihre fortlaufende Nummer unterschieden werden. Durch Aktivieren eines dieser Flags können Sie den Parameter auf der linken Seite aus der Ferne über das MQTT-Protokoll konfigurieren. Um dies zu erreichen, müssen Sie nach dem Aktivieren des entsprechenden Feldes und dem \textbf{Drücken von „SAVE“} lediglich eine MQTT-Nachricht auf dem in Klammern angegebenen Topic (z.~B. \textit{001} oder \textit{002}) auf Ihrem Broker veröffentlichen (konfiguriert in Abschnitt~\ref{sec:mqtt_connection}).
-
-Wenn Sie die \textbf{MQTT control (001)} aktivieren, können Sie den Ladevorgang starten und stoppen, indem Sie entweder \textit{0} oder \textit{1} auf dem MQTT-Topic \textit{001} veröffentlichen. Das Gleiche gilt für \textbf{MQTT control (002)} durch Veröffentlichung eines Werts zwischen \textit{0} und \textit{7} auf \textit{002} sowie \textbf{MQTT control (003)} auf \textit{003} mit einem Wert zwischen \textit{0} und \textit{100}.\\
-
-Zu guter Letzt haben wir das Feld \textbf{„Aux Cmd“}, das für Zusatzbefehl steht und sich genauso verhält wie das, das wir bereits auf der Alarmauslöser-Seite in Abschnitt~\ref{sec:web_alarm_triggers} besprochen haben. Es wird gesendet, wenn der Ladevorgang abgeschlossen ist oder wenn der Ladevorgang beim angegebenen SOC stoppt.\\
+Ein weiteres damit zusammenhängendes Feld ist das \textbf{„Maximale Ladung einmalig (nächstes/aktuelles)“}, das
+wie eine Schaltfläche funktioniert und ToM+ anweist, eine vollständige Ladung durchzuführen, ohne dass der gewählte Ladezustand (SOC) den Vorgang stoppt. Dies
+überschreibt das vorherige Feld und wird \textbf{nach dem Klicken auf „SPEICHERN“} auf den
+aktuellen Ladevorgang angewendet, falls dieser bereits läuft, oder andernfalls auf den nächsten.\\
 
 
-Nach jeder Änderung drücken Sie die Schaltfläche \textbf{„SAVE“}, um \textit{Ihre Änderungen zu speichern}; andernfalls gehen sie beim Verlassen der Seite verloren.
+Nun gibt es ein Sicherheitsfeld, die \textbf{„Maximale Ladegerätetemperatur“}, in dem Sie
+einen Schwellenwert (ganzzahliger Wert in °C) festlegen können, bei dessen Überschreitung – mit einer benutzerdefinierten
+Hysterese – ToM+ das zuvor festgelegte Leistungsbegrenzungsniveau langsam senkt. Es wird so lange
+gesenkt, bei Bedarf um zwei Stufen, bis sich die Temperatur wieder normalisiert hat und sich damit auch die Leistungsbegrenzung normalisiert.
 
-\subsubsection{Ladehistorie}
+Die vorgenannte Toleranz ist im entsprechenden Feld \textbf{„Temp margin“} anpassbar, in das
+Sie einen ganzzahligen Wert (in °C) eingeben können, der zur maximalen
+Ladetemperatur addiert wird, um den Schwellenwert zu unterschreiten, bevor die Ladeleistung reduziert wird.
 
-Die Ladehistorie-Tabelle enthält die letzten fünfzehn Ladevorgänge zusammen mit einigen nützlichen Werten zu deren Bereicherung. Wie Sie sehen können, gibt es Datum und Uhrzeit sowie den \textbf{ODO Kilometers}-Wert beim Start des Ladevorgangs. Daneben sehen wir, wie viel Zeit der Ladevorgang in Anspruch genommen hat, die \textbf{Average Power} (durchschnittliche Leistung) sowie die \textbf{charged kWh} (geladene kWh). Schließlich haben wir \textit{init SOC} und \textit{end SOC}, welche die Start- und Endprozentsätze darstellen.\\
+Ein weiteres zugehöriges Feld ist das \textbf{„Abbruch-Temperatur“}, das den letzten Sicherheitsschwellenwert
+für die Ladegerätetemperatur enthält; wird dieser überschritten, bricht M+ den Ladevorgang sofort ab.\\
 
 
-Die letzte Spalte enthält einige zusätzliche \textbf{Notes} (Hinweise) zum Ladestatus, z.~B. wie er gestoppt wurde (entweder Stopp-SOC erreicht oder manuell abgebrochen) oder ob er noch läuft.
+Als Nächstes folgen drei MQTT-Steuerungsfelder, die durch ihre fortlaufende Nummer gekennzeichnet sind.
+Durch Aktivieren eines dieser Kontrollkästchen können Sie den links davon stehenden Parameter
+über das MQTT-Protokoll aus der Ferne zu konfigurieren. Dazu müssen Sie, nachdem Sie das entsprechende Feld aktiviert und
+\textbf{auf „SAVE“ geklickt} haben, lediglich eine MQTT-Nachricht zu dem Thema veröffentlichen,
+das zwischen den Klammern angegeben ist (z. B. \textit{001} oder \textit{002}) an Ihren Broker
+(konfiguriert in Abschnitt~\ref{sec:mqtt_connection}).
 
-Wenn Sie möchten, können Sie auch einige Datensätze manuell löschen, indem Sie die Schaltfläche \textit{X} am Ende des gewünschten Datensatzes drücken. Es ist möglich, alle auf einmal zu löschen, indem Sie die Schaltfläche \textbf{„CLEAR HISTORY“} im unteren Teil der Tabelle drücken.
+Wenn Sie die \textbf{MQTT-Steuerung (001)} aktivieren, können Sie den Ladevorgang starten und stoppen,
+indem Sie entweder \textit{0} oder \textit{1} auf dem MQTT-Thema \textit{001} veröffentlichen.
+Das Gleiche gilt für die \textbf{MQTT-Steuerung (002)}: Veröffentlichen Sie auf \textit{002} einen Wert zwischen
+\textit{0} und \textit{7} sowie bei der \textbf{MQTT-Steuerung (003)} unter dem Thema \textit{003} mit einem Wert
+zwischen \textit{0} und \textit{100}.\\
+
+Zu guter Letzt gibt es noch das Feld \textbf{„Aux Cmd“}, das für „Auxiliary
+Command“ steht und sich genauso verhält wie das bereits auf der Seite zum Alarmauslöser in
+Abschnitt~\ref{sec:web_alarm_triggers} besprochen haben. Es wird gesendet, wenn der Ladevorgang abgeschlossen ist oder
+wenn der Ladevorgang bei dem angegebenen SOC stoppt.\\
+
+
+Drücken Sie nach jeder Änderung die Schaltfläche \textbf{„SAVE“}, um \textit{Ihre Änderungen zu speichern}; andernfalls gehen diese verloren, wenn Sie die Seite verlassen.
+
+\subsubsection{Ladeverlauf}
+
+Die Tabelle „Ladeverlauf“ enthält die letzten fünfzehn Ladevorgänge zusammen mit einigen
+nützlichen Werten zur Ergänzung. Wie Sie sehen können, sind dort das Datum und die Uhrzeit sowie
+der Wert \textbf{ODO-Kilometer} zum Zeitpunkt des Ladevorgangs angegeben. Daneben finden Sie die
+Dauer des Ladevorgangs und die \textbf{Durchschnittsleistung} sowie die \textbf{geladenen kWh}.
+Schließlich sind noch der \textit{Anfangs-SOC} und der \textit{end SOC}, also den prozentualen Ladezustand zu Beginn und am Ende.\\
+
+
+Die letzte Spalte enthält einige zusätzliche \textbf{Anmerkungen} zum Ladezustand, wie beispielsweise
+die Art des Ladeabbruchs (entweder Erreichen des Stop-SOC oder manuelles Abbrechen) oder ob der Ladevorgang noch andauert.
+
+Falls Sie möchten, können Sie einige Datensätze auch manuell löschen, indem Sie auf die Schaltfläche \textit{X}
+am Ende des gewünschten Datensatzes klicken. Es ist möglich, alle Datensätze auf einmal zu löschen, indem Sie
+auf die Schaltfläche \textbf{„VERLAUF LÖSCHEN“} im unteren Bereich der Tabelle.
 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.95\textwidth]{figures/charging_history.png}
-    \caption{Ladeeinstellungs-Seite --- Ladehistorie-Tabelle.}
+    \caption{Seite „Ladeeinstellungen“ – Tabelle „Ladeverlauf“.}
 \end{figure}
 
-Drücken Sie die grüne Taste \textbf{„HOME“} unter der letzten Tabelle, um zur Startseite zurückzukehren.
+Drücken Sie die grüne Schaltfläche \textbf{„HOME“} unterhalb der letzten Tabelle, um zur Startseite zurückzukehren.
 
 \clearpage
 
-\subsection{Uhrzeit- \& Datumsseite}
+\subsection{Seite „Uhrzeit & Datum“}
 \label{sec:web_time_date}
 
-Mit Ihrem ToM+ können Sie das aktuelle Datum und die Uhrzeit überprüfen, aber wie stellt man sie ein? Diese Seite wurde genau für diesen Zweck erstellt und enthält eine einzelne Tabelle, die im folgenden Bild gezeigt wird.
+Mit Ihrem ToM+ können Sie das aktuelle Datum und die aktuelle Uhrzeit abrufen, aber wie stellen Sie diese ein?
+Diese Seite wurde genau zu diesem Zweck erstellt und enthält eine einzige Tabelle, die in der Abbildung unten dargestellt ist.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/time_page.png}
-    \caption{Aktuelle Uhrzeit- \& Datumstabelle.}
+    \caption{Tabelle „Aktuelle Uhrzeit & Datum“.}
 \end{figure}
 
-Die ersten fünf Felder sind selbsterklärend und intuitiv; passen Sie Datum und Uhrzeit einfach an Ihre Zeitzone an. Das Kontrollkästchen \textbf{„DST“}, das für Daylight Saving Time (Sommerzeit) steht, ermöglicht das Aktivieren oder Deaktivieren des 1-Stunden-Versatzes je nach aktueller Jahreszeit.
+Die ersten fünf Felder sind selbsterklärend und intuitiv – passen Sie einfach Datum und Uhrzeit
+entsprechend Ihrer Zeitzone an. Über das Kontrollkästchen \textbf{„DST“} steht für „Daylight Saving Time“ (Sommerzeit) und
+ermöglicht es Ihnen, die 1-Stunden-Verschiebung je nach aktueller Jahreszeit zu aktivieren oder zu deaktivieren.
 
-Wenn Sie Ihre Änderungen bestätigen und auf ToM+ anwenden möchten, drücken Sie einfach die Schaltfläche \textbf{„SET“}, und sie werden aktualisiert.\\
+Wenn Sie Ihre Änderungen bestätigen und auf ToM+ anwenden möchten, klicken Sie einfach auf die Schaltfläche \textbf{„SET“}
+– die Änderungen werden dann übernommen.\\
 
-Als Nächstes haben wir ein sehr nützliches Feld, das Flag \textbf{„Synchronize clock with WiFi“}, das nützlich ist, wenn Sie bereits eine WLAN-Verbindung wie in Abschnitt~\ref{sec:add_wifi_profile} besprochen konfiguriert haben. Schalten Sie dies einfach ein und überlassen Sie ToM+ die Arbeit.
+Als Nächstes haben wir ein sehr nützliches Feld, das Kontrollkästchen \textbf{„Uhr mit WLAN“},
+das nützlich ist, wenn Sie bereits eine WLAN-Verbindung konfiguriert haben, wie in
+Abschnitt~\ref{sec:add_wifi_profile} beschrieben. Schalten Sie diese Option einfach ein und überlassen Sie ToM+ die Arbeit.
 
-Direkt darunter befindet sich ein technischerer Wert bezüglich des Datums/der Uhrzeit, der ToM+ Ihre aktuelle Zeitzone (\textbf{TZ}) mithilfe einer Zeichenfolge namens \textbf{„POSIX“} mitteilt. Dies beinhaltet auch, wann der 1-Stunden-Sommerzeitversatz angewendet wird. In den meisten mitteleuropäischen Ländern lautet die Zeichenfolge wie folgt: \textit{CET-1CEST,M3.5.0/2,M10.5.0/3}; suchen Sie im Zweifelsfall online nach der POSIX-TZ-Zeichenfolge Ihres Landes.\\
+Direkt darunter befindet sich ein eher technischer Wert zur Datums- und Zeitangabe, der ToM+ mitteilt, welche
+Zeitzone (\textbf{TZ}) mithilfe einer als \textbf{„POSIX“} bezeichneten Zeichenkette mit. Dies umfasst auch, wann die
+1-stündige Sommerzeitverschiebung angewendet wird. In den meisten mitteleuropäischen Ländern lautet die Zeichenkette wie folgt:
+\textit{CET-1CEST,M3.5.0/2,M10.5.0/3}; suchen Sie im Internet nach dem POSIX-TZ-String Ihres Landes, falls Sie sich nicht sicher sind.\\
 
 
-Denken Sie wie immer daran, Ihre Änderungen durch Drücken der Schaltfläche \textbf{„SAVE“} am Ende der Tabelle zu speichern; andernfalls gehen sie beim Verlassen der Seite verloren.
+Denken Sie wie immer daran, Ihre Änderungen durch Klicken auf die Schaltfläche \textbf{„SAVE“} am
+Ende der Tabelle zu speichern; andernfalls gehen sie verloren, wenn Sie die Seite verlassen.
 
-Drücken Sie die grüne Taste \textbf{„HOME“} unter der Tabelle, um zur Startseite zurückzukehren.
+Klicken Sie auf die grüne Schaltfläche \textbf{„HOME“} unterhalb der Tabelle, um zur Startseite zurückzukehren.
 
 \clearpage
 
-\subsection{BigToM / ToM+ Einstellungsseite}
+\subsection{Einstellungsseite für BigToM / ToM+}
 \label{sec:web_btom_tom_sets}
 
-Auf dieser Seite können Sie einige Parameter Ihres BigToM oder ToM+ anpassen, da diese Seite hauptsächlich Konfigurationen für die \textbf{Dashboard-Seite} enthält, die nur auf diesen beiden Geräten verfügbar ist.
+Auf dieser Seite können Sie einige Parameter Ihres BigToM oder ToM+ anpassen, da diese
+Seite hauptsächlich Konfigurationen für die \textbf{Dashboard-Seite} enthält, die nur auf diesen
+beiden Geräten verfügbar sind.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/btom_page.png}
-    \caption{BigToM \textbackslash ToM+ Einstellungstabelle.}
+    \caption{Einstellungstabelle für BigToM \textbackslash ToM+.}
 \end{figure}
 
-Beim Ersetzen Ihres Dashboards durch ein BigToM-Dashboard müssen Sie möglicherweise einige Kilometer zum ODO des neuen Dashboards hinzufügen oder davon abziehen, um Ihren ursprünglichen Stand zu erhalten. Das liegt daran, dass sie auf dem Dashboard-Motherboard gespeichert sind. Der erste Parameter ist daher das Feld \textbf{„ODO kms offset“}, das zur Korrektur dieser Kilometerdifferenz verwendet wird.
+Wenn Sie Ihr Armaturenbrett durch ein BigToM-Armaturenbrett ersetzen, müssen Sie möglicherweise
+einige Kilometer zum neuen ODO-Wert des Armaturenbretts addieren oder abziehen, um Ihren ursprünglichen Wert zu erhalten. Das liegt daran,
+dass diese Werte auf der Hauptplatine des Armaturenbretts gespeichert sind. Der erste Parameter ist daher das Feld \textbf{„ODO
+kms offset“}, mit dem diese Kilometer-Differenz ausgeglichen wird.
 
-Wie Sie vielleicht wissen, werden Dashboard-Geschwindigkeitsanzeigen aus Sicherheitsgründen absichtlich um $3 km/h$ erhöht. Wenn Sie Ihre reale Geschwindigkeit sehen möchten, aktivieren Sie einfach das Flag \textbf{„Real speed (not ODO)“} in der zweiten Zeile der Tabelle.\\
+Wie Sie vielleicht wissen, werden die Geschwindigkeitsanzeigen im Armaturenbrett aus $3 km/h$ Sicherheitsgründen absichtlich
+erhöht. Wenn Sie Ihre tatsächliche Geschwindigkeit sehen möchten, aktivieren Sie einfach das Flag \textbf{„Real 
+speed (nicht ODO)“} in der zweiten Zeile der Tabelle.\\
 
-Schauen wir uns nun das Flag \textbf{„Lock touch while driving“} an. Wenn aktiviert, wird der Touchscreen während der Fahrt (d.~h. Geschwindigkeit $>0$) aus Sicherheitsgründen deaktiviert.
+Werfen wir nun einen Blick auf das Flag \textbf{„Touchscreen während der Fahrt sperren“}. Ist dieses aktiv,
+wird der Touchscreen während der Fahrt deaktiviert (d. h.~Geschwindigkeit $>0$) aus Sicherheitsgründen deaktiviert.
 
-Als Nächstes haben wir das Flag \textbf{Skip welcome animation}, das aktiviert werden kann, wenn Sie es leid sind, die Begrüßungsanimation beim Wechsel vom Dashboard zu einer anderen Seite zu sehen.\\
-
-
-Dann gibt es einen Bereich, der dem Leistungsbalken gewidmet ist, der in Abbildung~\ref{fig:dashboard_layout} oben im Dashboard-Layout gezeigt wird. Hier können Sie über das Auswahlfeld \textbf{„Power bar item“} wählen, welcher Wert angezeigt und zum Füllen des Leistungsbalkens verwendet werden soll. Es stehen drei verfügbare Daten zur Auswahl: \textit{Engine Torque} (Motordrehmoment), \textit{Battery Ampere} (Batteriestrom) oder \textit{Battery kW} (Batterieleistung).
-
-Die beiden Felder \textbf{„Up/Down section scale \%“} darunter werden verwendet, um den Bereich des Leistungsbalkens anzupassen, und repräsentieren den Prozentsatz des Maximal-/Minimalwerts des ausgewählten Datenelements. Im Beispielbild habe ich für den maximalen Bereich \textit{30\%} eingetragen.\\
-
-
-Im nächsten Abschnitt können wir eine weitere nützliche Funktion aktivieren, die ebenfalls in Abbildung~\ref{fig:dashboard_layout} direkt unter der Geschwindigkeitsanzeige gezeigt wird. Dies wird durch Aktivieren des Flags \textbf{„Enable alert speed bar“} erreicht, das über drei anpassbare Schwellenwerte verfügt, die jeweils einer Farbe von \textit{Grün} über \textit{Gelb} bis \textit{Rot} entsprechen.
-
-Die folgenden drei Felder, \textbf{„Speed alert low/medium/high limit“}, sind mit der jeweiligen Schwellenwertgeschwindigkeit in $km/h$ auszufüllen, um die Geschwindigkeitsleiste mit der entsprechenden Farbe aufleuchten zu lassen. Im Beispiel wird die Leiste beim Überschreiten von $50 km/h$ gelb und beim Überschreiten von $70 km/h$ rot. Wie Sie vielleicht bemerken, wollte ich nicht, dass die grüne Leiste angezeigt wird, daher habe ich den Schwellenwert \textit{low} auf denselben Wert wie den Schwellenwert \textit{medium} gesetzt.\\
+Als Nächstes haben wir das Kontrollkästchen \textbf{„Begrüßungsanimation überspringen“}, das Sie aktivieren können, wenn Sie
+es leid sind, die Begrüßungsanimation zu sehen, wenn Sie vom Armaturenbrett zu einer anderen Seite wechseln.\\
 
 
-Vorletztes haben wir das standardmäßig aktivierte Flag \textbf{„3D layout for charging page“}, das 3D-Details anstelle der Standard-ToM-Ladeseite anzeigt.
+Dann gibt es einen Abschnitt, der der in Abbildung~\ref{fig:dashboard_layout}
+oben im Dashboard-Layout dargestellt ist. Hier können Sie mithilfe des Auswahlfelds \textbf{„Power-Bar-Element“}
+auswählen, welcher Wert angezeigt und zum Ausfüllen der Power-Bar verwendet werden soll. Es stehen drei
+Daten zur Auswahl: \textit{Motordrehmoment}, \textit{Batterie-Ampere} oder \textit{Batterie-kW}.
 
-Und schließlich gibt es die zuletzt hinzugefügte Funktion namens \textbf{Twin ToM}, die für die ursprünglichen ToM-Besitzer entwickelt wurde, bevor ToM+ herauskam. Damit können Sie das kleinere Display zusammen mit der neuen Ansteckversion verwenden, um zwei Seiten gleichzeitig zu überwachen. Damit dies funktioniert, müssen Sie das Flag in der letzten Zeile aktivieren: \textbf{„Enable auxiliary display“}.
+Die beiden Felder \textbf{„Skala des oberen/unteren Bereichs in %“} dienen dazu, den Bereich der
+Leistungsleiste anzupassen, und geben den Prozentsatz des Maximal- bzw. Minimalwerts der ausgewählten Datenangabe an.
+Im Beispielbild habe ich für den maximalen Bereich \textit{30\%} eingegeben.\\
 
-Anschließend können Sie über das Auswahlfeld \textbf{„Start page“} eine bestimmte Seite auswählen, die beim Einschalten auf dem Zusatzdisplay angezeigt werden soll, oder einfach \textit{Last shown} (Zuletzt angezeigt) wählen.\\
+
+Im nächsten Abschnitt können wir eine weitere nützliche Funktion aktivieren, die in Abbildung~\ref{fig:dashboard_layout}
+ebenfalls direkt unterhalb der Geschwindigkeitsanzeige dargestellt ist. Dies wird durch Aktivieren des Kontrollkästchens \textbf{„Geschwindigkeitswarnleiste aktivieren
+“} erreicht, das über drei anpassbare Schwellenwerte verfügt, von denen jeder
+einer Farbe von \textit{grün} über \textit{gelb} bis hin zu \textit{rot} entspricht.
+
+Die folgenden drei Felder, \textbf{„Geschwindigkeitswarnung: untere/mittlere/obere Grenze“}, sind dazu vorgesehen,
+mit den jeweiligen Schwellenwerten in $km/h$ ausgefüllt zu werden, damit die Geschwindigkeitsleiste
+in der entsprechenden Farbe leuchtet. Im Beispiel wird der Balken gelb, sobald $50 km/h$ überschritten wird,
+und anschließend rot, sobald $70 km/h$ überschritten wird. Wie Sie vielleicht bemerken, wollte ich nicht, dass der
+grüne Balken angezeigt wird, daher habe ich den Schwellenwert für \textit{niedrig} auf denselben Wert wie den für 
+\textit{mittel} gesetzt.\\
 
 
-Denken Sie wie immer daran, Ihre Änderungen durch Drücken der Schaltfläche \textbf{„SAVE“} am Ende der Tabelle zu speichern; andernfalls gehen sie beim Verlassen der Seite verloren.
+Vorletztes ist das Flag \textbf{„3D-Layout für die Ladeseite“} – standardmäßig aktiviert –,
+das anstelle der üblichen ToM-Ladeseite 3D-Details anzeigt.
 
-Drücken Sie die grüne Taste \textbf{„HOME“} unter der Tabelle, um zur Startseite zurückzukehren.
+Und schließlich gibt es noch die zuletzt hinzugefügte Funktion namens \textbf{Twin ToM}
+genannt und für Besitzer des ursprünglichen ToM konzipiert, bevor ToM+ auf den Markt kam. Damit können Sie
+das kleinere Display zusammen mit der neuen Aufsteckversion nutzen, um
+zwei Seiten gleichzeitig zu überwachen. Damit dies jedoch funktioniert, müssen Sie das Flag in der letzten Zeile
+, nämlich die Option \textbf{„Zusatzdisplay aktivieren“}.
+
+Anschließend können Sie über das Auswahlfeld \textbf{„Startseite“} eine bestimmte Seite auswählen, die
+beim Einschalten auf dem Zusatzdisplay angezeigt werden soll, oder einfach \textit{Zuletzt angezeigt} wählen.\\
+
+
+Denken Sie wie immer daran, Ihre Änderungen durch Klicken auf die Schaltfläche \textbf{„SAVE“} am
+Ende der Tabelle zu speichern, da sie sonst beim Verlassen der Seite verloren gehen.
+
+Klicken Sie auf die grüne Schaltfläche \textbf{„HOME“} unterhalb der Tabelle, um zur Startseite zurückzukehren.
 
 \clearpage
 
-\subsection{Diagnose-Seite}
+\subsection{Diagnoseseite}
 \label{sec:web_diagnostic}
 
-Diese Seite besteht aus nur einer Tabelle und ermöglicht es Ihnen, weitere Informationen zu den letzten 10 Fehlern anzuzeigen, die in Ihrem Twizy aufgetreten sind, ähnlich wie auf der in Abschnitt~\ref{sec:error_page} besprochenen ToM+-Displayseite.
+Diese Seite besteht aus nur einer Tabelle und ermöglicht es Ihnen, weitere Informationen
+zu den letzten 10 Fehlern einzusehen, die in Ihrem Twizy aufgetreten sind – ähnlich wie auf dem ToM+-Display
+, die in Abschnitt~\ref{sec:error_page} erläutert wurde.
 
-Die angezeigten Werte sind die \textbf{„DTC Number“} und, falls verfügbar, die \textbf{„DF Number“}, bei denen es sich um eindeutige Identifikatoren für Twizy-Fehler handelt, sodass Sie online danach suchen können. Als Nächstes haben wir den Fehler-\textbf{„Status“}, wie z.~B. \textit{SAVED}, wenn er bereits aufgetreten ist, oder \textit{PRESENT}, wenn er gerade erst aufgetreten ist.
+Die angezeigten Werte sind die \textbf{„DTC-Nummer“} und, sofern verfügbar, die \textbf{„DF-Nummer“},
+die eindeutige Kennungen für Twizy-Fehler darstellen, sodass Sie online danach suchen können.
+Als Nächstes folgt der Fehler-\textbf{„Status“}, beispielsweise \textit{SAVED}, wenn der Fehler bereits aufgetreten ist,
+oder \textit{PRESENT}, wenn er gerade erst aufgetreten ist.
 
-Informationen zur \textit{Aktivierung von DF-Nummern} finden Sie in Abschnitt~\ref{sec:add_wifi_profile}.
+Um \textit{DF-Nummern zu aktivieren}, lesen Sie bitte Abschnitt~\ref{sec:add_wifi_profile}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/error_page.png}
-    \caption{Diagnose-Seite --- Fehlerlisten-Tabelle.}
+    \caption{Diagnoseseite --- Fehlerlistentabelle.}
 \end{figure}
 
-Zusammen mit diesen Werten sind die nächsten vier Werte die Referenzen für \textbf{„ODO“}, \textbf{„SOC“}, \textbf{„speed“} (Geschwindigkeit) und \textbf{„12V Battery voltage“} (12V-Batteriespannung) zum Zeitpunkt des Auftretens des entsprechenden Fehlers.
+Neben diesen Werten sind die nächsten vier Werte die Referenzwerte \textbf{„ODO“},
+\textbf{„SOC“}, \textbf{„Geschwindigkeit“} und \textbf{„12-V-Batteriespannung“}, sofern der
+entsprechende Fehler aufgetreten ist.
 
-Für jeden Fehlerdatensatz gibt es, falls verfügbar, ein Feld für die Fehler-\textbf{„Description“} (Beschreibung).\\
+Für jeden Fehlerdatensatz gibt es, sofern vorhanden, ein Feld \textbf{„Beschreibung“}.\\
 
 
-Wenn Sie Twizy-Fehler löschen möchten, selbst fatale, können Sie die unten stehende Schaltfläche \textbf{„DELETE ERRORS“} drücken, die alle Fehler auf einmal löscht.
+Wenn Sie Twizy-Fehler, auch schwerwiegende, löschen möchten, können Sie auf die untenstehende
+Schaltfläche \textbf{„FEHLER LÖSCHEN“} klicken, wodurch alle Fehler auf einmal gelöscht werden.
 
-Drücken Sie die grüne Taste \textbf{„HOME“} unter der Tabelle, um zur Startseite zurückzukehren.
+Klicken Sie auf die grüne Schaltfläche \textbf{„HOME“} unterhalb der Tabelle, um zur Startseite zurückzukehren.

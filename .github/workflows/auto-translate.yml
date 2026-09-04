@@ -160,7 +160,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT_TOKEN }}
           commit-message: "chore: auto-translate DE/FR + rebuild PDFs"
           title: "Auto-translate: update DE/FR + PDFs"
           body: |

@@ -156,6 +156,40 @@ jobs:
             fi
           done
 
+      - name: Stage PDFs for release
+        id: stage-pdfs
+        run: |
+          # Trova tutti i PDF e li copia in una cartella temporanea
+          mkdir -p pdfs_to_upload
+          find . -name "*.pdf" -type f -exec cp {} pdfs_to_upload/ \;
+          
+          # Mostra i file trovati per debug
+          ls -lh pdfs_to_upload/
+
+      - name: Create/Update Release with PDFs
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "📄 Manuale Tradotto - Ultima versione"
+          tag_name: "auto-translate-latest"
+          body: |
+            ## PDF generati automaticamente
+
+            Questa release contiene i PDF tradotti in:
+            - 🇬🇧 Inglese (originale)
+            - 🇩🇪 Tedesco
+            - 🇫🇷 Francese
+
+            **Generato il:** $(date +'%d/%m/%Y %H:%M:%S')
+
+            *I PDF sono compressi per ridurre le dimensioni.*
+          files: |
+            pdfs_to_upload/*.pdf
+          overwrite: true
+          prerelease: false
+          draft: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}  # Usa PAT se il GITHUB_TOKEN non basta
+
       # ========== PULL REQUEST ==========
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6

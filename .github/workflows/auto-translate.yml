@@ -13,6 +13,11 @@ on:
   # Pulsante per avviarlo a mano da GitHub
   workflow_dispatch:
 
+# Evita due run in parallelo che si pestano i piedi (release/PR)
+concurrency:
+  group: auto-translate
+  cancel-in-progress: false
+
 jobs:
   translate-and-pr:
     runs-on: ubuntu-latest
@@ -34,28 +39,16 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
-      # ========== CACHE TEX LIVE (secondo documentazione ufficiale) ==========
-      - name: Cache TeX Live
-        id: cache-texlive
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.texlive
-            /tmp/texlive
-            /usr/local/texlive
-          key: texlive-full-${{ runner.os }}-2026-v1
-          restore-keys: |
-            texlive-full-${{ runner.os }}-2026-
-            texlive-full-${{ runner.os }}-
-
-      - name: Install TeX Live (solo se cache miss)
-        if: steps.cache-texlive.outputs.cache-hit != 'true'
+      # ========== TEX LIVE ==========
+      # Bastano questi pacchetti (verificato: compilano EN/DE/FR).
+      # texlive-full era enorme e la vecchia cache puntava a cartelle
+      # che apt non usa, quindi non serviva a nulla.
+      - name: Install TeX Live + Ghostscript
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-full
-
-      - name: Install Pandoc
-        run: sudo apt-get install -y pandoc
+          sudo apt-get install -y --no-install-recommends \
+            latexmk texlive-latex-recommended texlive-latex-extra \
+            texlive-fonts-recommended lmodern ghostscript
 
       # ========== TRADUZIONE ==========
       - name: Detect changed English chapters
@@ -84,6 +77,13 @@ jobs:
 
           echo "Changed files:"
           git diff --name-only "$BEFORE" "$AFTER"
+
+          # Translation script changed → retranslate everything
+          if git diff --name-only "$BEFORE" "$AFTER" | grep -qx 'scripts/translate_chapters.py'; then
+            echo "Translation script changed → translating all chapters"
+            echo "files=ALL" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
 
           CHANGED=$(
             git diff --name-only "$BEFORE" "$AFTER" -- chapters/ \
@@ -133,15 +133,11 @@ jobs:
 
       - name: Compress PDFs with Ghostscript
         run: |
-          # Installa Ghostscript (se non già presente)
-          sudo apt-get update
-          sudo apt-get install -y ghostscript
-
           # Imposta una soglia (es. 10 MB) per comprimere solo i file grandi
           MAX_SIZE=10485760
 
           # Trova tutti i PDF generati (modifica il percorso se necessario, es. build/ o .)
-          find . -name "*.pdf" -type f | while read -r pdf; do
+          for pdf in main_en.pdf main_de.pdf main_fr.pdf; do
             size=$(stat -c%s "$pdf")
             if [ "$size" -gt "$MAX_SIZE" ]; then
               echo "📦 Compressione di $pdf (dimensioni: $size byte)..."
@@ -156,15 +152,9 @@ jobs:
             fi
           done
 
-      - name: Stage PDFs for release
-        id: stage-pdfs
-        run: |
-          # Trova tutti i PDF e li copia in una cartella temporanea
-          mkdir -p pdfs_to_upload
-          find . -name "*.pdf" -type f -exec cp {} pdfs_to_upload/ \;
-          
-          # Mostra i file trovati per debug
-          ls -lh pdfs_to_upload/
+      - name: Prepare release notes
+        id: notes
+        run: echo "date=$(TZ=Europe/Rome date +'%d/%m/%Y %H:%M')" >> "$GITHUB_OUTPUT"
 
       - name: Create/Update Release with PDFs
         uses: softprops/action-gh-release@v2
@@ -179,16 +169,16 @@ jobs:
             - 🇩🇪 Tedesco
             - 🇫🇷 Francese
 
-            **Generato il:** $(date +'%d/%m/%Y %H:%M:%S')
+            **Generato il:** ${{ steps.notes.outputs.date }}
 
             *I PDF sono compressi per ridurre le dimensioni.*
           files: |
-            pdfs_to_upload/*.pdf
-          overwrite: true
+            main_en.pdf
+            main_de.pdf
+            main_fr.pdf
+          fail_on_unmatched_files: true
           prerelease: false
           draft: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}  # Usa PAT se il GITHUB_TOKEN non basta
 
       # ========== PULL REQUEST ==========
       - name: Create Pull Request
@@ -205,5 +195,9 @@ jobs:
 
             Controlla le traduzioni e i PDF, poi fai merge.
           branch: auto-translate/${{ github.run_id }}
+          # Committa solo le traduzioni (niente PDF, log o file di debug)
+          add-paths: |
+            chapters_de/**
+            chapters_fr/**
           delete-branch: true
           labels: translation, automated

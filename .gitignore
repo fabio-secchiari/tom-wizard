@@ -33,3 +33,6 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+# Output temporanei della CI
+debug_protected.txt
+pdfs_to_upload/

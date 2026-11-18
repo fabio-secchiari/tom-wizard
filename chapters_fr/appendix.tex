@@ -229,7 +229,7 @@ Enfin, appuyez sur le bouton vert \textbf{“Save”} et attendez que l'appareil
 \textbf{RAPPEL !} Si vous utilisez le broker Maqiatto, vous devrez peut-être ajouter le nouveau topic
 à votre compte comme expliqué à la Figure~\ref{sec:free_broker_add_topics}.
 
-Dans ce cas, vous devrez ajouter \textbf{cmnd/<votre\textunderscore~nom\textunderscore~de\textunderscore~topic\textunderscore~Tasmota>/Power} comme nouveau nom de topic,
+Dans ce cas, vous devrez ajouter \textbf{cmnd/<votre\_~nom\_~de\_~topic\_~Tasmota>/Power} comme nouveau nom de topic,
 qui deviendra \textit{cmnd/charge/Power} si vous avez suivi l'image.
 
 
@@ -254,16 +254,16 @@ l'appareil Tasmota.
 
 Si vous avez votre propre broker MQTT (c'est-à-dire \textit{pas Maqiatto}), la \textbf{Aux Cmd} aura cette syntaxe :
 \begin{itemize}
-    \item \textit{cmnd/<votre\textunderscore~nom\textunderscore~de\textunderscore~topic\textunderscore~Tasmota>/Power 1} si vous souhaitez allumer l'appareil.
-    \item \textit{cmnd/<votre\textunderscore~nom\textunderscore~de\textunderscore~topic\textunderscore~Tasmota>/Power 0} si vous souhaitez l'éteindre.
+    \item \textit{cmnd/<votre\_~nom\_~de\_~topic\_~Tasmota>/Power 1} si vous souhaitez allumer l'appareil.
+    \item \textit{cmnd/<votre\_~nom\_~de\_~topic\_~Tasmota>/Power 0} si vous souhaitez l'éteindre.
 \end{itemize}
 À nouveau, dans notre exemple, la commande devient \textbf{cmnd/charge/Power 1} pour allumer la lampe.\\
 
 Sinon, si vous utilisez le broker Maqiatto ou un autre qui utilise votre userID (e-mail)
 comme préfixe dans le nom des topics, la syntaxe de la \textbf{Aux Cmd} ressemblera à ceci :
 \begin{itemize}
-    \item \textit{myemail@gmail.com/cmnd/<votre\textunderscore~nom\textunderscore~de\textunderscore~topic\textunderscore~Tasmota>/Power 1} pour l'allumer.
-    \item \textit{myemail@gmail.com/cmnd/<votre\textunderscore~nom\textunderscore~de\textunderscore~topic\textunderscore~Tasmota>/Power 0} pour l'éteindre.
+    \item \textit{myemail@gmail.com/cmnd/<votre\_~nom\_~de\_~topic\_~Tasmota>/Power 1} pour l'allumer.
+    \item \textit{myemail@gmail.com/cmnd/<votre\_~nom\_~de\_~topic\_~Tasmota>/Power 0} pour l'éteindre.
 \end{itemize}
 Dans notre cas, la commande devient \textbf{myemail@gmail.com/cmnd/charge/Power 1}.\\
 
@@ -274,8 +274,8 @@ Veuillez noter que si vous avez un appareil avec plusieurs relais, vous devrez
 modifier la syntaxe ci-dessus en spécifiant quel relais vous souhaitez contrôler : en utilisant \textbf{“Power1”}
 pour le premier relais, \textbf{“Power2”} pour le second et ainsi de suite. Cela devient :
 \begin{itemize} 
-    \item \textit{cmnd/<votre\textunderscore~nom\textunderscore~de\textunderscore~topic\textunderscore~Tasmota>/Power1 1} pour allumer le premier relais.
-    \item \textit{cmnd/<votre\textunderscore~nom\textunderscore~de\textunderscore~topic\textunderscore~Tasmota>/Power1 0} pour l'éteindre.
+    \item \textit{cmnd/<votre\_~nom\_~de\_~topic\_~Tasmota>/Power1 1} pour allumer le premier relais.
+    \item \textit{cmnd/<votre\_~nom\_~de\_~topic\_~Tasmota>/Power1 0} pour l'éteindre.
 \end{itemize}
 La même distinction de syntaxe concernant Maqiatto et les brokers possédés s'applique également ici.
 

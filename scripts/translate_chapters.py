@@ -4,7 +4,10 @@ Traduce i capitoli inglesi verso tedesco e francese usando DeepL.
 
 Strategia:
   1. Il sorgente LaTeX viene suddiviso in "testo" e "codice" (comandi,
-     graffe, math, commenti, ambienti verbatim, ...).
+     graffe, math, commenti, ambienti verbatim, ...). Anche password e
+     nomi di file con underscore (GIVE\\_ME\\_DF!, ESP32\\_Fw23.bin),
+     percorsi/topic MQTT (cmnd/<...>/Power) e il contenuto di \\texttt{}
+     sono "codice": DeepL non li vede proprio.
   2. Il codice viene sostituito con tag XML vuoti <x id="N"/>, mentre il
      testo viene escapato per XML. Così DeepL (tag_handling="xml") vede i
      segnaposto come veri tag e non li traduce né li modifica.
@@ -50,25 +53,46 @@ CODE_ARG_COMMANDS = (
     "iconbox|lstinputlisting|hyperref|nameref"
 )
 
-LATEX_CODE = re.compile(
-    r"""
-      \\begin\{(?P<verb>verbatim\*?|lstlisting|minted|equation\*?|align\*?)\}
-          .*?\\end\{(?P=verb)\}                        # ambienti da non toccare
-    | (?<!\\)%[^\n]*\n?                                # commenti (con il newline!)
-    | \\\[.*?\\\]                                      # math display
-    | \\\(.*?\\\)                                      # math inline \( \)
-    | (?<!\\)\$[^$]*\$                                 # math inline $ $
-    | \\begin\{[^{}]*\}(?:\[[^\]]*\])*                 # \begin{env}[opt]
-          (?:\{(?:[^{}]|\{[^{}]*\})*\})?               #   {width} di subfigure ecc.
-    | \\end\{[^{}]*\}
-    | \\(?:""" + CODE_ARG_COMMANDS + r""")\*?
-          (?:\[[^\]]*\])*\{[^{}]*\}                    # \cmd[opt]{codice}
-    | \\[a-zA-Z@]+\*?                                  # qualsiasi altro comando
-    | \\[^a-zA-Z]                                      # \\ \& \% \_ \, ...
-    | [{}~&]                                           # graffe, spazi fissi, tab
-    """,
-    re.VERBOSE | re.DOTALL,
-)
+# "Parole" da copiare così come sono: password e nomi file con underscore
+# (GIVE\_ME\_DF!, ESP32\_Fw23.bin, your\_~Tasmota\_~topic\_~name) e
+# percorsi / topic MQTT (cmnd/<...>/Power, /dev/ttyUSB0, \%prefix\%/\%topic\%/).
+_WORD_CHAR = r"(?:[\w.!+\-@<>]|\\%|~(?=[\w<\\]))"
+_WORD_JOIN = r"(?:\\_|\\textunderscore(?:\{\}|\s)?|/)"
+WORD = rf"(?P<word>{_WORD_CHAR}*(?:{_WORD_JOIN}{_WORD_CHAR}*)+)"
+
+_LATEX_PARTS = [
+    r"""\\begin\{(?P<verb>verbatim\*?|lstlisting|minted|equation\*?|align\*?)\}
+          .*?\\end\{(?P=verb)\}""",                     # ambienti da non toccare
+    r"(?<!\\)%[^\n]*\n?",                               # commenti (con il newline!)
+    r"\\\[.*?\\\]",                                     # math display
+    r"\\\(.*?\\\)",                                     # math inline \( \)
+    r"(?<!\\)\$[^$]*\$",                                # math inline $ $
+    r"""\\begin\{[^{}]*\}(?:\[[^\]]*\])*
+          (?:\{(?:[^{}]|\{[^{}]*\})*\})?""",            # \begin{env}[opt]{width}
+    r"\\end\{[^{}]*\}",
+    r"\\(?:" + CODE_ARG_COMMANDS + r")\*?(?:\[[^\]]*\])*\{[^{}]*\}",  # \cmd{codice}
+    r"\\texttt\{[^{}]*\}",                              # monospaziato = codice
+    r"\\verb\*?(?P<delim>[^a-zA-Z\s]).*?(?P=delim)",    # \verb|...|
+    WORD,                                               # password, file, percorsi
+    r"\\[a-zA-Z@]+\*?",                                 # qualsiasi altro comando
+    r"\\[^a-zA-Z]",                                     # \\ \& \% \_ \, ...
+    r"[{}~&]",                                          # graffe, spazi fissi, tab
+]
+LATEX_CODE = re.compile("|".join(_LATEX_PARTS), re.VERBOSE | re.DOTALL)
+LATEX_CODE_NO_WORD = re.compile(
+    "|".join(x for x in _LATEX_PARTS if x is not WORD), re.VERBOSE | re.DOTALL)
+
+
+def is_verbatim_word(word: str) -> bool:
+    """True se la "parola" va copiata identica (non tradotta)."""
+    if re.search(r"\\_|\\textunderscore", word):
+        return True                                     # GIVE\_ME\_DF!
+    if word.count("/") >= 2 and (
+        word.startswith("/") or re.search(r"[<>@\d A-Z]|\\%", word)
+    ):
+        return True                                     # cmnd/<...>/Power, /dev/x
+    return False                                        # and/or, low/medium/high
+
 
 TAG_RE = re.compile(r'<x\s+id\s*=\s*"(\d+)"\s*/>')
 
@@ -80,14 +104,21 @@ def tokenize(text: str) -> List[Tuple[str, str]]:
     vengono uniti in un unico segnaposto, per ridurre il numero di tag.
     """
     tokens: List[Tuple[str, str]] = []
-    pos = 0
-    for m in LATEX_CODE.finditer(text):
-        if m.start() > pos:
-            tokens.append(("text", text[pos:m.start()]))
-        tokens.append(("code", m.group(0)))
-        pos = m.end()
-    if pos < len(text):
-        tokens.append(("text", text[pos:]))
+
+    def scan(chunk: str, regex: "re.Pattern[str]") -> None:
+        pos = 0
+        for m in regex.finditer(chunk):
+            if m.start() > pos:
+                tokens.append(("text", chunk[pos:m.start()]))
+            if m.lastgroup == "word" and not is_verbatim_word(m.group(0)):
+                scan(m.group(0), LATEX_CODE_NO_WORD)    # parola normale: traducibile
+            else:
+                tokens.append(("code", m.group(0)))
+            pos = m.end()
+        if pos < len(chunk):
+            tokens.append(("text", chunk[pos:]))
+
+    scan(text, LATEX_CODE)
 
     merged: List[Tuple[str, str]] = []
     for kind, value in tokens:

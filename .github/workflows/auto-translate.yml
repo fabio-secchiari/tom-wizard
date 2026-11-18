@@ -7,6 +7,7 @@ on:
     paths:
       - 'chapters/**/*.tex'
       - 'scripts/translate_chapters.py'
+      - 'scripts/build_markdown.py'
       - 'Makefile'
       - 'main_*.tex'
 
@@ -43,12 +44,13 @@ jobs:
       # Bastano questi pacchetti (verificato: compilano EN/DE/FR).
       # texlive-full era enorme e la vecchia cache puntava a cartelle
       # che apt non usa, quindi non serviva a nulla.
-      - name: Install TeX Live + Ghostscript
+      # pandoc (3.1.3 su Ubuntu 24.04) serve per i Markdown del sito.
+      - name: Install TeX Live + Ghostscript + Pandoc
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
             latexmk texlive-latex-recommended texlive-latex-extra \
-            texlive-fonts-recommended lmodern ghostscript
+            texlive-fonts-recommended lmodern ghostscript pandoc
 
       # ========== TRADUZIONE ==========
       - name: Detect changed English chapters
@@ -127,6 +129,12 @@ jobs:
             echo "No English chapters changed."
           fi
 
+      # ========== MARKDOWN (sito web) ==========
+      # Rigenera markdown/index*.md dai sorgenti (anche DE/FR appena tradotti).
+      # Fallisce se restano comandi LaTeX o se si perdono caratteri speciali.
+      - name: Build Markdown for the website
+        run: python scripts/build_markdown.py
+
       # ========== COMPILAZIONE ==========
       - name: Compile all PDFs
         run: make all
@@ -185,19 +193,20 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.PAT_TOKEN }}
-          commit-message: "chore: auto-translate DE/FR + rebuild PDFs"
-          title: "Auto-translate: update DE/FR + PDFs"
+          commit-message: "chore: auto-translate DE/FR + rebuild Markdown/PDFs"
+          title: "Auto-translate: update DE/FR + Markdown + PDFs"
           body: |
-            Traduzione automatica + ricompilazione PDF generata da DeepL.
+            Traduzione automatica (DeepL) + Markdown del sito rigenerati + PDF ricompilati.
 
             **File inglesi modificati:**
             `${{ steps.changed.outputs.files }}`
 
             Controlla le traduzioni e i PDF, poi fai merge.
           branch: auto-translate/${{ github.run_id }}
-          # Committa solo le traduzioni (niente PDF, log o file di debug)
+          # Committa solo traduzioni e Markdown (niente PDF, log o file di debug)
           add-paths: |
             chapters_de/**
             chapters_fr/**
+            markdown/**
           delete-branch: true
           labels: translation, automated

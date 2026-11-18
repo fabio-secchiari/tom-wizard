@@ -336,7 +336,7 @@ Seitensymbole sind die Symbole, die Sie in der unteren Zeile des ToM+ Displays f
 
 ::: tcolorbox
   ------------------------------------------------ -------------------------------------------------------------
-  ![image](icons/BatteryA+red.png){height="8mm"}   
+  ![image](icons/BatteryA_red.png){height="8mm"}   
 
   ------------------------------------------------ -------------------------------------------------------------
 :::
@@ -350,7 +350,7 @@ Seitensymbole sind die Symbole, die Sie in der unteren Zeile des ToM+ Displays f
 
 ::: tcolorbox
   --------------------------------------------- -------------------------------------------------------------
-  ![image](icons/Battery3°.jpg){height="8mm"}   
+  ![image](icons/Battery3_deg.jpg){height="8mm"}   
 
   --------------------------------------------- -------------------------------------------------------------
 :::
@@ -387,7 +387,7 @@ Seitensymbole sind die Symbole, die Sie in der unteren Zeile des ToM+ Displays f
 
 ::: tcolorbox
   ------------------------------------------- -------------------------------------------------------------
-  ![image](icons/Charge°.png){height="8mm"}   
+  ![image](icons/Charge_deg.png){height="8mm"}   
 
   ------------------------------------------- -------------------------------------------------------------
 :::
@@ -424,14 +424,14 @@ Seitensymbole sind die Symbole, die Sie in der unteren Zeile des ToM+ Displays f
 
 ::: tcolorbox
   ------------------------------------------- -------------------------------------------------------------
-  ![image](icons/Motor°2.jpg){height="8mm"}   
+  ![image](icons/Motor_deg2.jpg){height="8mm"}   
 
   ------------------------------------------- -------------------------------------------------------------
 :::
 
 ::: tcolorbox
   ---------------------------------------- -------------------------------------------------------------
-  ![image](icons/Sev°.png){height="8mm"}   
+  ![image](icons/Sev_deg.png){height="8mm"}   
 
   ---------------------------------------- -------------------------------------------------------------
 :::
@@ -1140,7 +1140,7 @@ Wenn Sie auf eine Tabellenzelle tippen (entweder SSID oder Key), öffnet ToM+ ei
 Bisher können Sie **vier verschiedene Verbindungsprofile** mit vier Paaren aus SSID und Passwort einrichten. Wenn Sie kein Profil einrichten, aber die WLAN-Schieberegler aktiviert sind, führt ToM+ dennoch alle zwei Minuten einen WLAN-Scan durch, um zu versuchen, öffentliche Verbindungen ohne Passwortschutz zu finden und sich dann zu verbinden. Drücken Sie die Taste mit dem **Pfeil unten rechts zum Speichern**.\
 Das vierte WLAN-Verbindungsprofil ist besonders, da das Feld **„KEY 4"** sowohl als Standard-Passwortfeld für die letzte SSID als auch zum Ändern des Standard-Webserver-Passworts verwendet wird, wie in Abschnitt [4.4.3](#sec:web_change_password){reference-type="ref" reference="sec:web_change_password"} besprochen wird.
 
-Darüber hinaus gibt es einige Speziacodes, die Sie in dieses Feld eingeben können, um geheime Konfigurationen durchzuführen. Diese Codes unterscheiden zwischen Groß- und Kleinschreibung und wirken sich nicht auf Ihr Feld **„KEY 4"** aus, wenn sie korrekt geschrieben sind, da ToM+ sie nur als Befehle verwendet. Sie können **GIVEMEDF!** eingeben (exakt so wie hier geschrieben, auch mit Unterstrichen und Ausrufezeichen), um die *DF-Fehlernummerierung und Fehlerbeschreibung* sowohl auf dem Display als auch in der Weboberfläche anzuzeigen.\
+Darüber hinaus gibt es einige Speziacodes, die Sie in dieses Feld eingeben können, um geheime Konfigurationen durchzuführen. Diese Codes unterscheiden zwischen Groß- und Kleinschreibung und wirken sich nicht auf Ihr Feld **„KEY 4"** aus, wenn sie korrekt geschrieben sind, da ToM+ sie nur als Befehle verwendet. Sie können **GIVE_ME_DF!** eingeben (exakt so wie hier geschrieben, auch mit Unterstrichen und Ausrufezeichen), um die *DF-Fehlernummerierung und Fehlerbeschreibung* sowohl auf dem Display als auch in der Weboberfläche anzuzeigen.\
 **ERINNERUNG!** Die Befehle werden von ToM+ nur ausgeführt, wenn sie über diese WLAN-Einstellungsseite eingegeben werden, nicht über die später besprochene Weboberfläche. Da die Herkunft der DF-Nummer nicht eindeutig geklärt ist, erfolgt die Aktivierung dieser Funktion auf eigene Verantwortung.
 
 ### WLAN-Verbindung prüfen {#sec:check_wifi_connection}
@@ -1998,7 +1998,7 @@ Bevor du die Firmware aktualisierst, musst du natürlich die ZIP-Datei der gewü
 
 Zuerst bemerken wir eine Textdatei namens *changeLog23.txt*, mit der die hinzugefügten Funktionen und behobenen Fehler der neuesten Firmware-Version nachverfolgt werden. Lies sie durch, wenn du neugierig bist, was es Neues gibt, oder wenn du zusätzliche Hilfe beim Update-Vorgang benötigst.\
 Als Nächstes gibt es zwei Ordner, die das **LCD-Display-Firmware**-Update im *.tft*-Format enthalten. **Wähle die Version**, die für dein Gerät gemacht ist: den ersten Ordner, wenn du ein ToM+ oder ein BigToM hast (was ein größeres Display bedeutet), oder den anderen, wenn du ein traditionelles ToM hast oder das Twin ToM (kleinerer Bildschirm) aktualisieren möchtest. Dies ist ein entscheidender Schritt, da neue Icons und Grafiken sonst nicht zu deiner Displaygröße passen.\
-Die letzte Datei ist die Binärdatei *ESP32Fw23.bin* für das **Blackbox-Update**. Stelle sicher, dass du alle diese Dateien hast, da du sie in den nächsten Schritten benötigst.
+Die letzte Datei ist die Binärdatei *ESP32_Fw23.bin* für das **Blackbox-Update**. Stelle sicher, dass du alle diese Dateien hast, da du sie in den nächsten Schritten benötigst.
 
 ### Was sollte ich vor dem Update wissen?
 
@@ -2078,14 +2078,14 @@ Auf der Download-Seite der [Silicon Labs-Website](https://www.silabs.com/softwar
 
 Da dieser Abschnitt der Anleitung speziell für Windows-Betriebssysteme gilt, laden wir das Paket *„CP210x Windows Drivers"* herunter, indem wir auf den im Bild oben gelb markierten Link klicken.
 
-Die heruntergeladene Datei ist ein ZIP-Ordner, der gewöhnlich *„CP210xWindowsDrivers.zip"* heißt und in dem sich einige Ordner und Dateien befinden. Im Screenshot unten sind alle üblicherweise im ZIP-Ordner enthaltenen Dateien aufgelistet.
+Die heruntergeladene Datei ist ein ZIP-Ordner, der gewöhnlich *„CP210x_Windows_Drivers.zip"* heißt und in dem sich einige Ordner und Dateien befinden. Im Screenshot unten sind alle üblicherweise im ZIP-Ordner enthaltenen Dateien aufgelistet.
 
 <figure data-latex-placement="H">
 <img src="figures/driver_folder.png" style="width:70.0%" />
 <figcaption>Inhalt des Treiber-ZIP-Ordners.</figcaption>
 </figure>
 
-Entpacke alle Dateien in einen temporären Ordner auf deinem Desktop. Nun ist es wichtig, die richtige *„.exe"*-Datei für die Installation der Treiber auszuführen. Wenn dein Betriebssystem 64-Bit ist (bei den meisten Computern), führst du die Datei *CP210xVCPInstallerx64.exe* aus, andernfalls ist die zweite *„.exe"*-Datei die passende, wie im Bild gezeigt.
+Entpacke alle Dateien in einen temporären Ordner auf deinem Desktop. Nun ist es wichtig, die richtige *„.exe"*-Datei für die Installation der Treiber auszuführen. Wenn dein Betriebssystem 64-Bit ist (bei den meisten Computern), führst du die Datei *CP210xVCPInstaller_x64.exe* aus, andernfalls ist die zweite *„.exe"*-Datei die passende, wie im Bild gezeigt.
 
 Stelle sicher, dass du die ausführbare Datei mit Administratorrechten startest, indem du mit der rechten Maustaste darauf klickst und die Option **„Als Administrator ausführen"** wählst. Falls du dazu aufgefordert wirst, erlaube dem Programm, Administratoraktionen auf deinem Computer auszuführen, da der Treiber-Installationsprozess sonst nicht startet.
 
@@ -2126,7 +2126,7 @@ Nun sollte sich ein Fenster öffnen, das wie in der Abbildung unten aussieht. Su
 
 Besuche die [offizielle ESP32-Website](https://www.espressif.com/en/support/download/other-tools), um ein Tool herunterzuladen, das wir zum Flashen der Firmware auf unsere Blackbox-Platine benötigen. Suche nach **„Flash Download Tools"** und drücke die Schaltfläche wie im Bild gezeigt. Suche dann auf der Seite nach den *„Flash Download Tools"* mit dem Speichern-Symbol und klicke darauf.
 
-Dadurch wird ein ZIP-Ordner namens *„flashdownloadtoolx.x.x.zip"* heruntergeladen, wobei die „x"-Symbole durch die Versionsbezeichnung ersetzt werden (in diesem Beispiel **V3.9.11**). Beim Öffnen des heruntergeladenen ZIP-Ordners wirst du feststellen, dass sich darin ein weiterer Ordner befindet. Entpacke diesen auf deinen Desktop oder an einen beliebigen Ort und öffne ihn. Die darin enthaltenen Dateien entsprechen in der Regel den im Screenshot unten aufgelisteten.
+Dadurch wird ein ZIP-Ordner namens *„flash_download_tool_x.x.x.zip"* heruntergeladen, wobei die „x"-Symbole durch die Versionsbezeichnung ersetzt werden (in diesem Beispiel **V3.9.11**). Beim Öffnen des heruntergeladenen ZIP-Ordners wirst du feststellen, dass sich darin ein weiterer Ordner befindet. Entpacke diesen auf deinen Desktop oder an einen beliebigen Ort und öffne ihn. Die darin enthaltenen Dateien entsprechen in der Regel den im Screenshot unten aufgelisteten.
 
 <figure data-latex-placement="H">
 <img src="figures/esptool_folder.png" style="width:70.0%" />
@@ -2180,7 +2180,7 @@ Stelle vor allen weiteren Schritten den Schalter der ToM+-Blackbox auf OFF (*d.�
 
 ### Vorbereiten des Computers
 
-Lade den im Firmware-Release-Beitrag angehängten ToM+-Firmware-Update-Ordner herunter. Entpacke nun die im ToM+-Firmware-Release-ZIP enthaltene Binärdatei (Endung *.bin*), wie in Abschnitt [5.1.3](#sec:update_files){reference-type="ref" reference="sec:update_files"} beschrieben. Die Datei heißt in der Regel *„FwXXESP32.bin"*, wobei das Symbol *„XX"* durch die Versionsnummer ersetzt wird, zum Beispiel *„23"*.\
+Lade den im Firmware-Release-Beitrag angehängten ToM+-Firmware-Update-Ordner herunter. Entpacke nun die im ToM+-Firmware-Release-ZIP enthaltene Binärdatei (Endung *.bin*), wie in Abschnitt [5.1.3](#sec:update_files){reference-type="ref" reference="sec:update_files"} beschrieben. Die Datei heißt in der Regel *„FwXX_ESP32.bin"*, wobei das Symbol *„XX"* durch die Versionsnummer ersetzt wird, zum Beispiel *„23"*.\
 **Haftungsausschluss:** *Dieser Blackbox-Vorgang wurde unter Ubuntu 20.04 getestet (hoffe, er funktioniert auch mit anderen Unix-Distributionen). Schließe die Blackbox erst an, wenn du ausdrücklich dazu aufgefordert wirst*.\
 Nun müssen wir das Paket esptool installieren, um die neue Firmware auf die Blackbox zu flashen. Führe dies entweder über die grafische Benutzeroberfläche der Paketverwaltung deiner Unix-Distribution aus oder mit dem entsprechenden Befehl im Terminal. Zum Beispiel *„sudo apt-get esptool"*, wie im Bild gezeigt. Gib bei Aufforderung das Passwort des Sudo-Benutzers ein, drücke EINGABE und warte.
 
@@ -2247,7 +2247,7 @@ Die Zeile, die uns interessiert, ist diese: *„cp210x converter now attached to
 
 Navigiere mit deinem Dateimanager in den Ordner, in dem die Firmware-*.bin*-Datei gespeichert ist, und öffne dort ein Terminal, indem du mit der rechten Maustaste auf den Ordner klickst und die Option **„Terminal öffnen"** aus dem Kontextmenü wählst. Alternativ kannst du auch manuell mit dem Befehl „cd" durch deine Ordner navigieren, bis du den richtigen Ordner gefunden hast.
 
-Sobald du dich im richtigen Verzeichnis befindest, führe diesen langen und etwas trockenen Befehl aus. Ersetze dabei *„ttyUSBx"* durch den Namen der seriellen Schnittstelle, den wir im vorherigen Schritt notiert haben (z. B. *„ttyUSB0"*), und *„ESP32FwXX.bin"* durch den Namen der *„.bin"*-Datei, die die auf ToM+ zu ladende Firmware-Version enthält (z. B. *„ESP32Fw23.bin"*).
+Sobald du dich im richtigen Verzeichnis befindest, führe diesen langen und etwas trockenen Befehl aus. Ersetze dabei *„ttyUSBx"* durch den Namen der seriellen Schnittstelle, den wir im vorherigen Schritt notiert haben (z. B. *„ttyUSB0"*), und *„ESP32_FwXX.bin"* durch den Namen der *„.bin"*-Datei, die die auf ToM+ zu ladende Firmware-Version enthält (z. B. *„ESP32_Fw23.bin"*).
 
         python /usr/share/esptool/esptool.py --chip auto --port /dev/ttyUSBx --baud
     921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio

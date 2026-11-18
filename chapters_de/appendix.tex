@@ -244,7 +244,7 @@ Drücken Sie abschließend die grüne Schaltfläche \textbf{„Save“} und wart
 \textbf{NICHT VERGESSEN!} Wenn Sie den Maqiatto-Broker verwenden, müssen Sie möglicherweise
 das neue Topic zu Ihrem Konto hinzufügen, wie in Abbildung~\ref{sec:free_broker_add_topics} erklärt.
 
-In diesem Fall müssen Sie \textbf{cmnd/<your\textunderscore~Tasmota\textunderscore~topic\textunderscore~name>/Power}
+In diesem Fall müssen Sie \textbf{cmnd/<your\_~Tasmota\_~topic\_~name>/Power}
 als neuen Topic-Namen hinzufügen.
 Wenn Sie dem Beispielbild gefolgt sind, lautet dieser \textit{cmnd/charge/Power}.
 
@@ -272,16 +272,16 @@ Tasmota-Gerät senden wird.
 Wenn Sie einen eigenen MQTT-Broker verwenden (also \textit{nicht Maqiatto}), hat
 \textbf{Aux Cmd} folgende Syntax:
 \begin{itemize}
-    \item \textit{cmnd/<your\textunderscore~Tasmota\textunderscore~topic\textunderscore~name>/Power 1}, wenn das Gerät eingeschaltet werden soll.
-    \item \textit{cmnd/<your\textunderscore~Tasmota\textunderscore~topic\textunderscore~name>/Power 0}, wenn das Gerät ausgeschaltet werden soll.
+    \item \textit{cmnd/<your\_~Tasmota\_~topic\_~name>/Power 1}, wenn das Gerät eingeschaltet werden soll.
+    \item \textit{cmnd/<your\_~Tasmota\_~topic\_~name>/Power 0}, wenn das Gerät ausgeschaltet werden soll.
 \end{itemize}
 In unserem Beispiel lautet der Befehl zum Einschalten der Lampe \textbf{cmnd/charge/Power 1}.\\
 
 Wenn Sie hingegen den Maqiatto-Broker oder einen anderen Broker verwenden, der Ihre Benutzer-ID (E-Mail-Adresse)
 als Präfix im Topic-Namen verwendet, sieht die Syntax für \textbf{Aux Cmd} folgendermaßen aus:
 \begin{itemize}
-    \item \textit{myemail@gmail.com/cmnd/<your\textunderscore~Tasmota\textunderscore~topic\textunderscore~name>/Power 1}, um das Gerät einzuschalten.
-    \item \textit{myemail@gmail.com/cmnd/<your\textunderscore~Tasmota\textunderscore~topic\textunderscore~name>/Power 0}, um das Gerät auszuschalten.
+    \item \textit{myemail@gmail.com/cmnd/<your\_~Tasmota\_~topic\_~name>/Power 1}, um das Gerät einzuschalten.
+    \item \textit{myemail@gmail.com/cmnd/<your\_~Tasmota\_~topic\_~name>/Power 0}, um das Gerät auszuschalten.
 \end{itemize}
 In unserem Fall lautet der Befehl \textbf{myemail@gmail.com/cmnd/charge/Power 1}.\\
 
@@ -294,8 +294,8 @@ anpassen müssen, um festzulegen, welches Relais Sie steuern möchten:
 Verwenden Sie \textbf{„Power1“} für das erste Relais, \textbf{„Power2“} für das zweite und so weiter.
 Dies ergibt:
 \begin{itemize} 
-    \item \textit{cmnd/<your\textunderscore~Tasmota\textunderscore~topic\textunderscore~name>/Power1 1}, um das erste Relais einzuschalten.
-    \item \textit{cmnd/<your\textunderscore~Tasmota\textunderscore~topic\textunderscore~name>/Power1 0}, um es auszuschalten.
+    \item \textit{cmnd/<your\_~Tasmota\_~topic\_~name>/Power1 1}, um das erste Relais einzuschalten.
+    \item \textit{cmnd/<your\_~Tasmota\_~topic\_~name>/Power1 0}, um es auszuschalten.
 \end{itemize}
 Die gleiche Unterscheidung bezüglich Maqiatto und eigenen Brokern gilt auch hier.
 

@@ -3,11 +3,11 @@
 
 Version 2.0
 
-![image](figures/tom_plus.png){width="85%" height="70%"}
+![image](figures/tom_plus.png){width="85%"}
 
 Fabio Java
 
-2026
+01/09/2026
 :::
 
 # Preface {#preface .unnumbered}
@@ -16,7 +16,8 @@ Fabio Java
 *In an era of automated content generation, this manual stands apart and you can be confident that all provided features and user interface are human-written. This is what makes this project unique among any alternatives: knowing exactly what the code does is the key to consciously develop new features, fix bugs and guarantee support to other ToM+ owners if needed.*\
 *ToM+ is costantly evolving with the help of its large community born out from the* [German Twizy forum](https://www.twizy-forum.de/twiz-o-meter). *If you would like to have a ToM+ unit, email me at* **info.twizometer@gmail.com**. *If you would like to suggest a new feature, report a bug or even a typo in this manual, please email me or open a pull request on* [Codeberg](https://codeberg.org/fabio-java/ToM-Wizard).\
 *If you own a standard ToM or a BigToM, you can refer to this user manual as well, since the features are basically the same, except for standard ToM where the dashboard page and 3D charging pages are missing.*\
-*This user manual is updated to 2.4 ESP firmware version.*
+*ToM is not a commercial product and it's handmade by an hobbyst like me, each unit is unique and must be considered a prototype, without CE logo or any other official tests. Twiz O'meter reads data from the CAN bus without performing any modifications to the car, but I take no responsibilities for its installation and usage.*\
+*This user manual is updated to 2.4 ESP firmware version at date 03/09/2026.*
 
 # Description and Features List
 
@@ -28,7 +29,7 @@ ToM+ has many functions and can be constantly updated along with the firmware de
 
 Since the dashboard of our Twizy includes some values only, like the speed and the remaining kilometers, I decided to develop this cool display, that will show much more data, reading them directly from the Twizy CAN bus, using the OBD connector in the left glove box. ToM will just "sniff" the values sent out by the Twizy and then show them on the LCD display, allowing many other features. ToM has a tiny but powerful memory that is able to store some of these values while driving to give you a trip history. The capability of it to store some values, makes it possible to save your configurations and customizations on ToM, even after a firmware update.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/dashboard.jpg" style="width:80.0%" />
 <figcaption>Dashboard of the ToM+</figcaption>
 </figure>
@@ -37,7 +38,7 @@ It tries to keep the same style of the original Twizy dashboard, but with a more
 
 The main page is customizable and you can choose what to show on it, as well as the other pages that you can scroll through using the button you can mount on the wiper stalk. The general look of the other pages is shown in the image, with one value in the foreground and the others in the left side. In the bottom you can change the shown page by tapping its icon.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/engine_page.jpg" style="width:80.0%" />
 <figcaption>Engine page of the ToM+</figcaption>
 </figure>
@@ -48,8 +49,8 @@ The ESP32 board contained in the black box have the capability to connect to a W
 
 This is not the only feature related to the Wi-Fi capability that ToM+ has. It's able to be an access point as well with its SSID and password, creating a private network with no Internet connection. In this way you can safely connect, **accepting to keep the connection** profile active even if it doesn't provide any Internet connection (it usually appears with a notify in Android phones 10 seconds after the first connection) and then perform your additional configurations on some web server pages hosted by ToM+ itself. Just type in your favorite browser ToM static private IPv4 (***192.188.1.188***) and enjoy!
 
-<figure data-latex-placement="H">
-<img src="figures/landing_page.png" style="height:75.0%" />
+<figure>
+<img src="figures/landing_page.png" style="width:100.0%" />
 <figcaption>Web server landing page</figcaption>
 </figure>
 
@@ -63,12 +64,12 @@ The layout tries to emulate the ToM original graphical interface and relies on *
 
 You may need to enable "install apps from unknown sources" flag in your phone settings to open such a file extension *(.apk)*. At first start you may notice a pop-up saying that this application was created for an older version of Android if you have a newer phone: just say OK and ignore it (it will work fine). Some preview of the charging and settings page of the app:
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/tom_app_charging.png" style="width:80.0%" />
 <figcaption>Charging page of the ToM+ Android app</figcaption>
 </figure>
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/tom_app_settings.png" style="width:65.0%" />
 <figcaption>Settings page of the ToM+ Android app</figcaption>
 </figure>
@@ -77,14 +78,14 @@ You may need to enable "install apps from unknown sources" flag in your phone se
 
 ToM will use the 12V battery power supply, taking it directly from the OBD connector and won't consume much, as shown in the progressive measures down below.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/consumption_off.png" style="width:65.0%" />
 <figcaption>Consumption when Twizy is OFF</figcaption>
 </figure>
 
 When the motherboard is active and the display is turned on, it consumes about 90 mA. If the WiFi is turned on as well, the power consumption is around the one shown below (maybe a little more due to the last updates that introduced the 3D graphic).
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/consumption_on_wifi.png" style="width:65.0%" />
 <figcaption>Consumption when ToM+ is ON with WiFi</figcaption>
 </figure>
@@ -95,7 +96,7 @@ When Twizy is OFF, the black box will go to sleep mode and will consume 18 mA. I
 
 When ToM+ is shipped, it is usually packaged in a brown box to protect internal boards and sensors from bumps during the travel. In this newer version, no more long cables are needed, just a shorter one connected to the internal ToM+ motherboard, enclosed in a small black plastic container that I usually call "black box". Of course, along with it, the resistive LCD touch display is provided, where you can view and configure all the stuff. No more screws or tape needed! Just an easy clip on display that fits directly on top of the original dashboard.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/box.png" style="width:80.0%" />
 <figcaption>Provided ToM+ kit</figcaption>
 </figure>
@@ -104,19 +105,19 @@ When ToM+ is shipped, it is usually packaged in a brown box to protect internal 
 
 The black box is the motherboard of ToM+ and contains most of the components needed for the system to operate. It provides:
 
-- An external connector for the LCD display;
+-   An external connector for the LCD display;
 
-- An expansion connector with power and GPIO pins;
+-   An expansion connector with power and GPIO pins;
 
-- An on-board OBD female port for the Twizy CAN bus;
+-   An on-board OBD female port for the Twizy CAN bus;
 
-- A microUSB port for firmware updates;
+-   A microUSB port for firmware updates;
 
-- A female connector for the button on the wiper stalk.
+-   A female connector for the button on the wiper stalk.
 
-- ON/OFF ToM+ power switch
+-   ON/OFF ToM+ power switch
 
-<figure data-latex-placement="H">
+<figure id="fig:blackbox_components">
 <img src="figures/black_box.jpg" style="width:75.0%" />
 <figcaption>The black box</figcaption>
 </figure>
@@ -125,7 +126,7 @@ The black box is the motherboard of ToM+ and contains most of the components nee
 
 If you would like to customize more your ToM+ you can easily do this using the connector shown in the image here. In fact it gives an additional 5V power supply coming from VCC (ex red cable) and the GND (ex black cable), so that you can power an external LED, a small buzzer or whatever you prefer. The other two cables are General Input Output Pins, PIN1 (ex yellow) and PIN2 (ex blue). They can have either input or output functions, depending on what you will choose on the *"Expansion page"* of ToM **web server**. In this latest version of the device, the expansion connector is embedded in the black box (without colored cables) but the pinout remains the same. Remember to remove the protective cover before using it and to use an input voltage of **maximum 3,3V**. For higher voltage provide a proper resistor divider.
 
-<figure id="fig:expansion_pinout" data-latex-placement="H">
+<figure id="fig:expansion_pinout">
 <img src="figures/expansion_bb.jpg" style="width:70.0%" />
 <figcaption>Expansion connector</figcaption>
 </figure>
@@ -134,28 +135,28 @@ If you would like to customize more your ToM+ you can easily do this using the c
 
 The resistive touch LCD display is embedded in a 3D printed stand that clips on the original dashboard. If requested, you can also have a 3D standalone support to mount the display on the glovebox as the standard ToM. In that way, you can have a 2 in 1 device that can be both clip-on or standalone as you wish. A microSD slot is accessible for firmware updates.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/display.png" style="width:80.0%" />
 <figcaption>LCD display clip-on</figcaption>
 </figure>
 
 The display, provided with a protective film, as visible in the images, can be put into the 3D container to have an adjustable stand that you can put wherever you like.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/3d_stand_wdisplay.png" style="width:80.0%" />
 <figcaption>LCD display standalone</figcaption>
 </figure>
 
 When inside the standalone version, you can fix it with the cover and the screws that you can find in the packet along with the 3D foldable stand, as shown in the images below.
 
-<figure id="fig:back_cover" data-latex-placement="H">
+<figure id="fig:back_cover">
 <img src="figures/back_cover.png" style="width:80.0%" />
 <figcaption>LCD cover provided</figcaption>
 </figure>
 
 The 3D stand also has holes on the base if you want to screw it on the glovebox. The other holes on the frame are made for screwing the back cover to keep the display in place when inside.
 
-<figure id="fig:bottom_cover_screwholes" data-latex-placement="H">
+<figure id="fig:bottom_cover_screwholes">
 <img src="figures/bottom_cover_screwholes.png" style="width:80.0%" />
 <figcaption>LCD cover screw fixing</figcaption>
 </figure>
@@ -164,17 +165,17 @@ The 3D stand also has holes on the base if you want to screw it on the glovebox.
 
 The package includes a cable tie to fix the 3D printed stand for the button to the right wiper stalk (included as well). In addition, there is a bonus sticker if you want to support the project by sticking it somewhere on your Twizy.
 
-<figure data-latex-placement="H">
+<figure id="fig:cable_tie">
 <img src="figures/cable_tie.jpg" style="width:80.0%" />
 <figcaption>Cable tie</figcaption>
 </figure>
 
-<figure id="fig:wiper_stalk_button" data-latex-placement="H">
+<figure id="fig:wiper_stalk_button">
 <img src="figures/wiper_stalk_button.jpg" style="width:80.0%" />
 <figcaption>3D printed button for wiper stalk</figcaption>
 </figure>
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/sticker.png" style="width:80.0%" />
 <figcaption>ToM sticker</figcaption>
 </figure>
@@ -191,20 +192,20 @@ When ordering the device, you can choose to have the 3D stand along with the cli
 
 If you choose this mode, it is really simple. You just need to clip the display on the dashboard, in a position that is comfortable for you to see while driving. Put the top part of the display on the dashboard and then push the bottom part until it clicks in place.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/clip_on.jpg" style="width:80.0%" />
 <figcaption>Clip-on mode installation</figcaption>
 </figure>
 
-Make sure that the cable is not pinched in the bottom part of the display but it is free to move in the apposite hole, otherwise you might damage the cable.
+Make sure that the cable is not pinched in the bottom part of the display but it is free to move in the apposite hole, otherwise you might damage the cable. Then remove the protective film, if you want.
 
 ### 3D stand mode
 
 If provided, you can use the 3D stand to place the display on a flat surface inside the car. You can put a double-sided tape on the bottom, so you can stick it to the surface. Or you can use the screwholes on the bottom of the stand to fix it with two screws.
 
-As we did for the clip-on mode, make sure that the cable is not pinched in the back part of the display when putting the cover on but it is free to move in the apposite hole, otherwise you might damage the cable. Refer to Figure [1.2](#fig:back_cover){reference-type="ref" reference="fig:back_cover"} and Figure [1.3](#fig:bottom_cover_screwholes){reference-type="ref" reference="fig:bottom_cover_screwholes"} at page  to see the mentioned parts. This is how the 3D stands looks without the display installed.
+As we did for the clip-on mode, make sure that the cable is not pinched in the back part of the display when putting the cover on but it is free to move in the apposite hole, otherwise you might damage the cable. Refer to Figure [1.3](#fig:back_cover){reference-type="ref" reference="fig:back_cover"} and Figure [1.4](#fig:bottom_cover_screwholes){reference-type="ref" reference="fig:bottom_cover_screwholes"} at page  to see the mentioned parts. This is how the 3D stands looks without the display installed.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/3d_stand.jpg" style="width:80.0%" />
 <figcaption>3D printed empty stand</figcaption>
 </figure>
@@ -213,7 +214,7 @@ As we did for the clip-on mode, make sure that the cable is not pinched in the b
 
 Then you can remove the protective film from the display and plug in the cable to power it. The other end of the cable needs to be connected to the black box, which will be installed in the next step. It fits only in one way, so make sure to align the connector properly before plugging it in.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/bb_connection.jpg" style="width:80.0%" />
 <figcaption>Black box connection</figcaption>
 </figure>
@@ -224,12 +225,43 @@ After you have decided where to place the display, you need to plug in the black
 
 The black box needs to be connected to the car's OBD2 port, which is located inside the left glove box of the Twizy. If you've never opened it before, you will find a small plastic cover that you need to remove to access the OBD2 port. Once you have access, simply plug in the black box and make sure it is securely connected. It only fits in one way, so make sure to align the connector properly before plugging it in.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/obd_connector.png" style="width:80.0%" />
 <figcaption>OBD2 connector location in the Twizy</figcaption>
 </figure>
 
 **Only after connecting the display** you can enable the switch on the black box. And the installation is complete! Now you can start your Twizy and enjoy the ToM+ features.
+
+## Wiper stalk button position
+
+Now it's time to install, if provided, the wiper stalk button to control ToM+ or BigToM without having to use the touch screen. Just to be clear this button is shown in Figure [1.6](#fig:wiper_stalk_button){reference-type="ref" reference="fig:wiper_stalk_button"} and must be connected to the plug next to the black box switch as highlighted in Figure [1.1](#fig:blackbox_components){reference-type="ref" reference="fig:blackbox_components"} and below.\
+
+<figure>
+<img src="figures/ButtonConnector.JPG" style="width:70.0%" />
+<figcaption>Black box wiper stalk button connection.</figcaption>
+</figure>
+
+To fix and secure the button to the wiper stalk (I personally suggest using it on the right one), you will need a cable zip tie, provided in the received kit as shown in Figure [1.5](#fig:cable_tie){reference-type="ref" reference="fig:cable_tie"}.
+
+<figure>
+<img src="figures/button_installed.jpg" style="width:80.0%" />
+<figcaption>Wiper stalk button position.</figcaption>
+</figure>
+
+To know how to use the wiper stalk button refer to Section [4.4.7.5](#sec:web_wiper_stalk){reference-type="ref" reference="sec:web_wiper_stalk"}, where it's also explained how to customize button presses and performed actions.
+
+## Twin ToM --- Secondary display installation
+
+The Twin ToM was designed for original **standard ToM owners** to find a new use for the smaller LCD display as an auxilliary screen. The two displays work simoultaneously with the same black box and you can monitor different pages at the same time. If you are a ToM+ owner, you can ask for the smaller display and have an auxilliary display too.\
+The suggested usage is having the dashboard page on the bigger display (because this page is not available on the smaller one) and any other page on the standard ToM display, for instance to monitor motor data.\
+This will work with the original black box version, by updating to the latest firmware version only. To connect both displays instead, you will need an USB switch adapter that looks like the one in the image below. To have the **Twin ToM** just email me and ask for the upgrade and you will receive the bigger ToM+ display along with the shown adapter.
+
+<figure>
+<img src="figures/twintom_adapter.jpg" style="width:70.0%" />
+<figcaption>Twin ToM double USB provided adapter.</figcaption>
+</figure>
+
+As already mentioned, Twin ToM is compatible with ToM+ but it requires a different adapter, than you will receive along with the smaller auxilliary display if you contact me via email at **info.twizometer@gmail.com**.
 
 # Basic user interface explanation
 
@@ -242,360 +274,262 @@ The User Interface (UI) of ToM is really intuitive and easy to use, and each dat
 Page icons are the icons which you can find on the bottom line of the ToM+ display and they are used to switch between the different pages. Since the last update they have been revamped with a 3D metallic look.
 
 ::: tcolorbox
-  --------------------------------------------- -------------------------------------------------------------
-  ![image](icons/BatteryV2.png){height="8mm"}   
-
-  --------------------------------------------- -------------------------------------------------------------
+![image](icons/BatteryV2.png){height="8mm"} **Battery page**\
+Shows main values about the battery.
 :::
 
 ::: tcolorbox
-  ----------------------------------------- -------------------------------------------------------------
-  ![image](icons/Motor.png){height="8mm"}   
-
-  ----------------------------------------- -------------------------------------------------------------
+![image](icons/Motor.png){height="8mm"} **Engine page**\
+Shows main values about the engine.
 :::
 
 ::: tcolorbox
-  ------------------------------------------------ -------------------------------------------------------------
-  ![image](icons/BatteryInfo2.png){height="8mm"}   
-
-  ------------------------------------------------ -------------------------------------------------------------
+![image](icons/BatteryInfo2.png){height="8mm"} **Battery info page**\
+Shows detailed information about battery cells.
 :::
 
 ::: tcolorbox
-  ----------------------------------------- -------------------------------------------------------------
-  ![image](icons/Alarm.PNG){height="8mm"}   
-
-  ----------------------------------------- -------------------------------------------------------------
+![image](icons/Alarm.PNG){height="8mm"} **Alarm log page**\
+Shows the list of last alarms triggers and their details.
 :::
 
 ::: tcolorbox
-  ----------------------------------------- -------------------------------------------------------------
-  ![image](icons/Error.png){height="8mm"}   
-
-  ----------------------------------------- -------------------------------------------------------------
+![image](icons/Error.png){height="8mm"} **Error log page**\
+Shows the list of last errors and their details.
 :::
 
 ::: tcolorbox
-  ------------------------------------------- -------------------------------------------------------------
-  ![image](icons/TripLog.png){height="8mm"}   
-
-  ------------------------------------------- -------------------------------------------------------------
+![image](icons/TripLog.png){height="8mm"} **Trip log page**\
+Shows the list of last trips and their details.
 :::
 
 ::: tcolorbox
-  --------------------------------------------- -------------------------------------------------------------
-  ![image](icons/Gyroscope.png){height="8mm"}   
-
-  --------------------------------------------- -------------------------------------------------------------
+![image](icons/Gyroscope.png){height="8mm"} **Gyroscope page**\
+Shows main values about the gyroscope and miscellaneous.
 :::
 
 ::: tcolorbox
-  ------------------------------------------------ -------------------------------------------------------------
-  ![image](icons/Street0Ok_v2.png){height="8mm"}   
-
-  ------------------------------------------------ -------------------------------------------------------------
+![image](icons/Street0Ok_v2.png){height="8mm"} **Trip page**\
+Shows main values about the selected trip.
 :::
 
 ::: tcolorbox
-  ----------------------------------------- -------------------------------------------------------------
-  ![image](icons/3Dots.PNG){height="8mm"}   
-
-  ----------------------------------------- -------------------------------------------------------------
+![image](icons/3Dots.PNG){height="8mm"} **Settings page**\
+Shows various settings and options for the ToM+.
 :::
 
 ### Battery group {#sec:item_numbers}
 
 ::: tcolorbox
-  ---------------------------------------------- -------------------------------------------------------------
-  ![image](icons/BatterySoc.jpg){height="8mm"}   
-
-  ---------------------------------------------- -------------------------------------------------------------
+![image](icons/BatterySoc.jpg){height="8mm"} **(1) State Of Charge (%)**\
+The current state of charge of the battery.
 :::
 
 ::: tcolorbox
-  ---------------------------------------------- -------------------------------------------------------------
-  ![image](icons/BatterySoh.jpg){height="8mm"}   
-
-  ---------------------------------------------- -------------------------------------------------------------
+![image](icons/BatterySoh.jpg){height="8mm"} **(2) State Of Health (%)**\
+The current state of health of the battery.
 :::
 
 ::: tcolorbox
-  ---------------------------------------------- -------------------------------------------------------------
-  ![image](icons/BatteryKwh.jpg){height="8mm"}   
-
-  ---------------------------------------------- -------------------------------------------------------------
+![image](icons/BatteryKwh.jpg){height="8mm"} **(6) Battery remaining capacity ($kWh$)**\
+The remaining energy stored in the battery.
 :::
 
 ::: tcolorbox
-  -------------------------------------------- -------------------------------------------------------------
-  ![image](icons/BatteryA.jpg){height="8mm"}   
-
-  -------------------------------------------- -------------------------------------------------------------
+![image](icons/BatteryA.jpg){height="8mm"} **(7) Battery instant current consumption ($A$)**\
+The current flowing through the battery.
 :::
 
 ::: tcolorbox
-  ------------------------------------------------ -------------------------------------------------------------
-  ![image](icons/BatteryA+red.png){height="8mm"}   
-
-  ------------------------------------------------ -------------------------------------------------------------
+![image](icons/BatteryA_red.png){height="8mm"} **(7) Battery current recharge ($A$)**\
+The current recharge by regenerative braking.
 :::
 
 ::: tcolorbox
-  --------------------------------------------- -------------------------------------------------------------
-  ![image](icons/BatteryKw.png){height="8mm"}   
-
-  --------------------------------------------- -------------------------------------------------------------
+![image](icons/BatteryKw.png){height="8mm"} **(54) Battery instant power ($kW$)**\
+The power flowing through the battery.
 :::
 
 ::: tcolorbox
-  --------------------------------------------- -------------------------------------------------------------
-  ![image](icons/Battery3°.jpg){height="8mm"}   
-
-  --------------------------------------------- -------------------------------------------------------------
+![image](icons/Battery3_deg.jpg){height="8mm"} **(3) Battery temperature (°C)**\
+The current temperature of the battery.
 :::
 
 ::: tcolorbox
-  --------------------------------------------- -------------------------------------------------------------
-  ![image](icons/BatteryV2.jpg){height="8mm"}   
-
-  --------------------------------------------- -------------------------------------------------------------
+![image](icons/BatteryV2.jpg){height="8mm"} **(25) Battery voltage ($V$)**\
+The current voltage of the traction battery.
 :::
 
 ::: tcolorbox
-  -------------------------------------------- -------------------------------------------------------------
-  ![image](icons/BatteryV.jpg){height="8mm"}   
-
-  -------------------------------------------- -------------------------------------------------------------
+![image](icons/BatteryV.jpg){height="8mm"} **(39) 12V battery voltage ($V$)**\
+The current voltage of the 12V battery.
 :::
 
 ::: tcolorbox
-  ----------------------------------------------- -------------------------------------------------------------
-  ![image](icons/BatteryDiff.png){height="8mm"}   
-
-  ----------------------------------------------- -------------------------------------------------------------
+![image](icons/BatteryDiff.png){height="8mm"} **(5) Min-Max battery cell difference ($V$)**\
+The difference between the minimum and maximum battery cell voltages.
 :::
 
 ### Charging group
 
 ::: tcolorbox
-  ---------------------------------------- -------------------------------------------------------------
-  ![image](icons/CEta.png){height="8mm"}   
-
-  ---------------------------------------- -------------------------------------------------------------
+![image](icons/CEta.png){height="8mm"} **(55) Charging ETA ($min$)**\
+The estimated time remaining for the battery to be fully charged.
 :::
 
 ::: tcolorbox
-  ------------------------------------------- -------------------------------------------------------------
-  ![image](icons/Charge°.png){height="8mm"}   
-
-  ------------------------------------------- -------------------------------------------------------------
+![image](icons/Charge_deg.png){height="8mm"} **(57) Charger temperature (°C)**\
+The current temperature of the charger.
 :::
 
 ::: tcolorbox
-  ---------------------------------------------- -------------------------------------------------------------
-  ![image](icons/ChargedKwh.png){height="8mm"}   
-
-  ---------------------------------------------- -------------------------------------------------------------
+![image](icons/ChargedKwh.png){height="8mm"} **(56) Charged energy ($kWh$)**\
+The amount of energy that has been charged into the battery.
 :::
 
 ::: tcolorbox
-  --------------------------------------------- -------------------------------------------------------------
-  ![image](icons/ChargeKwh.png){height="8mm"}   
-
-  --------------------------------------------- -------------------------------------------------------------
+![image](icons/ChargeKwh.png){height="8mm"} **(58) Instant charging power ($kW$)**\
+The current power being delivered to the battery.
 :::
 
 ### Motor group
 
 ::: tcolorbox
-  -------------------------------------------- -------------------------------------------------------------
-  ![image](icons/MotoRPM2.jpg){height="8mm"}   
-
-  -------------------------------------------- -------------------------------------------------------------
+![image](icons/MotoRPM2.jpg){height="8mm"} **(8) Motor RPM ($rpm$)**\
+The current revolutions per minute of the motor.
 :::
 
 ::: tcolorbox
-  ------------------------------------------- -------------------------------------------------------------
-  ![image](icons/MotorNm.jpg){height="8mm"}   
-
-  ------------------------------------------- -------------------------------------------------------------
+![image](icons/MotorNm.jpg){height="8mm"} **(9) Motor torque ($Nm$)**\
+The current torque being produced by the motor.
 :::
 
 ::: tcolorbox
-  ------------------------------------------- -------------------------------------------------------------
-  ![image](icons/Motor°2.jpg){height="8mm"}   
-
-  ------------------------------------------- -------------------------------------------------------------
+![image](icons/Motor_deg2.jpg){height="8mm"} **(4) Motor temperature (°C)**\
+The current temperature of the motor.
 :::
 
 ::: tcolorbox
-  ---------------------------------------- -------------------------------------------------------------
-  ![image](icons/Sev°.png){height="8mm"}   
-
-  ---------------------------------------- -------------------------------------------------------------
+![image](icons/Sev_deg.png){height="8mm"} **(45) Sevcon temperature (°C)**\
+The current temperature of the Sevcon controller.
 :::
 
 ### Expansion port group
 
 ::: tcolorbox
-  ---------------------------------------- -------------------------------------------------------------
-  ![image](icons/Pin1.png){height="8mm"}   
-
-  ---------------------------------------- -------------------------------------------------------------
+![image](icons/Pin1.png){height="8mm"} **(40) Expansion port PIN1 ($0/1$)**\
+The binary state of the expansion port PIN1.
 :::
 
 ::: tcolorbox
-  ---------------------------------------- -------------------------------------------------------------
-  ![image](icons/Pin2.png){height="8mm"}   
-
-  ---------------------------------------- -------------------------------------------------------------
+![image](icons/Pin2.png){height="8mm"} **(41) Expansion port PIN2 ($0/1$)**\
+The binary state of the expansion port PIN2.
 :::
 
 ### Gyroscope group
 
 ::: tcolorbox
-  ------------------------------------------ -------------------------------------------------------------
-  ![image](icons/InclDX.PNG){height="8mm"}   
-
-  ------------------------------------------ -------------------------------------------------------------
+![image](icons/InclDX.PNG){height="8mm"} **(62) Gyroscope right X-axis (°)**\
+The current right angle of the gyroscope along the X-axis.
 :::
 
 ::: tcolorbox
-  ------------------------------------------ -------------------------------------------------------------
-  ![image](icons/InclSX.PNG){height="8mm"}   
-
-  ------------------------------------------ -------------------------------------------------------------
+![image](icons/InclSX.PNG){height="8mm"} **(62) Gyroscope left X-axis (°)**\
+The current left angle of the gyroscope along the X-axis.
 :::
 
 ::: tcolorbox
-  ----------------------------------------------- -------------------------------------------------------------
-  ![image](icons/UphillTwizy.png){height="8mm"}   
-
-  ----------------------------------------------- -------------------------------------------------------------
+![image](icons/UphillTwizy.png){height="8mm"} **(63) Frontal uphill inclination (°)**\
+The current frontal uphill angle of the gyroscope.
 :::
 
 ::: tcolorbox
-  ------------------------------------------------- -------------------------------------------------------------
-  ![image](icons/DownhillTwizy.png){height="8mm"}   
-
-  ------------------------------------------------- -------------------------------------------------------------
+![image](icons/DownhillTwizy.png){height="8mm"} **(63) Frontal downhill inclination (°)**\
+The current frontal downhill angle of the gyroscope.
 :::
 
 ::: tcolorbox
-  ------------------------------------------- -------------------------------------------------------------
-  ![image](icons/GyroAcc.JPG){height="8mm"}   
-
-  ------------------------------------------- -------------------------------------------------------------
+![image](icons/GyroAcc.JPG){height="8mm"} **(61) Gyroscope acceleration ($m/s^2$)**\
+The current car acceleration measured by the gyroscope.
 :::
 
 ::: tcolorbox
-  ----------------------------------------- -------------------------------------------------------------
-  ![image](icons/Gtemp.PNG){height="8mm"}   
-
-  ----------------------------------------- -------------------------------------------------------------
+![image](icons/Gtemp.PNG){height="8mm"} **(60) ToM+ black box temperature (°C)**\
+The current temperature of the ToM+ black box.
 :::
 
 ::: tcolorbox
-  ----------------------------------------- -------------------------------------------------------------
-  ![image](icons/Timer.PNG){height="8mm"}   
-
-  ----------------------------------------- -------------------------------------------------------------
+![image](icons/Timer.PNG){height="8mm"} **(59) Time elapsed ($min$)**\
+The current time elapsed from power on.
 :::
 
 ### Trip group
 
 ::: tcolorbox
-  --------------------------------------- -------------------------------------------------------------
-  ![image](icons/tKm.png){height="8mm"}   
-
-  --------------------------------------- -------------------------------------------------------------
+![image](icons/tKm.png){height="8mm"} **(46) Trip distance ($km$)**\
+The current distance traveled in the current trip.
 :::
 
 ::: tcolorbox
-  ---------------------------------------- -------------------------------------------------------------
-  ![image](icons/tKmh.png){height="8mm"}   
-
-  ---------------------------------------- -------------------------------------------------------------
+![image](icons/tKmh.png){height="8mm"} **(53) Trip average speed ($km/h$)**\
+The current average speed in the current trip.
 :::
 
 ::: tcolorbox
-  ---------------------------------------- -------------------------------------------------------------
-  ![image](icons/tKmR.png){height="8mm"}   
-
-  ---------------------------------------- -------------------------------------------------------------
+![image](icons/tKmR.png){height="8mm"} **(47) Trip kilometers left ($km$)**\
+The remaining kilometer range with the current trip consumption.
 :::
 
 ::: tcolorbox
-  ---------------------------------------- -------------------------------------------------------------
-  ![image](icons/tkWh.png){height="8mm"}   
-
-  ---------------------------------------- -------------------------------------------------------------
+![image](icons/tkWh.png){height="8mm"} **(49) Trip total power consumption ($kWh$)**\
+The total power consumption in the current trip.
 :::
 
 ::: tcolorbox
-  ------------------------------------------- -------------------------------------------------------------
-  ![image](icons/tkWh100.png){height="8mm"}   
-
-  ------------------------------------------- -------------------------------------------------------------
+![image](icons/tkWh100.png){height="8mm"} **(50) Trip power consumption per 100 kilometers ($kWh/100km$)**\
+The current power consumption per 100 kilometers in the current trip.
 :::
 
 ::: tcolorbox
-  -------------------------------------------- -------------------------------------------------------------
-  ![image](icons/tkWh1min.png){height="8mm"}   
-
-  -------------------------------------------- -------------------------------------------------------------
+![image](icons/tkWh1min.png){height="8mm"} **(52) Trip power consumption per minute ($kWh/min$)**\
+The current power consumption per minute in the current trip.
 :::
 
 ::: tcolorbox
-  ------------------------------------------ -------------------------------------------------------------
-  ![image](icons/tTimer.png){height="8mm"}   
-
-  ------------------------------------------ -------------------------------------------------------------
+![image](icons/tTimer.png){height="8mm"} **(48) Trip time ($min$)**\
+The current time elapsed in the current trip.
 :::
 
 ::: tcolorbox
-  ------------------------------------------- -------------------------------------------------------------
-  ![image](icons/tUphill.png){height="8mm"}   
-
-  ------------------------------------------- -------------------------------------------------------------
+![image](icons/tUphill.png){height="8mm"} **(38) Trip uphill average inclination (°)**\
+The average uphill inclination in the current trip.
 :::
 
 ::: tcolorbox
-  --------------------------------------------- -------------------------------------------------------------
-  ![image](icons/tDownhill.png){height="8mm"}   
-
-  --------------------------------------------- -------------------------------------------------------------
+![image](icons/tDownhill.png){height="8mm"} **(38) Trip downhill average inclination (°)**\
+The average downhill inclination in the current trip.
 :::
 
 ### Dashboard group
 
 ::: tcolorbox
-  --------------------------------------- -------------------------------------------------------------
-  ![image](icons/ODO.png){height="8mm"}   
-
-  --------------------------------------- -------------------------------------------------------------
+![image](icons/ODO.png){height="8mm"} **(42) Odometer ($km$)**\
+The total distance traveled by the vehicle.
 :::
 
 ::: tcolorbox
-  --------------------------------------- -------------------------------------------------------------
-  ![image](icons/Kmh.png){height="8mm"}   
-
-  --------------------------------------- -------------------------------------------------------------
+![image](icons/Kmh.png){height="8mm"} **Current speed ($km/h$)**\
+(44) The current speed of the vehicle.
 :::
 
 ::: tcolorbox
-  ---------------------------------------- -------------------------------------------------------------
-  ![image](icons/KmhR.png){height="8mm"}   
-
-  ---------------------------------------- -------------------------------------------------------------
+![image](icons/KmhR.png){height="8mm"} **(43) Kilometers left ($km$)**\
+The remaining distance calculated by the original dashboard.
 :::
 
 ::: tcolorbox
-  ------------------------------------------- -------------------------------------------------------------
-  ![image](icons/KmRCalc.png){height="8mm"}   
-
-  ------------------------------------------- -------------------------------------------------------------
+![image](icons/KmRCalc.png){height="8mm"} **(51) Calculated kilometers left ($km$)**\
+The km left calculated by the ToM+ with customizable weighted average.
 :::
 
 []{#fig:calculated_kilometers_left label="fig:calculated_kilometers_left"}
@@ -604,64 +538,64 @@ Page icons are the icons which you can find on the bottom line of the ToM+ displ
 
 This section will cover the explanation of the dashboard page, which is the main page of the ToM+, so probably the one you will use the most. In the image below I have numbered the most important parts and I will explain each of them in the following paragraphs.
 
-<figure id="fig:dashboard_layout" data-latex-placement="H">
+<figure id="fig:dashboard_layout">
 <img src="figures/dashboard_numbers.PNG" style="width:80.0%" />
 <figcaption>Dashboard page with numbered parts.</figcaption>
 </figure>
 
 **1**
 
-: Current gear of the vehicle, which is usually displayed on the original dashboard as well.
+:   Current gear of the vehicle, which is usually displayed on the original dashboard as well.
 
 **2**
 
-: A value chosen from torque, power consumption and current consumption, which is used to fill the power bar described in item 6. Tap on the value to cycle between the three options.
+:   A value chosen from torque, power consumption and current consumption, which is used to fill the power bar described in item 6. Tap on the value to cycle between the three options.
 
 **3**
 
-: Error status icon, displayed when an error is present.
+:   Error status icon, displayed when an error is present.
 
 **4**
 
-: Shows the active trip. Tap on the icon to open the trip page.
+:   Shows the active trip. Tap on the icon to open the trip page.
 
 **5**
 
-: Icons for MQTT and WiFi. Greyed out when disconnected, and colored when connected. Tap on the icons if you want to perform a new WiFi scan or a MQTT reconnection.
+:   Icons for MQTT and WiFi. Greyed out when disconnected, and colored when connected. Tap on the icons if you want to perform a new WiFi scan or a MQTT reconnection.
 
 **6**
 
-: Power bar displaying the selected value from item 2. Starting from the center line, the bar is filled from left to right when accelerating, and from right to left when in regenerative braking. The bar is filled with a color gradient in each direction, and the **maximum and minimum values are customizable** in the web server BigToM page.
+:   Power bar displaying the selected value from item 2. Starting from the center line, the bar is filled from left to right when accelerating, and from right to left when in regenerative braking. The bar is filled with a color gradient in each direction, and the **maximum and minimum values are customizable** in the web server BigToM page.
 
 **7**
 
-: Displays the instant speed of the vehicle. You can choose between km/h and mph in the web server Advanced Info and Settings page.
+:   Displays the instant speed of the vehicle. You can choose between km/h and mph in the web server Advanced Info and Settings page.
 
 **8**
 
-: Motor icon, tap on it to open the motor page.
+:   Motor icon, tap on it to open the motor page.
 
 **9**
 
-: Battery gradient colored icon, tap on it to open the battery info page.
+:   Battery gradient colored icon, tap on it to open the battery info page.
 
 **10**
 
-: Additional displayed values, you can cycle between them by tapping on the icon to change.
+:   Additional displayed values, you can cycle between them by tapping on the icon to change.
 
 **11**
 
-: Displays the time and date, cycle between them by tapping on it.
+:   Displays the time and date, cycle between them by tapping on it.
 
 **12**
 
-: Customizable speed alert limit (green, yellow or red), see Section [4.4.14](#sec:web_btom_tom_sets){reference-type="ref" reference="sec:web_btom_tom_sets"} to enable.
+:   Customizable speed alert limit (green, yellow or red), see Section [4.4.14](#sec:web_btom_tom_sets){reference-type="ref" reference="sec:web_btom_tom_sets"} to enable.
 
 ## The pages layout {#sec:main-layout}
 
 The layout can be divided in two main parts, that we will see in detail in the next two paragraphs. The first is the data monitor which has some features to change the data shown in foreground choosing from the ones listed in the side bar. The second is the status icon bar, usually in the bottom of the page. The battery, motor, gyroscope and trip pages share the same layout, shown in the picture.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/engine_page.jpg" style="width:80.0%" />
 <figcaption>Example of the shared layout (the motor page).</figcaption>
 </figure>
@@ -674,7 +608,7 @@ In the bottom there is a list of icons, which are used to switch between the dif
 
 Changing the data shown in foreground is really easy and intuitive. You can do it just by tapping on the icon of the data you want to show in foreground and the values will swap. In this way you can also rearrange the data in the left side of the screen, which is really useful if you want to have a specific data in an arbitrary order.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/change_foreground.jpg" style="width:70.0%" />
 <figcaption>Example of changing the foreground data (in the motor page).</figcaption>
 </figure>
@@ -685,7 +619,7 @@ As an example, in the picture above, the user has tapped on the icon of the moto
 
 To change the active page, you can tap on the icon of the page you want to switch to, which is located in the bottom line of the screen. The icon will become orange and the new page will be displayed. In the image the active page is the motor page.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/changing_page.jpg" style="width:70.0%" />
 <figcaption>Example of changing the active page (in the motor page).</figcaption>
 </figure>
@@ -696,7 +630,7 @@ Each of these actions can be performed using the button on the right wiper stalk
 
 Below the buttons to change page discussed in the previous paragraph, there is a long white line that will show you the network connection status and when alarms or errors trigger as well. At the beginning of the line, as you can see in the picture, is located a small twizy icon with a number: it's a button that will take you to the trip page, that will be discussed later in Section [3.6](#sec:trip_page){reference-type="ref" reference="sec:trip_page"}. Now let's see the status icon bar.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/status_icon_bar.jpg" style="width:70.0%" />
 <figcaption>The status icon bar.</figcaption>
 </figure>
@@ -706,7 +640,7 @@ The next icon is a purple cloud with the **"MQTT"** text in it and, as you can g
 Then we have the error icon, which is a red rectangle with the **"ERR"** text in it. It will be displayed when an error is present or hidden when there are no errors.\
 Finally we have alarm icons, represented with colored stars. Stars available are the one shown in the picture, you can select which one to use for each alarm in the web server Alarm triggers page. There you can choose whether to make them blink or not.
 
-<figure id="fig:alarm_icons" data-latex-placement="H">
+<figure id="fig:alarm_icons">
 <img src="figures/alarm_icons.png" style="width:70.0%" />
 <figcaption>The alarm icons.</figcaption>
 </figure>
@@ -714,9 +648,9 @@ Finally we have alarm icons, represented with colored stars. Stars available are
 ### Pop-ups
 
 On these pages, pop-ups will appear, depending on your configurations set on the web server "Alarm triggers" page. There are two main types of pop-ups: the first one that won't disappear until you notice and press it (this type will block the whole system, pausing the values in the left grid and the foreground value as well). Otherwise, if you don't want to be bothered while driving you can use the second pop-up type, which was specifically designed to automatically disappear after 10 seconds.\
-Here you can see an example of the simplest type of pop-up where the circled warning icon will keep blinking. As you can see it's composed by a yellow box with a dotted outline which contains the icon of the value and the value itself that triggered the alarm previously set on the web server page (motor temperature = 35° C).
+Here you can see an example of the simplest type of pop-up where the circled warning icon will keep blinking. As you can see it's composed by a yellow box with a dotted outline which contains the icon of the value and the value itself that triggered the alarm previously set on the web server page (motor temperature = 35°C).
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/pop-up.PNG" style="width:70.0%" />
 <figcaption>An example of a pop-up.</figcaption>
 </figure>
@@ -725,7 +659,7 @@ Here you can see an example of the simplest type of pop-up where the circled war
 
 The battery info page will give you more detailed info about every single cell of the battery. As you may know standard Twizy batteries have 14 cells and a shared temperature sensor for each couple of them. In this page you are able to monitor each cell voltage and its temperature as well, and you can also have an overview of the full battery voltage. In the image is shown how it usually looks like.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/binfo_page.jpg" style="width:80.0%" />
 <figcaption>The battery info page.</figcaption>
 </figure>
@@ -736,13 +670,13 @@ As shown in the image above in the left side of the page is located a battery sh
 
 If you press the same arrow button again the data shown will change again, becoming the cells temperatures, expressed in Celsius. The foreground value would change as well and as you may notice from the icon above it, showing the full battery temperature, which is the same of each cell in this example. Refer to the image below to see the change.
 
-<figure data-latex-placement="ht">
 <figure>
-<img src="figures/binfo_page2.jpg" />
+<figure>
+<img src="figures/binfo_page2.jpg" style="width:100.0%" />
 <figcaption>Remaining cell voltages.</figcaption>
 </figure>
 <figure>
-<img src="figures/binfo_page3.jpg" />
+<img src="figures/binfo_page3.jpg" style="width:100.0%" />
 <figcaption>Cell temperatures.</figcaption>
 </figure>
 <figcaption>Cell temperatures.</figcaption>
@@ -752,7 +686,7 @@ If you press the same arrow button again the data shown will change again, becom
 
 Pressing the same button again will take you to a special page which contains all the data we discussed in the previous paragraph at once.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/binfo_page_condensed.png" style="width:80.0%" />
 <figcaption>The condensed battery info page.</figcaption>
 </figure>
@@ -766,7 +700,7 @@ You can decide in the settings whether this condensed battery page is shown as t
 
 In this page you will be able to see all alarm triggers, if you missed one or if you put them silent not to be disturbed while driving. Let's see how it looks like.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/alarm_page.jpg" style="width:80.0%" />
 <figcaption>The 3D alarm log page.</figcaption>
 </figure>
@@ -774,7 +708,7 @@ In this page you will be able to see all alarm triggers, if you missed one or if
 The image show a small table which contains the item that caused the alarm to trigger paired with its icon and its value. Then I added a date and time as well (available if connected to a network the first time) to know when that record was added to the list.\
 In the next images (with the old design), most records are related to the battery SOC, specifically when it goes below the 30%. You will discover how to set your own alarm on the web server in Section [4.4.8](#sec:web_alarm_triggers){reference-type="ref" reference="sec:web_alarm_triggers"}.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/alarm_log_old1.png" style="width:70.0%" />
 <figcaption>The 3D alarm log page.</figcaption>
 </figure>
@@ -783,7 +717,7 @@ In the next images (with the old design), most records are related to the batter
 
 If you need to see older alarm triggers, which doesn't appear in the list of the first seven ones, then you can press the yellow warning icon at the top of the table, and this will change the values shown with the older ones. You can do this action twice, because ToM is able store up to 21 alarm triggers and forgets older ones.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/alarm_log_old2.png" style="width:100.0%" />
 <figcaption>Changing the shown triggers.</figcaption>
 </figure>
@@ -794,7 +728,7 @@ As you can see in these two photos of the alarm log page, when I pressed the cir
 
 If you don't need one or more records anymore, you can choose to delete some of them. Select one or more records to permanently remove by pressing their date or time (a small red check sign will appear next to the chosen records). Then press the trash can icon circled in yellow in the second photo to delete the selected records. Those records will disappear and will be replaced by the next records, causing a shift of the whole list as you may notice in the second picture.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/alarm_log_old3.jpg" style="width:100.0%" />
 <figcaption>Deleting selected alarm triggers.</figcaption>
 </figure>
@@ -805,7 +739,7 @@ In this page there aren't any status icon bar or buttons to change page, since i
 
 This page is able to store the data about a trip *(trip means the time from when you start driving to when you power off your Twizy)* and then decide to store or discard these values when you start driving again. You can store simultaneously up to five trip data. The layout is the same as the main page, so the controls to change the order of the values or the data in foreground was already discussed in Section [3.3](#sec:main-layout){reference-type="ref" reference="sec:main-layout"}. Next paragraphs are about how to reset a trip and how to change the current trip.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/trip_page_full.jpg" style="width:80.0%" />
 <figcaption>The trip page.</figcaption>
 </figure>
@@ -819,13 +753,13 @@ To see in what trip ToM is currently recording refer to the orange number in the
 
 In this example I'm currently on the motor page and I'm recording data on the fifth trip page, as it's specified by the small orange number near the trip icon. If you want to pause the trip recording, you can do that on ToM+ by **holding down for three seconds the trip button** while another page is active (in this example the battery one).\
 
-<figure data-latex-placement="ht">
 <figure>
-<img src="figures/trip_page_on.jpg" />
+<figure>
+<img src="figures/trip_page_on.jpg" style="width:100.0%" />
 <figcaption>Trip recording active on trip 5.</figcaption>
 </figure>
 <figure>
-<img src="figures/trip_page_off.jpg" />
+<img src="figures/trip_page_off.jpg" style="width:100.0%" />
 <figcaption>Trip recording paused.</figcaption>
 </figure>
 <figcaption>Trip recording paused.</figcaption>
@@ -843,29 +777,29 @@ This page stores the data of the last twenty trips and the layout is the same as
 
 ### How to access the trip history page
 
-This page is not accessible from the main page, but you can reach it by **long pressing the alarm log icon** in the bottom line of the screen until it changes. This is because the trip history page is not a page you will use often, so it was decided to hide it from the main page to save space, as well as the error page. So, the sequence of pages available by **long pressing the alarm log icon** are: alarm log page (Section [3.5](#sec:alarm_log){reference-type="ref" reference="sec:alarm_log"}) $\rightarrow$ error page (Section [3.8](#sec:error_page){reference-type="ref" reference="sec:error_page"}) $\rightarrow$ trip history page $\rightarrow$ back to alarm log page, each one with the respective icon.\
+This page is not accessible from the main page, but you can reach it by **long pressing the alarm log icon** (i.e. the fourth one) in the bottom line of the screen until it changes. This is because the trip history page is not a page you will use often, so it was decided to hide it from the main page to save space, as well as the error page. So, the sequence of pages available by **long pressing the alarm log icon** are: alarm log page (Section [3.5](#sec:alarm_log){reference-type="ref" reference="sec:alarm_log"}) $\rightarrow$ error page (Section [3.8](#sec:error_page){reference-type="ref" reference="sec:error_page"}) $\rightarrow$ trip history page $\rightarrow$ back to alarm log page, each one with the respective icon. Next time ToM+ turns on, trip history page will be the default fourth icon.\
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/enter_trip_log_page.jpg" style="width:80.0%" />
 <figcaption>The icon to access the trip history page.</figcaption>
 </figure>
 
 ### Main trip history page controls
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/trip_history_page.jpg" style="width:80.0%" />
 <figcaption>The trip history page.</figcaption>
 </figure>
 
 In this image you can see the first seven trips stored in the list, with their date and time, the distance traveled. You can easily change the data shown on each row by pressing on the icon of the data as shown below. The data will cycle between most of the trip data available, so you can choose which one to show. In the next images you can see the same page with the trip power consumption and average speed.
 
-<figure data-latex-placement="ht">
 <figure>
-<img src="figures/trip_log_kwh.jpg" />
+<figure>
+<img src="figures/trip_log_kwh.jpg" style="width:100.0%" />
 <figcaption>Showing trip power consumption.</figcaption>
 </figure>
 <figure>
-<img src="figures/trip_log_kmh.jpg" />
+<img src="figures/trip_log_kmh.jpg" style="width:100.0%" />
 <figcaption>Showing trip average speed.</figcaption>
 </figure>
 <figcaption>Showing trip average speed.</figcaption>
@@ -879,15 +813,15 @@ This page is similar to the alarm log page and the trip history page, but it wil
 
 ### How to access the error page
 
-This page is not accessible from the main page, but you can reach it by **long pressing the alarm log icon** in the bottom line of the screen until it changes. As we discussed before, the sequence of pages available by long pressing the alarm log icon are: alarm log page (Section [3.5](#sec:alarm_log){reference-type="ref" reference="sec:alarm_log"}) $\rightarrow$ error page $\rightarrow$ trip history page (Section [3.7](#sec:trip_history){reference-type="ref" reference="sec:trip_history"}) $\rightarrow$ back to alarm log page, each one with the respective icon.\
+This page is not accessible from the main page, but you can reach it by **long pressing the alarm log icon** (i.e. the fourth one) in the bottom line of the screen until it changes. As we discussed before, the sequence of pages available by long pressing the alarm log icon are: alarm log page (Section [3.5](#sec:alarm_log){reference-type="ref" reference="sec:alarm_log"}) $\rightarrow$ error page $\rightarrow$ trip history page (Section [3.7](#sec:trip_history){reference-type="ref" reference="sec:trip_history"}) $\rightarrow$ back to alarm log page, each one with the respective icon. Next time ToM+ turns on, error page will be the default fourth icon.\
 
-<figure data-latex-placement="ht">
 <figure>
-<img src="figures/enter_error_page.jpg" />
+<figure>
+<img src="figures/enter_error_page.jpg" style="width:100.0%" />
 <figcaption>The icon to access the error page.</figcaption>
 </figure>
 <figure>
-<img src="figures/error_page.jpg" />
+<img src="figures/error_page.jpg" style="width:100.0%" />
 <figcaption>Showing the error page.</figcaption>
 </figure>
 <figcaption>Showing the error page.</figcaption>
@@ -897,6 +831,7 @@ This page is not accessible from the main page, but you can reach it by **long p
 
 As you can see in the second image above, the error page is similar to the alarm log page. It shows a list of the last 14 errors that occurred, with their ODO, the DTC number, the DF number if available, and a representative icon. Refer to the relative page on the web server for more information such as SOC, speed and a brief description (Section [4.4.15](#sec:web_diagnostic){reference-type="ref" reference="sec:web_diagnostic"}).\
 By pressing on the icon of the error (circled in yellow in the image) you can cycle between the pages of stored errors, which are 14 in total. The first page shows the last 7 errors, while the second page shows the older ones. To **delete error records** both in this page and on the car, simply click on the trash can icon.\
+To enable DF numbers and descriptions please refer to Section [4.1.2](#sec:add_wifi_profile){reference-type="ref" reference="sec:add_wifi_profile"}. If DF numbers are shown (instead of *???*) you can press that number to have **additional description** about the pressed error. The seventh line will be replaced by this additional info and you can click on it to hide again.\
 As in other pages the space wasn't enough to put the buttons to change page, so you can press the exit button in the bottom right corner to go back to the previous page and then change the active one if you want.
 
 ## The charging page {#sec:charging_page}
@@ -906,59 +841,59 @@ This page doesn't show while driving and there isn't a specific button to view i
 As you can see in the image the layout is the same as the dashboard page. The current SOC is shown in the center replacing the speed value.\
 An animation will start as well, with a different speed depending on the charging power level. In the photo below there are also some charging specific data, which you can change in the settings as it will be explained later. In this page you don't have the icons status bar, but you still have the network status icons in the bottom right corner, since you can monitor your car charging values when the car is powered off too. In fact, ToM+ will power on automatically when you plug your Twizy into a valid power supply.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/charging_page.jpg" style="width:80.0%" />
 <figcaption>The charging page.</figcaption>
 </figure>
 
 **1**
 
-: Current power stored in the battery, expressed in $kWh$.
+:   Current power stored in the battery, expressed in $kWh$.
 
 **2**
 
-: A value chosen from torque, power consumption and current consumption, which is used to fill the blue part of the power bar. Tap on the value to cycle between the three options.
+:   A value chosen from torque, power consumption and current consumption, which is used to fill the blue part of the power bar. Tap on the value to cycle between the three options.
 
 **3**
 
-: Current charging power, expressed in $kW$, used to fill the right side of the power bar.
+:   Current charging power, expressed in $kW$, used to fill the right side of the power bar.
 
 **4**
 
-: Shows the ETA, i.e., the estimated time to complete charging.
+:   Shows the ETA, i.e., the estimated time to complete charging.
 
 **5**
 
-: The current SOC, i.e., the state of charge of the battery, expressed in %.
+:   The current SOC, i.e., the state of charge of the battery, expressed in %.
 
 **6**
 
-: Additional displayed values, you can cycle between them by tapping on the icon to change.
+:   Additional displayed values, you can cycle between them by tapping on the icon to change.
 
 **7**
 
-: Icons for MQTT and WiFi. Greyed out when disconnected, and colored when connected. Tap on the icons if you want to perform a new WiFi scan or a MQTT reconnection.
+:   Icons for MQTT and WiFi. Greyed out when disconnected, and colored when connected. Tap on the icons if you want to perform a new WiFi scan or a MQTT reconnection.
 
 **8**
 
-: Shortcut button to open the settings page, to access more advanced settings.
+:   Shortcut button to open the settings page, to access more advanced settings.
 
 ## The settings page {#sec:settings_page}
 
 In order to let ToM be much more customizable here is the settings page, accessed by pressing the three dots on the top right corner in any of the main pages. Now you can easily edit the basic appearance of your personal ToM.
 
-<figure id="fig:settings_page" data-latex-placement="H">
+<figure id="fig:settings_page">
 <img src="figures/settings_page1.jpg" style="width:80.0%" />
 <figcaption>The first settings page.</figcaption>
 </figure>
 
 The last row will give you info about your personal ToM and will display:
 
-- Your ToM **Serial Number** in the first field (it's censored in the figure above)
+-   Your ToM **Serial Number** in the first field (it's censored in the figure above)
 
-- The black box (ESP) firmware version (currently 2.4 in the figure)
+-   The black box (ESP) firmware version (currently 2.4 in the figure)
 
-- The LCD touch display firmware version (currently 2.4 in the figure)
+-   The LCD touch display firmware version (currently 2.4 in the figure)
 
 You can update to the latest version of the firmware as explained in Section [5](#sec:update_procedure){reference-type="ref" reference="sec:update_procedure"}.
 
@@ -970,7 +905,7 @@ As you may notice in the image above, the circled button in the top right corner
 
 If you want to change the order of the data displayed in one of the page or even combine data from different pages you can do it in the settings page, following this steps.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/settings_page1_values.jpg" style="width:80.0%" />
 <figcaption>Customizing page values.</figcaption>
 </figure>
@@ -978,7 +913,7 @@ If you want to change the order of the data displayed in one of the page or even
 Pressing on the first icon you will cycle between all available pages whose icons were explained before in Section [3.1.1](#sec:page_icon_list){reference-type="ref" reference="sec:page_icon_list"} and will let you customize values for that specific page. In the image above the user has selected the gyroscope page, so the values shown on the right are the ones currently set for that page.\
 Each of the five icons under the **Displayed Data** header can be customized just tapping on it, cycling between all data until you find the desired one (icon meaning explained in Section [3.1](#sec:icon_list){reference-type="ref" reference="sec:icon_list"}). For instance you can also choose to put some motor data on the battery page as well, combining the two of them.\
 
-<figure id="fig:icon_arrangement" data-latex-placement="H">
+<figure id="fig:icon_arrangement">
 <img src="figures/settings_page1_matching.jpg" style="width:80.0%" />
 <figcaption>Resulting layout values.</figcaption>
 </figure>
@@ -987,12 +922,11 @@ After you have customized the shown values **remember to save by pressing the ex
 
 #### Choosing the starting page
 
-You can choose which page will be the first one to show when you leave the dashboard page. To do that press the icon to cycle through all available pages until you find the one you want.
-
+You can choose which page will be the first one to show when you leave the dashboard page. To do that press the icon to cycle through all available pages until you find the one you want. Remember that this configuration is ignored in ToM+ because the dashboard page will always be the displayed starting one. So, this only work for standard ToM.\
 In the image below the user has selected the battery page, so when leaving the dashboard page ToM+ will show it first.\
 
-<figure data-latex-placement="H">
-<img src="figures/settings_page1_bright.jpg" style="width:80.0%" />
+<figure>
+<img src="figures/settings_page1_bright.jpg" style="width:70.0%" />
 <figcaption>Customizing start page and brightness.</figcaption>
 </figure>
 
@@ -1006,8 +940,8 @@ ToM+ has a specific page to display more specific charging data (Section [3.9](
 
 Tap or slide the button on the left to choose between ON and OFF. When the sliding button is set to ON the ToM will boot up and load the charging page when your Twizy is charging otherwise, in the OFF state it will be switched off while charging. To save your edits press the bottom right corner exit button.\
 
-<figure data-latex-placement="H">
-<img src="figures/settings_page1_charge.jpg" style="width:80.0%" />
+<figure>
+<img src="figures/settings_page1_charge.jpg" style="width:70.0%" />
 <figcaption>Customizing charging page and battery kWh.</figcaption>
 </figure>
 
@@ -1019,8 +953,8 @@ You can set your battery capacity in kWh, which is useful if you have a Twizy wi
 
 If you figure out that gyroscope inclination data could be possibly wrong try pressing the "CALIBRATE" button which will perform a gyroscope calibration. Make sure you are **on a plain surface** with your Twizy before doing this operation otherwise your inclination data would be even worse. The process is shown down here:
 
-<figure data-latex-placement="H">
-<img src="figures/settings_page1_calibrate.jpg" style="width:80.0%" />
+<figure>
+<img src="figures/settings_page1_calibrate.jpg" style="width:70.0%" />
 <figcaption>Adjusting gyroscope calibration.</figcaption>
 </figure>
 
@@ -1034,7 +968,7 @@ The two available options are *'Condensed'* and *'Multiple'* and you can switch 
 
 This second settings page is about some advanced settings about the charging process. To access it press the circled button in the top right corner of the first settings page and press it again to navigate to the first settings page.\
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/settings_page2.jpg" style="width:80.0%" />
 <figcaption>Second settings page.</figcaption>
 </figure>
@@ -1045,8 +979,8 @@ You can choose the maximum charge level of your Twizy battery, which is useful i
 
 To increase or decrease the level press on the `-` or `+` buttons. The change will be applied to the current charge if already charging or to the next charge if not.\
 
-<figure data-latex-placement="H">
-<img src="figures/settings_page2_lvl.jpg" style="width:60.0%" />
+<figure>
+<img src="figures/settings_page2_lvl.jpg" style="width:50.0%" />
 <figcaption>Changing charge level.</figcaption>
 </figure>
 
@@ -1054,8 +988,8 @@ To increase or decrease the level press on the `-` or `+` buttons. The change wi
 
 Some users reported that would be useful to have a manual control of the expansion PIN1, which is normally used to control an auxiliary charger. So, when needed, you can manually control the expansion PIN1 by pressing the ON/OFF button. The change will be applied as soon as you press the bottom right corner exit button.\
 
-<figure data-latex-placement="H">
-<img src="figures/settings_page2_stop.jpg" style="width:80.0%" />
+<figure>
+<img src="figures/settings_page2_stop.jpg" style="width:70.0%" />
 <figcaption>Manual control of expansion PIN1 and stop charge level.</figcaption>
 </figure>
 
@@ -1067,8 +1001,8 @@ You can choose to stop the charge at a specific SOC, which is useful if you want
 
 You can choose to make a charge with no power and SOC limits, which is useful if you want once in a while to balance the battery cells. You can press the button to start the max parameters charge, which will be applied to the current charge if already charging or to the next charge if not.\
 
-<figure data-latex-placement="H">
-<img src="figures/settings_page2_max.jpg" style="width:80.0%" />
+<figure>
+<img src="figures/settings_page2_max.jpg" style="width:70.0%" />
 <figcaption>Max parameters charge and abort charging process.</figcaption>
 </figure>
 
@@ -1079,31 +1013,23 @@ You can choose to abort the charging process, which is useful if you want to sto
 ### The right side menu
 
 ::: tcolorbox
-  --------------------------------------------- -------------------------------------------------------------
-  ![image](icons/SetupRed1.png){height="8mm"}   
-
-  --------------------------------------------- -------------------------------------------------------------
+![image](icons/SetupRed1.png){height="8mm"} **Settings page (1 or 2)**\
+Shows in which settings page you are. Click to switch.
 :::
 
 ::: tcolorbox
-  ---------------------------------------------- -------------------------------------------------------------
-  ![image](icons/WifiBianco.PNG){height="8mm"}   
-
-  ---------------------------------------------- -------------------------------------------------------------
+![image](icons/WifiBianco.PNG){height="8mm"} **WiFi settings page**\
+Change page to the WiFi settings. (Section [4.1](#sec:wifi_settings){reference-type="ref" reference="sec:wifi_settings"})
 :::
 
 ::: tcolorbox
-  ---------------------------------------------- -------------------------------------------------------------
-  ![image](icons/MQTTBianco.PNG){height="8mm"}   
-
-  ---------------------------------------------- -------------------------------------------------------------
+![image](icons/MQTTBianco.PNG){height="8mm"} **MQTT settings page**\
+Change page to the MQTT settings. (Section [4.2](#sec:MQTT){reference-type="ref" reference="sec:MQTT"})
 :::
 
 ::: tcolorbox
-  --------------------------------------------- -------------------------------------------------------------
-  ![image](icons/ExitIcon2.png){height="8mm"}   
-
-  --------------------------------------------- -------------------------------------------------------------
+![image](icons/ExitIcon2.png){height="8mm"} **Save and exit button**\
+Save changes and exit to the last page.
 :::
 
 # Advanced ToM+ configurations
@@ -1112,7 +1038,7 @@ You can choose to abort the charging process, which is useful if you want to sto
 
 Since the second firmware release, your ToM+ can now connect to the Internet by a Wi-Fi on board module. This will allow you to view your Twizy real time data if combined with MQTT protocol which will be dealt in Section [4.2](#sec:MQTT){reference-type="ref" reference="sec:MQTT"}.\
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/wifi_settings_3d.png" style="width:80.0%" />
 <figcaption>The WiFi settings page.</figcaption>
 </figure>
@@ -1125,13 +1051,13 @@ In addition ToM+ has a web interface, in which you can monitor data in real time
 Since the second firmware release, your ToM+ can now connect to the Internet by a Wi-Fi embedded module and this will allow you to unlock many more features than before. Now you can have access to your Twizy data remotely on your smartphone!\
 You won't need to manually check your Twizy charging state anymore, because this new feature will publish charging state data directly on your smartphone and they will be protected and private as well. It will just need some MQTT configuration.\
 
-- No more struggling on constantly checking your Twizy charging state manually!
+-   No more struggling on constantly checking your Twizy charging state manually!
 
-- Plenty of possibilities to embed your Twizy in an IoT system relying on MQTT
+-   Plenty of possibilities to embed your Twizy in an IoT system relying on MQTT
 
-- Wi-Fi would not affect much both electric consumption and ToM performances
+-   Wi-Fi would not affect much both electric consumption and ToM performances
 
-- Unlock a new web page with real time Twizy data and ToM user-friendly settings
+-   Unlock a new web page with real time Twizy data and ToM user-friendly settings
 
 ### Adding a WiFi connection profile {#sec:add_wifi_profile}
 
@@ -1140,7 +1066,7 @@ When you tap on a table cell, either SSID or key, ToM+ will open a keyboard page
 By now you are able to set **four different connection profiles** with four pairs of SSID and password. If you don't set any profile but the Wi-Fi slider are enabled ToM+ will still perform a Wi-Fi scan every two minutes trying to find public connection without password protection and then it will try to connect. Press the bottom **right arrow button to save**.\
 The fourth WiFi connection profile is special, because the **"KEY 4"** field is used both as a standard password field for the last SSID and to change the default webserver password, as will be discussed in Section [4.4.3](#sec:web_change_password){reference-type="ref" reference="sec:web_change_password"}.
 
-In addition, there are some special codes you can enter in this field to perform some secret configuration. These codes are case sensitive and won't affect your **"KEY 4"** field if written correctly, since ToM+ uses them as commands only. You can type **GIVEMEDF!** (exactly as wrote here, with underscore and exclamation mark too) to *show DF error numbering and error decription* both in display and webUI.\
+In addition, there are some special codes you can enter in this field to perform some secret configuration. These codes are case sensitive and won't affect your **"KEY 4"** field if written correctly, since ToM+ uses them as commands only. You can type **GIVE_ME_DF!** (exactly as wrote here, with underscore and exclamation mark too) to *show DF error numbering and error decription* both in display and webUI.\
 **REMEMBER!** The commands are executed by ToM+ only if they are entered from this WiFi settings page, not from the webUI discussed later. In addition, since the origin of DF number is not clear, enabling this function is up to you and under your responsibility.
 
 ### Check WiFi connection {#sec:check_wifi_connection}
@@ -1148,29 +1074,23 @@ In addition, there are some special codes you can enter in this field to perform
 To check if your ToM+ is connected to the Internet via Wi-Fi the process is very simple. In all pages there is the WiFi icon (dealt in Section [3.3.3](#sec:status_icon_bar){reference-type="ref" reference="sec:status_icon_bar"}) which shows its status.
 
 ::: tcolorbox
-  ------------------------------------------------ -------------------------------------------------------------
-  ![image](icons/Tray_WiFiOff.png){height="8mm"}   
-
-  ------------------------------------------------ -------------------------------------------------------------
+![image](icons/Tray_WiFiOff.png){height="8mm"} **WiFi is off**\
+ToM+ is not connected and won't publish any data.
 :::
 
 ::: tcolorbox
-  --------------------------------------------- -------------------------------------------------------------
-  ![image](icons/Tray_WiFi.png){height="8mm"}   
-
-  --------------------------------------------- -------------------------------------------------------------
+![image](icons/Tray_WiFi.png){height="8mm"} **WiFi is on**\
+ToM+ is connected and will publish data if MQTT is connected.
 :::
 
 ::: tcolorbox
-  --------------------------------------------- -------------------------------------------------------------
-  ![image](icons/Tray_WiFi.png){height="8mm"}   
-
-  --------------------------------------------- -------------------------------------------------------------
+![image](icons/Tray_WiFi.png){height="8mm"} **WiFi scan in progress**\
+If blinking, ToM+ is currently scanning for available Wi-Fi networks.
 :::
 
 If you want to get more specific info about whether or not your ToM+ is connected to any network, you can check additional fields in the Wi-Fi settings page on the bottom right corner, as shown in the image below.
 
-<figure id="fig:wifi_bottom_line" data-latex-placement="H">
+<figure id="fig:wifi_bottom_line">
 <img src="figures/wifi_bottom_line.png" style="width:70.0%" />
 <figcaption>The WiFi bottom grid info.</figcaption>
 </figure>
@@ -1190,7 +1110,7 @@ As already mentioned to *save your changes* you need to press the bottom right a
 
 If you have already took a look at the Wi-Fi Section [4.1](#sec:wifi_settings){reference-type="ref" reference="sec:wifi_settings"}, you would probably now know that MQTT is needed to access to your data remotely and this section will show you how to set up it correctly and how does the ToM+ interface deal with this protocol.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/mqtt_settings_page.png" style="width:80.0%" />
 <figcaption>The MQTT settings page.</figcaption>
 </figure>
@@ -1217,21 +1137,21 @@ So, combining ToM+ with MQTT protocol can be very powerful and if you like home 
 *Disclaimer*: Take your time while doing this process because for not expert users may take some more minutes and be sure to **note down your configuration** parameters.\
 First of all choose your MQTT broker provider, I personally advice Maqiatto, since it's free, intuitive and easy to use. So let's visit the official website tutorial page: <https://www.maqiatto.com/examples>. Now we should see a page like the one shown here:
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/mqtt_step1.png" style="width:100.0%" />
 <figcaption>Step 1: Press “CREATE ACCOUNT” button.</figcaption>
 </figure>
 
 As the official guide says, you need to have an account in order to create your MQTT broker. So let's press the top right circled **"Create Account"** button and create one. You will be redirected to this page (<https://www.maqiatto.com/signup>) where you will have to fill in your personal data.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/mqtt_step2.png" style="width:100.0%" />
 <figcaption>Step 2: Fill in your personal data.</figcaption>
 </figure>
 
 After filling in all the form fields press the **"Signup"** green button and wait until we get this page (<https://www.maqiatto.com/configure>) popping up a successful registration message as shown in the image down here:
 
-<figure id="sec:free_broker_add_topics" data-latex-placement="H">
+<figure id="sec:free_broker_add_topics">
 <img src="figures/mqtt_step3.png" style="width:100.0%" />
 <figcaption>Step 3: Add IN/OUT topics.</figcaption>
 </figure>
@@ -1240,7 +1160,7 @@ From this page you can manage your available topics (refer to Section [4.2.1](#
 In the blank text box after the "/" symbol we should put the name we want to give to our topics. Choose it carefully and make sure it is clear and easy for you to remember. For instance I will call the input topic **TOMin** and the output topic **TOMout**, but you can choose the name you prefer.\
 For the first topic, type **TOMin** and press the **"+ Add Topic"** blue button as I did above. If the operation ends up correctly then a green popup message will show, saying **"Topic was added for this user"** and a new records will appear in the *"Available Topics"* list that was empty before. Now repeat the process for the **TOMout** topic as well and check again if the topic was successfully created. Before this process the *"Available Topics"* list was empty, but now we can see our two topics in the list and we can delete them if needed.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/mqtt_step4.png" style="width:80.0%" />
 <figcaption>Step 4: Change your broker password.</figcaption>
 </figure>
@@ -1250,7 +1170,7 @@ So let's take some time to make the broker secure and protected from unwanted ac
 
 If everything goes well, a green popup message will show up saying **"Broker user password was updated"**. The change username button is greyed out because you can't change your username unless you are a premium user.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/mqtt_step5.png" style="width:70.0%" />
 <figcaption>Step 5: Note down the port number.</figcaption>
 </figure>
@@ -1261,7 +1181,7 @@ In the last section of the configuration page (<https://www.maqiatto.com/configu
 
 Now that it's clear what MQTT (Section [4.2.1](#sec:brief_mqtt){reference-type="ref" reference="sec:brief_mqtt"}) is and we have set up our personal broker (Section [4.2.3](#sec:free_broker){reference-type="ref" reference="sec:free_broker"}) let's see where on the display we can connect ToM+ with our freshly created broker.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/mqtt_connect1.png" style="width:80.0%" />
 <figcaption>MQTT broker connection parameters.</figcaption>
 </figure>
@@ -1275,7 +1195,7 @@ Next we have the **user** field, which is the username that ToM+ will use to aut
 
 Afterwards we need to specify the **password of the broker** which can be different from the one of your Maqiatto account if you chose to change it when suggested in Section [4.2.3](#sec:free_broker){reference-type="ref" reference="sec:free_broker"}.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/mqtt_connect2.png" style="width:80.0%" />
 <figcaption>MQTT ToM+ publishing parameters.</figcaption>
 </figure>
@@ -1293,7 +1213,7 @@ To **save your changes** you need to press the bottom right arrow button. If you
 
 If you want to temporarily or permanently disable the publishing of data with MQTT protocol press or slide on the left slider called **"PUBLISH"** in the image down here. From then on ToM+ won't publish Twizy data via MQTT until you enable it again.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/mqtt_connect3.png" style="width:80.0%" />
 <figcaption>MQTT bottom sliders.</figcaption>
 </figure>
@@ -1304,7 +1224,7 @@ The right slider button under **"SUBSCRIBE"** allows ToM+ to receive commands fr
 
 Near the two sliding buttons, there's a small **"STATUS"** label which holds wheter the MQTT connection is working or not. When ToM+ is connected to the MQTT specified broker, you will see a *"CONNECTED"* text. When there's a problem with the broker connection or Wi-Fi is disabled, as we saw in Section [4.1.4](#sec:enable_disable_wifi){reference-type="ref" reference="sec:enable_disable_wifi"}, MQTT won't work properly and a *"DISCONNECTED"* message appears as in the image below.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/mqtt_status.png" style="width:80.0%" />
 <figcaption>MQTT status field.</figcaption>
 </figure>
@@ -1317,13 +1237,13 @@ To **save your changes** you need to press the bottom right arrow button. If you
 
 When you tap on a table cell in the Wi-Fi or MQTT settings page, ToM+ will open a keyboard page where you can type in your data. The keyboard page is very intuitive and easy to use. You can switch between three different charsets by pressing the **"1/3"** button on the bottom left corner of the keyboard.
 
-<figure data-latex-placement="ht">
 <figure>
-<img src="figures/keyboard_page1.jpg" />
+<figure>
+<img src="figures/keyboard_page1.jpg" style="width:100.0%" />
 <figcaption>First charset: Letters.</figcaption>
 </figure>
 <figure>
-<img src="figures/keyboard_page1_caps.jpg" />
+<img src="figures/keyboard_page1_caps.jpg" style="width:100.0%" />
 <figcaption>First charset: Uppercase letters.</figcaption>
 </figure>
 <figcaption>First charset: Uppercase letters.</figcaption>
@@ -1331,13 +1251,13 @@ When you tap on a table cell in the Wi-Fi or MQTT settings page, ToM+ will open 
 
 In the **first charset**, you can type letters in lowercase or uppercase by pressing the shift button circled in yellow in the first image. When you type something it will appear in the text field on the top of the keyboard. If you want to delete a character just press the backspace button.
 
-<figure data-latex-placement="ht">
 <figure>
-<img src="figures/keyboard_page2.jpg" />
+<figure>
+<img src="figures/keyboard_page2.jpg" style="width:100.0%" />
 <figcaption>Second charset: Symbols.</figcaption>
 </figure>
 <figure>
-<img src="figures/keyboard_page3.jpg" />
+<img src="figures/keyboard_page3.jpg" style="width:100.0%" />
 <figcaption>Third charset: Numbers and more.</figcaption>
 </figure>
 <figcaption>Third charset: Numbers and more.</figcaption>
@@ -1350,7 +1270,7 @@ When you are done typing, press the **OK** button to confirm your input and retu
 
 In some fields, such as the MQTT publish frequency, only numbers are allowed. In this case, ToM+ will open a number-only keyboard page as shown in the image below.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/keyboard_num_only.jpg" style="width:80.0%" />
 <figcaption>Number-only keyboard.</figcaption>
 </figure>
@@ -1363,7 +1283,7 @@ The web server is a new feature introduced with the second firmware release. It 
 
 In addition, you can also use the web server to set up **WiFi and MQTT** much more easily than using the ToM+ display with the keyboard page only (Section [4.3](#sec:keyboard_page){reference-type="ref" reference="sec:keyboard_page"}).\
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/landing_page.png" style="width:46.0%" />
 <figcaption>Landing page of the web server.</figcaption>
 </figure>
@@ -1373,87 +1293,63 @@ In addition, you can also use the web server to set up **WiFi and MQTT** much mo
 In the landing page shown above, you will see twelve buttons that give you access to different pages of the web server. Here I will give a quick overview of the functions available on each page and then in the next paragraphs they will be all deepen more. In these section, the icons are used as a visual aid only:\
 
 ::: tcolorbox
-  ------------------------------------------------ -------------------------------------------------------------
-  ![image](icons/BatteryInfo2.png){height="8mm"}   
-
-  ------------------------------------------------ -------------------------------------------------------------
+![image](icons/BatteryInfo2.png){height="8mm"} **Data monitor**\
+Here you can monitor your Twizy data in real time, organized in tables just like on the ToM+ display pages (Section [4.4.4](#sec:web_data_monitor){reference-type="ref" reference="sec:web_data_monitor"}).
 :::
 
 ::: tcolorbox
-  ------------------------------------------------ -------------------------------------------------------------
-  ![image](icons/Street0Ok_v2.png){height="8mm"}   
-
-  ------------------------------------------------ -------------------------------------------------------------
+![image](icons/Street0Ok_v2.png){height="8mm"} **Trip history**\
+Here you can check each recorded trip data (1 to 5) and the last twenty trips, the same as on the ToM+ display (Section [4.4.5](#sec:web_trip_history){reference-type="ref" reference="sec:web_trip_history"}).
 :::
 
 ::: tcolorbox
-  ------------------------------------------------ -------------------------------------------------------------
-  ![image](icons/Tray_WiFiOff.png){height="8mm"}   
-
-  ------------------------------------------------ -------------------------------------------------------------
+![image](icons/Tray_WiFiOff.png){height="8mm"} **Network settings**\
+Here you can set up your Wi-Fi connection profiles and MQTT broker parameters, just like on the ToM+ display (Section [4.4.6](#sec:web_network_settings){reference-type="ref" reference="sec:web_network_settings"}).
 :::
 
 ::: tcolorbox
-  ---------------------------------------- -------------------------------------------------------------
-  ![image](icons/Pin1.png){height="8mm"}   
-
-  ---------------------------------------- -------------------------------------------------------------
+![image](icons/Pin1.png){height="8mm"} **Expansion settings**\
+Here you can configure the expansion connector pins and choose the behavior for the right wiper stalk button (Section [4.4.7](#sec:web_expansion_settings){reference-type="ref" reference="sec:web_expansion_settings"}).
 :::
 
 ::: tcolorbox
-  ----------------------------------------- -------------------------------------------------------------
-  ![image](icons/Alarm.PNG){height="8mm"}   
-
-  ----------------------------------------- -------------------------------------------------------------
+![image](icons/Alarm.PNG){height="8mm"} **Alarm Triggers**\
+Here you can view or set up alarms based on ToM+ data and choose the action to be executed when an alarm triggers (Section [4.4.8](#sec:web_alarm_triggers){reference-type="ref" reference="sec:web_alarm_triggers"}).
 :::
 
 ::: tcolorbox
-  ----------------------------------------- -------------------------------------------------------------
-  ![image](icons/Alarm.PNG){height="8mm"}   
-
-  ----------------------------------------- -------------------------------------------------------------
+![image](icons/Alarm.PNG){height="8mm"} **Alarms log**\
+Here you can view and clear the history of the last 21 alarms trigger and their details, such as date and time (Section [4.4.9](#sec:web_alarms_log){reference-type="ref" reference="sec:web_alarms_log"}).
 :::
 
 ::: tcolorbox
-  ---------------------------------------- -------------------------------------------------------------
-  ![image](icons/Swap.png){height="8mm"}   
-
-  ---------------------------------------- -------------------------------------------------------------
+![image](icons/Swap.png){height="8mm"} **OTA Update & Prefs**\
+Here you can update the ToM+ firmware via OTA method and backup/restore your ToM+ preferences (Section [4.4.10](#sec:web_ota_update){reference-type="ref" reference="sec:web_ota_update"}).
 :::
 
 ::: tcolorbox
-  ---------------------------------------- -------------------------------------------------------------
-  ![image](icons/Swap.png){height="8mm"}   
-
-  ---------------------------------------- -------------------------------------------------------------
+![image](icons/Swap.png){height="8mm"} **Advanced Info & Sets**\
+Here you can view advanced information about your Twizy battery and configure miscellaneous settings (Section [4.4.11](#sec:web_advanced_info){reference-type="ref" reference="sec:web_advanced_info"}).
 :::
 
 ::: tcolorbox
-  ---------------------------------------- -------------------------------------------------------------
-  ![image](icons/CEta.png){height="8mm"}   
-
-  ---------------------------------------- -------------------------------------------------------------
+![image](icons/CEta.png){height="8mm"} **Charging Prefs & Log**\
+Here you can set up charging preferences, abort charge on the fly, and view or clear the last 15 charging logs (Section [4.4.12](#sec:web_charging_prefs){reference-type="ref" reference="sec:web_charging_prefs"}).
 :::
 
 ::: tcolorbox
-  ----------------------------------------- -------------------------------------------------------------
-  ![image](icons/Timer.PNG){height="8mm"}   
-
-  ----------------------------------------- -------------------------------------------------------------
+![image](icons/Timer.PNG){height="8mm"} **Time & Date**\
+Here you can set the time and date of your ToM+ and choose the time zone using POSIX TZ strings or synchronize with WiFi (Section [4.4.13](#sec:web_time_date){reference-type="ref" reference="sec:web_time_date"}).
 :::
 
 ::: tcolorbox
-  --------------------------------------- -------------------------------------------------------------
-  ![image](icons/Kmh.png){height="8mm"}   
-
-  --------------------------------------- -------------------------------------------------------------
+![image](icons/Kmh.png){height="8mm"} **BigToM / ToM+ Sets**\
+Here you can configure some dashboard parameters, such as the scale of the power bar or setting up a speed limit (Section [4.4.14](#sec:web_btom_tom_sets){reference-type="ref" reference="sec:web_btom_tom_sets"}).
 :::
 
 ::: tcolorbox
-  ----------------------------------------- -------------------------------------------------------------
-  ![image](icons/Error.png){height="8mm"}   
-
-  ----------------------------------------- -------------------------------------------------------------
+![image](icons/Error.png){height="8mm"} **Diagnostic**\
+Here you can view DTC/DF numbers and the descriptions of your Twizy errors and clear the logs if needed (Section [4.4.15](#sec:web_diagnostic){reference-type="ref" reference="sec:web_diagnostic"}).
 :::
 
 ### Access the web server {#sec:web_server_access}
@@ -1474,14 +1370,14 @@ As said in the introduction, this page lists all available ToM+ data, organized 
 
 These values are **updated every 10 seconds** and are coupled with their measure unit. Don't worry for your privacy because your data travels packed in a particular packet structure that is difficult to sniff or crack. In addition, the web server does not use any external services or MQTT for the monitoring so that your data remains private and safe. The page is fully generated directly by the black box and doesn't undergo any further processing.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/monitor_page1.png" style="width:100.0%" />
 <figcaption>Data monitor page — top tables.</figcaption>
 </figure>
 
 In the second part of the page, there are the last three tables which contain dashboard data, expansion port data and the last one holds all the battery info voltages and temperatures. Press the **"HOME"** green button pointed by the red arrow to return to the landing page.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/monitor_page2.png" style="width:100.0%" />
 <figcaption>Data monitor page — bottom tables.</figcaption>
 </figure>
@@ -1490,14 +1386,14 @@ In the second part of the page, there are the last three tables which contain da
 
 This holds the values of the trip page previously discussed in Section [3.6](#sec:trip_page){reference-type="ref" reference="sec:trip_page"}. It can store up to 5 different sets of data and, even if display shown data are limited, the web server page will show them all. The first table shows trips, each organized into five rows and the headers of each record are listed in Section [3.1](#sec:icon_list){reference-type="ref" reference="sec:icon_list"}.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/trip_page1.png" style="width:100.0%" />
 <figcaption>Trip history page — Trip data.</figcaption>
 </figure>
 
 The second table shows the last twenty trips (from the most recent), with the same headers as the first table. You can get back to the start page pressing the **"HOME"** green button located just below the second table.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/trip_page2.png" style="width:100.0%" />
 <figcaption>Trip history page — Trip history.</figcaption>
 </figure>
@@ -1507,14 +1403,14 @@ The second table shows the last twenty trips (from the most recent), with the sa
 This page allows you to configure Wi-Fi profiles and MQTT broker without struggling with the ToM+ display keyboard. The page is split in two main tables, one for Wi-Fi (Section [4.1](#sec:wifi_settings){reference-type="ref" reference="sec:wifi_settings"}) and the other for MQTT settings (Section [4.2](#sec:MQTT){reference-type="ref" reference="sec:MQTT"}).\
 As you can see in the image the first one contains all the four profiles that were previously set on ToM+, or if not, their default values. The same is for passwords, that are not visible until you press the "O" button next to the one you want to see. Pressing it again will hide the password. Here you can also change the Wi-Fi password for the Access Point (Section [4.4.3](#sec:web_change_password){reference-type="ref" reference="sec:web_change_password"}).
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/wifi_page1.png" style="width:100.0%" />
 <figcaption>Network settings page — WiFi table.</figcaption>
 </figure>
 
 The two check boxes do the same functions as the two sliding buttons in ToM+ WiFi settings page. To know what they are used for, refer to Section [4.1.4](#sec:enable_disable_wifi){reference-type="ref" reference="sec:enable_disable_wifi"}. After any change, press the **"SAVE"** button to save your changes, otherwise they will be lost when you leave the page.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/wifi_page3.png" style="width:100.0%" />
 <figcaption>Network settings page — WiFi status table.</figcaption>
 </figure>
@@ -1522,7 +1418,7 @@ The two check boxes do the same functions as the two sliding buttons in ToM+ WiF
 If your ToM+ is connected to a network, a small table will appear below the one just discussed and the rows contain three main information: the SSID, ToM+ IP address and the MAC address. These data can be found on the ToM+ display as well, in the Wi-Fi settings page as previously shown in Figure [4.1](#fig:wifi_bottom_line){reference-type="ref" reference="fig:wifi_bottom_line"}.\
 The second main table, instead holds the MQTT broker settings, as they were previously configured on ToM+ display, or if not, default values (*e.g. "broker.address"*). You can easily change them manually from this web server page, that is much more comfortable than using the ToM+ display keyboard. Check below in the image how this table may look once configured.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/wifi_page2.png" style="width:100.0%" />
 <figcaption>Network settings page — MQTT table.</figcaption>
 </figure>
@@ -1532,19 +1428,19 @@ After any change, press the **"SAVE"** button to save your changes, otherwise th
 
 ### Expansion settings page {#sec:web_expansion_settings}
 
-This page holds the configuration for PIN1 and PIN2 of the expansion connector, as well as the configuration for the right wiper stalk button. It can be really useful if you like customizing stuff and adding your personal touch to your ToM+. The pin-out of the expansion connector is shown in Figure [1.1](#fig:expansion_pinout){reference-type="ref" reference="fig:expansion_pinout"}. Since they are general input/output pins you can choose the mode of each one depending on your needs.\
+This page holds the configuration for PIN1 and PIN2 of the expansion connector, as well as the configuration for the right wiper stalk button. It can be really useful if you like customizing stuff and adding your personal touch to your ToM+. The pin-out of the expansion connector is shown in Figure [1.2](#fig:expansion_pinout){reference-type="ref" reference="fig:expansion_pinout"}. Since they are general input/output pins you can choose the mode of each one depending on your needs.\
 If you choose the **"INPUT"** mode, then that line will be listening to the signal specified in the next field, and this can be really useful when setting a really specific alarm, but we will discuss this later. On the other hand, if you select the **"OUTPUT"** mode ToM+ will transmit the signal specified in the next field, which can be HIGH (5V) or LOW (0V), when an alarm triggers. But as said before, it will be depth in Section [4.4.8](#sec:web_alarm_triggers){reference-type="ref" reference="sec:web_alarm_triggers"}.\
 Since the most recent firmware releases, new modes other than INPUT and OUTPUT have been added to the expansion PINs. Let's dig into them:\
 
-- **IR CONTROLLER**: This mode allows ToM+ to be controlled by an infrared remote.
+-   **IR CONTROLLER**: This mode allows ToM+ to be controlled by an infrared remote.
 
-- **KEY+ CONTROLLER**: This mode allows you to control your ToM+ via a rotational infrared remote. For these two first modes an additional configuration table will appear.
+-   **KEY+ CONTROLLER**: This mode allows you to control your ToM+ via a rotational wireless remote. For these two first modes an additional configuration table will appear.
 
-- **SERIAL TX**: Allows you to configure a serial TX line (still not implemented).
+-   **SERIAL TX**: Allows you to configure a serial TX line (still not implemented).
 
-- **SERIAL RX**: Allows you to configure a serial RX line (still not implemented).
+-   **SERIAL RX**: Allows you to configure a serial RX line (still not implemented).
 
-- **CTRL BUTTON**: This mode allows you to use the right wiper stalk button as a control button for your ToM+ gestures.
+-   **CTRL BUTTON**: This mode allows you to use the right wiper stalk button as a control button for your ToM+ gestures.
 
 #### Standard OUTPUT mode
 
@@ -1554,7 +1450,7 @@ If you select *"Active High"*, the signal sent is HIGH (5V) and normally is held
 
 If you select *"Active Low"*, the signal sent is LOW (0V) and normally is held to HIGH (5V).
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/expansion_page1.png" style="width:100.0%" />
 <figcaption>Expansion settings page — PIN1 table.</figcaption>
 </figure>
@@ -1562,15 +1458,15 @@ If you select *"Active Low"*, the signal sent is LOW (0V) and normally is held t
 As you can see in the image below, when selecting the **"OUTPUT"** mode, you can also choose the *"Output Type"*. This is useful if you have a really specific output device that needs additional management that is not limited to the standard HIGH/LOW signal. To achieve this, you can choose from a list of already managed output devices, highlighted in the image above.\
 After any change, press the **"SAVE"** button to save your changes, otherwise they will be lost when you leave the page. If you got an idea for a new output device that can be useful for the community, feel free to contact me.\
 
-- *"Normal"*: This is the standard OUTPUT mode, limited to HIGH/LOW signals.
+-   *"Normal"*: This is the standard OUTPUT mode, limited to HIGH/LOW signals.
 
-- *"Charger auxilliary fan"*: This lets you control an auxilliary fan. You will need to set an alarm on charger temperature with a threshold. Then, when charging, if it triggers the fan will start cooling the charger, stopping only after the temperature drops below the selected threshold with a fixed hysteresis (even after charging is finished if needed).
+-   *"Charger auxilliary fan"*: This lets you control an auxilliary fan. You will need to set an alarm on charger temperature with a threshold. Then, when charging, if it triggers the fan will start cooling the charger, stopping only after the temperature drops below the selected threshold with a fixed hysteresis (even after charging is finished if needed).
 
-- *"Reku break light"*: This lets you connect a relay board which controls the breaking light, in order to power it on when in regeneration mode. This is particularly useful if your Twizy is tuned to increase the regeneration power.
+-   *"Reku break light"*: This lets you connect a relay board which controls the breaking light, in order to power it on when in regeneration mode. This is particularly useful if your Twizy is tuned to increase the regeneration power.
 
-- *"Auxilliary charger"*: This lets you control an auxilliary charger with an alarm on SOC or battery voltage. It lets you connect a relay board that enables or disables an auxilliary charger when needed. It powers on only in charging mode, with a small fixed delay.
+-   *"Auxilliary charger"*: This lets you control an auxilliary charger with an alarm on SOC or battery voltage. It lets you connect a relay board that enables or disables an auxilliary charger when needed. It powers on only in charging mode, with a small fixed delay.
 
-- *"Motor fan"*: This lets you control a motor fan with an alarm on the engine temperature. It works the same as the charger fan with the difference that this works only while driving.
+-   *"Motor fan"*: This lets you control a motor fan with an alarm on the engine temperature. It works the same as the charger fan with the difference that this works only while driving.
 
 #### Standard INPUT mode
 
@@ -1578,7 +1474,7 @@ As you can see in the image below, when selecting the **"INPUT"** mode, no addit
 
 After any change, press the **"SAVE"** button to save your changes, otherwise they will be lost when you leave the page.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/expansion_page3.png" style="width:100.0%" />
 <figcaption>Expansion settings page — PIN2 table.</figcaption>
 </figure>
@@ -1587,13 +1483,13 @@ After any change, press the **"SAVE"** button to save your changes, otherwise th
 
 First of all you will need an IR receiver (either a sensor or a module like the one in the first image) to be plugged in one of the expansion board PINs. This mode is intended to be used with a general IR remote, but the one I personally suggest is the one shown in the second image below, specially designed to be put on the steering wheel.
 
-<figure data-latex-placement="ht">
 <figure>
-<img src="figures/ir_receiver.jpg" />
+<figure>
+<img src="figures/ir_receiver.jpg" style="width:100.0%" />
 <figcaption>IR receiver module.</figcaption>
 </figure>
 <figure>
-<img src="figures/ir_controller_photo.jpg" />
+<img src="figures/ir_controller_photo.jpg" style="width:100.0%" />
 <figcaption>IR controller steering wheel remote.</figcaption>
 </figure>
 <figcaption>IR controller steering wheel remote.</figcaption>
@@ -1601,7 +1497,7 @@ First of all you will need an IR receiver (either a sensor or a module like the 
 
 When you select the **"IR CONTROLLER"** mode for either PIN1 or PIN2 table, remember to press the **"SAVE"** button to save your changes. Once you saved, the page will reload and an additional table will appear below, you can see it in the image below.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/ir_settings.png" style="width:80.0%" />
 <figcaption>Expansion settings page — IR settings table.</figcaption>
 </figure>
@@ -1611,16 +1507,16 @@ Using this, you can fill the other fields accordingly. The last one is particula
 
 #### KEY+ CONTROLLER mode
 
-This mode is really similar to the one just discussed, but is intended to be used with another type of controller (the one in the picture below). It's a Bluetooth wireless rotary controller for car audio systems, which performs different actions depending on how fast/slow you are rotating the external ring. And of course it has some more buttons as well in the internal part.\
+This mode is really similar to the one just discussed, but is intended to be used with another type of controller (the one in the picture below). It's a wireless rotary controller for car audio systems, which performs different actions depending on how fast/slow you are rotating the external ring. And of course it has some more buttons as well in the internal part.\
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/keyp_controller.jpg" style="width:40.0%" />
 <figcaption>Bluetooth wireless rotary controller.</figcaption>
 </figure>
 
 When you select the **"KEY+ CONTROLLER"** mode for either PIN1 or PIN2 table, remember to press the **"SAVE"** button to save your changes. Once you saved, the page will reload and an additional table will appear below, you can see it in the image below.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/keyp_settings.png" style="width:80.0%" />
 <figcaption>Expansion settings page — KEY+ settings table.</figcaption>
 </figure>
@@ -1632,20 +1528,20 @@ After that, remeber to press the **"SAVE"** button to save your changes, otherwi
 
 #### CTRL BUTTON mode {#sec:web_wiper_stalk}
 
-This last table holds the configuration needed to make the provided right **wiper stalk button** (Figure [1.4](#fig:wiper_stalk_button){reference-type="ref" reference="fig:wiper_stalk_button"}) work. You can use this button to navigate through all ToM+ UI without using the touch-screen, with these three main **actions**: *"Browse items"*, *"Change page"*, *"Select-deselect"*. To achieve this, there are three type of **button presses**: *"Short"*, *"Medium"*, *"Long"*.\
+This last table holds the configuration needed to make the provided right **wiper stalk button** (Figure [1.6](#fig:wiper_stalk_button){reference-type="ref" reference="fig:wiper_stalk_button"}) work. You can use this button to navigate through all ToM+ UI without using the touch-screen, with these three main **actions**: *"Browse items"*, *"Change page"*, *"Select-deselect"*. To achieve this, there are three type of **button presses**: *"Short"*, *"Medium"*, *"Long"*.\
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/expansion_page2.png" style="width:100.0%" />
 <figcaption>Expansion settings page — Wiper stalk button table.</figcaption>
 </figure>
 
 So, in the first part of this table you can rearrange this actions with the gestures you prefer.\
 
-- *"Browse items"*: This moves a small white marker next to the current selected data.
+-   *"Browse items"*: This moves a small white marker next to the current selected data.
 
-- *"Change page"*: This lets you cycle through the pages present in the rotation.
+-   *"Change page"*: This lets you cycle through the pages present in the rotation.
 
-- *"Select-deselect"*: This simulates tapping on the selected data (e.g. switches from background to foreground).\
+-   *"Select-deselect"*: This simulates tapping on the selected data (e.g. switches from background to foreground).\
 
 In the second part of the table you can select the **pages you would like to skip** when cycling through the available pages repeating the *"Change page"* gesture. For instance, if I don't want to monitor the Info battery page when cycling with the button, I just check it out and it will be removed from the rotation.\
 After any change, press the **"SAVE"** button to save your changes, otherwise they will be lost when you leave the page. At the end of this page, pointed by a red arrow in the image, there's the **"HOME"** green button to return to the landing page.
@@ -1654,24 +1550,24 @@ After any change, press the **"SAVE"** button to save your changes, otherwise th
 
 When something happens on ToM+ and you want to get noticed about it, you can choose how to be notified and when in this page. You can have up to **ten alarms** running simultaneously and TOM+ constantly checks the state of each condition. In the image is shown the first table, where you can see currently active alarms.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/alarm_page1.png" style="width:100.0%" />
 <figcaption>Alarm page — Existing alarms list table.</figcaption>
 </figure>
 
 The headers of the tables are practically the elements of the condition that ToM+ listens for.\
 
-- **ITEM**: This is the data to be checked, chosen from the list of Section [3.1](#sec:icon_list){reference-type="ref" reference="sec:icon_list"}.
+-   **ITEM**: This is the data to be checked, chosen from the list of Section [3.1](#sec:icon_list){reference-type="ref" reference="sec:icon_list"}.
 
-- **CONDITION**: This is the operator sign used when comparing the values.
+-   **CONDITION**: This is the operator sign used when comparing the values.
 
-- **VALUE**: This is a signed integer value used as the second term of the comparison.
+-   **VALUE**: This is a signed integer value used as the second term of the comparison.
 
-- **ACTION**: This is the action performed when the alarm triggers. See the next table.
+-   **ACTION**: This is the action performed when the alarm triggers. See the next table.
 
-- **SEND-MQTT**: This is a binary field and if crossed, pulish a message on MQTT topic.
+-   **SEND-MQTT**: This is a binary field and if crossed, pulish a message on MQTT topic.
 
-- **COMMAND**: This is an optional string to be sent as an additional command.
+-   **COMMAND**: This is an optional string to be sent as an additional command.
 
  \
 The first alarm trigger checks the battery consumption and activates the PIN2 of the expansion board if it's greater than 35A. In this specific example, it is used to power on the rear brake light when the regeneration is enough to make the Twizy slow down.\
@@ -1681,7 +1577,7 @@ The third alarm trigger checks the battery SOC and once charge is complete, e.g.
 So, the function of the **"COMMAND"** column is really useful and allows you to embed your ToM+ in your IoT house. See the Appendix [7](#apx:tasmota){reference-type="ref" reference="apx:tasmota"} for detailed configurations.\
 When you want to remove a specific alarm you will just need to press the **"Remove"** button in its last column.\
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/alarm_page2.png" style="width:100.0%" />
 <figcaption>Alarm page — Adding new alarm table.</figcaption>
 </figure>
@@ -1689,29 +1585,29 @@ When you want to remove a specific alarm you will just need to press the **"Remo
 In the second table you can add a new alarm to the list we have just discussed. First of all you have to choose the **ITEM**, between all the available data listed in Section [3.1](#sec:icon_list){reference-type="ref" reference="sec:icon_list"}. In this choice box items are organized as in the list just quoted. Then select the **CONDITION**, i.e. the operator of the comparison, between *"lower"*, *"greater"* or *"equal"*. Next it's time for the reference **VALUE**, a signed integer number, the right term of the comparison.\
 Let's take some time to explain all of the possible **ACTION**s.\
 
-- *pop-up*: a yellow pop-up notifying the item value appears in the center of the screen. To hide it just press it once. You can see a pop-up example in the first image below.
+-   *pop-up*: a yellow pop-up notifying the item value appears in the center of the screen. To hide it just press it once. You can see a pop-up example in the first image below.
 
-- *pop-up 10 sec*: a yellow pop-up notifying the item value stays on the screen for ten seconds.
+-   *pop-up 10 sec*: a yellow pop-up notifying the item value stays on the screen for ten seconds.
 
-- *silent*: no visible actions happen: it's commonly used to post MQTT messages only.
+-   *silent*: no visible actions happen: it's commonly used to post MQTT messages only.
 
-- *icon x fix*: icon x (*where x can be 2,3,4 or 5*) lights on. See Figure [4.4](#fig:alarm_icons2){reference-type="ref" reference="fig:alarm_icons2"} for alarm icons.
+-   *icon x fix*: icon x (*where x can be 2,3,4 or 5*) lights on. See Figure [4.4](#fig:alarm_icons2){reference-type="ref" reference="fig:alarm_icons2"} for alarm icons.
 
-- *icon x blink*: icon x (*where x can be 2,3,4 or 5*) starts blinking.
+-   *icon x blink*: icon x (*where x can be 2,3,4 or 5*) starts blinking.
 
-- *pin1 active*: PIN1 of the expansion board gets activated (LOW or HIGH depending on the level selected in the expansion settings page in Section [4.4.8](#sec:web_alarm_triggers){reference-type="ref" reference="sec:web_alarm_triggers"}).
+-   *pin1 active*: PIN1 of the expansion board gets activated (LOW or HIGH depending on the level selected in the expansion settings page in Section [4.4.8](#sec:web_alarm_triggers){reference-type="ref" reference="sec:web_alarm_triggers"}).
 
-- *pin2 active*: PIN2 of the expansion board gets activated. In this example PIN2 was set as INPUT mode so it's greyed out, because it can't represent an OUTPUT action.
+-   *pin2 active*: PIN2 of the expansion board gets activated. In this example PIN2 was set as INPUT mode so it's greyed out, because it can't represent an OUTPUT action.
 
  \
 
-<figure id="fig:alarm_icons2" data-latex-placement="ht">
+<figure id="fig:alarm_icons2">
 <figure>
-<img src="figures/pop-up.PNG" />
+<img src="figures/pop-up.PNG" style="width:100.0%" />
 <figcaption>Pop-up: Battery temp &gt; 89°C.</figcaption>
 </figure>
 <figure id="fig:alarm_icons2">
-<img src="figures/alarm_icons.png" />
+<img src="figures/alarm_icons.png" style="width:100.0%" />
 <figcaption>Alarm icons (2,3,4 and 5).</figcaption>
 </figure>
 <figcaption>Alarm icons (2,3,4 and 5).</figcaption>
@@ -1726,7 +1622,7 @@ Press the **"HOME"** green button at the end of the page to return to the landin
 
 This page stores the last 21 alarm triggers and does the same function as the log page of ToM, as shown in Section [3.5](#sec:alarm_log){reference-type="ref" reference="sec:alarm_log"}. You can see and remove any unwanted records as well, by pressing the **"Remove"** button near the one you would like to permanently delete (on ToM+ display too).\
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/alarm_log1.png" style="width:60.0%" />
 <figcaption>Alarm log page table.</figcaption>
 </figure>
@@ -1746,7 +1642,7 @@ Sometimes firmware patches, like bug fixes or minor stuff, may be released witho
 
 The last field is the complete name of the **Special partition** firmware, which is an additional storage used to hold third-party softwares (e.g. the Twizy-cfg tuning software). For more information about tuning your Twizy using Twizy-cfg on ToM+ refer to Appendix [6](#apx:tuning){reference-type="ref" reference="apx:tuning"}.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/ota_page3.png" style="width:100.0%" />
 <figcaption>OTA Update page — Update and info table.</figcaption>
 </figure>
@@ -1759,7 +1655,7 @@ If it is a *third-party software*, be sure to check the *"Update to special part
 In the **"BOOT OPTIONS"** table instead, once you have loaded the desired firmwares, you can switch bewteen them if needed. Let's say I'm running ToM+ 2.4 firmware and I want to do some tuning with Twizy-cfg third-party software; I have already loaded both of them in the correct partitions. In order to achieve this, press the *"Reboot from special partition"* button and wait for ToM+ to reboot, then follow the Appendix [6](#apx:tuning){reference-type="ref" reference="apx:tuning"} for more.\
 *"Reboot from Ota0 partition"* and *"Reboot from Ota1 partition"* buttons are used to change between ToM+ firmware version. Let's say I'm running ToM+ 2.4 firmware but for some reason I want to get back to the 2.3 version I had before. To do so, press the respective button to reboot from either Ota1 and Ota0. ToM+ will instantly reboot and you will get disconnected to the web interface.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/ota_boot.png" style="width:100.0%" />
 <figcaption>OTA Update page — Boot options table.</figcaption>
 </figure>
@@ -1772,7 +1668,7 @@ If you are *updating the main display*, go and press the **"UPDATE LCD"** button
 
 If you are *updating the twin display*, be sure to check the *"Update AUX LCD"* option and, only after that, press the **"UPDATE LCD"** button. As soon as the update is completed the LCD display will reboot and load the desired firmware.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/ota_lcd.png" style="width:100.0%" />
 <figcaption>OTA Update page — LCD firmware update table.</figcaption>
 </figure>
@@ -1782,14 +1678,14 @@ If you are *updating the twin display*, be sure to check the *"Update AUX LCD"* 
 In the next web page section we can manage preferences, which includes WiFi and MQTT configurations, ToM+ pages icon arrangements and even more. So, it is always adviceable to have a **backup before updating**, to avoid entering your passwords again if an update goes wrong. In order to do that, press the **"BACKUP"** button and a file called *prefs.ToM* will be downloaded on your device. Sometimes a pop-up opens to warn you that this file has a strange extension, hit the *Keep* button and download it anyway.\
 The opposite process is easy as well. Press the **"Browse..."** button and navigate your device folders until you find the preferences file *prefs.ToM*. To apply the changes press the **"RESTORE"** button and you will be redirected to the landing page as a confirm.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/prefs_page.png" style="width:100.0%" />
 <figcaption>OTA Update page — Preferences backup table.</figcaption>
 </figure>
 
 This next table is very specific to users of older ToM versions that have now received the password to upgrade their device to ToM+ without changing the black box. If this is your case, please type the password in the text field and press the **"UPGRADE"** button. From now on, your ToM is finally upgraded to ToM+, enjoy!
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/hw_upgrade.png" style="width:100.0%" />
 <figcaption>OTA Update page — Upgrade hardware table.</figcaption>
 </figure>
@@ -1801,14 +1697,14 @@ Press the **"HOME"** green button at the end of the table to return to the landi
 This page is made for various advanced settings that aren't available in the ToM+ display settings pages discussed in Section [3.10](#sec:settings_page){reference-type="ref" reference="sec:settings_page"} due to space reasons.\
 The first flag, **"Disable Auto-dimming"**, can be checked if you don't like ToM+ LCD display to adapt the brightness when turning on the light beams. Otherwise, you can adjust the **"Dimming brightness (%)"** expressed in percentage (up to 100%), and set by yourself the factor of brightness reduction when the light beams are activated.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/adv_sett_page1.png" style="width:100.0%" />
 <figcaption>Advanced Info page — Advanced settings table.</figcaption>
 </figure>
 
 Next, we have the **Warning messages at power-off** subsection, where you can select the reminders (*light beam* and *handbrake*) and info (*system errors* and *charge limits*) shown on ToM+ shutdown pop-up. It looks like the one shown in the image below, letting you know, for instance, if you forgot to engage the handbrake. The last two check boxes are for future uses, not implemented yet.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/pop-up_finale.png" style="width:50.0%" />
 <figcaption>Warning message at power-off.</figcaption>
 </figure>
@@ -1824,14 +1720,14 @@ Lastly we have the **"Miles to Kilometers"** flag, that helps when your BigToM w
 
 Please remember to **save your changes** by pressing the **"SAVE"** button at the end of this table. If you don't do this, your changes will be lost when you leave the page.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/adv_info.png" style="width:90.0%" />
 <figcaption>Advanced Info page — Advanced info table.</figcaption>
 </figure>
 
 The table above holds data about your battery, such as stored capacity, **SOH**, **battery mileage**, total consumed kWh and about charges, such as the number of *total*, *full* and *partial* ones and the **maximum accepted charge power**.\
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/item_scroll.png" style="width:100.0%" />
 <figcaption>Advanced Info page — Items scroll table.</figcaption>
 </figure>
@@ -1860,7 +1756,7 @@ Just below there is the **"Charge power limit"** box, where you can choose how m
 
 In the top right corner there is the **"ABORT CHARGING"** button, that instantly stops gracefully the charging process, just like the one on ToM+ display in the settings page we discusses in Section [3.10](#sec:settings_page){reference-type="ref" reference="sec:settings_page"}.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/charging_process.png" style="width:100.0%" />
 <figcaption>Charging Preferences page — Charging process control table.</figcaption>
 </figure>
@@ -1888,7 +1784,7 @@ The last column holds some additional **Notes** about the charging status, such 
 
 If you want you can manually delete some records too, pressing the *X* button at the end of the desired record. It is possible to delete all of them at once by pressing the **"CLEAR HISTORY"** button located in the bottom part of the table.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/charging_history.png" style="width:95.0%" />
 <figcaption>Charging Preferences page — Charging history table.</figcaption>
 </figure>
@@ -1899,7 +1795,7 @@ Press the **"HOME"** green button below the last table to return to the landing 
 
 With your ToM+ you can check the current date and time, but how to set it? This page was made for this exact purpose, and holds a single table shown in the image below.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/time_page.png" style="width:100.0%" />
 <figcaption>Current Time &amp; Date table.</figcaption>
 </figure>
@@ -1918,7 +1814,7 @@ Press the **"HOME"** green button below the table to return to the landing page.
 
 In this page you can customize some parameters of you BigToM or ToM+, because this page mainly holds configurations for the **dashboard page**, available only in these two devices.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/btom_page.png" style="width:100.0%" />
 <figcaption>BigToM \ToM+ Settings table.</figcaption>
 </figure>
@@ -1952,7 +1848,7 @@ The shown values are the **"DTC Number"** and, if available, the **"DF Number"**
 
 To *enable DF Numbers*, please refer to Section [4.1.2](#sec:add_wifi_profile){reference-type="ref" reference="sec:add_wifi_profile"}.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/error_page.png" style="width:100.0%" />
 <figcaption>Diagnostic page — Error list table.</figcaption>
 </figure>
@@ -1982,7 +1878,7 @@ If you're still convinced to upgrade ToM+ firmware with the second method, there
 
 Later we will see how to connect ToM+ to our computer in order to transfer the new upgrade files on it. The second thing you must get is a micro USB cable, which is the same that is usually used in rechargeable device and older smartphones. You will also need a microSD card with a storage capacity between 8 and 32 GB. Examples are shown in the photos down below. And of course you will need your ToM+!
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/cables_sd_update.png" style="width:80.0%" />
 <figcaption>microUSB cables and example microSD card.</figcaption>
 </figure>
@@ -1991,14 +1887,14 @@ Later we will see how to connect ToM+ to our computer in order to transfer the n
 
 Before you update the firmware, you obviously need to download from the Twizy forum (again <https://www.twizy-forum.de/twiz-o-meter>) the desired version update ZIP. You will probably need to register to the forum to see and download firmware files and images. It's a really cool and active community, so I suggest to become a member anyway. After extracting the files in the folder, this is what you should get:
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/firmware_release_folder.png" style="width:100.0%" />
 <figcaption>Firmware release folder files list.</figcaption>
 </figure>
 
 First of all, we notice a text file with the *changeLog23.txt*, used to track the added features and bug fixed in the latest firmware release. Read it if you are curious to know what's new or if you need additional help with the update procedure.\
 Next, there are two folders containing the **LCD display firmware** update in a *.tft* format. **Choose the version** made for your device: first folder if you got a ToM+ or a BigToM (that means bigger display) or the other one if you have a traditional ToM or you're willing to update the Twin ToM (smaller screen). This is a crucial step, otherwise new icons and graphics won't fit your display size.\
-The last one is the *ESP32Fw23.bin* binary file for the **black box update**. Make sure to have all of these files, because you will need them in the next steps.
+The last one is the *ESP32_Fw23.bin* binary file for the **black box update**. Make sure to have all of these files, because you will need them in the next steps.
 
 ### What should I know before update?
 
@@ -2018,7 +1914,7 @@ Now that we've chosen a microSD card, that must have a storage capacity **betwee
 
 So, move any files to your computer and format the microSD card in a **FAT32 format** as I did in the screenshot here. To achieve that right, click on the card icon in your file explorer and select the **"Format"** option from the dropdown menu.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/forma_sd_steps.png" style="width:70.0%" />
 <figcaption>How to FAT32 format microSD steps.</figcaption>
 </figure>
@@ -2032,7 +1928,7 @@ Now, we are ready to put the microSD card in the LCD display slot. It may help u
 
 Now that the microSD card is inserted in the internal slot, slowly push it into the box until your hear a "click" sound. This will mean that you can safely remove the pliers without losing the card inside the box.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/sd_insert.jpg" style="width:60.0%" />
 <figcaption>Insert the microSD in the display hole.</figcaption>
 </figure>
@@ -2043,13 +1939,13 @@ Once the microSD is in, we can carry on with the updating workflow. Now, let's g
 
 Wait for the LCD display to start the updating process until you see the progress percentage as shown in the figure below (both for the ToM+ and ToM display). The microSD copying process will usually take up to a minute and a half.
 
-<figure data-latex-placement="ht">
 <figure>
-<img src="figures/update_screen_lcd.jpg" />
+<figure>
+<img src="figures/update_screen_lcd.jpg" style="width:100.0%" />
 <figcaption>ToM+ display update.</figcaption>
 </figure>
 <figure>
-<img src="figures/copy_sd_card.png" />
+<img src="figures/copy_sd_card.png" style="width:100.0%" />
 <figcaption>ToM display update.</figcaption>
 </figure>
 <figcaption>ToM display update.</figcaption>
@@ -2071,31 +1967,31 @@ Before plugging the cable in the computer, we need to install some programs to l
 
 From the download page of the [Silicon Lab website](https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads), we need to choose our operative system version, as we can see in the screenshot I've taken down here.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/driver_download.png" style="width:100.0%" />
 <figcaption>Driver dowload page on Silicon Lab.</figcaption>
 </figure>
 
 Since this section of the guide is specific to any Windows operative system we will download the *"CP210x Windows Drivers"* package pressing on the link pointed in yellow in the image above.
 
-The downloaded file will be a ZIP folder, usually called *"CP210xWindowsDrivers.zip"* in which you can find a couple of folders and some files. In the screenshot below are listed all the usual files contained in the ZIP folder.
+The downloaded file will be a ZIP folder, usually called *"CP210x_Windows_Drivers.zip"* in which you can find a couple of folders and some files. In the screenshot below are listed all the usual files contained in the ZIP folder.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/driver_folder.png" style="width:70.0%" />
 <figcaption>Contents of driver ZIP folder.</figcaption>
 </figure>
 
-Extract all the files in a dummy folder in your Desktop. Now, it's important to choose the right *".exe"* file to run in order to install the drivers. If your operating system is 64 bit (for most computers) you will run *CP210xVCPInstallerx64.exe* file, otherwise the second *".exe"* file is the properly one, as show in the image.
+Extract all the files in a dummy folder in your Desktop. Now, it's important to choose the right *".exe"* file to run in order to install the drivers. If your operating system is 64 bit (for most computers) you will run *CP210xVCPInstaller_x64.exe* file, otherwise the second *".exe"* file is the properly one, as show in the image.
 
 Make sure to run the executable file with admin permission by right clicking on it and selecting **"Run as Administrator"** option. If prompted allow the program to perform admin operations on your computer, or the driver installation process won't start.
 
-<figure data-latex-placement="ht">
 <figure>
-<img src="figures/wizard_step1.png" />
+<figure>
+<img src="figures/wizard_step1.png" style="width:100.0%" />
 <figcaption>First step: Press “Next”.</figcaption>
 </figure>
 <figure>
-<img src="figures/wizard_step2.png" />
+<img src="figures/wizard_step2.png" style="width:100.0%" />
 <figcaption>Second step: “Accept” and “Next”.</figcaption>
 </figure>
 <figcaption>Second step: “Accept” and “Next”.</figcaption>
@@ -2107,7 +2003,7 @@ The next window you will probably see is this one shown on the right. Here you m
 When the copy is done, the installation of CP210X drivers is complete and you can safely plug in the black box into your computer. Now press the **"Finish"** button to close the window.\
 Before doing anything make sure that the switch on ToM+ black box is powered OFF (*i.e. 0 symbol on the switch*). The Twizy must be powered off as well because, if you try plugging the cable in your PC while ToM+ is still powered by the car, you will mix power supplies (5V and 12V) and ToM+ will definitely die.
 
-<figure id="fig:black_box_labels" data-latex-placement="H">
+<figure id="fig:black_box_labels">
 <img src="figures/black_box.jpg" style="width:60.0%" />
 <figcaption>The black box components.</figcaption>
 </figure>
@@ -2119,24 +2015,24 @@ Now the computer should recognize the black box ESP32 board, if you installed th
 
 Now you should have opened a window that looks like the one shown in the figure down below. Find the **"Ports"** row with a connector icon and double click it, opening the list of all of your serial devices. As I did in the screenshot look for *"Silicon Labs CP210x to UART Bridge (COMx)"* and then note down the COM number, that is **COM8** in the example. This number will be useful in the next step to tell the PC where to upload the new firmware version. Let's continue this process...
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/device_manager.png" style="width:80.0%" />
 <figcaption>Device manager UART serial port (COM8).</figcaption>
 </figure>
 
 Visit the [ESP32 official website](https://www.espressif.com/en/support/download/other-tools) to download a tool that we will need to flash the firmware on our black box board. Look for **"Flash Download Tools"** and press the button as shown in the image. Then, search in the page for the *"Flash Download Tools"* with the save icon and press it.
 
-It will download a ZIP folder called *"flashdownloadtoolx.x.x.zip"*, where the "x" symbols will be replaced by the version name, which is **V3.9.11** in this example. Opening the downloaded ZIP folder, you will notice that there is another folder in it. Extract that one on your Destktop or wherever you want and open it. The files contained in it would usually be the ones listed in the screenshot below.
+It will download a ZIP folder called *"flash_download_tool_x.x.x.zip"*, where the "x" symbols will be replaced by the version name, which is **V3.9.11** in this example. Opening the downloaded ZIP folder, you will notice that there is another folder in it. Extract that one on your Destktop or wherever you want and open it. The files contained in it would usually be the ones listed in the screenshot below.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/esptool_folder.png" style="width:70.0%" />
 <figcaption>Contents of Flash Tools ZIP folder.</figcaption>
 </figure>
 
-Select the *"flashdownloadtool.11.exe"* or whatever version you downloaded and run it with admin permissions, by right clicking on the file and selecting **"Run as Administrator"** option. If prompted, allow the executable file to perform operations on your computer.\
+Select the *"flash_download_tool_3.9.11.exe"* or whatever version you downloaded and run it with admin permissions, by right clicking on the file and selecting **"Run as Administrator"** option. If prompted, allow the executable file to perform operations on your computer.\
 Once the program is started, you should see a terminal window opening, that is going to lunch in some seconds the user interface. It should look like as the first one shown in the example here. You need to change the **"ChypType"** to *"ESP32"* as it's shown in the second step down below. Leave the rest as it is and press **"OK"** button.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/launching_flashtool.png" style="width:85.0%" />
 <figcaption>Select ESP32 motherboard in the choice box.</figcaption>
 </figure>
@@ -2151,7 +2047,7 @@ Proceed by **flagging the check box** next to the first line, choosing the firmw
 
 Now, it comes the last step of the configuration: select the COM number using the list box in the bottom right corner. Make sure to select the right COM, which is the one we previously note down from the **Device Manager** page.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/flashtool_page.png" style="width:100.0%" />
 <figcaption>ESP32 Download Tool configuration steps.</figcaption>
 </figure>
@@ -2160,7 +2056,7 @@ Now let's start the update pressing the **"START"** button as shown in the first
 
 Once the upload is completed, you will see a **"FINISH"** message in the green box at the bottom left corner, as shown in the image. As an additional confirm, the progress bar will be full and now the update is done.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/flashtool_page2.png" style="width:100.0%" />
 <figcaption>ESP32 Download Tool finalizing update.</figcaption>
 </figure>
@@ -2180,25 +2076,25 @@ Before doing anything, turn OFF ToM+ black box switch (*i.e. 0 symbol on it*) an
 
 ### Preparing the computer
 
-Download the ToM+ firmware update folder attached to the firmware release post. Now, extract the binary file (*.bin* extension) attached in the ToM+ firmware release ZIP as we discussed in Section [5.1.3](#sec:update_files){reference-type="ref" reference="sec:update_files"}. The file in it is usually called *"FwXXESP32.bin"*, where the *"XX"* symbol will be replaced by the version number, for instance *"23"*.\
+Download the ToM+ firmware update folder attached to the firmware release post. Now, extract the binary file (*.bin* extension) attached in the ToM+ firmware release ZIP as we discussed in Section [5.1.3](#sec:update_files){reference-type="ref" reference="sec:update_files"}. The file in it is usually called *"FwXX_ESP32.bin"*, where the *"XX"* symbol will be replaced by the version number, for instance *"23"*.\
 **Disclaimer:** *this black box process was tested using Ubuntu 20.04 (hope it will work with other Unix distribution too). Do not plug the black box until explicitly told to do so*.\
 Now we need to install the esptool package, to flash the new firmware onto the black box. Do this, either with the package manager UI provided by your Unix distribution, or with the appropriate command in a terminal. For instance, *"sudo apt-get esptool"*, as shown in the image. If prompted, type in the password of the sudo user, then press ENTER and wait.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/apt_get_esptool.png" style="width:100.0%" />
 <figcaption>Installing esptool package on Ubuntu.</figcaption>
 </figure>
 
 Next you need to install python, if you don't have it, since the esptool is written in python language. So you need to type the command *"sudo apt-get python"*, as shown in the image. Again, if prompted, type in the password of the sudo user, then press ENTER and wait.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/apt_get_python.png" style="width:100.0%" />
 <figcaption>Installing python package on Ubuntu.</figcaption>
 </figure>
 
 Once we have installed both packages type *"sudo tail -f /var/log/messages"* in the terminal as shown in the image to monitor in real-time the log file, that will show us which COM the black box will be associated to by the OS. If prompted, type in the password of the sudo user, then press ENTER. **Now we can plug in the black box**.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/tail_com.png" style="width:100.0%" />
 <figcaption>Monitor real-time COM connections.</figcaption>
 </figure>
@@ -2247,7 +2143,7 @@ The line we are interested in is this one: *"cp210x converter now attached to tt
 
 Navigate with your file manager in the folder where the firmware *.bin* file is stored and open a terminal in it by right clicking on the folder and selecting **"Open Terminal"** option from the dropdown menu. Or if you prefer, you can manually navigate through your folders using the "cd" command until you find the right one.
 
-Once you are in the correct directory, execute this long and boring command, replacing *"ttyUSBx"* with the serial port name we noted down in the step before (e.g. *"ttyUSB0"*) and *"ESP32FwXX.bin"* with the name of the *".bin"* file which contains the firmware version to load on ToM+ (e.g. *"ESP32Fw23.bin"*).
+Once you are in the correct directory, execute this long and boring command, replacing *"ttyUSBx"* with the serial port name we noted down in the step before (e.g. *"ttyUSB0"*) and *"ESP32_FwXX.bin"* with the name of the *".bin"* file which contains the firmware version to load on ToM+ (e.g. *"ESP32_Fw23.bin"*).
 
         python /usr/share/esptool/esptool.py --chip auto --port /dev/ttyUSBx --baud
     921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio
@@ -2290,13 +2186,13 @@ To restore your previous configurations, enter in the ToM+ settings page by pres
 [Twizy-Cfg](http://github.com/dexterbg/Twizy-Cfg) is an **open-source**, light-weight configuration shell designed for the SEVCON Gen4 motor controller embedded within the Renault Twizy, developed by [dexterbg](https://github.com/dexterbg). Developed to run on Arduino microcontrollers equipped with an MCP2515 SPI CAN-bus module, this tool provides hardware hackers, technicians, and EV enthusiasts with a direct command-line interface to interact with the vehicle's drive system via the standard **OBD-II diagnostic** port.\
 At its core, Twizy-Cfg acts as a bridge between *high-level* macro commands and *low-level* CANopen SDO (Service Data Object) register operations. It enables precise tuning and monitoring of the powertrain, offering capabilities such as:\
 
-- Drive Profile Customization: Adjusting key performance parameters, including maximum power, torque limits, top speed, and acceleration ramps.
+-   Drive Profile Customization: Adjusting key performance parameters, including maximum power, torque limits, top speed, and acceleration ramps.
 
-- Energy Management: Fine-tuning energy recuperation levels during coasting and braking to balance driving range against braking force.
+-   Energy Management: Fine-tuning energy recuperation levels during coasting and braking to balance driving range against braking force.
 
-- Profile Management: Saving, loading, and restoring custom performance profiles directly to and from the Arduino's EEPROM.
+-   Profile Management: Saving, loading, and restoring custom performance profiles directly to and from the Arduino's EEPROM.
 
-- Diagnostics & Low-level Access: Issuing raw CANopen commands and basic OBD-II diagnostic requests to inspect controller states and firmware revisions.
+-   Diagnostics & Low-level Access: Issuing raw CANopen commands and basic OBD-II diagnostic requests to inspect controller states and firmware revisions.
 
  \
 This appendix will cover how ToM+ can handle a special partition with the above mentioned piece of software, that have been adapted to work on its ESP32 board (ToM+ chip).
@@ -2311,7 +2207,7 @@ Then, you will need the compiled version of ESP32 compatible Twizy-cfg, that you
 
 Now connect to the web server following one of the methods exaplained in Section [4.4.2](#sec:web_server_access){reference-type="ref" reference="sec:web_server_access"} and then navigate through the **"OTA Update and Prefs"** page (Section [4.4.10](#sec:web_ota_update){reference-type="ref" reference="sec:web_ota_update"}) and use the previously extracted *".bin"* file to perform the update, selecting the **"Update to special partition"** flag (otherwise you will replace the original ToM+ firmware).\
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/ota_page3.png" style="width:100.0%" />
 <figcaption>OTA Update page — Update and info table.</figcaption>
 </figure>
@@ -2321,7 +2217,7 @@ When the update progress bar reaches 100%, ToM+ LCD display will become black an
 The **password** is the default ToM+ password, which is the word "pass" followed by your device serial number (e.g. *pass129777*). Serial number can be found in the settings page as explained in Figure [3.3](#fig:settings_page){reference-type="ref" reference="fig:settings_page"}.\
 Now, open a web browser and type **192.168.4.1/webserial** to navigate to the web server interface, where you can send tuning commands. The command terminal looks like the one shown in the image here. As already said, tuning isn't an official ToM+ feature and *Twizy-cfg* wasn't written by me, so please refer to [Twizy-cfg topic](https://www.twizy-forum.de/projekte-twizy/83451-twizy-cfg-sevcon-shell-fuer-arduino?start=0) or to its [Github repository](https://github.com/dexterbg/Twizy-Cfg) to know tuning commands and configurations.\
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/TuningMonitor.PNG" style="width:70.0%" />
 <figcaption>Tuning monitor to perform tuning commands.</figcaption>
 </figure>
@@ -2329,7 +2225,7 @@ Now, open a web browser and type **192.168.4.1/webserial** to navigate to the we
 As long as you are using Twizy-cfg, ToM+ firmware won't be loaded and so the display won't power on. When you want to get back to official ToM+ firmware, you will just need to type in the tuning monitor this self-explanatory command: **reboot**.\
 And that's it, ToM+ reboots to the other partition and gets back to its normal behaviour and the tuning configuration will persist in your Twizy. The next time you will need the Twizy-cfg shell, just go in the **"OTA Update and Prefs"** page on ToM+ web server and select the option *"REBOOT FROM SPECIAL PARTITION"* from the table shown in the next image. No need to upload the *".bin"* file again.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/ota_boot.png" style="width:100.0%" />
 <figcaption>OTA Update page — Boot options table.</figcaption>
 </figure>
@@ -2343,13 +2239,13 @@ In this appendix I'll explain how you can configure your ToM+ to interact with a
 Basicaly they are *relais modules* which can be controlled remotly via a wireless connection. You can easly find this sort of devices on lots of e-commerce websites (like Amazon), for a few tens of euros.\
 They have many formats, but frequently they appear in the two shown in the image. The second one is more compact and user-friendly, while the first one needs some cable connection to work with your electric equipments.
 
-<figure data-latex-placement="ht">
 <figure>
-<img src="figures/Sonoff.PNG" />
+<figure>
+<img src="figures/Sonoff.PNG" style="width:100.0%" />
 <figcaption>Sonoff WiFi smart switch.</figcaption>
 </figure>
 <figure>
-<img src="figures/TasmotaPlug.PNG" />
+<img src="figures/TasmotaPlug.PNG" style="width:100.0%" />
 <figcaption>Tasmota WiFi smart plug.</figcaption>
 </figure>
 <figcaption>Tasmota WiFi smart plug.</figcaption>
@@ -2373,20 +2269,20 @@ In order to use them, as I did in this appendix, you have to upgrade them to Tas
 
 Navigate to the **Tasmota WebUI** and you will get a landing page similar to the one show below. At any time, if unsure, please refer to the [official documentation](https://tasmota.github.io/docs/).
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/Mqtt1.PNG" style="width:45.0%" />
 <figcaption>Tasmota webUI — Landing page.</figcaption>
 </figure>
 
 First of all, press the **"Configuration"** button that will take you to the page shown in the first image below. After that, configure the *WiFi connection*, entering your parameters (SSID and password) in Tasmota's **"Configure WiFi"** page. Then, follow the instruction to configure *MQTT settings*, accessing **"Configure MQTT"** webUI page.\
 
-<figure data-latex-placement="ht">
 <figure>
-<img src="figures/Mqtt2.PNG" />
+<figure>
+<img src="figures/Mqtt2.PNG" style="width:100.0%" />
 <figcaption>Configuration page.</figcaption>
 </figure>
 <figure>
-<img src="figures/Mqtt4.PNG" />
+<img src="figures/Mqtt4.PNG" style="width:100.0%" />
 <figcaption>MQTT configuration page.</figcaption>
 </figure>
 <figcaption>MQTT configuration page.</figcaption>
@@ -2402,7 +2298,7 @@ If you use Maqiatto instead, configured following Section [4.2.3](#sec:free_bro
 Finally, press the **"Save"** green button and wait until the device reboots.\
 **REMEMBER!** If you are using Maqiatto broker, you may need to add the new topic to your account as explained in Figure [4.2](#sec:free_broker_add_topics){reference-type="ref" reference="sec:free_broker_add_topics"}.
 
-In this case, you'll have to add **cmnd/\<your Tasmota topic name\>/Power** as the new topic name, that will become *cmnd/charge/Power* if you followed the image.
+In this case, you'll have to add **cmnd/\<your\_ Tasmota\_ topic\_ name\>/Power** as the new topic name, that will become *cmnd/charge/Power* if you followed the image.
 
 ## ToM+ Tasmota configuration
 
@@ -2410,7 +2306,7 @@ Open ToM+ webserver as explained in Section [4.4.2](#sec:web_server_access){ref
 
 In my case, I chose **"Battery SOC"** item, that will trigger alarm when its value will be *equal to 97%*, to notify the quite completed charge.
 
-<figure data-latex-placement="H">
+<figure>
 <img src="figures/Tom01.PNG" style="width:70.0%" />
 <figcaption>Adding the Tasmota trigger on ToM+.</figcaption>
 </figure>
@@ -2419,24 +2315,24 @@ As you may notice, the most important part is to configure properly the **"Aux C
 
 If you have your own MQTT broker (i.e. *not Maqiatto*) the **Aux Cmd** will have this syntax:
 
-- *cmnd/\<your Tasmota topic name\>/Power 1* if you want to power ON the device.
+-   *cmnd/\<your\_ Tasmota\_ topic\_ name\>/Power 1* if you want to power ON the device.
 
-- *cmnd/\<your Tasmota topic name\>/Power 0* if you want to power it OFF.
+-   *cmnd/\<your\_ Tasmota\_ topic\_ name\>/Power 0* if you want to power it OFF.
 
 Again, in our example the command becomes **cmnd/charge/Power 1** to power the lamp ON.\
 Otherwise, if you are using Maqiatto broker or another one which uses your userID (e-mail) as a prefix in topics name, then the **Aux Cmd** syntax will look in this other way:
 
-- *myemail@gmail.com/cmnd/\<your Tasmota topic name\>/Power 1* to power it ON.
+-   *myemail@gmail.com/cmnd/\<your\_ Tasmota\_ topic\_ name\>/Power 1* to power it ON.
 
-- *myemail@gmail.com/cmnd/\<your Tasmota topic name\>/Power 0* to power it OFF.
+-   *myemail@gmail.com/cmnd/\<your\_ Tasmota\_ topic\_ name\>/Power 0* to power it OFF.
 
 In our case, the command becomes **myemail@gmail.com/cmnd/charge/Power 1**.\
 If you want to stop charging and then restart when specific conditions are met, you need to add two alarms, one for each Power ON/OFF condition, using the explained syntax accordingly.\
 Please note that, if you have a device with more relais, you will have to edit the above syntax specifying which relais you want to control: using **"Power1"** for the first relay, **"Power2"** for the second one and so on. This becomes:
 
-- *cmnd/\<your Tasmota topic name\>/Power1 1* to power ON the first relay.
+-   *cmnd/\<your\_ Tasmota\_ topic\_ name\>/Power1 1* to power ON the first relay.
 
-- *cmnd/\<your Tasmota topic name\>/Power1 0* to power it OFF.
+-   *cmnd/\<your\_ Tasmota\_ topic\_ name\>/Power1 0* to power it OFF.
 
 The same syntax distinction about Maqiatto and owned brokers applies here as well.
 

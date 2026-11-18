@@ -71,7 +71,7 @@ BigToM (c'est-à-dire avec un plus grand écran), ou l'autre si vous avez un ToM
 vous souhaitez mettre à jour le Twin ToM (écran plus petit). C'est une étape
 cruciale, sinon les nouvelles icônes et graphismes ne s'adapteront pas à la taille de votre écran.\\
 
-Le dernier fichier est le fichier binaire \textit{ESP32\textunderscore Fw23.bin} pour la \textbf{mise à jour du boîtier noir}.
+Le dernier fichier est le fichier binaire \textit{ESP32\_Fw23.bin} pour la \textbf{mise à jour du boîtier noir}.
 Assurez-vous de posséder tous ces fichiers, car vous en aurez besoin dans les étapes suivantes.
 
 \subsection{Que dois-je savoir avant la mise à jour ?}
@@ -217,7 +217,7 @@ Cette section du guide étant spécifique au système d'exploitation Windows, no
 télécharger le paquet \textit{“CP210x Windows Drivers”} en cliquant sur le lien surligné
 en jaune sur l'image ci-dessus.
 
-Le fichier téléchargé sera une archive ZIP, généralement nommée \textit{“CP210x\textunderscore Windows\textunderscore Drivers.zip”},
+Le fichier téléchargé sera une archive ZIP, généralement nommée \textit{“CP210x\_Windows\_Drivers.zip”},
 contenant quelques dossiers et plusieurs fichiers. La capture d'écran ci-dessous présente
 la liste habituelle des fichiers contenus dans l'archive ZIP.
 
@@ -229,7 +229,7 @@ la liste habituelle des fichiers contenus dans l'archive ZIP.
 
 Extrayez tous les fichiers dans un dossier temporaire sur votre Bureau. Il est maintenant important de
 choisir le bon fichier \textit{“.exe”} à exécuter pour installer les pilotes. Si votre
-système d'exploitation est en 64 bits (ce qui est le cas de la plupart des ordinateurs), exécutez le fichier \textit{CP210xVCPInstaller\textunderscore x64.exe} ;
+système d'exploitation est en 64 bits (ce qui est le cas de la plupart des ordinateurs), exécutez le fichier \textit{CP210xVCPInstaller\_x64.exe} ;
 sinon, le second fichier \textit{“.exe”} sera celui adapté, comme le montre l'image.
 
 Veillez à exécuter le fichier exécutable avec les privilèges d'administrateur en faisant un clic droit dessus et en
@@ -306,7 +306,7 @@ pour télécharger un outil nécessaire pour flasher le firmware sur la carte du
 Recherchez \textbf{“Flash Download Tools”} et cliquez sur le bouton comme indiqué sur l'image.
 Ensuite, recherchez dans la page les \textit{“Flash Download Tools”} avec l'icône de disquette et cliquez dessus.
 
-Un fichier ZIP nommé \textit{“flash\textunderscore download\textunderscore tool\textunderscore x.x.x.zip”} sera téléchargé,
+Un fichier ZIP nommé \textit{“flash\_download\_tool\_x.x.x.zip”} sera téléchargé,
 où les symboles « x » seront remplacés par le nom de la version, qui est \textbf{V3.9.11} dans cet exemple.
 En ouvrant le dossier ZIP téléchargé, vous remarquerez qu'il contient un autre dossier.
 Extrayez-le sur votre Bureau ou à l'emplacement de votre choix, puis ouvrez-le. Les fichiers
@@ -318,7 +318,7 @@ qu'il contient sont généralement ceux énumérés sur la capture d'écran ci-d
     \caption{Contenu du dossier ZIP des Flash Tools.}
 \end{figure}
 
-Sélectionnez \textit{“flash\textunderscore download\textunderscore tool\textunderscore 3.9.11.exe”}
+Sélectionnez \textit{“flash\_download\_tool\_3.9.11.exe”}
 ou la version que vous avez téléchargée et exécutez-le avec les droits d'administrateur en faisant un clic droit
 sur le fichier et en choisissant l'option \textbf{“Exécuter en tant qu'administrateur”}.
 Si vous y êtes invité, autorisez l'exécutable à effectuer des opérations sur votre ordinateur.\\
@@ -408,7 +408,7 @@ d'endommager l'appareil.
 Téléchargez le dossier de mise à jour du firmware ToM+ joint au message de publication du firmware.
 Extrayez maintenant le fichier binaire (extension \textit{.bin}) contenu dans le ZIP de la release du
 firmware ToM+, comme nous l'avons expliqué à la Section~\ref{sec:update_files}.
-Le fichier s'appelle généralement \textit{“FwXX\textunderscore ESP32.bin”},
+Le fichier s'appelle généralement \textit{“FwXX\_ESP32.bin”},
 où les symboles \textit{“XX”} seront remplacés par le numéro de version, par exemple \textit{“23”}.\\
 
 \textbf{Avertissement :} \textit{cette procédure pour le boîtier noir a été testée sous Ubuntu 20.04
@@ -504,9 +504,9 @@ dans le menu déroulant. Si vous préférez, vous pouvez naviguer manuellement �
 à l'aide de la commande « cd » jusqu'à trouver le bon répertoire.
 
 Une fois dans le bon dossier, exécutez cette commande longue et un peu fastidieuse, en remplaçant \textit{“ttyUSBx”} par le
-nom du port série noté précédemment (ex. \textit{“ttyUSB0”}) et \textit{“ESP32\textunderscore FwXX.bin”} par
+nom du port série noté précédemment (ex. \textit{“ttyUSB0”}) et \textit{“ESP32\_FwXX.bin”} par
 le nom du fichier \textit{“.bin”} qui contient la version du firmware à charger sur le ToM+
-(ex. \textit{“ESP32\textunderscore Fw23.bin”}).
+(ex. \textit{“ESP32\_Fw23.bin”}).
 
 \begin{verbatim}
     python /usr/share/esptool/esptool.py --chip auto --port /dev/ttyUSBx --baud

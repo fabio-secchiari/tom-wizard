@@ -227,27 +227,42 @@ def restore_chunk(translated: str, placeholders: Dict[int, str],
     return "".join(out)
 
 
-_SKIP_RE = re.compile(
-    r"\\begin\{(verbatim\*?|lstlisting|minted)\}.*?\\end\{\1\}"   # verbatim
-    r"|(?<!\\)%[^\n]*"                                          # commenti
-    r"|\\[{}]",                                                 # \{ \}
+_GROUP_SCAN_RE = re.compile(
+    r"(?P<skip>\\begin\{(verbatim\*?|lstlisting|minted)\}.*?\\end\{\2\}"  # verbatim
+    r"|(?<!\\)%[^\n]*"                                                  # commenti
+    r"|\\[{}\\])"                                                       # \{ \} \\
+    r"|(?P<open>\{)|(?P<close>\})"
+    r"|(?P<blank>\n[ \t]*\n(?:[ \t]*\n)*)",
     re.DOTALL)
 
 
-def blank_lines_inside_groups(text: str) -> int:
-    """Conta le righe vuote dentro {...}: in LaTeX sono un errore
-    (es. \\chapter*{ <riga vuota> Vorwort}) e pandoc si blocca."""
-    text = _SKIP_RE.sub("", text)
-    depth = count = 0
-    for m in re.finditer(r"[{}]|\n[ \t]*\n", text):
+def fix_blank_lines_inside_groups(text: str) -> Tuple[str, List[str]]:
+    """Le righe vuote dentro {...} in LaTeX sono un errore
+    (es. \\chapter*{ <riga vuota> Vorwort}) e pandoc si blocca.
+    Le sostituisce con un semplice a capo e restituisce (testo, contesti)."""
+    out: List[str] = []
+    fixed: List[str] = []
+    depth = pos = 0
+    for m in _GROUP_SCAN_RE.finditer(text):
+        out.append(text[pos:m.start()])
         tok = m.group(0)
-        if tok == "{":
+        if m.group("open"):
             depth += 1
-        elif tok == "}":
+        elif m.group("close"):
             depth = max(0, depth - 1)
-        elif depth > 0:
-            count += 1
-    return count
+        elif m.group("blank") and depth > 0:
+            line = text.count("\n", 0, m.start()) + 1
+            ctx = text[max(0, m.start() - 40):m.end() + 40].replace("\n", "⏎")
+            fixed.append(f"riga {line}: …{ctx}…")
+            tok = "\n"
+        out.append(tok)
+        pos = m.end()
+    out.append(text[pos:])
+    return "".join(out), fixed
+
+
+def blank_lines_inside_groups(text: str) -> int:
+    return len(fix_blank_lines_inside_groups(text)[1])
 
 
 # ============================================================
@@ -304,7 +319,15 @@ def translate_text(client: "deepl.DeepLClient", text: str, target_lang: str) -> 
 
     translated = "".join(result)
     if blank_lines_inside_groups(translated) > blank_lines_inside_groups(text):
-        raise RuntimeError("DeepL ha inserito righe vuote dentro {...} (LaTeX non valido)")
+        if blank_lines_inside_groups(text):
+            # Il sorgente ne ha già: non sappiamo quali siano volute.
+            raise RuntimeError("DeepL ha inserito righe vuote dentro {...} (LaTeX non valido)")
+        # Nel sorgente non ce ne sono: tutte quelle presenti le ha aggiunte
+        # DeepL e si possono ridurre a un semplice a capo.
+        translated, fixed = fix_blank_lines_inside_groups(translated)
+        print(f"    ⚠️ Corrette {len(fixed)} righe vuote inserite da DeepL dentro {{...}}:")
+        for f in fixed[:10]:
+            print(f"       {f}")
     return translated
 
 

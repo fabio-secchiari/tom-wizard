@@ -28,12 +28,12 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12'
 
@@ -44,7 +44,7 @@ jobs:
       # Bastano questi pacchetti (verificato: compilano EN/DE/FR).
       # texlive-full era enorme e la vecchia cache puntava a cartelle
       # che apt non usa, quindi non serviva a nulla.
-      # pandoc (3.1.3 su Ubuntu 24.04) serve per i Markdown del sito.
+      # pandoc serve per i Markdown del sito.
       - name: Install TeX Live + Ghostscript + Pandoc
         run: |
           sudo apt-get update

@@ -132,7 +132,23 @@ def tokenize(text: str) -> List[Tuple[str, str]]:
             merged[-1] = ("code", merged[-1][1] + ws + value)
         else:
             merged.append((kind, value))
-    return merged
+
+    # Gli spazi/a capo ai bordi del testo diventano parte dei segnaposto
+    # vicini: così la struttura (righe vuote = paragrafi!) resta quella del
+    # sorgente anche se DeepL sposta o aggiunge spazi attorno ai tag.
+    for i, (kind, value) in enumerate(merged):
+        if kind != "text":
+            continue
+        if i > 0 and merged[i - 1][0] == "code":
+            lead = value[:len(value) - len(value.lstrip())]
+            merged[i - 1] = ("code", merged[i - 1][1] + lead)
+            value = value[len(lead):]
+        if i + 1 < len(merged) and merged[i + 1][0] == "code":
+            trail = value[len(value.rstrip()):]
+            merged[i + 1] = ("code", trail + merged[i + 1][1])
+            value = value[:len(value) - len(trail)]
+        merged[i] = ("text", value)
+    return [(k, v) for k, v in merged if v]
 
 
 # ============================================================
@@ -192,31 +208,61 @@ def build_chunks(tokens: List[Tuple[str, str]]) -> Tuple[List[str], Dict[int, st
 
 def restore_chunk(translated: str, placeholders: Dict[int, str],
                   seen: Dict[int, int]) -> str:
+    """Rimette il codice al posto dei tag. Gli spazi che DeepL lascia
+    accanto a un tag vengono scartati: quelli giusti sono già dentro il
+    segnaposto (vedi tokenize)."""
+    parts = TAG_RE.split(translated)        # testo, id, testo, id, ..., testo
     out: List[str] = []
-    pos = 0
-    for m in TAG_RE.finditer(translated):
-        out.append(clean_output(xml_unescape(translated[pos:m.start()])))
-        idx = int(m.group(1))
-        seen[idx] = seen.get(idx, 0) + 1
-        out.append(placeholders.get(idx, ""))
-        pos = m.end()
-    out.append(clean_output(xml_unescape(translated[pos:])))
+    for i in range(0, len(parts), 2):
+        piece = parts[i]
+        if i > 0:
+            piece = piece.lstrip()          # dopo un tag
+        if i + 1 < len(parts):
+            piece = piece.rstrip()          # prima di un tag
+        out.append(clean_output(xml_unescape(piece)))
+        if i + 1 < len(parts):
+            idx = int(parts[i + 1])
+            seen[idx] = seen.get(idx, 0) + 1
+            out.append(placeholders.get(idx, ""))
     return "".join(out)
+
+
+_SKIP_RE = re.compile(
+    r"\\begin\{(verbatim\*?|lstlisting|minted)\}.*?\\end\{\1\}"   # verbatim
+    r"|(?<!\\)%[^\n]*"                                          # commenti
+    r"|\\[{}]",                                                 # \{ \}
+    re.DOTALL)
+
+
+def blank_lines_inside_groups(text: str) -> int:
+    """Conta le righe vuote dentro {...}: in LaTeX sono un errore
+    (es. \\chapter*{ <riga vuota> Vorwort}) e pandoc si blocca."""
+    text = _SKIP_RE.sub("", text)
+    depth = count = 0
+    for m in re.finditer(r"[{}]|\n[ \t]*\n", text):
+        tok = m.group(0)
+        if tok == "{":
+            depth += 1
+        elif tok == "}":
+            depth = max(0, depth - 1)
+        elif depth > 0:
+            count += 1
+    return count
 
 
 # ============================================================
 # DEEPL
 # ============================================================
 
-def get_deepl_client() -> deepl.Translator:
+def get_deepl_client() -> "deepl.DeepLClient":
     api_key = os.getenv("DEEPL_API_KEY")
     if not api_key:
         print("❌ DEEPL_API_KEY non trovata")
         sys.exit(1)
-    return deepl.Translator(api_key)
+    return deepl.DeepLClient(api_key)
 
 
-def translate_text(client: deepl.Translator, text: str, target_lang: str) -> str:
+def translate_text(client: "deepl.DeepLClient", text: str, target_lang: str) -> str:
     if not text.strip():
         return text
 
@@ -256,14 +302,17 @@ def translate_text(client: deepl.Translator, text: str, target_lang: str) -> str
         )
         raise RuntimeError(f"DeepL ha alterato i segnaposto LaTeX ({details})")
 
-    return "".join(result)
+    translated = "".join(result)
+    if blank_lines_inside_groups(translated) > blank_lines_inside_groups(text):
+        raise RuntimeError("DeepL ha inserito righe vuote dentro {...} (LaTeX non valido)")
+    return translated
 
 
 # ============================================================
 # FILE
 # ============================================================
 
-def translate_file(client: deepl.Translator, source_file: Path,
+def translate_file(client: "deepl.DeepLClient", source_file: Path,
                    target_dir: Path, lang: str) -> bool:
     target_dir.mkdir(parents=True, exist_ok=True)
     target_file = target_dir / source_file.name

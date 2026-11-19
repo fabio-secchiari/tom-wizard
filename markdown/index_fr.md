@@ -336,7 +336,7 @@ Les icônes de page sont les icônes situées sur la ligne inférieure de l'écr
 
 ::: tcolorbox
   ------------------------------------------------ -------------------------------------------------------------
-  ![image](icons/BatteryA+red.png){height="8mm"}   
+  ![image](icons/BatteryA_red.png){height="8mm"}   
 
   ------------------------------------------------ -------------------------------------------------------------
 :::
@@ -350,7 +350,7 @@ Les icônes de page sont les icônes situées sur la ligne inférieure de l'écr
 
 ::: tcolorbox
   --------------------------------------------- -------------------------------------------------------------
-  ![image](icons/Battery3°.jpg){height="8mm"}   
+  ![image](icons/Battery3_deg.jpg){height="8mm"}   
 
   --------------------------------------------- -------------------------------------------------------------
 :::
@@ -387,7 +387,7 @@ Les icônes de page sont les icônes situées sur la ligne inférieure de l'écr
 
 ::: tcolorbox
   ------------------------------------------- -------------------------------------------------------------
-  ![image](icons/Charge°.png){height="8mm"}   
+  ![image](icons/Charge_deg.png){height="8mm"}   
 
   ------------------------------------------- -------------------------------------------------------------
 :::
@@ -424,14 +424,14 @@ Les icônes de page sont les icônes situées sur la ligne inférieure de l'écr
 
 ::: tcolorbox
   ------------------------------------------- -------------------------------------------------------------
-  ![image](icons/Motor°2.jpg){height="8mm"}   
+  ![image](icons/Motor_deg2.jpg){height="8mm"}   
 
   ------------------------------------------- -------------------------------------------------------------
 :::
 
 ::: tcolorbox
   ---------------------------------------- -------------------------------------------------------------
-  ![image](icons/Sev°.png){height="8mm"}   
+  ![image](icons/Sev_deg.png){height="8mm"}   
 
   ---------------------------------------- -------------------------------------------------------------
 :::
@@ -1140,7 +1140,7 @@ Lorsque vous appuyez sur une cellule du tableau, qu'il s'agisse du SSID ou de la
 Vous êtes désormais en mesure de configurer **quatre profils de connexion différents** avec quatre paires de SSID et de mots de passe. Si vous ne configurez aucun profil mais que les curseurs Wi-Fi sont activés, ToM+ effectuera tout de même une recherche Wi-Fi toutes les deux minutes pour essayer de trouver des connexions publiques sans protection par mot de passe, puis tentera de s'y connecter. Appuyez sur le bouton **flèche en bas à droite pour enregistrer**.\
 Le quatrième profil de connexion Wi-Fi est spécial, car le champ **« KEY 4 »** sert à la fois de champ de mot de passe standard pour le dernier SSID et à modifier le mot de passe par défaut du serveur web, comme cela sera abordé dans la Section [4.4.3](#sec:web_change_password){reference-type="ref" reference="sec:web_change_password"}.
 
-De plus, vous pouvez saisir certains codes spéciaux dans ce champ pour effectuer des configurations secrètes. Ces codes sont sensibles à la casse et n'affecteront pas votre champ **« KEY 4 »** s'ils sont écrits correctement, car ToM+ les utilise uniquement comme des commandes. Vous pouvez saisir **GIVEMEDF!** (exactement comme écrit ici, avec les tirets bas et le point d'exclamation) pour *afficher la numérotation et la description des erreurs DF* sur l'écran et sur l'interface webUI.\
+De plus, vous pouvez saisir certains codes spéciaux dans ce champ pour effectuer des configurations secrètes. Ces codes sont sensibles à la casse et n'affecteront pas votre champ **« KEY 4 »** s'ils sont écrits correctement, car ToM+ les utilise uniquement comme des commandes. Vous pouvez saisir **GIVE_ME_DF!** (exactement comme écrit ici, avec les tirets bas et le point d'exclamation) pour *afficher la numérotation et la description des erreurs DF* sur l'écran et sur l'interface webUI.\
 **RAPPEL !** Les commandes ne sont exécutées par ToM+ que si elles sont saisies depuis cette page de paramètres Wi-Fi, et non depuis l'interface webUI abordée plus tard. De plus, l'origine du numéro DF n'étant pas claire, l'activation de cette fonction est à votre discrétion et sous votre responsabilité.
 
 ### Vérifier la connexion Wi-Fi {#sec:check_wifi_connection}
@@ -1998,7 +1998,7 @@ Avant de mettre à jour le firmware, vous devez évidemment télécharger depuis
 
 Tout d'abord, nous remarquons un fichier texte nommé *changeLog23.txt*, utilisé pour suivre les fonctionnalités ajoutées et les bugs corrigés dans la dernière version du firmware. Lisez-le si vous êtes curieux de savoir ce qui est nouveau ou si vous avez besoin d'aide supplémentaire pour la procédure de mise à jour.\
 Ensuite, il y a deux dossiers contenant la mise à jour du **firmware de l'écran LCD** au format *.tft*. **Choisissez la version** conçue pour votre appareil : le premier dossier si vous possédez un ToM+ ou un BigToM (c'est-à-dire avec un plus grand écran), ou l'autre si vous avez un ToM traditionnel ou si vous souhaitez mettre à jour le Twin ToM (écran plus petit). C'est une étape cruciale, sinon les nouvelles icônes et graphismes ne s'adapteront pas à la taille de votre écran.\
-Le dernier fichier est le fichier binaire *ESP32Fw23.bin* pour la **mise à jour du boîtier noir**. Assurez-vous de posséder tous ces fichiers, car vous en aurez besoin dans les étapes suivantes.
+Le dernier fichier est le fichier binaire *ESP32_Fw23.bin* pour la **mise à jour du boîtier noir**. Assurez-vous de posséder tous ces fichiers, car vous en aurez besoin dans les étapes suivantes.
 
 ### Que dois-je savoir avant la mise à jour ?
 
@@ -2078,14 +2078,14 @@ Depuis la page de téléchargement du [site Silicon Labs](https://www.silabs.com
 
 Cette section du guide étant spécifique au système d'exploitation Windows, nous allons télécharger le paquet *"CP210x Windows Drivers"* en cliquant sur le lien surligné en jaune sur l'image ci-dessus.
 
-Le fichier téléchargé sera une archive ZIP, généralement nommée *"CP210xWindowsDrivers.zip"*, contenant quelques dossiers et plusieurs fichiers. La capture d'écran ci-dessous présente la liste habituelle des fichiers contenus dans l'archive ZIP.
+Le fichier téléchargé sera une archive ZIP, généralement nommée *"CP210x_Windows_Drivers.zip"*, contenant quelques dossiers et plusieurs fichiers. La capture d'écran ci-dessous présente la liste habituelle des fichiers contenus dans l'archive ZIP.
 
 <figure data-latex-placement="H">
 <img src="figures/driver_folder.png" style="width:70.0%" />
 <figcaption>Contenu de l’archive ZIP des pilotes.</figcaption>
 </figure>
 
-Extrayez tous les fichiers dans un dossier temporaire sur votre Bureau. Il est maintenant important de choisir le bon fichier *".exe"* à exécuter pour installer les pilotes. Si votre système d'exploitation est en 64 bits (ce qui est le cas de la plupart des ordinateurs), exécutez le fichier *CP210xVCPInstallerx64.exe* ; sinon, le second fichier *".exe"* sera celui adapté, comme le montre l'image.
+Extrayez tous les fichiers dans un dossier temporaire sur votre Bureau. Il est maintenant important de choisir le bon fichier *".exe"* à exécuter pour installer les pilotes. Si votre système d'exploitation est en 64 bits (ce qui est le cas de la plupart des ordinateurs), exécutez le fichier *CP210xVCPInstaller_x64.exe* ; sinon, le second fichier *".exe"* sera celui adapté, comme le montre l'image.
 
 Veillez à exécuter le fichier exécutable avec les privilèges d'administrateur en faisant un clic droit dessus et en sélectionnant l'option **"Exécuter en tant qu'administrateur"**. Si vous y êtes invité, autorisez le programme à effectuer des opérations d'administration sur votre ordinateur, faute de quoi le processus d'installation du pilote ne démarrera pas.
 
@@ -2126,7 +2126,7 @@ Une fenêtre similaire à celle de la figure ci-dessous devrait s'ouvrir. Recher
 
 Visitez le [site officiel d'ESP32](https://www.espressif.com/en/support/download/other-tools) pour télécharger un outil nécessaire pour flasher le firmware sur la carte du boîtier noir. Recherchez **"Flash Download Tools"** et cliquez sur le bouton comme indiqué sur l'image. Ensuite, recherchez dans la page les *"Flash Download Tools"* avec l'icône de disquette et cliquez dessus.
 
-Un fichier ZIP nommé *"flashdownloadtoolx.x.x.zip"* sera téléchargé, où les symboles « x » seront remplacés par le nom de la version, qui est **V3.9.11** dans cet exemple. En ouvrant le dossier ZIP téléchargé, vous remarquerez qu'il contient un autre dossier. Extrayez-le sur votre Bureau ou à l'emplacement de votre choix, puis ouvrez-le. Les fichiers qu'il contient sont généralement ceux énumérés sur la capture d'écran ci-dessous.
+Un fichier ZIP nommé *"flash_download_tool_x.x.x.zip"* sera téléchargé, où les symboles « x » seront remplacés par le nom de la version, qui est **V3.9.11** dans cet exemple. En ouvrant le dossier ZIP téléchargé, vous remarquerez qu'il contient un autre dossier. Extrayez-le sur votre Bureau ou à l'emplacement de votre choix, puis ouvrez-le. Les fichiers qu'il contient sont généralement ceux énumérés sur la capture d'écran ci-dessous.
 
 <figure data-latex-placement="H">
 <img src="figures/esptool_folder.png" style="width:70.0%" />
@@ -2180,7 +2180,7 @@ Avant toute chose, basculez l'interrupteur du boîtier noir ToM+ sur OFF (*c'est
 
 ### Préparation de l'ordinateur
 
-Téléchargez le dossier de mise à jour du firmware ToM+ joint au message de publication du firmware. Extrayez maintenant le fichier binaire (extension *.bin*) contenu dans le ZIP de la release du firmware ToM+, comme nous l'avons expliqué à la Section [5.1.3](#sec:update_files){reference-type="ref" reference="sec:update_files"}. Le fichier s'appelle généralement *"FwXXESP32.bin"*, où les symboles *"XX"* seront remplacés par le numéro de version, par exemple *"23"*.\
+Téléchargez le dossier de mise à jour du firmware ToM+ joint au message de publication du firmware. Extrayez maintenant le fichier binaire (extension *.bin*) contenu dans le ZIP de la release du firmware ToM+, comme nous l'avons expliqué à la Section [5.1.3](#sec:update_files){reference-type="ref" reference="sec:update_files"}. Le fichier s'appelle généralement *"FwXX_ESP32.bin"*, où les symboles *"XX"* seront remplacés par le numéro de version, par exemple *"23"*.\
 **Avertissement :** *cette procédure pour le boîtier noir a été testée sous Ubuntu 20.04 (en espérant qu'elle fonctionne également sur d'autres distributions Unix). Ne branchez pas le boîtier noir tant que cela ne vous est pas explicitement demandé*.\
 Nous devons maintenant installer le paquet esptool pour flasher le nouveau firmware sur le boîtier noir. Effectuez cette opération soit via l'interface du gestionnaire de paquets de votre distribution Unix, soit à l'aide de la commande appropriée dans un terminal. Par exemple, *"sudo apt-get esptool"*, comme le montre l'image. Si vous y êtes invité, saisissez le mot de passe de l'utilisateur sudo, puis appuyez sur ENTREE et patientez.
 
@@ -2247,7 +2247,7 @@ La ligne qui nous intéresse particulièrement est la suivante : *"cp210x conver
 
 Naviguez avec votre gestionnaire de fichiers dans le dossier où se trouve le fichier *.bin* du firmware, puis ouvrez un terminal à cet endroit en faisant un clic droit sur le dossier et en choisissant l'option **"Ouvrir dans un terminal"** dans le menu déroulant. Si vous préférez, vous pouvez naviguer manuellement à travers vos dossiers à l'aide de la commande « cd » jusqu'à trouver le bon répertoire.
 
-Une fois dans le bon dossier, exécutez cette commande longue et un peu fastidieuse, en remplaçant *"ttyUSBx"* par le nom du port série noté précédemment (ex. *"ttyUSB0"*) et *"ESP32FwXX.bin"* par le nom du fichier *".bin"* qui contient la version du firmware à charger sur le ToM+ (ex. *"ESP32Fw23.bin"*).
+Une fois dans le bon dossier, exécutez cette commande longue et un peu fastidieuse, en remplaçant *"ttyUSBx"* par le nom du port série noté précédemment (ex. *"ttyUSB0"*) et *"ESP32_FwXX.bin"* par le nom du fichier *".bin"* qui contient la version du firmware à charger sur le ToM+ (ex. *"ESP32_Fw23.bin"*).
 
         python /usr/share/esptool/esptool.py --chip auto --port /dev/ttyUSBx --baud
     921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio
@@ -2402,7 +2402,7 @@ Si vous utilisez plutôt Maqiatto, configuré selon la Section [4.2.3](#sec:fre
 Enfin, appuyez sur le bouton vert **"Save"** et attendez que l'appareil redémarre.\
 **RAPPEL !** Si vous utilisez le broker Maqiatto, vous devrez peut-être ajouter le nouveau topic à votre compte comme expliqué à la Figure [4.2](#sec:free_broker_add_topics){reference-type="ref" reference="sec:free_broker_add_topics"}.
 
-Dans ce cas, vous devrez ajouter **cmnd/\<votre nom de topic Tasmota\>/Power** comme nouveau nom de topic, qui deviendra *cmnd/charge/Power* si vous avez suivi l'image.
+Dans ce cas, vous devrez ajouter **cmnd/\<your_Tasmota_topic_name\>/Power** comme nouveau nom de topic, qui deviendra *cmnd/charge/Power* si vous avez suivi l'image.
 
 ## Configuration Tasmota sur ToM+
 
@@ -2419,24 +2419,24 @@ Comme vous pouvez le remarquer, la partie la plus importante est de configurer c
 
 Si vous avez votre propre broker MQTT (c'est-à-dire *pas Maqiatto*), la **Aux Cmd** aura cette syntaxe :
 
-- *cmnd/\<votre nom de topic Tasmota\>/Power 1* si vous souhaitez allumer l'appareil.
+- *cmnd/\<your_Tasmota_topic_name\>/Power 1* si vous souhaitez allumer l'appareil.
 
-- *cmnd/\<votre nom de topic Tasmota\>/Power 0* si vous souhaitez l'éteindre.
+- *cmnd/\<your_Tasmota_topic_name\>/Power 0* si vous souhaitez l'éteindre.
 
 À nouveau, dans notre exemple, la commande devient **cmnd/charge/Power 1** pour allumer la lampe.\
 Sinon, si vous utilisez le broker Maqiatto ou un autre qui utilise votre userID (e-mail) comme préfixe dans le nom des topics, la syntaxe de la **Aux Cmd** ressemblera à ceci :
 
-- *myemail@gmail.com/cmnd/\<votre nom de topic Tasmota\>/Power 1* pour l'allumer.
+- *myemail@gmail.com/cmnd/\<your_Tasmota_topic_name\>/Power 1* pour l'allumer.
 
-- *myemail@gmail.com/cmnd/\<votre nom de topic Tasmota\>/Power 0* pour l'éteindre.
+- *myemail@gmail.com/cmnd/\<your_Tasmota_topic_name\>/Power 0* pour l'éteindre.
 
 Dans notre cas, la commande devient **myemail@gmail.com/cmnd/charge/Power 1**.\
 Si vous souhaitez arrêter la charge puis la redémarrer lorsque des conditions spécifiques sont remplies, vous devez ajouter deux alarmes, une pour chaque condition d'allumage/extinction (Power ON/OFF), en utilisant la syntaxe expliquée en conséquence.\
 Veuillez noter que si vous avez un appareil avec plusieurs relais, vous devrez modifier la syntaxe ci-dessus en spécifiant quel relais vous souhaitez contrôler : en utilisant **"Power1"** pour le premier relais, **"Power2"** pour le second et ainsi de suite. Cela devient :
 
-- *cmnd/\<votre nom de topic Tasmota\>/Power1 1* pour allumer le premier relais.
+- *cmnd/\<your_Tasmota_topic_name\>/Power1 1* pour allumer le premier relais.
 
-- *cmnd/\<votre nom de topic Tasmota\>/Power1 0* pour l'éteindre.
+- *cmnd/\<your_Tasmota_topic_name\>/Power1 0* pour l'éteindre.
 
 La même distinction de syntaxe concernant Maqiatto et les brokers possédés s'applique également ici.
 

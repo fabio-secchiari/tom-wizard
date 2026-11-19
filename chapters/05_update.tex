@@ -71,7 +71,7 @@ BigToM (that means bigger display) or the other one if you have a traditional To
 you're willing to update the Twin ToM (smaller screen). This is a crucial
 step, otherwise new icons and graphics won't fit your display size.\\
 
-The last one is the \textit{ESP32\textunderscore Fw23.bin} binary file for the \textbf{black box update}.
+The last one is the \textit{ESP32\_Fw23.bin} binary file for the \textbf{black box update}.
 Make sure to have all of these files, because you will need them in the next steps.
 
 \subsection{What should I know before update?}
@@ -217,7 +217,7 @@ Since this section of the guide is specific to any Windows operative system we w
 download the \textit{“CP210x Windows Drivers”} package pressing on the link pointed
 in yellow in the image above.
 
-The downloaded file will be a ZIP folder, usually called \textit{“CP210x\textunderscore Windows\textunderscore Drivers.zip”}
+The downloaded file will be a ZIP folder, usually called \textit{“CP210x\_Windows\_Drivers.zip”}
 in which you can find a couple of folders and some files. In the screenshot below
 are listed all the usual files contained in the ZIP folder.
 
@@ -229,7 +229,7 @@ are listed all the usual files contained in the ZIP folder.
 
 Extract all the files in a dummy folder in your Desktop. Now, it's important to
 choose the right \textit{“.exe”} file to run in order to install the drivers. If your
-operating system is 64 bit (for most computers) you will run \textit{CP210xVCPInstaller\textunderscore x64.exe}
+operating system is 64 bit (for most computers) you will run \textit{CP210xVCPInstaller\_x64.exe}
 file, otherwise the second \textit{“.exe”} file is the properly one, as show in the image.
 
 Make sure to run the executable file with admin permission by right clicking on it and
@@ -306,7 +306,7 @@ to download a tool that we will need to flash the firmware on our black box boar
 Look for \textbf{“Flash Download Tools”} and press the button as shown in the image.
 Then, search in the page for the \textit{“Flash Download Tools”} with the save icon and press it.
 
-It will download a ZIP folder called \textit{“flash\textunderscore download\textunderscore tool\textunderscore x.x.x.zip”},
+It will download a ZIP folder called \textit{“flash\_download\_tool\_x.x.x.zip”},
 where the “x” symbols will be replaced by the version name, which is \textbf{V3.9.11} in this example.
 Opening the downloaded ZIP folder, you will notice that there is another folder in it.
 Extract that one on your Destktop or wherever you want and open it. The files
@@ -318,7 +318,7 @@ contained in it would usually be the ones listed in the screenshot below.
     \caption{Contents of Flash Tools ZIP folder.}
 \end{figure}
 
-Select the \textit{“flash\textunderscore download\textunderscore tool\textunderscore 3.9.11.exe”}
+Select the \textit{“flash\_download\_tool\_3.9.11.exe”}
 or whatever version you downloaded and run it with admin permissions, by right clicking
 on the file and selecting \textbf{“Run as Administrator”} option.
 If prompted, allow the executable file to perform operations on your computer.\\
@@ -409,7 +409,7 @@ damages to the device.
 Download the ToM+ firmware update folder attached to the firmware release post.
 Now, extract the binary file (\textit{.bin} extension) attached in the ToM+
 firmware release ZIP as we discussed in Section~\ref{sec:update_files}.
-The file in it is usually called \textit{“FwXX\textunderscore ESP32.bin”},
+The file in it is usually called \textit{“FwXX\_ESP32.bin”},
 where the \textit{“XX”} symbol will be replaced by the version number, for instance \textit{“23”}.\\
 
 \textbf{Disclaimer:} \textit{this black box process was tested using Ubuntu 20.04
@@ -505,9 +505,9 @@ option from the dropdown menu. Or if you prefer, you can manually navigate throu
 your folders using the “cd” command until you find the right one.
 
 Once you are in the correct directory, execute this long and boring command, replacing \textit{“ttyUSBx”} with the
-serial port name we noted down in the step before (e.g. \textit{“ttyUSB0”}) and \textit{“ESP32\textunderscore FwXX.bin”} with
+serial port name we noted down in the step before (e.g. \textit{“ttyUSB0”}) and \textit{“ESP32\_FwXX.bin”} with
 the name of the \textit{“.bin”} file which contains the firmware version to load on ToM+
-(e.g. \textit{“ESP32\textunderscore Fw23.bin”}).
+(e.g. \textit{“ESP32\_Fw23.bin”}).
 
 \begin{verbatim}
     python /usr/share/esptool/esptool.py --chip auto --port /dev/ttyUSBx --baud

@@ -65,7 +65,7 @@ Seitensymbole sind die Symbole, die Sie in der unteren Zeile des ToM+ Displays f
 {(7) Aktueller Batteriestromverbrauch (\(A\))}
 {Der Strom, der durch die Batterie fließt.}
 
-\iconbox{icons/BatteryA+red.png}
+\iconbox{icons/BatteryA_red.png}
 {(7) Batterieladestrom (\(A\))}
 {Der Ladestrom durch regeneratives Bremsen.}
 
@@ -73,8 +73,8 @@ Seitensymbole sind die Symbole, die Sie in der unteren Zeile des ToM+ Displays f
 {(54) Momentane Batterieleistung (\(kW\))}
 {Die durch die Batterie fließende Leistung.}
 
-\iconbox{icons/Battery3°.jpg}
-{(3) Batterietemperatur (\textdegree~C)}
+\iconbox{icons/Battery3_deg.jpg}
+{(3) Batterietemperatur (°C)}
 {Die aktuelle Temperatur der Batterie.}
 
 \iconbox{icons/BatteryV2.jpg}
@@ -95,8 +95,8 @@ Seitensymbole sind die Symbole, die Sie in der unteren Zeile des ToM+ Displays f
 {(55) Lade-ETA (Geschätzte Dauer) (\(min\))}
 {Die geschätzte verbleibende Zeit, bis die Batterie vollständig aufgeladen ist.}
 
-\iconbox{icons/Charge°.png}
-{(57) Ladegerättemperatur (\textdegree~C)}
+\iconbox{icons/Charge_deg.png}
+{(57) Ladegerättemperatur (°C)}
 {Die aktuelle Temperatur des Ladegeräts.}
 
 \iconbox{icons/ChargedKwh.png}
@@ -117,12 +117,12 @@ Seitensymbole sind die Symbole, die Sie in der unteren Zeile des ToM+ Displays f
 {(9) Motordrehmoment (\(Nm\))}
 {Das aktuelle vom Motor erzeugte Drehmoment.}
 
-\iconbox{icons/Motor°2.jpg}
-{(4) Motortemperatur (\textdegree~C)}
+\iconbox{icons/Motor_deg2.jpg}
+{(4) Motortemperatur (°C)}
 {Die aktuelle Temperatur des Motors.}
 
-\iconbox{icons/Sev°.png}
-{(45) Sevcon-Temperatur (\textdegree~C)}
+\iconbox{icons/Sev_deg.png}
+{(45) Sevcon-Temperatur (°C)}
 {Die aktuelle Temperatur des Sevcon-Controllers.}
 
 \subsection{Erweiterungsport-Gruppe}
@@ -138,19 +138,19 @@ Seitensymbole sind die Symbole, die Sie in der unteren Zeile des ToM+ Displays f
 \subsection{Gyroskopgruppe}
 
 \iconbox{icons/InclDX.PNG}
-{(62) Gyroskop rechte X-Achse (\textdegree)}
+{(62) Gyroskop rechte X-Achse (°)}
 {Der aktuelle rechte Winkel des Gyroskops entlang der X-Achse.}
 
 \iconbox{icons/InclSX.PNG}
-{(62) Gyroskop linke X-Achse (\textdegree)}
+{(62) Gyroskop linke X-Achse (°)}
 {Der aktuelle linke Winkel des Gyroskops entlang der X-Achse.}
 
 \iconbox{icons/UphillTwizy.png}
-{(63) Frontale Steigungsneigung (\textdegree)}
+{(63) Frontale Steigungsneigung (°)}
 {Der aktuelle frontale Steigungswinkel des Gyroskops.}
 
 \iconbox{icons/DownhillTwizy.png}
-{(63) Frontale Gefälleneigung (\textdegree)}
+{(63) Frontale Gefälleneigung (°)}
 {Der aktuelle frontale Gefällewinkel des Gyroskops.}
 
 \iconbox{icons/GyroAcc.JPG}
@@ -158,7 +158,7 @@ Seitensymbole sind die Symbole, die Sie in der unteren Zeile des ToM+ Displays f
 {Die aktuelle Fahrzeugbeschleunigung, gemessen vom Gyroskop.}
 
 \iconbox{icons/Gtemp.PNG}
-{(60) ToM+ Blackbox-Temperatur (\textdegree~C)}
+{(60) ToM+ Blackbox-Temperatur (°C)}
 {Die aktuelle Temperatur der ToM+ Blackbox.}
 
 \iconbox{icons/Timer.PNG}
@@ -196,11 +196,11 @@ Seitensymbole sind die Symbole, die Sie in der unteren Zeile des ToM+ Displays f
 {Die aktuell verstrichene Zeit der aktuellen Fahrt.}
 
 \iconbox{icons/tUphill.png}
-{(38) Durchschnittliche Steigungsneigung der Fahrt (\textdegree)}
+{(38) Durchschnittliche Steigungsneigung der Fahrt (°)}
 {Die durchschnittliche Steigungsneigung der aktuellen Fahrt.}
 
 \iconbox{icons/tDownhill.png}
-{(38) Durchschnittliche Gefälleneigung der Fahrt (\textdegree)}
+{(38) Durchschnittliche Gefälleneigung der Fahrt (°)}
 {Die durchschnittliche Gefälleneigung der aktuellen Fahrt.}
 
 \subsection{Armaturenbrettgruppe}
@@ -333,7 +333,7 @@ Dort können Sie auch wählen, ob Sie diese blinken lassen möchten oder nicht.
 Auf diesen Seiten werden je nach den auf der Webserver-Seite „Alarmauslöser“ festgelegten Konfigurationen Pop-ups angezeigt. Es gibt zwei Haupttypen von Pop-ups: der erste verschwindet erst, wenn Sie ihn bemerken und darauf drücken (dieser Typ blockiert das gesamte System und pausiert sowohl die Werte im linken Raster als auch den Vordergrundwert). 
 Andererseits können Sie, wenn Sie beim Fahren nicht gestört werden möchten, den zweiten Pop-up-Typ verwenden, der speziell dafür entwickelt wurde, nach 10 Sekunden automatisch zu verschwinden. \\
 
-Hier sehen Sie ein Beispiel für die einfachste Art von Pop-up, bei dem das eingekreiste Warnsymbol kontinuierlich blinkt. Wie Sie sehen können, besteht es aus einem gelben Kasten mit einer gepunkteten Umrandung, der das Symbol des Werts und den Wert selbst enthält, der den zuvor auf der Webserver-Seite eingestellten Alarm ausgelöst hat (Motortemperatur = 35\textdegree~C).
+Hier sehen Sie ein Beispiel für die einfachste Art von Pop-up, bei dem das eingekreiste Warnsymbol kontinuierlich blinkt. Wie Sie sehen können, besteht es aus einem gelben Kasten mit einer gepunkteten Umrandung, der das Symbol des Werts und den Wert selbst enthält, der den zuvor auf der Webserver-Seite eingestellten Alarm ausgelöst hat (Motortemperatur = 35°C).
 
 \begin{figure}[H]
     \centering

@@ -41,7 +41,7 @@ Zuerst bemerken wir eine Textdatei namens \textit{changeLog23.txt}, mit der die 
 
 Als Nächstes gibt es zwei Ordner, die das \textbf{LCD-Display-Firmware}-Update im \textit{.tft}-Format enthalten. \textbf{Wähle die Version}, die für dein Gerät gemacht ist: den ersten Ordner, wenn du ein ToM+ oder ein BigToM hast (was ein größeres Display bedeutet), oder den anderen, wenn du ein traditionelles ToM hast oder das Twin ToM (kleinerer Bildschirm) aktualisieren möchtest. Dies ist ein entscheidender Schritt, da neue Icons und Grafiken sonst nicht zu deiner Displaygröße passen.\\
 
-Die letzte Datei ist die Binärdatei \textit{ESP32\textunderscore Fw23.bin} für das \textbf{Blackbox-Update}. Stelle sicher, dass du alle diese Dateien hast, da du sie in den nächsten Schritten benötigst.
+Die letzte Datei ist die Binärdatei \textit{ESP32\_Fw23.bin} für das \textbf{Blackbox-Update}. Stelle sicher, dass du alle diese Dateien hast, da du sie in den nächsten Schritten benötigst.
 
 \subsection{Was sollte ich vor dem Update wissen?}
 
@@ -138,7 +138,7 @@ Auf der Download-Seite der \href{https://www.silabs.com/software-and-tools/usb-t
 
 Da dieser Abschnitt der Anleitung speziell für Windows-Betriebssysteme gilt, laden wir das Paket \textit{„CP210x Windows Drivers“} herunter, indem wir auf den im Bild oben gelb markierten Link klicken.
 
-Die heruntergeladene Datei ist ein ZIP-Ordner, der gewöhnlich \textit{„CP210x\textunderscore Windows\textunderscore Drivers.zip“} heißt und in dem sich einige Ordner und Dateien befinden. Im Screenshot unten sind alle üblicherweise im ZIP-Ordner enthaltenen Dateien aufgelistet.
+Die heruntergeladene Datei ist ein ZIP-Ordner, der gewöhnlich \textit{„CP210x\_Windows\_Drivers.zip“} heißt und in dem sich einige Ordner und Dateien befinden. Im Screenshot unten sind alle üblicherweise im ZIP-Ordner enthaltenen Dateien aufgelistet.
 
 \begin{figure}[H]
     \centering
@@ -146,7 +146,7 @@ Die heruntergeladene Datei ist ein ZIP-Ordner, der gewöhnlich \textit{„CP210x
     \caption{Inhalt des Treiber-ZIP-Ordners.}
 \end{figure}
 
-Entpacke alle Dateien in einen temporären Ordner auf deinem Desktop. Nun ist es wichtig, die richtige \textit{„.exe“}-Datei für die Installation der Treiber auszuführen. Wenn dein Betriebssystem 64-Bit ist (bei den meisten Computern), führst du die Datei \textit{CP210xVCPInstaller\textunderscore x64.exe} aus, andernfalls ist die zweite \textit{„.exe“}-Datei die passende, wie im Bild gezeigt.
+Entpacke alle Dateien in einen temporären Ordner auf deinem Desktop. Nun ist es wichtig, die richtige \textit{„.exe“}-Datei für die Installation der Treiber auszuführen. Wenn dein Betriebssystem 64-Bit ist (bei den meisten Computern), führst du die Datei \textit{CP210xVCPInstaller\_x64.exe} aus, andernfalls ist die zweite \textit{„.exe“}-Datei die passende, wie im Bild gezeigt.
 
 Stelle sicher, dass du die ausführbare Datei mit Administratorrechten startest, indem du mit der rechten Maustaste darauf klickst und die Option \textbf{„Als Administrator ausführen“} wählst. Falls du dazu aufgefordert wirst, erlaube dem Programm, Administratoraktionen auf deinem Computer auszuführen, da der Treiber-Installationsprozess sonst nicht startet.
 
@@ -196,7 +196,7 @@ Nun sollte sich ein Fenster öffnen, das wie in der Abbildung unten aussieht. Su
 
 Besuche die \href{https://www.espressif.com/en/support/download/other-tools}{offizielle ESP32-Website}, um ein Tool herunterzuladen, das wir zum Flashen der Firmware auf unsere Blackbox-Platine benötigen. Suche nach \textbf{„Flash Download Tools“} und drücke die Schaltfläche wie im Bild gezeigt. Suche dann auf der Seite nach den \textit{„Flash Download Tools“} mit dem Speichern-Symbol und klicke darauf.
 
-Dadurch wird ein ZIP-Ordner namens \textit{„flash\textunderscore download\textunderscore tool\textunderscore x.x.x.zip“} heruntergeladen, wobei die „x“-Symbole durch die Versionsbezeichnung ersetzt werden (in diesem Beispiel \textbf{V3.9.11}). Beim Öffnen des heruntergeladenen ZIP-Ordners wirst du feststellen, dass sich darin ein weiterer Ordner befindet. Entpacke diesen auf deinen Desktop oder an einen beliebigen Ort und öffne ihn. Die darin enthaltenen Dateien entsprechen in der Regel den im Screenshot unten aufgelisteten.
+Dadurch wird ein ZIP-Ordner namens \textit{„flash\_download\_tool\_x.x.x.zip“} heruntergeladen, wobei die „x“-Symbole durch die Versionsbezeichnung ersetzt werden (in diesem Beispiel \textbf{V3.9.11}). Beim Öffnen des heruntergeladenen ZIP-Ordners wirst du feststellen, dass sich darin ein weiterer Ordner befindet. Entpacke diesen auf deinen Desktop oder an einen beliebigen Ort und öffne ihn. Die darin enthaltenen Dateien entsprechen in der Regel den im Screenshot unten aufgelisteten.
 
 \begin{figure}[H]
     \centering
@@ -204,7 +204,7 @@ Dadurch wird ein ZIP-Ordner namens \textit{„flash\textunderscore download\text
     \caption{Inhalt des Flash-Tools-ZIP-Ordners.}
 \end{figure}
 
-Wähle die Datei \textit{„flash\textunderscore download\textunderscore tool\textunderscore 3.9.11.exe“} (oder die entsprechende heruntergeladene Version) aus und führe sie mit Administratorrechten aus, indem du mit der rechten Maustaste auf die Datei klickst und die Option \textbf{„Als Administrator ausführen“} wählst. Falls du dazu aufgefordert wirst, erlaube der ausführbaren Datei die Durchführung von Aktionen auf deinem Computer.\\
+Wähle die Datei \textit{„flash\_download\_tool\_3.9.11.exe“} (oder die entsprechende heruntergeladene Version) aus und führe sie mit Administratorrechten aus, indem du mit der rechten Maustaste auf die Datei klickst und die Option \textbf{„Als Administrator ausführen“} wählst. Falls du dazu aufgefordert wirst, erlaube der ausführbaren Datei die Durchführung von Aktionen auf deinem Computer.\\
 
 Sobald das Programm gestartet ist, sollte sich ein Terminal-Fenster öffnen, das nach einigen Sekunden die Benutzeroberfläche startet. Sie sollte so aussehen wie im ersten Beispiel hier gezeigt. Du musst den \textbf{„ChipType“} auf \textit{„ESP32“} ändern, wie im zweiten Schritt unten dargestellt. Lass den Rest unverändert und drücke die Schaltfläche \textbf{„OK“}.
 
@@ -260,7 +260,7 @@ Stelle vor allen weiteren Schritten den Schalter der ToM+-Blackbox auf OFF (\tex
 
 \subsection{Vorbereiten des Computers}
 
-Lade den im Firmware-Release-Beitrag angehängten ToM+-Firmware-Update-Ordner herunter. Entpacke nun die im ToM+-Firmware-Release-ZIP enthaltene Binärdatei (Endung \textit{.bin}), wie in Abschnitt~\ref{sec:update_files} beschrieben. Die Datei heißt in der Regel \textit{„FwXX\textunderscore ESP32.bin“}, wobei das Symbol \textit{„XX“} durch die Versionsnummer ersetzt wird, zum Beispiel \textit{„23“}.\\
+Lade den im Firmware-Release-Beitrag angehängten ToM+-Firmware-Update-Ordner herunter. Entpacke nun die im ToM+-Firmware-Release-ZIP enthaltene Binärdatei (Endung \textit{.bin}), wie in Abschnitt~\ref{sec:update_files} beschrieben. Die Datei heißt in der Regel \textit{„FwXX\_ESP32.bin“}, wobei das Symbol \textit{„XX“} durch die Versionsnummer ersetzt wird, zum Beispiel \textit{„23“}.\\
 
 \textbf{Haftungsausschluss:} \textit{Dieser Blackbox-Vorgang wurde unter Ubuntu 20.04 getestet (hoffe, er funktioniert auch mit anderen Unix-Distributionen). Schließe die Blackbox erst an, wenn du ausdrücklich dazu aufgefordert wirst}.\\
 
@@ -333,7 +333,7 @@ Die Zeile, die uns interessiert, ist diese: \textit{„cp210x converter now atta
 
 Navigiere mit deinem Dateimanager in den Ordner, in dem die Firmware-\textit{.bin}-Datei gespeichert ist, und öffne dort ein Terminal, indem du mit der rechten Maustaste auf den Ordner klickst und die Option \textbf{„Terminal öffnen“} aus dem Kontextmenü wählst. Alternativ kannst du auch manuell mit dem Befehl „cd“ durch deine Ordner navigieren, bis du den richtigen Ordner gefunden hast.
 
-Sobald du dich im richtigen Verzeichnis befindest, führe diesen langen und etwas trockenen Befehl aus. Ersetze dabei \textit{„ttyUSBx“} durch den Namen der seriellen Schnittstelle, den wir im vorherigen Schritt notiert haben (z.\,B. \textit{„ttyUSB0“}), und \textit{„ESP32\textunderscore FwXX.bin“} durch den Namen der \textit{„.bin“}-Datei, die die auf ToM+ zu ladende Firmware-Version enthält (z.\,B. \textit{„ESP32\textunderscore Fw23.bin“}).
+Sobald du dich im richtigen Verzeichnis befindest, führe diesen langen und etwas trockenen Befehl aus. Ersetze dabei \textit{„ttyUSBx“} durch den Namen der seriellen Schnittstelle, den wir im vorherigen Schritt notiert haben (z.\,B. \textit{„ttyUSB0“}), und \textit{„ESP32\_FwXX.bin“} durch den Namen der \textit{„.bin“}-Datei, die die auf ToM+ zu ladende Firmware-Version enthält (z.\,B. \textit{„ESP32\_Fw23.bin“}).
 
 \begin{verbatim}
     python /usr/share/esptool/esptool.py --chip auto --port /dev/ttyUSBx --baud

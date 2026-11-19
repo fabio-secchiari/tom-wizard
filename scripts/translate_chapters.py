@@ -16,6 +16,8 @@ Strategia:
      script termina con codice d'uscita != 0.
 """
 
+import hashlib
+import json
 import os
 import re
 import sys
@@ -38,8 +40,14 @@ TARGET_LANGS = {
     "fr": Path("chapters_fr"),
 }
 
-# DeepL accetta richieste fino a 128 KiB: restiamo molto sotto.
-MAX_CHUNK_CHARS = 20_000
+# Blocchi piccoli (circa un paragrafo o poco più): DeepL rimescola meno i
+# tag e la cache si riusa meglio quando cambia solo una parte di un capitolo.
+CHUNK_TARGET_CHARS = 4_000
+CHUNK_MAX_CHARS = 20_000          # DeepL accetta fino a 128 KiB per richiesta
+
+# Cache delle traduzioni già pagate (una per lingua). In CI viene salvata con
+# actions/cache anche quando la run fallisce, così non si ripaga la quota.
+CACHE_DIR = Path(os.getenv("TRANSLATION_CACHE_DIR", ".translation_cache"))
 
 # ============================================================
 # TOKENIZZAZIONE LATEX
@@ -73,6 +81,7 @@ _LATEX_PARTS = [
     r"\\(?:" + CODE_ARG_COMMANDS + r")\*?(?:\[[^\]]*\])*\{[^{}]*\}",  # \cmd{codice}
     r"\\texttt\{[^{}]*\}",                              # monospaziato = codice
     r"\\verb\*?(?P<delim>[^a-zA-Z\s]).*?(?P=delim)",    # \verb|...|
+    r"\\item\s*\[(?:[^\[\]{}]|\{[^{}]*\})*\]",               # \item[\textbf{1}]
     WORD,                                               # password, file, percorsi
     r"\\[a-zA-Z@]+\*?",                                 # qualsiasi altro comando
     r"\\[^a-zA-Z]",                                     # \\ \& \% \_ \, ...
@@ -179,13 +188,29 @@ def clean_output(text: str) -> str:
 # PROTEZIONE / RIPRISTINO
 # ============================================================
 
-def build_chunks(tokens: List[Tuple[str, str]]) -> Tuple[List[str], Dict[int, str]]:
-    """Converte i token in blocchi XML da inviare a DeepL."""
-    placeholders: Dict[int, str] = {}
-    chunks: List[str] = []
-    current: List[str] = []
-    size = 0
+class Chunk:
+    """Un blocco XML da tradurre e gli id dei segnaposto che contiene."""
+    def __init__(self) -> None:
+        self.pieces: List[str] = []
+        self.ids: List[int] = []
 
+    @property
+    def xml(self) -> str:
+        return "".join(self.pieces)
+
+    def has_text(self) -> bool:
+        return bool(TAG_RE.sub("", self.xml).strip())
+
+
+def build_chunks(tokens: List[Tuple[str, str]]) -> Tuple[List[Chunk], Dict[int, str]]:
+    """Converte i token in blocchi XML da inviare a DeepL.
+    Si taglia dopo un segnaposto con una riga vuota (fine paragrafo) appena
+    il blocco supera CHUNK_TARGET_CHARS, o dopo un qualsiasi a capo se supera
+    CHUNK_MAX_CHARS."""
+    placeholders: Dict[int, str] = {}
+    chunks: List[Chunk] = []
+    cur = Chunk()
+    size = 0
     for kind, value in tokens:
         if kind == "text":
             piece = xml_escape(XML_FORBIDDEN_CHARS.sub(" ", value))
@@ -193,17 +218,37 @@ def build_chunks(tokens: List[Tuple[str, str]]) -> Tuple[List[str], Dict[int, st
             idx = len(placeholders)
             placeholders[idx] = value
             piece = f'<x id="{idx}"/>'
-        current.append(piece)
+            cur.ids.append(idx)
+        cur.pieces.append(piece)
         size += len(piece)
-
-        # Taglio solo dopo un segnaposto che contiene un newline
-        if kind == "code" and "\n" in value and size >= MAX_CHUNK_CHARS:
-            chunks.append("".join(current))
-            current, size = [], 0
-
-    if current:
-        chunks.append("".join(current))
+        if kind == "code" and (
+            (size >= CHUNK_TARGET_CHARS and re.search(r"\n[ \t]*\n", value))
+            or (size >= CHUNK_MAX_CHARS and "\n" in value)
+        ):
+            chunks.append(cur)
+            cur, size = Chunk(), 0
+    if cur.pieces:
+        chunks.append(cur)
     return chunks, placeholders
+
+
+def split_chunk(chunk: Chunk, placeholders: Dict[int, str]) -> List[Chunk]:
+    """Divide un blocco in pezzi più piccoli, tagliando dopo ogni segnaposto
+    che contiene un a capo (in pratica: una riga di sorgente alla volta)."""
+    parts: List[Chunk] = []
+    cur = Chunk()
+    for piece in chunk.pieces:
+        cur.pieces.append(piece)
+        m = TAG_RE.fullmatch(piece)
+        if m:
+            idx = int(m.group(1))
+            cur.ids.append(idx)
+            if "\n" in placeholders[idx]:
+                parts.append(cur)
+                cur = Chunk()
+    if cur.pieces:
+        parts.append(cur)
+    return parts
 
 
 def restore_chunk(translated: str, placeholders: Dict[int, str],
@@ -277,57 +322,172 @@ def get_deepl_client() -> "deepl.DeepLClient":
     return deepl.DeepLClient(api_key)
 
 
-def translate_text(client: "deepl.DeepLClient", text: str, target_lang: str) -> str:
+# ------------------------------------------------------------
+# Cache
+# ------------------------------------------------------------
+
+_caches: Dict[str, Dict[str, str]] = {}
+
+
+def _cache_file(lang: str) -> Path:
+    return CACHE_DIR / f"{lang}.json"
+
+
+def cache_for(lang: str) -> Dict[str, str]:
+    if lang not in _caches:
+        try:
+            _caches[lang] = json.loads(_cache_file(lang).read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            _caches[lang] = {}
+    return _caches[lang]
+
+
+def cache_key(xml: str, lang: str) -> str:
+    return hashlib.sha256(f"{lang}\0{xml}".encode("utf-8")).hexdigest()
+
+
+def save_cache(lang: str) -> None:
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    tmp = _cache_file(lang).with_suffix(".tmp")
+    tmp.write_text(json.dumps(cache_for(lang), ensure_ascii=False, indent=0), encoding="utf-8")
+    tmp.replace(_cache_file(lang))
+
+
+# ------------------------------------------------------------
+# Controlli di struttura
+# ------------------------------------------------------------
+
+def brace_delta(code: str) -> int:
+    """Quante graffe apre (+) o chiude (-) un pezzo di codice LaTeX."""
+    code = _GROUP_SCAN_RE.sub(
+        lambda m: m.group(0) if (m.group("open") or m.group("close")) else "", code)
+    return code.count("{") - code.count("}")
+
+
+def chunk_problem(translated: str, chunk: Chunk, placeholders: Dict[int, str],
+                  start_depth: int, depth_before: Dict[int, int]) -> Optional[str]:
+    """None se la traduzione di un blocco è strutturalmente valida, altrimenti
+    il motivo. Ogni segnaposto deve comparire una volta sola e allo stesso
+    livello di graffe che ha nel sorgente (DeepL può spostare una parola in
+    grassetto, ma non far finire testo fuori o dentro un'altra graffa)."""
+    ids = [int(i) for i in TAG_RE.findall(translated)]
+    if sorted(ids) != sorted(chunk.ids):
+        missing = set(chunk.ids) - set(ids)
+        extra = [i for i in ids if ids.count(i) > 1 or i not in chunk.ids]
+        return f"segnaposto mancanti {sorted(missing)[:5]} / in più {sorted(set(extra))[:5]}"
+    depth = start_depth
+    for idx in ids:
+        if depth != depth_before[idx]:
+            return f"ordine dei segnaposto cambiato vicino a {placeholders[idx].strip()[:40]!r}"
+        depth += brace_delta(placeholders[idx])
+    return None
+
+
+# ------------------------------------------------------------
+# Traduzione
+# ------------------------------------------------------------
+
+def deepl_translate(client: "deepl.DeepLClient", xml: str, lang: str,
+                    stats: Dict[str, int]) -> str:
+    cache = cache_for(lang)
+    key = cache_key(xml, lang)
+    if key in cache:
+        stats["cached"] += 1
+        return cache[key]
+    try:
+        res = client.translate_text(
+            xml,
+            source_lang="EN",
+            target_lang=lang.upper(),
+            formality="prefer_more",
+            tag_handling="xml",
+            ignore_tags=["x"],
+            preserve_formatting=True,
+        )
+    except deepl.DeepLException as e:
+        Path("debug_protected.txt").write_text(xml, encoding="utf-8")
+        raise RuntimeError(f"Errore DeepL: {e} (blocco salvato in debug_protected.txt)") from e
+    stats["requests"] += 1
+    stats["chars"] += len(TAG_RE.sub("", xml))
+    cache[key] = res.text
+    save_cache(lang)
+    return res.text
+
+
+def translate_chunk(client, chunk: Chunk, placeholders: Dict[int, str], lang: str,
+                    start_depth: int, depth_before: Dict[int, int],
+                    stats: Dict[str, int], level: int = 0) -> str:
+    """Traduce un blocco; se DeepL ne rovina la struttura lo ritraduce
+    diviso in pezzi più piccoli (una riga alla volta)."""
+    if not chunk.has_text():
+        return chunk.xml
+    translated = deepl_translate(client, chunk.xml, lang, stats)
+    problem = chunk_problem(translated, chunk, placeholders, start_depth, depth_before)
+    if problem is None:
+        return translated
+    parts = split_chunk(chunk, placeholders)
+    if level >= 1 or len(parts) <= 1:
+        raise RuntimeError(f"DeepL ha rovinato la struttura LaTeX: {problem}")
+    stats["retried"] += 1
+    out, depth = [], start_depth
+    for part in parts:
+        out.append(translate_chunk(client, part, placeholders, lang, depth,
+                                   depth_before, stats, level + 1))
+        depth += sum(brace_delta(placeholders[i]) for i in part.ids)
+    return "".join(out)
+
+
+def prepare(text: str) -> Tuple[List[Chunk], Dict[int, str], Dict[int, int]]:
+    chunks, placeholders = build_chunks(tokenize(text))
+    depth_before: Dict[int, int] = {}
+    depth = 0
+    for idx in sorted(placeholders):
+        depth_before[idx] = depth
+        depth += brace_delta(placeholders[idx])
+    return chunks, placeholders, depth_before
+
+
+def pending_chars(text: str, lang: str) -> int:
+    """Caratteri (circa) che verranno inviati a DeepL: esclusi i blocchi già
+    in cache."""
+    chunks, _, _ = prepare(text)
+    cache = cache_for(lang)
+    return sum(len(TAG_RE.sub("", c.xml)) for c in chunks
+               if c.has_text() and cache_key(c.xml, lang) not in cache)
+
+
+def translate_text(client: "deepl.DeepLClient", text: str, target_lang: str,
+                   stats: Optional[Dict[str, int]] = None) -> str:
     if not text.strip():
         return text
+    stats = stats if stats is not None else {"cached": 0, "requests": 0, "chars": 0, "retried": 0}
 
-    chunks, placeholders = build_chunks(tokenize(text))
+    chunks, placeholders, depth_before = prepare(text)
     seen: Dict[int, int] = {}
     result: List[str] = []
-
+    depth = 0
     for chunk in chunks:
-        if not TAG_RE.sub("", chunk).strip():
-            # solo codice: niente da tradurre
-            result.append(restore_chunk(chunk, placeholders, seen))
-            continue
-        try:
-            res = client.translate_text(
-                chunk,
-                source_lang="EN",
-                target_lang=target_lang.upper(),
-                formality="prefer_more",
-                tag_handling="xml",
-                ignore_tags=["x"],
-                preserve_formatting=True,
-            )
-        except deepl.DeepLException as e:
-            Path("debug_protected.txt").write_text(chunk, encoding="utf-8")
-            raise RuntimeError(f"Errore DeepL: {e} (blocco salvato in debug_protected.txt)") from e
-        result.append(restore_chunk(res.text, placeholders, seen))
+        translated = translate_chunk(client, chunk, placeholders, target_lang,
+                                     depth, depth_before, stats)
+        result.append(restore_chunk(translated, placeholders, seen))
+        depth += sum(brace_delta(placeholders[i]) for i in chunk.ids)
 
-    missing = [i for i in placeholders if seen.get(i, 0) == 0]
-    duplicated = [i for i, n in seen.items() if n > 1]
-    unknown = [i for i in seen if i not in placeholders]
-    if missing or duplicated or unknown:
-        details = "; ".join(
-            f"{name}: " + ", ".join(repr(placeholders.get(i, "?"))[:60] for i in ids[:5])
-            for name, ids in (("mancanti", missing), ("duplicati", duplicated),
-                              ("sconosciuti", unknown))
-            if ids
-        )
-        raise RuntimeError(f"DeepL ha alterato i segnaposto LaTeX ({details})")
+    missing = [i for i in placeholders if seen.get(i, 0) != 1]
+    if missing:
+        raise RuntimeError(f"DeepL ha alterato i segnaposto LaTeX (id {missing[:5]})")
 
     translated = "".join(result)
-    if blank_lines_inside_groups(translated) > blank_lines_inside_groups(text):
-        if blank_lines_inside_groups(text):
-            # Il sorgente ne ha già: non sappiamo quali siano volute.
-            raise RuntimeError("DeepL ha inserito righe vuote dentro {...} (LaTeX non valido)")
-        # Nel sorgente non ce ne sono: tutte quelle presenti le ha aggiunte
-        # DeepL e si possono ridurre a un semplice a capo.
+    # La struttura delle graffe ora è garantita uguale al sorgente, quindi le
+    # righe vuote dentro {...} che il sorgente non ha le ha aggiunte DeepL
+    # (dentro il testo) e si possono ridurre a un semplice a capo.
+    if blank_lines_inside_groups(text) == 0:
         translated, fixed = fix_blank_lines_inside_groups(translated)
-        print(f"    ⚠️ Corrette {len(fixed)} righe vuote inserite da DeepL dentro {{...}}:")
-        for f in fixed[:10]:
-            print(f"       {f}")
+        if fixed:
+            print(f"    ⚠️ Corrette {len(fixed)} righe vuote inserite da DeepL dentro {{...}}:")
+            for f in fixed[:10]:
+                print(f"       {f}")
+    elif blank_lines_inside_groups(translated) != blank_lines_inside_groups(text):
+        raise RuntimeError("DeepL ha cambiato le righe vuote dentro {...} (LaTeX non valido)")
     return translated
 
 
@@ -336,7 +496,7 @@ def translate_text(client: "deepl.DeepLClient", text: str, target_lang: str) -> 
 # ============================================================
 
 def translate_file(client: "deepl.DeepLClient", source_file: Path,
-                   target_dir: Path, lang: str) -> bool:
+                   target_dir: Path, lang: str, stats: Dict[str, int]) -> bool:
     target_dir.mkdir(parents=True, exist_ok=True)
     target_file = target_dir / source_file.name
 
@@ -344,7 +504,7 @@ def translate_file(client: "deepl.DeepLClient", source_file: Path,
     content = source_file.read_text(encoding="utf-8")
 
     try:
-        translated = translate_text(client, content, lang)
+        translated = translate_text(client, content, lang, stats)
     except Exception as e:
         print(f"    ❌ Errore: {e}")
         return False
@@ -357,6 +517,24 @@ def translate_file(client: "deepl.DeepLClient", source_file: Path,
 # ============================================================
 # MAIN
 # ============================================================
+
+def check_quota(client: "deepl.DeepLClient", needed: int) -> bool:
+    try:
+        usage = client.get_usage().character
+    except deepl.DeepLException as e:
+        print(f"⚠️ Impossibile leggere la quota DeepL ({e}), proseguo.")
+        return True
+    if not usage.valid or not usage.limit:
+        return True
+    left = usage.limit - usage.count
+    print(f"Quota DeepL: usati {usage.count:,} / {usage.limit:,} caratteri, "
+          f"disponibili {left:,}; da tradurre ~{needed:,}.")
+    if needed > left:
+        print("❌ Quota DeepL insufficiente: niente viene tradotto finché la quota non si "
+              "rinnova (o non si passa a un piano superiore).")
+        return False
+    return True
+
 
 def main(files_to_translate: Optional[List[str]] = None) -> int:
     if files_to_translate:
@@ -371,16 +549,23 @@ def main(files_to_translate: Optional[List[str]] = None) -> int:
         print("⚠️ Nessun file da tradurre.")
         return 0
 
+    needed = sum(pending_chars(f.read_text(encoding="utf-8"), lang)
+                 for f in source_files for lang in TARGET_LANGS)
     client = get_deepl_client()
+    if needed and not check_quota(client, needed):
+        return 1
+
+    stats = {"cached": 0, "requests": 0, "chars": 0, "retried": 0}
     total_jobs = len(source_files) * len(TARGET_LANGS)
     success_count = 0
-
     for source_file in source_files:
         for lang, target_dir in TARGET_LANGS.items():
-            if translate_file(client, source_file, target_dir, lang):
+            if translate_file(client, source_file, target_dir, lang, stats):
                 success_count += 1
 
     print(f"\nTraduzione completata: {success_count}/{total_jobs} file tradotti con successo.")
+    print(f"Blocchi dalla cache: {stats['cached']}, richieste a DeepL: {stats['requests']} "
+          f"(~{stats['chars']:,} caratteri), blocchi ritradotti a pezzi: {stats['retried']}.")
     return 0 if success_count == total_jobs else 1
 
 

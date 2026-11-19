@@ -108,6 +108,14 @@ jobs:
             echo "No English chapters changed."
           fi
 
+      # Cache delle traduzioni DeepL: i blocchi già tradotti non consumano quota.
+      - name: Restore DeepL translation cache
+        uses: actions/cache/restore@v4
+        with:
+          path: .translation_cache
+          key: deepl-cache-${{ github.run_id }}
+          restore-keys: deepl-cache-
+
       - name: Translate changed chapters
         env:
           DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
@@ -128,6 +136,14 @@ jobs:
           else
             echo "No English chapters changed."
           fi
+
+      # Salvata anche se la traduzione fallisce (es. quota esaurita a metà)
+      - name: Save DeepL translation cache
+        if: always() && hashFiles('.translation_cache/*.json') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: .translation_cache
+          key: deepl-cache-${{ github.run_id }}
 
       # ========== MARKDOWN (sito web) ==========
       # Rigenera markdown/index*.md dai sorgenti (anche DE/FR appena tradotti).

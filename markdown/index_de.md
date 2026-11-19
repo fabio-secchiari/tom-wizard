@@ -2401,7 +2401,7 @@ Wenn Sie stattdessen Maqiatto verwenden, das gemäß Abschnitt [4.2.3](#sec:fre
 Drücken Sie abschließend die grüne Schaltfläche **„Save"** und warten Sie, bis das Gerät neu startet.\
 **NICHT VERGESSEN!** Wenn Sie den Maqiatto-Broker verwenden, müssen Sie möglicherweise das neue Topic zu Ihrem Konto hinzufügen, wie in Abbildung [4.2](#sec:free_broker_add_topics){reference-type="ref" reference="sec:free_broker_add_topics"} erklärt.
 
-In diesem Fall müssen Sie **cmnd/\<your Tasmota topic name\>/Power** als neuen Topic-Namen hinzufügen. Wenn Sie dem Beispielbild gefolgt sind, lautet dieser *cmnd/charge/Power*.
+In diesem Fall müssen Sie **cmnd/\<your_Tasmota_topic_name\>/Power** als neuen Topic-Namen hinzufügen. Wenn Sie dem Beispielbild gefolgt sind, lautet dieser *cmnd/charge/Power*.
 
 ## ToM+-Tasmota-Konfiguration
 
@@ -2418,24 +2418,24 @@ Wie Sie sehen können, ist der wichtigste Teil die korrekte Konfiguration des Fe
 
 Wenn Sie einen eigenen MQTT-Broker verwenden (also *nicht Maqiatto*), hat **Aux Cmd** folgende Syntax:
 
-- *cmnd/\<your Tasmota topic name\>/Power 1*, wenn das Gerät eingeschaltet werden soll.
+- *cmnd/\<your_Tasmota_topic_name\>/Power 1*, wenn das Gerät eingeschaltet werden soll.
 
-- *cmnd/\<your Tasmota topic name\>/Power 0*, wenn das Gerät ausgeschaltet werden soll.
+- *cmnd/\<your_Tasmota_topic_name\>/Power 0*, wenn das Gerät ausgeschaltet werden soll.
 
 In unserem Beispiel lautet der Befehl zum Einschalten der Lampe **cmnd/charge/Power 1**.\
 Wenn Sie hingegen den Maqiatto-Broker oder einen anderen Broker verwenden, der Ihre Benutzer-ID (E-Mail-Adresse) als Präfix im Topic-Namen verwendet, sieht die Syntax für **Aux Cmd** folgendermaßen aus:
 
-- *myemail@gmail.com/cmnd/\<your Tasmota topic name\>/Power 1*, um das Gerät einzuschalten.
+- *myemail@gmail.com/cmnd/\<your_Tasmota_topic_name\>/Power 1*, um das Gerät einzuschalten.
 
-- *myemail@gmail.com/cmnd/\<your Tasmota topic name\>/Power 0*, um das Gerät auszuschalten.
+- *myemail@gmail.com/cmnd/\<your_Tasmota_topic_name\>/Power 0*, um das Gerät auszuschalten.
 
 In unserem Fall lautet der Befehl **myemail@gmail.com/cmnd/charge/Power 1**.\
 Wenn Sie den Ladevorgang stoppen und anschließend unter bestimmten Bedingungen wieder starten möchten, müssen Sie zwei Alarme hinzufügen: einen für die Power-ON- und einen für die Power-OFF-Bedingung, jeweils mit der oben beschriebenen Syntax.\
 Bitte beachten Sie, dass Sie bei einem Gerät mit mehreren Relais die oben beschriebene Syntax anpassen müssen, um festzulegen, welches Relais Sie steuern möchten: Verwenden Sie **„Power1"** für das erste Relais, **„Power2"** für das zweite und so weiter. Dies ergibt:
 
-- *cmnd/\<your Tasmota topic name\>/Power1 1*, um das erste Relais einzuschalten.
+- *cmnd/\<your_Tasmota_topic_name\>/Power1 1*, um das erste Relais einzuschalten.
 
-- *cmnd/\<your Tasmota topic name\>/Power1 0*, um es auszuschalten.
+- *cmnd/\<your_Tasmota_topic_name\>/Power1 0*, um es auszuschalten.
 
 Die gleiche Unterscheidung bezüglich Maqiatto und eigenen Brokern gilt auch hier.
 

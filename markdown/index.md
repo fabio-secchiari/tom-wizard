@@ -2298,7 +2298,7 @@ If you use Maqiatto instead, configured following Section [4.2.3](#sec:free_bro
 Finally, press the **"Save"** green button and wait until the device reboots.\
 **REMEMBER!** If you are using Maqiatto broker, you may need to add the new topic to your account as explained in Figure [4.2](#sec:free_broker_add_topics){reference-type="ref" reference="sec:free_broker_add_topics"}.
 
-In this case, you'll have to add **cmnd/\<your\_ Tasmota\_ topic\_ name\>/Power** as the new topic name, that will become *cmnd/charge/Power* if you followed the image.
+In this case, you'll have to add **cmnd/\<your_Tasmota_topic_name\>/Power** as the new topic name, that will become *cmnd/charge/Power* if you followed the image.
 
 ## ToM+ Tasmota configuration
 
@@ -2315,24 +2315,24 @@ As you may notice, the most important part is to configure properly the **"Aux C
 
 If you have your own MQTT broker (i.e. *not Maqiatto*) the **Aux Cmd** will have this syntax:
 
--   *cmnd/\<your\_ Tasmota\_ topic\_ name\>/Power 1* if you want to power ON the device.
+-   *cmnd/\<your_Tasmota_topic_name\>/Power 1* if you want to power ON the device.
 
--   *cmnd/\<your\_ Tasmota\_ topic\_ name\>/Power 0* if you want to power it OFF.
+-   *cmnd/\<your_Tasmota_topic_name\>/Power 0* if you want to power it OFF.
 
 Again, in our example the command becomes **cmnd/charge/Power 1** to power the lamp ON.\
 Otherwise, if you are using Maqiatto broker or another one which uses your userID (e-mail) as a prefix in topics name, then the **Aux Cmd** syntax will look in this other way:
 
--   *myemail@gmail.com/cmnd/\<your\_ Tasmota\_ topic\_ name\>/Power 1* to power it ON.
+-   *myemail@gmail.com/cmnd/\<your_Tasmota_topic_name\>/Power 1* to power it ON.
 
--   *myemail@gmail.com/cmnd/\<your\_ Tasmota\_ topic\_ name\>/Power 0* to power it OFF.
+-   *myemail@gmail.com/cmnd/\<your_Tasmota_topic_name\>/Power 0* to power it OFF.
 
 In our case, the command becomes **myemail@gmail.com/cmnd/charge/Power 1**.\
 If you want to stop charging and then restart when specific conditions are met, you need to add two alarms, one for each Power ON/OFF condition, using the explained syntax accordingly.\
 Please note that, if you have a device with more relais, you will have to edit the above syntax specifying which relais you want to control: using **"Power1"** for the first relay, **"Power2"** for the second one and so on. This becomes:
 
--   *cmnd/\<your\_ Tasmota\_ topic\_ name\>/Power1 1* to power ON the first relay.
+-   *cmnd/\<your_Tasmota_topic_name\>/Power1 1* to power ON the first relay.
 
--   *cmnd/\<your\_ Tasmota\_ topic\_ name\>/Power1 0* to power it OFF.
+-   *cmnd/\<your_Tasmota_topic_name\>/Power1 0* to power it OFF.
 
 The same syntax distinction about Maqiatto and owned brokers applies here as well.
 

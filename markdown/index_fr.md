@@ -2402,7 +2402,7 @@ Si vous utilisez plutôt Maqiatto, configuré selon la Section [4.2.3](#sec:fre
 Enfin, appuyez sur le bouton vert **"Save"** et attendez que l'appareil redémarre.\
 **RAPPEL !** Si vous utilisez le broker Maqiatto, vous devrez peut-être ajouter le nouveau topic à votre compte comme expliqué à la Figure [4.2](#sec:free_broker_add_topics){reference-type="ref" reference="sec:free_broker_add_topics"}.
 
-Dans ce cas, vous devrez ajouter **cmnd/\<votre nom de topic Tasmota\>/Power** comme nouveau nom de topic, qui deviendra *cmnd/charge/Power* si vous avez suivi l'image.
+Dans ce cas, vous devrez ajouter **cmnd/\<your_Tasmota_topic_name\>/Power** comme nouveau nom de topic, qui deviendra *cmnd/charge/Power* si vous avez suivi l'image.
 
 ## Configuration Tasmota sur ToM+
 
@@ -2419,24 +2419,24 @@ Comme vous pouvez le remarquer, la partie la plus importante est de configurer c
 
 Si vous avez votre propre broker MQTT (c'est-à-dire *pas Maqiatto*), la **Aux Cmd** aura cette syntaxe :
 
-- *cmnd/\<votre nom de topic Tasmota\>/Power 1* si vous souhaitez allumer l'appareil.
+- *cmnd/\<your_Tasmota_topic_name\>/Power 1* si vous souhaitez allumer l'appareil.
 
-- *cmnd/\<votre nom de topic Tasmota\>/Power 0* si vous souhaitez l'éteindre.
+- *cmnd/\<your_Tasmota_topic_name\>/Power 0* si vous souhaitez l'éteindre.
 
 À nouveau, dans notre exemple, la commande devient **cmnd/charge/Power 1** pour allumer la lampe.\
 Sinon, si vous utilisez le broker Maqiatto ou un autre qui utilise votre userID (e-mail) comme préfixe dans le nom des topics, la syntaxe de la **Aux Cmd** ressemblera à ceci :
 
-- *myemail@gmail.com/cmnd/\<votre nom de topic Tasmota\>/Power 1* pour l'allumer.
+- *myemail@gmail.com/cmnd/\<your_Tasmota_topic_name\>/Power 1* pour l'allumer.
 
-- *myemail@gmail.com/cmnd/\<votre nom de topic Tasmota\>/Power 0* pour l'éteindre.
+- *myemail@gmail.com/cmnd/\<your_Tasmota_topic_name\>/Power 0* pour l'éteindre.
 
 Dans notre cas, la commande devient **myemail@gmail.com/cmnd/charge/Power 1**.\
 Si vous souhaitez arrêter la charge puis la redémarrer lorsque des conditions spécifiques sont remplies, vous devez ajouter deux alarmes, une pour chaque condition d'allumage/extinction (Power ON/OFF), en utilisant la syntaxe expliquée en conséquence.\
 Veuillez noter que si vous avez un appareil avec plusieurs relais, vous devrez modifier la syntaxe ci-dessus en spécifiant quel relais vous souhaitez contrôler : en utilisant **"Power1"** pour le premier relais, **"Power2"** pour le second et ainsi de suite. Cela devient :
 
-- *cmnd/\<votre nom de topic Tasmota\>/Power1 1* pour allumer le premier relais.
+- *cmnd/\<your_Tasmota_topic_name\>/Power1 1* pour allumer le premier relais.
 
-- *cmnd/\<votre nom de topic Tasmota\>/Power1 0* pour l'éteindre.
+- *cmnd/\<your_Tasmota_topic_name\>/Power1 0* pour l'éteindre.
 
 La même distinction de syntaxe concernant Maqiatto et les brokers possédés s'applique également ici.
 
